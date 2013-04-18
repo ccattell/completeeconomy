@@ -1,0 +1,7 @@
+author: ccattell
+description: Everything your server needs for a fully functioning economy
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: me.ccattell.plugins.completeeconomy.CompleteEconomy
+name: Complete Economy
+startup: postworld
+version: 0.0.1a
