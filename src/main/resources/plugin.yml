@@ -1,5 +1,4 @@
 author: ccattell
-database: true
 description: Everything your server needs for a fully functioning economy
 generator: http://dinnerbone.com/minecraft/tools/pluginator/
 main: me.ccattell.plugins.completeeconomy.CompleteEconomy
