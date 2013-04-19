@@ -13,9 +13,13 @@ import java.sql.Statement;
  * @author Charlie
  */
 public class CEDatabase {
+    private static CEDatabase instance = new CEDatabase();
     public Connection connection = null;
     public Statement statement = null;
 
+    public static synchronized CEDatabase getInstance() {
+        return instance;
+    }
     public void createTables() {
         try {
             statement = connection.createStatement();
@@ -30,5 +34,9 @@ public class CEDatabase {
         } catch (SQLException e) {
             
         }
+    }
+    public void setConnection(String path) throws Exception {
+        Class.forName("org.sqlite.JDBC");
+        connection = DriverManager.getConnection("jdbc:sqlite:" + path);
     }
 }
