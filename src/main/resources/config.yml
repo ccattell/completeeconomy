@@ -2,9 +2,9 @@ System:
   Database:
     # Databases Supported:
     # mysql, sqlite
-	
+
     Type: 'sqlite'
-    
+
     ##
     # MySQL Database uses ip:port style connections.
     # ip
@@ -15,8 +15,8 @@ System:
     #  - default: 3306 for mysql
     ##
     # [MySQL Default] mysql://localhost:3306/iConomy
-    
-	URL: 'mysql://localhost:3306/CompleteEconomy'
+
+    URL: 'mysql://localhost:3306/CompleteEconomy'
 
     # Login details for MySQL database
     Username: ''
