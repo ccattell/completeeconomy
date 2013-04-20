@@ -11,3 +11,9 @@ System:
     # Login details for MySQL database
     Username: ''
     Password: ''
+
+# Whether or not to show the update message for the plugin in console/to an admin
+UpdateMessage: true
+
+# Name of the money used
+MoneyName: Money
