@@ -5,17 +5,7 @@ System:
 
     Type: 'sqlite'
     
-    ##
-    # MySQL Database uses ip:port style connections.
-    # ip
-    #  - is the connection identifier (internet protocol)
-    #  - for ipv6 usually encased in brackets [::1]
-    # port
-    #  - the port that the database is listening on
-    #  - default: 3306 for mysql
-    ##
     # [MySQL Default] mysql://localhost:3306/iConomy
-
     URL: 'mysql://localhost:3306/CompleteEconomy'
 
     # Login details for MySQL database

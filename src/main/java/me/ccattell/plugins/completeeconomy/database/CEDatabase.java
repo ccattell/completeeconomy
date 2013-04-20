@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 
 /**
  *
@@ -24,17 +25,18 @@ public class CEDatabase {
     }
 
     public void createTables() {
-        try {
-            statement = connection.createStatement();
-            String queryCE = "CREATE TABLE IF NOT EXISTS CompleteEconomy ("
-                    + "  player_id INTEGER NOT NULL PRIMARY KEY,"
-                    + "  player_name TEXT,"
-                    + "  cash_on_hand REAL DEFAULT NULL,"
-                    + "  last_login INTEGER DEFAULT NULL"
-                    + ")";
-            statement.executeUpdate(queryCE);
-        } catch (SQLException e) {
-            System.out.println("Could not create table: " + e.getMessage());
+        if(CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")){
+            try {
+                statement = connection.createStatement();
+
+                String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name TEXT PRIMARY KEY,  cash REAL DEFAULT NULL,  bank REAL DEFAULT NULL,  last_login INTEGER DEFAULT NULL)";
+                statement.executeUpdate(queryCE);
+                String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name TEXT, job_id INTEGER DEFAULT NULL, experience INTEGER DEFAULT NULL, level INTEGER DEFAULT NULL)";
+                statement.executeUpdate(queryJobs);
+            } catch (SQLException e) {
+                System.out.println(CompleteEconomy.plugin.pluginName + "Could not create table: " + e.getMessage());
+            }
+        }else{
         }
     }
 
