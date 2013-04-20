@@ -9,7 +9,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 
 public class CompleteEconomy extends JavaPlugin implements Listener {
@@ -20,7 +19,14 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public ConsoleCommandSender console;
     public String pluginName;
     public String dbtype;
+    public String moneyName = "";
 
+    //Saves the plugin's folder for future referencing
+    public String pluginFolder = this.getDataFolder().getAbsolutePath();
+    
+    //Functions need to be implemented but has everything needed for a flatfile storage of bank accounts in hashmaps.
+    public BankInfo bInfo;
+    
     //Needs to be implemented into a LoginListener
     private UpdateChecker updateChecker;
     
@@ -57,6 +63,8 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         if(updateChecker.updateNeeded()){
         	getServer().getLogger().warning(updateChecker.getUpdateString());
         }
+        
+        this.bInfo = new BankInfo(this, new File(pluginFolder + File.separator + "Database.yml"));
         
         service.createTables();
         getServer().getPluginManager().registerEvents(this, this);
