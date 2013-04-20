@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Charlie
+ * @author Charlie and Buwaroblahblah      die
  */
 public class CEDatabase {
 
