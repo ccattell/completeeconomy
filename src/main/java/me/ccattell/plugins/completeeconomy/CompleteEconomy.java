@@ -31,8 +31,13 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         plugin = this;
         console = getServer().getConsoleSender();
         try {
-            String path = getDataFolder() + File.separator + "CompleteEconomy.db";
-            service.setConnection(path);
+            if (CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")) {
+                String path = getDataFolder() + File.separator + "CompleteEconomy.db";
+                service.setConnection(path);
+            } else {
+                // mysql
+                service.setConnection();
+            }
             service.createTables();
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
