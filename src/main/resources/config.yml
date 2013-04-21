@@ -11,17 +11,16 @@ System:
     Username: ''
     Password: ''
 
+  Currency:
+    # Major is the first segment [Major].Minor
+    Major: [ 'Dollar', 'Dollars' ]
+
+    # Minor is the second segment Major.[Minor]
+    Minor: [ 'Cent', 'Cents' ]
+
   Default:
-    Currency:
-      # Major is the first segment [Major].Minor
-      Major: [ 'Dollar', 'Dollars' ]
-
-      # Minor is the second segment Major.[Minor]
-      Minor: [ 'Cent', 'Cents' ]
-
-    Account:
-      # Default account balance when created
-      Holdings: 30.0
+    # Default account balance when created
+    Holdings: 30.0
 
   # Controls how money is formatted through methods
   Formatting:
@@ -55,7 +54,8 @@ System:
       #   1 minute = 60 seconds
       #   1 hour = 1 minute * 60 = 3600 seconds
       #   1 day = 1 hour * 24 = 86400 seconds
-      Seconds: 60
+      #   1 Minecraft day = 1200 seconds
+      Seconds: 1200
 
     Amount:
       # The balance to be met where we stop giving interest.
@@ -63,4 +63,4 @@ System:
       Cutoff: 0.0
 
       # Percentage of holdings to give / take (Negative to take)
-      Percent: 0.0
+      Percent: 0.1
