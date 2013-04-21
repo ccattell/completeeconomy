@@ -19,6 +19,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public PluginDescriptionFile pdfFile;
     public ConsoleCommandSender console;
     public String pluginName;
+    public String dbtype;
 
     @Override
     public void onDisable() {
@@ -29,7 +30,8 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public void onEnable() {
         saveDefaultConfig();
         pdfFile = getDescription();
-        pluginName = ChatColor.GOLD + "[" + pdfFile.getName() + "]" + ChatColor.RESET + " ";
+        pluginName = ChatColor.DARK_PURPLE + "[" + pdfFile.getName() + "]" + ChatColor.RESET + " ";
+
         plugin = this;
         console = getServer().getConsoleSender();
         try {

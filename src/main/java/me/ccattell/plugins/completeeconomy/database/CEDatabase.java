@@ -8,7 +8,7 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 
 /**
  *
- * @author Charlie
+ * @author Charlie and Buwaroblahblah die
  */
 public class CEDatabase {
 
