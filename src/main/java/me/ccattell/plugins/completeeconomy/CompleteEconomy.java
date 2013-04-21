@@ -36,11 +36,13 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         console = getServer().getConsoleSender();
         try {
             if (CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")) {
+                console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading SQLite Database");
                 String path = getDataFolder() + File.separator + "CompleteEconomy.db";
                 service.setConnection(path);
                 new CEInitSQLite().initSQLite();
             } else {
                 // mysql
+                console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading MySQL Database");
                 service.setConnection();
                 new CEInitMySQL().initMYSQL();
             }
@@ -52,6 +54,10 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
+        loadPlayer();
+//        event.getPlayer().sendMessage("Welcome, "+ PlayerTitle +" " + event.getPlayer().getDisplayName() + "!");
         event.getPlayer().sendMessage("Welcome, Grandmaster " + event.getPlayer().getDisplayName() + "!");
+    }
+    public void loadPlayer(){
     }
 }
