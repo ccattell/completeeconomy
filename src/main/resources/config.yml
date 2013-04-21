@@ -4,9 +4,63 @@ System:
     # mysql, sqlite
 
     Type: 'sqlite'
-    # [MySQL Default] mysql://localhost:3306/iConomy
+    # [MySQL Default] mysql://localhost:3306/database_name
     URL: 'mysql://localhost:3306/CompleteEconomy'
 
     # Login details for MySQL database
     Username: ''
     Password: ''
+
+  Default:
+    Currency:
+      # Major is the first segment [Major].Minor
+      Major: [ 'Dollar', 'Dollars' ]
+
+      # Minor is the second segment Major.[Minor]
+      Minor: [ 'Cent', 'Cents' ]
+
+    Account:
+      # Default account balance when created
+      Holdings: 30.0
+
+  # Controls how money is formatted through methods
+  Formatting:
+    # Minor allows you to use the Minor amounts for amounts <1
+    # Example (true) 0.23 Cents and 1.23 Dollars (false) 0.23 Dollars and 1.23 Dollars
+    Minor: false
+
+
+  # Logs all monetary transactions passed through CompleteEconomy
+  Logging:
+    Enabled: false
+
+  # Purges Default Balances at Loading
+  # Good way to keep unused accounts or default accounts wiped out and lower database usage.
+  Purging:
+    Enabled: true
+
+  # Controls amount of money gained at a set interval.
+  Interest:
+    Enabled: true
+
+    # Only give interest to players who are currently online?
+    Online: true
+
+    Announce:
+      # Send a message when the player gains interest?
+      Enabled: false
+
+    Interval:
+      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
+      #   1 minute = 60 seconds
+      #   1 hour = 1 minute * 60 = 3600 seconds
+      #   1 day = 1 hour * 24 = 86400 seconds
+      Seconds: 60
+
+    Amount:
+      # The balance to be met where we stop giving interest.
+      # 0.0 for no limit
+      Cutoff: 0.0
+
+      # Percentage of holdings to give / take (Negative to take)
+      Percent: 0.0
