@@ -14,3 +14,34 @@ commands:
     usage: /<command>
     permission: ce.command
     permission-message: You don't have the permission <permission> to use this command
+  cash:
+    description: This will display your bank account balance.
+    usage: /<command>
+  pay:
+    description: This will give [amount] to another player.
+    usage: /<command> [amount][player name]
+
+  bank:
+    aliases: [b]
+    description: This will display your bank account balance.
+    usage: /<command>
+    deposit:
+      aliases: [d]
+      description: This will deposit [amount] to your Bank Account
+      usage: /<command> deposit [amount]
+    withdrawal:
+      aliases: [w]
+      description: This will withdrawal [amount] from your Bank Account
+      usage: /<command> withdrawal [amount]
+  xpbank:
+    aliases: [b]
+    description: This will display your XP account balance.
+    usage: /<command>
+    deposit:
+      aliases: [d]
+      description: This will deposit [amount] to your XP Account
+      usage: /<command> deposit [amount]
+    withdrawal:
+      aliases: [w]
+      description: This will withdrawal [amount] from your XP Account
+      usage: /<command> withdrawal [amount]
