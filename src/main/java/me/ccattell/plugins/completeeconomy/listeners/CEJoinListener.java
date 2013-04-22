@@ -27,17 +27,23 @@ public class CEJoinListener implements Listener {
         where.put("player_name", name);
         CEMainResultSet rsm = new CEMainResultSet(where);
         float c;
+        HashMap<String, Object> set = new HashMap<String, Object>();
+        CEQueryFactory qf = new CEQueryFactory();
         if (rsm.resultSet()) {
             // found a record so load data
             c = rsm.getCash();
             // do something with it
+            // update last_login
+            set.put("last_login", System.currentTimeMillis());
+            HashMap<String, Object> wherep = new HashMap<String, Object>();
+            wherep.put("player_name", name);
+            qf.doUpdate("CEMain", set, wherep);
         } else {
             // insert a record for new player
-            c = CompleteEconomy.plugin.getConfig().getInt("System.Default.Holdings") * 1.0F;
-            HashMap<String, Object> set = new HashMap<String, Object>();
+            c = CompleteEconomy.plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
             set.put("player_name", name);
             set.put("cash", c);
-            new CEQueryFactory().doInsert("CEMain", set);
+            qf.doInsert("CEMain", set);
             // do something with it
         }
     }
