@@ -1,9 +1,8 @@
 package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
-import org.bukkit.event.EventHandler;
+import me.ccattell.plugins.completeeconomy.commands.CECommands;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.command.ConsoleCommandSender;
@@ -11,6 +10,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
+import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 
 public class CompleteEconomy extends JavaPlugin implements Listener {
 
@@ -20,6 +22,9 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public ConsoleCommandSender console;
     public String pluginName;
     public String dbtype;
+    public PluginManager pm = Bukkit.getServer().getPluginManager();
+    public CEJoinListener joinListener;
+    public CECommands commands;
 
     @Override
     public void onDisable() {
@@ -49,15 +54,9 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
-        getServer().getPluginManager().registerEvents(this, this);
-    }
-
-    @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) {
-        loadPlayer();
-//        event.getPlayer().sendMessage("Welcome, "+ PlayerTitle +" " + event.getPlayer().getDisplayName() + "!");
-        event.getPlayer().sendMessage("Welcome, Grandmaster " + event.getPlayer().getDisplayName() + "!");
-    }
-    public void loadPlayer(){
+        joinListener = new CEJoinListener();
+        pm.registerEvents(joinListener, this);
+        commands = new CECommands();
+        getCommand("ce").setExecutor(commands);
     }
 }
