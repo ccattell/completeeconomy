@@ -58,5 +58,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         pm.registerEvents(joinListener, this);
         commands = new CECommands();
         getCommand("ce").setExecutor(commands);
+        getCommand("cash").setExecutor(commands);
+        getCommand("pay").setExecutor(commands);
     }
 }
