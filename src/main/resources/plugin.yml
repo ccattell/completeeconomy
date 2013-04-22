@@ -1,7 +1,16 @@
 author: ccattell
 description: Everything your server needs for a fully functioning economy
-generator: http://dinnerbone.com/minecraft/tools/pluginator/
 main: me.ccattell.plugins.completeeconomy.CompleteEconomy
 name: Complete Economy
 startup: postworld
 version: 0.0.1a
+permissions:
+  ce.command:
+    description: Allow players to use the /ce command.
+    default: true
+commands:
+  ce:
+    description: The CompleteEconomy command
+    usage: /<command>
+    permission: ce.command
+    permission-message: You don't have the permission <permission> to use this command
