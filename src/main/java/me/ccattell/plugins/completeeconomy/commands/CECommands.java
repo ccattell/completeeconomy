@@ -32,7 +32,7 @@ public class CECommands implements CommandExecutor {
             }else{
                 c = 0;
             }
-            sender.sendMessage(name + " Cash Balance: " + c );
+            sender.sendMessage(name + "'s Cash Balance: " + c );
             return true;
         }
         if (cmd.getName().equalsIgnoreCase("pay")) {
