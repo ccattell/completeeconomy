@@ -1,6 +1,7 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,6 +16,9 @@ public class CECommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        String major = CompleteEconomy.plugin.getConfig().getString("System.Currency.Major");
+        String minor = CompleteEconomy.plugin.getConfig().getString("System.Currency.Minor");
+        String format = CompleteEconomy.plugin.getConfig().getString("System.Formatting.Minor");
         if (cmd.getName().equalsIgnoreCase("ce")) {
             // do some stuff
             sender.sendMessage("You just used the /ce command!");
@@ -43,16 +47,37 @@ public class CECommands implements CommandExecutor {
                 where.put("player_name", name);
                 CEMainResultSet rsm = new CEMainResultSet(where);
                 float c;
+                long major_amt;
+                long minor_amt;
+                double m;
+                String s;
                 if (rsm.resultSet()) {
                     // found a record so load data
                     c = rsm.getCash();
+                    if(format.equalsIgnoreCase("false")){
+                        s = c + " " + major;
+                    }else{
+                        s = "";
+                        major_amt = (long) c;
+                        m = c - major_amt;
+                        m = m * 100;
+                        minor_amt = (long) m;
+                        if(major_amt > 0){
+                            s = s + major_amt + " " + major + " ";
+                        }
+                        if(minor_amt > 0){
+                            s = s + minor_amt + " " + minor;
+                        }
+                    }
                     String which = (name_supplied) ? name + "'s" : "Your";
-                    sender.sendMessage(which + " cash balance: " + c);
+                    sender.sendMessage(which + " cash balance: " + s);
                 } else {
                     // player does not exist in the CEMain table
                     sender.sendMessage(name + " does not exist in the CE database! Check your spelling.");
                 }
                 return true;
+            }else{
+                sender.sendMessage("You must supply a player name");
             }
         }
 
