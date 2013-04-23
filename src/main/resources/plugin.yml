@@ -5,6 +5,9 @@ name: Complete Economy
 startup: postworld
 version: 0.0.1a
 permissions:
+  ce.admin:
+    description: Allow players to use the CE admin features.
+    default: op
   ce.command:
     description: Allow players to use the /ce command.
     default: true

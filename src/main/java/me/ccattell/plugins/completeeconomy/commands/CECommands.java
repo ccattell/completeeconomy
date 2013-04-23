@@ -21,52 +21,48 @@ public class CECommands implements CommandExecutor {
             return true;
         }
         if (cmd.getName().equalsIgnoreCase("cash")) {
-            String name;
-            String name_type;
+            String name = "";
             Player player = null;
             if (sender instanceof Player) {
                 player = (Player) sender;
             }
-            if (player != null) {
-                if (args.length < 1) {
-                    name_type = "arg";
-                    name = args[0];
-                }else{
-                    name_type = "player";
-                    name = player.getName();
+            boolean name_supplied = false; // use a boolean rather than comparing strings
+            if (args.length > 0) {
+                if (!sender.hasPermission("ce.admin")) { // console always has permission
+                    sender.sendMessage("You don't have permission to get another player's balance!");
+                    return true;
                 }
-            } else {
-                // command run from console so will need to supply a player name
-                if (args.length < 1) {
-                    sender.sendMessage("You must supply a player name");
-                    return false;
-                }
-                name_type = "arg";
+                // player name supplied
                 name = args[0];
+                name_supplied = true;
+            } else if (player != null) {
+                name = player.getName();
             }
-            HashMap<String, Object> where = new HashMap<String, Object>();
-            where.put("player_name", name);
-            CEMainResultSet rsm = new CEMainResultSet(where);
-            float c;
-            if (rsm.resultSet()) {
-                // found a record so load data
-                c = rsm.getCash();
-                // do something with it
-            } else {
-                c = 0;
+            if (!name.isEmpty()) { // name could potentially still be empty, so check
+                HashMap<String, Object> where = new HashMap<String, Object>();
+                where.put("player_name", name);
+                CEMainResultSet rsm = new CEMainResultSet(where);
+                float c;
+                if (rsm.resultSet()) {
+                    // found a record so load data
+                    c = rsm.getCash();
+                    String which = (name_supplied) ? name + "'s" : "Your";
+                    sender.sendMessage(which + " cash balance: " + c);
+                } else {
+                    // player does not exist in the CEMain table
+                    sender.sendMessage(name + " does not exist in the CE database! Check your spelling.");
+                }
+                return true;
             }
-            if(name_type.equals("arg")){
-                sender.sendMessage(name + "'s cash balance: " + c);
-            }else{
-                sender.sendMessage("Your cash balance: " + c);                
-            }
-            return true;
         }
-        if (cmd.getName().equalsIgnoreCase("pay")) {
+
+        if (cmd.getName()
+                .equalsIgnoreCase("pay")) {
             // pay another player amount shown and save to the database
             sender.sendMessage("You just used the /pay command!");
             return true;
         }
+
         return false;
     }
 }
