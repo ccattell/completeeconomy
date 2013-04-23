@@ -22,18 +22,26 @@ public class CECommands implements CommandExecutor {
         }
         if (cmd.getName().equalsIgnoreCase("cash")) {
             String name;
+            String name_type;
             Player player = null;
             if (sender instanceof Player) {
                 player = (Player) sender;
             }
             if (player != null) {
-                name = player.getName();
+                if (args.length < 1) {
+                    name_type = "arg";
+                    name = args[0];
+                }else{
+                    name_type = "player";
+                    name = player.getName();
+                }
             } else {
                 // command run from console so will need to supply a player name
                 if (args.length < 1) {
                     sender.sendMessage("You must supply a player name");
                     return false;
                 }
+                name_type = "arg";
                 name = args[0];
             }
             HashMap<String, Object> where = new HashMap<String, Object>();
@@ -47,7 +55,11 @@ public class CECommands implements CommandExecutor {
             } else {
                 c = 0;
             }
-            sender.sendMessage(name + "'s Cash Balance: " + c);
+            if(name_type == "arg"){
+                sender.sendMessage(name + "'s cash balance: " + c);
+            }else{
+                sender.sendMessage("Your cash balance: " + c);                
+            }
             return true;
         }
         if (cmd.getName().equalsIgnoreCase("pay")) {
