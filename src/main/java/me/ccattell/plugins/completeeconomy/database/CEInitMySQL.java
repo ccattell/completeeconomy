@@ -21,9 +21,9 @@ public class CEInitMySQL {
     public void initMYSQL() {
         try {
             statement = connection.createStatement();
-            String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name text NOT NULL, cash float NOT NULL, bank float NOT NULL, xp float NOT NULL, last_login int(11) NOT NULL)";
+            String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name text NOT NULL, cash float NOT NULL, bank float NOT NULL, xp float NOT NULL, last_login int(11) NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
             statement.executeUpdate(queryCE);
-            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name text NOT NULL, job text NOT NULL, experience int(11) NOT NULL, level int(11) NOT NULL)";
+            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name text NOT NULL, job text NOT NULL, experience int(11) NOT NULL, level int(11) NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
             statement.executeUpdate(queryJobs);
         } catch (SQLException e) {
             System.out.println(CompleteEconomy.plugin.pluginName + "Could not create MySQL tables: " + e.getMessage());

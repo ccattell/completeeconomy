@@ -21,9 +21,9 @@ public class CEInitSQLite {
     public void initSQLite() {
         try {
             statement = connection.createStatement();
-            String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name TEXT PRIMARY KEY,  cash REAL DEFAULT NULL,  bank REAL DEFAULT NULL,  xp REAL DEFAULT NULL,  last_login INTEGER DEFAULT NULL)";
+            String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name TEXT PRIMARY KEY COLLATE NOCASE,  cash REAL DEFAULT NULL,  bank REAL DEFAULT NULL,  xp REAL DEFAULT NULL,  last_login INTEGER DEFAULT NULL)";
             statement.executeUpdate(queryCE);
-            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name TEXT PRIMARY KEY, job text NOT NULL, experience INTEGER DEFAULT NULL, level INTEGER DEFAULT NULL)";
+            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name TEXT PRIMARY KEY COLLATE NOCASE, job text NOT NULL, experience INTEGER DEFAULT NULL, level INTEGER DEFAULT NULL)";
             statement.executeUpdate(queryJobs);
         } catch (SQLException e) {
             System.out.println(CompleteEconomy.plugin.pluginName + "Could not create SQLite tables: " + e.getMessage());
