@@ -55,7 +55,7 @@ public class CECommands implements CommandExecutor {
             } else {
                 c = 0;
             }
-            if(name_type == "arg"){
+            if(name_type.equals("arg")){
                 sender.sendMessage(name + "'s cash balance: " + c);
             }else{
                 sender.sendMessage("Your cash balance: " + c);                
