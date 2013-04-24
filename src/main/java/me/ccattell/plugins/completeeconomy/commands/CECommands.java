@@ -100,10 +100,84 @@ public class CECommands implements CommandExecutor {
             }
         }
 
-        if (cmd.getName()
-                .equalsIgnoreCase("pay")) {
-            // pay another player amount shown and save to the database
-            sender.sendMessage("You just used the /pay command!");
+        if (cmd.getName().equalsIgnoreCase("pay")) {
+            String to_name = "";
+            String from_name = "";
+            float pay_amount = 0;
+
+            if (args.length > 1) {
+                to_name = args[1];
+                pay_amount = Float.parseFloat(args[0]);
+            } else {
+                // player does not exist in the CEMain table
+                sender.sendMessage(" Not enough supplied arguments");
+            }
+            from_name = sender.getName();
+            if (!to_name.isEmpty()) { // name could potentially still be empty, so check
+                HashMap<String, Object> where = new HashMap<String, Object>();
+                where.put("player_name", from_name);
+                CEMainResultSet fq = new CEMainResultSet(where);
+                if (fq.resultSet()) {
+                    // found a record so load data
+                    float c;
+                    float new_from;
+                    float old_to;
+                    float new_to;
+                    long major_amt;
+                    long minor_amt;
+                    double m;
+                    String s;
+                    c = fq.getCash();
+                    if(c < pay_amount){
+                        sender.sendMessage("Not enough cash on hand to complete this transaction.");
+                    }else{
+                        where.put("player_name", to_name);
+                        CEMainResultSet tq = new CEMainResultSet(where);
+                        if (tq.resultSet()) {
+                            old_to = tq.getCash();
+                            if(format.equalsIgnoreCase("false")){
+                                if(pay_amount == 1){
+                                    major = majorSingle;
+                                }else{
+                                    major = majorPlural;
+                                }
+                                s = pay_amount + " " + major;
+                            }else{
+                                s = "";
+                                major_amt = (long) pay_amount;
+                                m = pay_amount - major_amt;
+                                m = m * 100;
+                                minor_amt = (long) m;
+                                if(major_amt > 0){
+                                    if(major_amt == 1){
+                                        major = majorSingle;
+                                    }else{
+                                        major = majorPlural;
+                                    }
+                                    s = s + major_amt + " " + major + " ";
+                                }
+                                if(minor_amt > 0){
+                                    if(minor_amt == 1){
+                                        minor = minorSingle;
+                                    }else{
+                                        minor = minorPlural;
+                                    }
+                                    s = s + minor_amt + " " + minor;
+                                }
+                            }
+                            new_from = c - pay_amount;
+                            new_to = old_to + pay_amount;
+                            sender.sendMessage("Pay the player " + to_name + " " + s);
+                            // Do some stuff
+                        }else{
+                            sender.sendMessage(to_name + " does not exist in the CE database! Check your spelling.");
+                        }
+                    }
+                }
+                return true;
+            }else{
+                sender.sendMessage("You must supply a player name");
+            }
             return true;
         }
 
