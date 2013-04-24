@@ -55,9 +55,6 @@ public class CEPayCommand implements CommandExecutor {
             if (fq.resultSet()) {
                 // found a record so load data
                 float c;
-//                float new_from;
-//                float old_to;
-//                float new_to;
                 long major_amt;
                 long minor_amt;
                 double m;
@@ -102,13 +99,10 @@ public class CEPayCommand implements CommandExecutor {
                                 s = s + minor_amt + " " + minor;
                             }
                         }
-//                        new_from = c - pay_amount;
-//                        new_to = old_to + pay_amount;
-                        // Do some stuff
                         CEQueryFactory qf = new CEQueryFactory();
                         qf.alterCashBalance(from_name, -pay_amount);
                         qf.alterCashBalance(to_name, pay_amount);
-                        sender.sendMessage("You paid the player " + to_name + " " + s);
+                        sender.sendMessage("You paid " + to_name + " " + s);
                         return true;
                     } else {
                         sender.sendMessage(to_name + " does not exist in the CE database! Check your spelling.");
