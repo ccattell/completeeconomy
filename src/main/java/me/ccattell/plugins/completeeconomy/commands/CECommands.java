@@ -105,12 +105,15 @@ public class CECommands implements CommandExecutor {
             String from_name = "";
             float pay_amount = 0;
 
-            if (args.length > 1) {
-                to_name = args[1];
-                pay_amount = Float.parseFloat(args[0]);
+            if (args.length < 2) {
+                sender.sendMessage("Not enough supplied arguments");
+                return false;
+            } else if (args.length > 2) {
+                sender.sendMessage("Too many supplied arguments");
+                return false;
             } else {
-                // player does not exist in the CEMain table
-                sender.sendMessage(" Not enough supplied arguments");
+                pay_amount = Float.parseFloat(args[0]);
+                to_name = args[1];
             }
             from_name = sender.getName();
             if (!to_name.isEmpty()) { // name could potentially still be empty, so check
@@ -130,6 +133,7 @@ public class CECommands implements CommandExecutor {
                     c = fq.getCash();
                     if(c < pay_amount){
                         sender.sendMessage("Not enough cash on hand to complete this transaction.");
+                        return false;
                     }else{
                         where.put("player_name", to_name);
                         CEMainResultSet tq = new CEMainResultSet(where);
@@ -169,18 +173,18 @@ public class CECommands implements CommandExecutor {
                             new_to = old_to + pay_amount;
                             sender.sendMessage("Pay the player " + to_name + " " + s);
                             // Do some stuff
+                            return true;
                         }else{
                             sender.sendMessage(to_name + " does not exist in the CE database! Check your spelling.");
+                            return false;
                         }
                     }
                 }
-                return true;
             }else{
                 sender.sendMessage("You must supply a player name");
+                return false;
             }
-            return true;
         }
-
         return false;
     }
 }
