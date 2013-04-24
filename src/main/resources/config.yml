@@ -13,21 +13,25 @@ System:
 
   Currency:
     # Major is the first segment [Major].Minor
-    Major: [ 'Dollar', 'Dollars' ]
+    MajorSingle: Dollar
+    MajorPlural: Dollars
+    # Major: [ 'Dollar', 'Dollars' ]
+
 
     # Minor is the second segment Major.[Minor]
-    Minor: [ 'Cent', 'Cents' ]
+    MinorSingle: Cent
+    MinorPlural: Cents
+    # Minor: [ 'Cent', 'Cents' ]
+
+  # Controls how money is formatted through methods
+  Formatting:
+    # Separate allows you to use the Minor amounts for amounts < 1
+    # Example (true) 0.23 Cents and 1.23 Dollars (false) 0.23 Dollars and 1.23 Dollars
+    Separate: false
 
   Default:
     # Default account balance when created
     Holdings: 30.0
-
-  # Controls how money is formatted through methods
-  Formatting:
-    # Minor allows you to use the Minor amounts for amounts <1
-    # Example (true) 0.23 Cents and 1.23 Dollars (false) 0.23 Dollars and 1.23 Dollars
-    Minor: false
-
 
   # Logs all monetary transactions passed through CompleteEconomy
   Logging:

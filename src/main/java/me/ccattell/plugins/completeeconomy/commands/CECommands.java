@@ -16,9 +16,13 @@ public class CECommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        String major = CompleteEconomy.plugin.getConfig().getString("System.Currency.Major");
-        String minor = CompleteEconomy.plugin.getConfig().getString("System.Currency.Minor");
-        String format = CompleteEconomy.plugin.getConfig().getString("System.Formatting.Minor");
+        String major;
+        String minor;
+        String majorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorSingle");
+        String minorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorSingle");
+        String majorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorPlural");
+        String minorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorPlural");
+        String format = CompleteEconomy.plugin.getConfig().getString("System.Formatting.Separate");
         if (cmd.getName().equalsIgnoreCase("ce")) {
             // do some stuff
             sender.sendMessage("You just used the /ce command!");
@@ -55,6 +59,11 @@ public class CECommands implements CommandExecutor {
                     // found a record so load data
                     c = rsm.getCash();
                     if(format.equalsIgnoreCase("false")){
+                        if(c == 1){
+                            major = majorSingle;
+                        }else{
+                            major = majorPlural;
+                        }
                         s = c + " " + major;
                     }else{
                         s = "";
@@ -63,9 +72,19 @@ public class CECommands implements CommandExecutor {
                         m = m * 100;
                         minor_amt = (long) m;
                         if(major_amt > 0){
+                            if(major_amt == 1){
+                                major = majorSingle;
+                            }else{
+                                major = majorPlural;
+                            }
                             s = s + major_amt + " " + major + " ";
                         }
                         if(minor_amt > 0){
+                            if(minor_amt == 1){
+                                minor = minorSingle;
+                            }else{
+                                minor = minorPlural;
+                            }
                             s = s + minor_amt + " " + minor;
                         }
                     }
