@@ -43,6 +43,8 @@ public class CEJoinListener implements Listener {
             c = CompleteEconomy.plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
             set.put("player_name", name);
             set.put("cash", c);
+            set.put("bank", 0);
+            set.put("xp", 0);
             set.put("last_login", System.currentTimeMillis());
             qf.doInsert("CEMain", set);
             // do something with it

@@ -195,14 +195,52 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            System.out.println("Alter balance error! " + e.getMessage());
+            System.out.println("Alter cash balance error! " + e.getMessage());
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Alter balance error closing CEMain! " + e.getMessage());
+                System.out.println("Alter cash balance error closing CEMain! " + e.getMessage());
+            }
+        }
+    }
+
+    public void alterBankBalance(String player, float amount) {
+        Statement statement = null;
+        String query = "UPDATE CEMain SET bank = bank + " + amount + " WHERE player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println("Alter bank balance error! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Alter bank balance error closing CEMain! " + e.getMessage());
+            }
+        }
+    }
+
+    public void alterXPBalance(String player, float amount) {
+        Statement statement = null;
+        String query = "UPDATE CEMain SET xp = xp + " + amount + " WHERE player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println("Alter xp balance error! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Alter xp balance error closing CEMain! " + e.getMessage());
             }
         }
     }

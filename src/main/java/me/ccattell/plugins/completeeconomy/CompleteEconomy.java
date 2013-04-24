@@ -3,6 +3,7 @@ package me.ccattell.plugins.completeeconomy;
 import java.io.File;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import org.bukkit.event.Listener;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -56,5 +57,6 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         pm.registerEvents(new CEJoinListener(), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
+        getCommand("bank").setExecutor(new CEBankCommand());
     }
 }
