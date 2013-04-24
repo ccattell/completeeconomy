@@ -187,4 +187,23 @@ public class CEQueryFactory {
             }
         }
     }
+
+    public void alterCashBalance(String player, float amount) {
+        Statement statement = null;
+        String query = "UPDATE CEMain SET cash = cash + " + amount + " WHERE player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println("Alter balance error! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Alter balance error closing CEMain! " + e.getMessage());
+            }
+        }
+    }
 }
