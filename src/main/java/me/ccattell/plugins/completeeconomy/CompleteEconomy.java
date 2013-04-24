@@ -1,7 +1,8 @@
 package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
-import me.ccattell.plugins.completeeconomy.commands.CECommands;
+import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
 import org.bukkit.event.Listener;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -23,8 +24,6 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public String pluginName;
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();
-    public CEJoinListener joinListener;
-    public CECommands commands;
 
     @Override
     public void onDisable() {
@@ -54,11 +53,8 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
-        joinListener = new CEJoinListener();
-        pm.registerEvents(joinListener, this);
-        commands = new CECommands();
-        getCommand("ce").setExecutor(commands);
-        getCommand("cash").setExecutor(commands);
-        getCommand("pay").setExecutor(commands);
+        pm.registerEvents(new CEJoinListener(), this);
+        getCommand("cash").setExecutor(new CECashCommand());
+        getCommand("pay").setExecutor(new CEPayCommand());
     }
 }
