@@ -24,6 +24,9 @@ System:
     # Example (separate) 1 Dollar 23 Cents
     # Example (combined) 0.23 Dollars and 1.23 Dollars
     Formatting: combined
+    
+    # Purges all cash on hand when player dies
+    PurgeOnDeath: true
 
   Default:
     # Default account balance when created
