@@ -23,44 +23,89 @@ System:
     MinorPlural: Cents
     # Minor: [ 'Cent', 'Cents' ] // Would prefer this method
 
-  # Controls how money is formatted through methods
-  Formatting:
-    # Separate allows you to use the Minor amounts for amounts < 1
-    # Example (true) 0.23 Cents and 1.23 Dollars (false) 0.23 Dollars and 1.23 Dollars
-    Separate: false
+    # Controls how money is formatted through methods
+    # Example (separate) 1 Dollar 23 Cents
+    # Example (combined) 0.23 Dollars and 1.23 Dollars
+    Formatting: combined
 
   Default:
     # Default account balance when created
     Holdings: 30.0
 
-  # Logs all monetary transactions passed through CompleteEconomy
-  Logging: false
-
-  # Purges Default Balances at Loading
-  # Good way to keep unused accounts or default accounts wiped out and lower database usage.
-  Purging: true
-
-  # Controls amount of money gained at a set interval.
-  Interest:
+  Purging:
     Enabled: true
 
-    # Only give interest to players who are currently online?
-    Online: true
+    #Days to purge inactive accounts
+    Interval: 14
 
-    # Send a message when the player gains interest?
-    Announce: false
+  # Controls amount of money gained at a set interval.
+  Banking:
+    Enabled: true
 
-    #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
-    #  1 minute = 60 seconds
-    #  1 hour = 1 minute * 60 = 3600 seconds
-    #  1 day = 1 hour * 24 = 86400 seconds
-    #  1 Minecraft day = 1200 seconds
-    Interval: 1200
+    #Type options are Teller, Sign, Command, or All
+    Type: Command
+    
+    Interest:
+      Enabled: true
 
-    Amount:
+      # Only give interest to players who are currently online?
+      Online: true
+
+      # Send a message when the player gains interest?
+      Announce: true
+
+      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
+      #  1 minute = 60 seconds
+      #  1 hour = 1 minute * 60 = 3600 seconds
+      #  1 day = 1 hour * 24 = 86400 seconds
+      #  1 Minecraft day = 1200 seconds
+      Interval: 1200
+
       # The balance to be met where we stop giving interest.
       # 0.0 for no limit
       Cutoff: 0.0
 
       # Percentage of holdings to give / take (Negative to take)
-      Percent: 0.1
+      Amount: 0.1
+
+  XPBanking:
+    Enabled: true
+
+  Shops:
+    Enabled: true
+
+    # Only open when player is online?
+    Online: false
+
+    #Type options are ItemFrame, Sign, Chest, or All
+    Type: ItemFrame
+
+    # Send a message to player when someone purchases?
+    Announce: true
+
+    # Need to work out how this can be accomplished
+    # Allows kits to be made by players to be sold in shops?
+    PlayerKits: true
+
+  Kits:
+    Enabled: true
+
+  Jobs:
+    Enabled: true
+
+    # Send a message to player when they are promoted?
+    PromoteAnnounce: true
+
+    Earnings:
+      # Send a message to player regarding their earnings?
+      Announce: true
+      
+      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
+      #  1 minute = 60 seconds
+      #  5 minute = 300 seconds
+      #  1 hour = 3600 seconds
+      #  1 Minecraft day = 1200 seconds
+      AnnounceInterval: 1200
+
+      SaveInterval: 20
+
