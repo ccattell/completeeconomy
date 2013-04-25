@@ -15,7 +15,7 @@ public class CEMajorMinor {
     String minorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorSingle");
     String majorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorPlural");
     String minorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorPlural");
-    boolean format = CompleteEconomy.plugin.getConfig().getBoolean("System.Formatting.Separate");
+    String format = CompleteEconomy.plugin.getConfig().getString("System.Currency.Formatting");
 
     public void CEMajorMinor() {
     }
@@ -27,7 +27,7 @@ public class CEMajorMinor {
         long major_amt;
         long minor_amt;
         double m;
-        if (!format) {
+        if (format.equalsIgnoreCase("combined")) {
             if (pay_amount == 1) {
                 major = majorSingle;
             } else {
