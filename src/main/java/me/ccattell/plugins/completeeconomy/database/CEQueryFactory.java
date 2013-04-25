@@ -192,7 +192,7 @@ public class CEQueryFactory {
 
     public void alterBalance(String field, String player, float amount) {
         Statement statement = null;
-        String query = "UPDATE CEMain SET " + field + " = " + field + " + " + amount + " WHERE player_name = '" + player + "'  ";
+        String query = "UPDATE CEMain SET " + field + " = " + field + " + " + amount + " WHERE player_name = '" + player + "'";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(query);

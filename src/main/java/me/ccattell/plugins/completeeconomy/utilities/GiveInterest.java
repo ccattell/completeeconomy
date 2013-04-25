@@ -48,7 +48,7 @@ public class GiveInterest {
                     qf.alterBalance("bank", entry.getKey().getName(), credit);
                     if (announce) {
                         String s = new CEMajorMinor().getFormat(credit);
-                        entry.getKey().sendMessage("You recieved " + s + "in interest on your savings!");
+                        entry.getKey().sendMessage("You recieved " + s + " in interest on your savings!");
                     }
                 }
             }
