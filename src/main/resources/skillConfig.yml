@@ -1,0 +1,70 @@
+    ACROBATICS:
+    ARCHERY:
+    AXES:
+    Digging:
+      basepay: 1.0
+      exp: 0.25
+      break:
+        Dirt: 40
+        Sand: 40
+        Grass: 40
+        Clay: 50
+        Gravel: 50
+        Mycel: 60
+        Soul_Sand: 60
+    FISHING:
+    Herbalism:
+        Vine: 10
+        Melon_Block: 20
+        Pumpkin: 20
+        Cactus: 30
+        Cocoa: 30
+        Sugar_Cane_Block: 30
+        Carrot: 50
+        Crops: 50
+        Nether_Warts: 50
+        Potato: 50
+        Red_Rose: 100
+        Water_Lily: 100
+        Yellow_Flower: 100
+        Brown_Mushroom: 150
+        Red_Mushroom: 150
+    Mining:
+        Glowstone: 30
+        Sandstone: 30
+        Stone: 30
+        Mossy_Cobblestone: 30
+        Netherrack: 30
+        Coal_Ore: 100
+        Ender_Stone: 150
+        Obsidian: 150
+        Redstone_Ore: 150
+        Quartz_Ore: 250
+        Iron_Ore: 250
+        Gold_Ore: 350
+        Lapis_Ore: 400
+        Diamond_Ore: 750
+        Emerald_Ore: 1000
+    POWERLEVEL:
+    REPAIR:
+    Smelting:
+        Coal_Ore: 10
+        Redstone_Ore: 15
+        Iron_Ore: 25
+        Quartz_Ore: 25
+        Gold_Ore: 35
+        Lapis_Ore: 40
+        Diamond_Ore: 75
+        Emerald_Ore: 100
+    SWORDS:
+    Taming:
+        Wolf: 250
+        Ocelot: 500
+    UNARMED:
+    Woodcutting:
+        Huge_Mushroom_Red: 70
+        Huge_Mushroom_Brown: 70
+        Oak: 70
+        Spruce: 80
+        Birch: 90
+        Jungle: 100
