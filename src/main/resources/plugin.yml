@@ -11,6 +11,18 @@ permissions:
   ce.command:
     description: Allow players to use the /ce command.
     default: true
+  cash.command:
+    description: Allow players to use the /cash command.
+    default: false
+  pay.command:
+    description: Allow players to use the /pay command.
+    default: false
+  bank.command:
+    description: Allow players to use the /bank command.
+    default: false
+  xpbank.command:
+    description: Allow players to use the /xpbank command.
+    default: false
 commands:
   ce:
     description: The CompleteEconomy command
