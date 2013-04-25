@@ -34,13 +34,11 @@ System:
     Holdings: 30.0
 
   # Logs all monetary transactions passed through CompleteEconomy
-  Logging:
-    Enabled: false
+  Logging: false
 
   # Purges Default Balances at Loading
   # Good way to keep unused accounts or default accounts wiped out and lower database usage.
-  Purging:
-    Enabled: true
+  Purging: true
 
   # Controls amount of money gained at a set interval.
   Interest:
@@ -49,17 +47,15 @@ System:
     # Only give interest to players who are currently online?
     Online: true
 
-    Announce:
-      # Send a message when the player gains interest?
-      Enabled: false
+    # Send a message when the player gains interest?
+    Announce: false
 
-    Interval:
-      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
-      #   1 minute = 60 seconds
-      #   1 hour = 1 minute * 60 = 3600 seconds
-      #   1 day = 1 hour * 24 = 86400 seconds
-      #   1 Minecraft day = 1200 seconds
-      Seconds: 1200
+    #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
+    #  1 minute = 60 seconds
+    #  1 hour = 1 minute * 60 = 3600 seconds
+    #  1 day = 1 hour * 24 = 86400 seconds
+    #  1 Minecraft day = 1200 seconds
+    Interval: 1200
 
     Amount:
       # The balance to be met where we stop giving interest.
