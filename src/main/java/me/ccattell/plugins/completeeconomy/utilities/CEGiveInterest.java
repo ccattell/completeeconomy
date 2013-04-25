@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 
 public class CEGiveInterest {
 
-    boolean enabled = CompleteEconomy.plugin.getConfig().getBoolean("System.Interest.Enabled");
-    final boolean online = CompleteEconomy.plugin.getConfig().getBoolean("System.Interest.Online");
-    boolean announce = CompleteEconomy.plugin.getConfig().getBoolean("System.Interest.Announce");
-    long interval = CompleteEconomy.plugin.getConfig().getInt("System.Interest.Interval") * 20;
-    float cutoff = CompleteEconomy.plugin.getConfig().getInt("System.Interest.Amount.Cutoff");
-    float percent = CompleteEconomy.plugin.getConfig().getInt("System.Interest.Amount.Percent");
+    boolean enabled = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Enabled");
+    final boolean online = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Online");
+    boolean announce = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Announce");
+    long interval = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Interval") * 20;
+    float cutoff = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Cutoff");
+    float percent = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Amount");
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
