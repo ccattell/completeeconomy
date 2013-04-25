@@ -45,10 +45,12 @@ public class GiveInterest {
                 // calculate interest
                 if (entry.getValue() >= cutoff) {
                     float credit = toCents((entry.getValue() / 100) * percent);
-                    qf.alterBalance("bank", entry.getKey().getName(), credit);
-                    if (announce) {
-                        String s = new CEMajorMinor().getFormat(credit);
-                        entry.getKey().sendMessage("You recieved " + s + " in interest on your savings!");
+                    if (credit > 0) { // don't give interest unless there is some
+                        qf.alterBalance("bank", entry.getKey().getName(), credit);
+                        if (announce) {
+                            String s = new CEMajorMinor().getFormat(credit);
+                            entry.getKey().sendMessage("You recieved " + s + " in interest on your savings!");
+                        }
                     }
                 }
             }
