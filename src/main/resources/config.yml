@@ -15,13 +15,13 @@ System:
     # Major is the first segment [Major].Minor
     MajorSingle: Dollar
     MajorPlural: Dollars
-    # Major: [ 'Dollar', 'Dollars' ]
+    # Major: [ 'Dollar', 'Dollars' ] // Would prefer this method
 
 
     # Minor is the second segment Major.[Minor]
     MinorSingle: Cent
     MinorPlural: Cents
-    # Minor: [ 'Cent', 'Cents' ]
+    # Minor: [ 'Cent', 'Cents' ] // Would prefer this method
 
   # Controls how money is formatted through methods
   Formatting:
