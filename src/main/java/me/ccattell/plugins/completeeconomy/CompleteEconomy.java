@@ -55,7 +55,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
-        init_interest = GiveInterest();
+        new GiveInterest().interest();
         pm.registerEvents(new CEJoinListener(), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
