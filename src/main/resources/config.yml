@@ -12,13 +12,10 @@ System:
     Password: ''
 
   Currency:
-    # Major is the first segment [Major].Minor
+    Prefix: '[MONEY]'
     MajorSingle: Dollar
     MajorPlural: Dollars
     # Major: [ 'Dollar', 'Dollars' ] // Would prefer this method
-
-
-    # Minor is the second segment Major.[Minor]
     MinorSingle: Cent
     MinorPlural: Cents
     # Minor: [ 'Cent', 'Cents' ] // Would prefer this method
@@ -41,6 +38,7 @@ System:
   # Controls amount of money gained at a set interval.
   Banking:
     Enabled: true
+    Prefix: '[BANK]'
 
     #Type options are Teller, Sign, Command, or All
     Type: Command
@@ -70,9 +68,11 @@ System:
 
   XPBanking:
     Enabled: true
+    Prefix: '[XP BANK]'
 
   Shops:
     Enabled: true
+    Prefix: '[SHOP]'
 
     # Only open when player is online?
     Online: false
@@ -89,23 +89,22 @@ System:
 
   Kits:
     Enabled: true
+    Prefix: '[KIT]'
+    EnjoyMessage: Enjoy your Kit ;)
 
   Jobs:
     Enabled: true
+    Prefix: '[JOB]'
 
     # Send a message to player when they are promoted?
     PromoteAnnounce: true
+    
+    # Send a message to player when they level up?
+    LevelAnnounce: true
 
     Earnings:
       # Send a message to player regarding their earnings?
       Announce: true
-      
-      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
-      #  1 minute = 60 seconds
-      #  5 minute = 300 seconds
-      #  1 hour = 3600 seconds
-      #  1 Minecraft day = 1200 seconds
       AnnounceInterval: 1200
-
       SaveInterval: 20
 
