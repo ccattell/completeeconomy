@@ -1,0 +1,17 @@
+Titles:
+  Enabled: true
+  
+  # Send a message to player when they are promoted?
+  PromoteAnnounce: true
+
+  ShowTitleInChat: true
+  
+  Levels:
+    Novice: 0
+    Apprentice: 20
+    Trained: 40
+    Professional: 60
+    Veteran: 80
+    Expert: 100
+    Master: 120
+    GrandMaster: 140

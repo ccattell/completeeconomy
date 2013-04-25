@@ -1,0 +1,33 @@
+Banking:
+  Enabled: true
+  Prefix: '[BANK]'
+
+    #Type options are Teller, Sign, Command, or All
+  Type: Command
+    
+  Interest:
+    Enabled: true
+
+      # Only give interest to players who are currently online?
+    Online: true
+
+      # Send a message when the player gains interest?
+    Announce: true
+
+      #  Interval is done in seconds, here is a easy reference table for commonly set intervals:
+      #  1 minute = 60 seconds
+      #  1 hour = 1 minute * 60 = 3600 seconds
+      #  1 day = 1 hour * 24 = 86400 seconds
+      #  1 Minecraft day = 1200 seconds
+    Interval: 1200
+
+      # The balance to be met where we stop giving interest.
+      # 0.0 for no limit
+    Cutoff: 0.0
+
+      # Percentage of holdings to give / take (Negative to take)
+    Amount: 0.1
+
+XPBanking:
+  Enabled: true
+  Prefix: '[XP BANK]'

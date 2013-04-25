@@ -1,0 +1,21 @@
+Jobs:
+  Enabled: true
+  Prefix: '[JOB]'
+
+  MaxJobs:
+    Default: 4
+    Group: 5
+    Admins: 6
+    
+  # Send a message to player when they level up?
+  LevelAnnounce: true
+
+  Earnings:
+    # Send a message to player regarding their earnings?
+    Announce: true
+    AnnounceInterval: 1200
+    SaveInterval: 20
+    PaySpawners: false
+    SpawnDistance: 8
+    PayCreative: false
+
