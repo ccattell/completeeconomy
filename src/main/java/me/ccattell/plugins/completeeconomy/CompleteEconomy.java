@@ -1,18 +1,19 @@
 package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
-import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import org.bukkit.event.Listener;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
+import me.ccattell.plugins.completeeconomy.utilities.GiveInterest;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
@@ -54,6 +55,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
+        init_interest = GiveInterest();
         pm.registerEvents(new CEJoinListener(), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
