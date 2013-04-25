@@ -8,7 +8,7 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.entity.Player;
 
-public class GiveInterest {
+public class CEGiveInterest {
 
     boolean enabled = CompleteEconomy.plugin.getConfig().getBoolean("System.Interest.Enabled");
     final boolean online = CompleteEconomy.plugin.getConfig().getBoolean("System.Interest.Online");
@@ -19,7 +19,7 @@ public class GiveInterest {
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
-    public void GiveInterest() {
+    public void CEGiveInterest() {
     }
 
     public void interest() {
