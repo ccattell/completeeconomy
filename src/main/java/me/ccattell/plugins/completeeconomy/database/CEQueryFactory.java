@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import org.bukkit.entity.Player;
 
 /**
  * Do basic SQL INSERT, UPDATE and DELETE queries.
@@ -188,60 +190,46 @@ public class CEQueryFactory {
         }
     }
 
-    public void alterCashBalance(String player, float amount) {
+    public void alterBalance(String field, String player, float amount) {
         Statement statement = null;
-        String query = "UPDATE CEMain SET cash = cash + " + amount + " WHERE player_name = '" + player + "'";
+        String query = "UPDATE CEMain SET " + field + " = " + field + " + " + amount + " WHERE player_name = '" + player + "'  ";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            System.out.println("Alter cash balance error! " + e.getMessage());
+            System.out.println("Alter " + field + " balance error! " + e.getMessage());
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Alter cash balance error closing CEMain! " + e.getMessage());
+                System.out.println("Alter " + field + " balance error closing CEMain! " + e.getMessage());
             }
         }
     }
 
-    public void alterBankBalance(String player, float amount) {
+    public HashMap<Player, Float> getPlayers() {
+        HashMap<Player, Float> data = new HashMap<Player, Float>();
         Statement statement = null;
-        String query = "UPDATE CEMain SET bank = bank + " + amount + " WHERE player_name = '" + player + "'";
+        String query = "SELECT player_name, bank FROM CEMain";
         try {
             statement = connection.createStatement();
-            statement.executeUpdate(query);
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                data.put(CompleteEconomy.plugin.getServer().getPlayer(rs.getString("player_name")), rs.getFloat("bank"));
+            }
         } catch (SQLException e) {
-            System.out.println("Alter bank balance error! " + e.getMessage());
+            System.out.println("Get Players error! " + e.getMessage());
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Alter bank balance error closing CEMain! " + e.getMessage());
+                System.out.println("Get Players error closing CEMain! " + e.getMessage());
             }
         }
-    }
-
-    public void alterXPBalance(String player, float amount) {
-        Statement statement = null;
-        String query = "UPDATE CEMain SET xp = xp + " + amount + " WHERE player_name = '" + player + "'";
-        try {
-            statement = connection.createStatement();
-            statement.executeUpdate(query);
-        } catch (SQLException e) {
-            System.out.println("Alter xp balance error! " + e.getMessage());
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-            } catch (Exception e) {
-                System.out.println("Alter xp balance error closing CEMain! " + e.getMessage());
-            }
-        }
+        return data;
     }
 }
