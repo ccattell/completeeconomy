@@ -1,9 +1,9 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,13 +16,6 @@ public class CEPayCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        String major;
-        String minor;
-        String majorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorSingle");
-        String minorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorSingle");
-        String majorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorPlural");
-        String minorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorPlural");
-        String format = CompleteEconomy.plugin.getConfig().getString("System.Formatting.Separate");
 
         if (cmd.getName().equalsIgnoreCase("pay")) {
             String to_name;
@@ -55,9 +48,6 @@ public class CEPayCommand implements CommandExecutor {
             if (fq.resultSet()) {
                 // found a record so load data
                 float c;
-                long major_amt;
-                long minor_amt;
-                double m;
                 String s;
                 c = fq.getCash();
                 if (c < pay_amount) {
@@ -69,39 +59,10 @@ public class CEPayCommand implements CommandExecutor {
                     CEMainResultSet tq = new CEMainResultSet(where_to);
                     if (tq.resultSet()) {
 //                        old_to = tq.getCash();
-                        if (format.equalsIgnoreCase("false")) {
-                            if (pay_amount == 1) {
-                                major = majorSingle;
-                            } else {
-                                major = majorPlural;
-                            }
-                            s = pay_amount + " " + major;
-                        } else {
-                            s = "";
-                            major_amt = (long) pay_amount;
-                            m = pay_amount - major_amt;
-                            m = m * 100;
-                            minor_amt = (long) m;
-                            if (major_amt > 0) {
-                                if (major_amt == 1) {
-                                    major = majorSingle;
-                                } else {
-                                    major = majorPlural;
-                                }
-                                s = s + major_amt + " " + major + " ";
-                            }
-                            if (minor_amt > 0) {
-                                if (minor_amt == 1) {
-                                    minor = minorSingle;
-                                } else {
-                                    minor = minorPlural;
-                                }
-                                s = s + minor_amt + " " + minor;
-                            }
-                        }
+                        s = new CEMajorMinor().getFormat(pay_amount);
                         CEQueryFactory qf = new CEQueryFactory();
-                        qf.alterCashBalance(from_name, -pay_amount);
-                        qf.alterCashBalance(to_name, pay_amount);
+                        qf.alterBalance("cash", from_name, -pay_amount);
+                        qf.alterBalance("cash", to_name, pay_amount);
                         sender.sendMessage("You paid " + to_name + " " + s);
                         return true;
                     } else {

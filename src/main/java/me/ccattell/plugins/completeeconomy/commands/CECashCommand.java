@@ -1,9 +1,8 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,13 +16,7 @@ public class CECashCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        String major;
-        String minor;
-        String majorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorSingle");
-        String minorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorSingle");
-        String majorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorPlural");
-        String minorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorPlural");
-        String format = CompleteEconomy.plugin.getConfig().getString("System.Formatting.Separate");
+
         if (cmd.getName().equalsIgnoreCase("cash")) {
             String name = "";
             Player player = null;
@@ -47,43 +40,10 @@ public class CECashCommand implements CommandExecutor {
                 where.put("player_name", name);
                 CEMainResultSet rsm = new CEMainResultSet(where);
                 float c;
-                long major_amt;
-                long minor_amt;
-                double m;
-                String s;
                 if (rsm.resultSet()) {
                     // found a record so load data
                     c = rsm.getCash();
-                    if (format.equalsIgnoreCase("false")) {
-                        if (c == 1) {
-                            major = majorSingle;
-                        } else {
-                            major = majorPlural;
-                        }
-                        s = c + " " + major;
-                    } else {
-                        s = "";
-                        major_amt = (long) c;
-                        m = c - major_amt;
-                        m = m * 100;
-                        minor_amt = (long) m;
-                        if (major_amt > 0) {
-                            if (major_amt == 1) {
-                                major = majorSingle;
-                            } else {
-                                major = majorPlural;
-                            }
-                            s = s + major_amt + " " + major + " ";
-                        }
-                        if (minor_amt > 0) {
-                            if (minor_amt == 1) {
-                                minor = minorSingle;
-                            } else {
-                                minor = minorPlural;
-                            }
-                            s = s + minor_amt + " " + minor;
-                        }
-                    }
+                    String s = new CEMajorMinor().getFormat(c);
                     String which = (name_supplied) ? name + "'s" : "Your";
                     sender.sendMessage(which + " cash balance: " + s);
                 } else {
