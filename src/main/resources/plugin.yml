@@ -29,6 +29,6 @@ commands:
     description: This will display your bank account balance.
     usage: /<command>
   xpbank:
-    aliases: [b]
+    aliases: [xpb]
     description: This will display your XP account balance.
     usage: /<command>

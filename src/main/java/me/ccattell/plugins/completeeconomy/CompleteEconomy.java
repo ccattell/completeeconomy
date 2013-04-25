@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
@@ -60,5 +61,6 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
         getCommand("bank").setExecutor(new CEBankCommand());
+        getCommand("xpbank").setExecutor(new CEXPBankCommand());
     }
 }
