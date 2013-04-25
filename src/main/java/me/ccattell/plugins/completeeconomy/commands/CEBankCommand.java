@@ -84,7 +84,7 @@ public class CEBankCommand implements CommandExecutor {
                 try { // check it's a number, if not return false
                     transaction_amount = Float.parseFloat(args[1]);
                 } catch (NumberFormatException nfe) {
-                    return false;
+                    return true;
                 }
                 if(transaction_amount > 0){
                     HashMap<String, Object> where = new HashMap<String, Object>();
@@ -101,7 +101,7 @@ public class CEBankCommand implements CommandExecutor {
                                 return true;
                             }else{
                                 sender.sendMessage("Insufficient funds to complete withdrawal");
-                                return false;
+                                return true;
                             }
                         }
                         if(transaction_type.equalsIgnoreCase("deposit") || transaction_type.equalsIgnoreCase("d")){
@@ -114,14 +114,14 @@ public class CEBankCommand implements CommandExecutor {
                                 return true;
                             }else{
                                 sender.sendMessage("Insufficient funds to complete deposit");
-                                return false;
+                                return true;
                             }
                         }
                     }
                 }
             } else {
                 sender.sendMessage("Incorrect number of arguments");
-                return false;
+                return true;
             }
         }
         return false;
