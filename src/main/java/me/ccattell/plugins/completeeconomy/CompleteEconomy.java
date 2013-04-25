@@ -14,7 +14,7 @@ import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
-import me.ccattell.plugins.completeeconomy.utilities.GiveInterest;
+import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
@@ -56,7 +56,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
-        new GiveInterest().interest();
+        new CEGiveInterest().interest();
         pm.registerEvents(new CEJoinListener(), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
