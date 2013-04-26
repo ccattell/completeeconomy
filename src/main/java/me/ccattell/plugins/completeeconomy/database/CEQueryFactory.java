@@ -209,6 +209,25 @@ public class CEQueryFactory {
         }
     }
 
+    public void killBalance(String field, String player) {
+        Statement statement = null;
+        String query = "UPDATE CEMain SET " + field + " = '0' WHERE player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println("Alter " + field + " balance error! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Alter " + field + " balance error closing CEMain! " + e.getMessage());
+            }
+        }
+    }
+
     public HashMap<Player, Float> getPlayers() {
         HashMap<Player, Float> data = new HashMap<Player, Float>();
         Statement statement = null;

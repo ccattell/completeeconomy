@@ -14,6 +14,7 @@ import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
+import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
 import org.bukkit.Bukkit;
@@ -60,8 +61,10 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         }
         configs = new CECustomConfigs(this);
         configs.copyDefaultConfigs();
+        console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading config files");
         configs.loadCustomConfigs();
         pm.registerEvents(new CEJoinListener(), this);
+        pm.registerEvents(new CEDeathListener(), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
         getCommand("bank").setExecutor(new CEBankCommand());
