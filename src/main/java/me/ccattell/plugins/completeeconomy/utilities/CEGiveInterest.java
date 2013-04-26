@@ -1,54 +1,23 @@
 package me.ccattell.plugins.completeeconomy.utilities;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 public class CEGiveInterest {
-    private FileConfiguration customConfig = null;
-    private File customConfigFile = null;
-    
-    public void reloadCustomConfig() {
-        if (customConfigFile == null) {
-            customConfigFile = new File(CompleteEconomy.plugin.getDataFolder()+File.separator+ "bankConfig.yml");
-        }
-        if(!customConfigFile.exists()) {
-            try {
-                customConfigFile.createNewFile();
-            } catch (IOException e) {
-                CompleteEconomy.plugin.getLogger().severe("Could not create Config.yml! " + e);
-            }
-        }
-        customConfig = YamlConfiguration.loadConfiguration(customConfigFile);
-        // Look for defaults in the jar
-        InputStream defConfigStream = CompleteEconomy.plugin.getResource("bankConfig.yml");
-        if (defConfigStream != null) {
-            YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
-            customConfig.setDefaults(defConfig);
-        }
-        customConfig.saveResource("bankConfig.yml", false);
-    }
-    public FileConfiguration getCustomConfig() {
-        if (customConfig == null) {
-            this.reloadCustomConfig();
-        }
-        return customConfig;
-    }
-    boolean enabled = getCustomConfig().getBoolean("Banking.Interest.Enabled");
-    boolean online = getCustomConfig().getBoolean("Banking.Interest.Online");
-    boolean announce = getCustomConfig().getBoolean("Banking.Interest.Announce");
-    long interval = getCustomConfig().getInt("Banking.Interest.Interval") * 20;
-    float cutoff = getCustomConfig().getInt("Banking.Interest.Cutoff");
-    float percent = getCustomConfig().getInt("Banking.Interest.Amount");
+
+    boolean enabled = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
+    boolean online = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
+    boolean announce = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
+    long interval = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
+    // convert to float
+    float cutoff = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
+    // convert int to float - old default was 0.1 so divide by 10
+    float percent = (CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") / 10F);
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
@@ -65,7 +34,7 @@ public class CEGiveInterest {
                     // do stuff
                     doInterest();
                 }
-            }, 60L, interval);
+            }, interval, interval);
         }
     }
 
@@ -77,7 +46,7 @@ public class CEGiveInterest {
             if ((online && online_players.contains(entry.getKey())) || !online) {
                 // calculate interest
                 if (entry.getValue() >= cutoff) {
-                    float credit = toCents((entry.getValue() / 100) * percent);
+                    float credit = toCents((entry.getValue() / 100F) * percent);
                     if (credit > 0) { // don't give interest unless there is some
                         qf.alterBalance("bank", entry.getKey().getName(), credit);
                         if (announce) {
