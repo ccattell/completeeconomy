@@ -1,21 +1,54 @@
 package me.ccattell.plugins.completeeconomy.utilities;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 public class CEGiveInterest {
-
-    boolean enabled = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Enabled");
-    final boolean online = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Online");
-    boolean announce = CompleteEconomy.plugin.getConfig().getBoolean("System.Banking.Interest.Announce");
-    long interval = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Interval") * 20;
-    float cutoff = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Cutoff");
-    float percent = CompleteEconomy.plugin.getConfig().getInt("System.Banking.Interest.Amount");
+    private FileConfiguration customConfig = null;
+    private File customConfigFile = null;
+    
+    public void reloadCustomConfig() {
+        if (customConfigFile == null) {
+            customConfigFile = new File(CompleteEconomy.plugin.getDataFolder()+File.separator+ "bankConfig.yml");
+        }
+        if(!customConfigFile.exists()) {
+            try {
+                customConfigFile.createNewFile();
+            } catch (IOException e) {
+                CompleteEconomy.plugin.getLogger().severe("Could not create Config.yml! " + e);
+            }
+        }
+        customConfig = YamlConfiguration.loadConfiguration(customConfigFile);
+        // Look for defaults in the jar
+        InputStream defConfigStream = CompleteEconomy.plugin.getResource("bankConfig.yml");
+        if (defConfigStream != null) {
+            YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+            customConfig.setDefaults(defConfig);
+        }
+        customConfig.saveResource("bankConfig.yml", false);
+    }
+    public FileConfiguration getCustomConfig() {
+        if (customConfig == null) {
+            this.reloadCustomConfig();
+        }
+        return customConfig;
+    }
+    boolean enabled = getCustomConfig().getBoolean("Banking.Interest.Enabled");
+    boolean online = getCustomConfig().getBoolean("Banking.Interest.Online");
+    boolean announce = getCustomConfig().getBoolean("Banking.Interest.Announce");
+    long interval = getCustomConfig().getInt("Banking.Interest.Interval") * 20;
+    float cutoff = getCustomConfig().getInt("Banking.Interest.Cutoff");
+    float percent = getCustomConfig().getInt("Banking.Interest.Amount");
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
