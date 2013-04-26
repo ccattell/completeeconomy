@@ -4,7 +4,7 @@ Banking:
 
     #Type options are Teller, Sign, Command, or All
   Type: Command
-    
+
   Interest:
     Enabled: true
 
@@ -23,10 +23,10 @@ Banking:
 
       # The balance to be met where we stop giving interest.
       # 0.0 for no limit
-    Cutoff: 0.0
+    Cutoff: 0
 
       # Percentage of holdings to give / take (Negative to take)
-    Amount: 0.1
+    Amount: 1
 
 XPBanking:
   Enabled: true
