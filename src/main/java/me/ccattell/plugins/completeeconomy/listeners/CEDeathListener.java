@@ -14,11 +14,11 @@ public class CEDeathListener implements Listener {
     
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
+        String name = event.getEntity().getName();
         boolean purgeondeath = CompleteEconomy.plugin.getConfig().getBoolean("System.Currency.PurgeOnDeath");
         if(purgeondeath){
-            qf.killBalance("cash", event.getEntity().getName());
-            String name = event.getEntity().getName();
-            event.getEntity().sendMessage("You Suck, Grandmaster " + name + "!");
+            qf.killBalance("cash", name);
         }
+        event.getEntity().sendMessage("You Suck, Grandmaster " + name + "!");
     }
 }
