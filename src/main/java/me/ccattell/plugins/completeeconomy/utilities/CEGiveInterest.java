@@ -16,8 +16,8 @@ public class CEGiveInterest {
     long interval = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
     // convert to float
     float cutoff = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
-    // convert int to float - old default was 0.1 so divide by 10
-    float percent = (CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") / 10F);
+    // convert to float
+    float percent = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
@@ -46,7 +46,7 @@ public class CEGiveInterest {
             if ((online && online_players.contains(entry.getKey())) || !online) {
                 // calculate interest
                 if (entry.getValue() >= cutoff) {
-                    float credit = toCents((entry.getValue() / 100F) * percent);
+                    float credit = toCents((interval / 86400) * (percent / 100) * entry.getValue());
                     if (credit > 0) { // don't give interest unless there is some
                         qf.alterBalance("bank", entry.getKey().getName(), credit);
                         if (announce) {
