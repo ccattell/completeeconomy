@@ -5,42 +5,46 @@ name: Complete Economy
 startup: postworld
 version: 0.1-a
 permissions:
-  ce.admin:
+  ceadmin.commanmd:
     description: Allow players to use the CE admin features.
     default: op
-  ce.command:
-    description: Allow players to use the /ce command.
-    default: true
-  cash.command:
+  ce.cash:
     description: Allow players to use the /cash command.
     default: false
-  pay.command:
+  ce.pay:
     description: Allow players to use the /pay command.
     default: false
-  bank.command:
+  ce.bank:
     description: Allow players to use the /bank command.
     default: false
-  xpbank.command:
+  ce.xpbank:
     description: Allow players to use the /xpbank command.
     default: false
 commands:
-  ce:
+  ceadmin:
     description: The CompleteEconomy command
     usage: /<command>
-    permission: ce.command
-    permission-message: You don't have the permission <permission> to use this command
+    permission: ceadmin.command
+    permission-message: You don't have permission to use admin commands
   cash:
     description: This will display your bank account balance.
     usage: /<command>
+    permission: ce.cash
+    permission-message: You don't have permission to use this command
   pay:
     description: This will give [amount] to another player.
     usage: /<command> [amount] [player name]
-
+    permission: ce.pay
+    permission-message: You don't have permission to pay other players
   bank:
     aliases: [b]
     description: This will display your bank account balance.
     usage: /<command>
+    permission: ce.bank
+    permission-message: You don't have permission to use the bank
   xpbank:
     aliases: [xpb]
     description: This will display your XP account balance.
     usage: /<command>
+    permission: ce.xpbank
+    permission-message: You don't have permission to use the xp bank
