@@ -19,8 +19,8 @@ public class CEBankCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("bank")) {
-            if (!sender.hasPermission("bank.command")) {
-                sender.sendMessage("You don't have permission to use that command!");
+            if (!sender.hasPermission("ce.bank")) {
+                sender.sendMessage("You don't have permission to use the bank!");
                 return true;
             }else{
                 Player player = null;
