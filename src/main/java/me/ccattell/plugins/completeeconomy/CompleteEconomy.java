@@ -17,6 +17,7 @@ import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
+import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
@@ -30,6 +31,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();
     public CECustomConfigs configs;
+    protected CEVersionCheck versionCheck;
 
     @Override
     public void onDisable() {
@@ -44,6 +46,11 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
 
         plugin = this;
         console = getServer().getConsoleSender();
+        this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/tardis/files.rss");
+        if(this.versionCheck.updateNeeded()){
+            console.sendMessage(CompleteEconomy.plugin.pluginName + "A new version is available: " + this.versionCheck.getVersion());
+            console.sendMessage(CompleteEconomy.plugin.pluginName + "Get it from: " + this.versionCheck.getLink());
+        }
         try {
             if (CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")) {
                 console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading SQLite Database");
