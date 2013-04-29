@@ -26,8 +26,8 @@ public class CEBankCommand implements CommandExecutor {
                 sender.sendMessage("The bank command cannot be used from the console!");
                 return true;
             }
-            if (!sender.hasPermission("bank.command")) {
-                sender.sendMessage("You don't have permission to use that command!");
+            if (!sender.hasPermission("ce.bank")) {
+                sender.sendMessage("You don't have permission to use the bank!");
                 return true;
             }
             String name = player.getName();
