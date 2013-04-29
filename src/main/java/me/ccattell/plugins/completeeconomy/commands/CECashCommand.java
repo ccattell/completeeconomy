@@ -29,7 +29,7 @@ public class CECashCommand implements CommandExecutor {
                 }
                 boolean name_supplied = false; // use a boolean rather than comparing strings
                 if (args.length > 0) {
-                    if (!sender.hasPermission("ce.admin")) { // console always has permission
+                    if (!sender.hasPermission("ceadmin")) { // console always has permission
                         sender.sendMessage("You don't have permission to get another player's balance!");
                         return true;
                     }
