@@ -2,8 +2,11 @@ package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -13,10 +16,22 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * @author Charlie
  */
 public class CEJoinListener implements Listener {
+    protected CEVersionCheck versionCheck;
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         String name = event.getPlayer().getName();
+        String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
+        if(!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()){
+            this.versionCheck = new CEVersionCheck(CompleteEconomy.plugin,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            if(this.versionCheck.updateNeeded()){
+                String update = this.versionCheck.getUpdate();
+                if (update.equalsIgnoreCase("yes")) {
+                    event.getPlayer().sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + this.versionCheck.getVersion() + ChatColor.RESET);
+                    event.getPlayer().sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + this.versionCheck.getLink() + ChatColor.RESET);
+                }
+            }
+        }
         loadPlayer(name);
 //        event.getPlayer().sendMessage("Welcome, "+ PlayerTitle +" " + event.getPlayer().getDisplayName() + "!");
         event.getPlayer().sendMessage("Welcome, Grandmaster " + name + "!");

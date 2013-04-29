@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.bukkit.ChatColor;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -21,8 +20,9 @@ public class CEVersionCheck {
     private URL filesFeed;
     private String version;
     private String link;
-
-    public CEVersionCheck(CompleteEconomy plugin, String url) {
+    private String update;
+    
+    public CEVersionCheck(CompleteEconomy plugin, String url){
         this.plugin = plugin;
         try {
             this.filesFeed = new URL(url);
@@ -44,9 +44,13 @@ public class CEVersionCheck {
             while (test == false && i < num_files) {
                 Node latestFile = document.getElementsByTagName("item").item(i);
                 NodeList children = latestFile.getChildNodes();
-                version = children.item(1).getTextContent().replace("ComleteEconomy ", "");
+                version = children.item(1).getTextContent().toLowerCase().replace("completeeconomy ", "");
                 link = children.item(3).getTextContent();
                 if (UpdateChannel.equalsIgnoreCase("release")) {
+                    if (!version.contains("alpha") && !version.contains("beta") && !version.contains("pre")) {
+                        test = true;
+                    }
+                } else if (UpdateChannel.equalsIgnoreCase("pre")) {
                     if (!version.contains("alpha") && !version.contains("beta")) {
                         test = true;
                     }
@@ -59,12 +63,14 @@ public class CEVersionCheck {
                 }
                 i++;
             }
-            if (test == false) {
-                plugin.console.sendMessage(plugin.pluginName + "There are no files to test in your channel");
-            } else {
-                if (plugin.getDescription().getVersion().equals(version)) {
-                    plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
-                } else {
+            if(test == false){
+                update = "none";
+                return true;
+            }else{
+                if(plugin.getDescription().getVersion().equals(version)){
+                    update = "no";
+                    return true;
+                }else{
                     String[] data = version.split("-");
                     String version1 = version;
                     if (data.length == 1) {
@@ -93,11 +99,12 @@ public class CEVersionCheck {
                     version2 = version2.toLowerCase().replace("-alpha-", "1");
                     double value2 = Double.parseDouble(version2);
 
-                    if (value1 > value2) {
-                        plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + version + ChatColor.RESET);
-                        plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + link + ChatColor.RESET);
-                    } else if (value1 < value2) {
-                        plugin.console.sendMessage(plugin.pluginName + "You are using an unreleased version of the plugin!");
+                    if(value1 > value2){
+                        update = "yes";
+                        return true;
+                    }else if(value1 < value2){
+                        update = "dev";
+                        return true;
                     }
                 }
             }
@@ -105,5 +112,14 @@ public class CEVersionCheck {
             System.out.println("Could not get latest channels: " + e);
         }
         return false;
+    }
+    public String getVersion(){
+        return version;
+    }
+    public String getLink(){
+        return link;
+    }
+    public String getUpdate(){
+        return update;
     }
 }

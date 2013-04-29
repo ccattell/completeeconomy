@@ -49,7 +49,19 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if(!UpdateChannel.equalsIgnoreCase("none")){
             this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
-            if(this.versionCheck.updateNeeded()){}
+            if(this.versionCheck.updateNeeded()){
+                String update = this.versionCheck.getUpdate();
+                if (update.equalsIgnoreCase("none")) {
+                    plugin.console.sendMessage(plugin.pluginName + "There are no files to test in your channel");                    
+                } else if (update.equalsIgnoreCase("no")) {
+                    plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
+                } else if (update.equalsIgnoreCase("yes")) {
+                        plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + this.versionCheck.getVersion() + ChatColor.RESET);
+                        plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + this.versionCheck.getLink() + ChatColor.RESET);
+                } else if (update.equalsIgnoreCase("dev")) {
+                    plugin.console.sendMessage(plugin.pluginName + "You are using an unreleased version of the plugin!");
+                }
+            }
         }
         try {
             if (getConfig().getString("System.Database.Type").equals("sqlite")) {
