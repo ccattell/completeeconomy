@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.ccattell.plugins.completeeconomy</groupId>
     <artifactId>CompleteEconomy</artifactId>
-    <version>0.1-a</version>
+    <version>0.1-alpha</version>
     <name>Complete Economy</name>
     <repositories>
         <repository>

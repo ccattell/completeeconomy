@@ -3,7 +3,7 @@ description: Everything your server needs for a fully functioning economy
 main: me.ccattell.plugins.completeeconomy.CompleteEconomy
 name: Complete Economy
 startup: postworld
-version: 0.1-a
+version: 0.1-alpha
 permissions:
   ceadmin.commanmd:
     description: Allow players to use the CE admin features.

@@ -1,4 +1,7 @@
 System:
+  
+  # Updates can be none (for no update warnings), alpha, beta, and release
+  UpdateChannel: release
   Database:
     # Databases Supported:
     # mysql, sqlite
