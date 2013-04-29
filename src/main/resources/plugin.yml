@@ -5,21 +5,29 @@ name: Complete Economy
 startup: postworld
 version: 0.1-alpha
 permissions:
-  ceadmin.commanmd:
+  ce.admin:
     description: Allow players to use the CE admin features.
+    default: op
+  ce.use:
+    description: Allow players to use the CE features.
+    children:
+      ce.cash: true
+      ce.pay: true
+      ce.bank: true
+      ce.xpbank: true
     default: op
   ce.cash:
     description: Allow players to use the /cash command.
-    default: false
+    default: op
   ce.pay:
     description: Allow players to use the /pay command.
-    default: false
+    default: op
   ce.bank:
     description: Allow players to use the /bank command.
-    default: false
+    default: op
   ce.xpbank:
     description: Allow players to use the /xpbank command.
-    default: false
+    default: op
 commands:
   ceadmin:
     description: The CompleteEconomy command
