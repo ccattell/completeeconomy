@@ -17,13 +17,13 @@ import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
-import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
+import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheckAlt;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
-public class CompleteEconomy extends JavaPlugin implements Listener {
+public class CompleteEconomyAlt extends JavaPlugin implements Listener {
 
-    public static CompleteEconomy plugin;
+    public static CompleteEconomyAlt plugin;
     CEDatabase service = CEDatabase.getInstance();
     public PluginDescriptionFile pdfFile;
     public ConsoleCommandSender console;
@@ -31,7 +31,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();
     public CECustomConfigs configs;
-    protected CEVersionCheck versionCheck;
+    protected CEVersionCheckAlt versionCheck;
 
     @Override
     public void onDisable() {
@@ -46,10 +46,16 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
 
         plugin = this;
         console = getServer().getConsoleSender();
-        String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
-        if(!UpdateChannel.equalsIgnoreCase("none")){
-            this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
-            if(this.versionCheck.updateNeeded()){}
+        String UpdateChannel = getConfig().getString("System.UpdateChannel");
+        if (!UpdateChannel.equalsIgnoreCase("none")) {
+            this.versionCheck = new CEVersionCheckAlt(this, "http://dev.bukkit.org/server-mods/tardis/files.rss");
+            if (versionCheck.updateNeeded()) {
+                // send details
+                plugin.console.sendMessage(pluginName + "A new version is available: " + ChatColor.GOLD + versionCheck.getVersion());
+                plugin.console.sendMessage(pluginName + "Get it from: " + ChatColor.GOLD + versionCheck.getLink());
+            } else {
+                plugin.console.sendMessage(pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
+            }
         }
         try {
             if (getConfig().getString("System.Database.Type").equals("sqlite")) {
@@ -66,7 +72,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         } catch (Exception e) {
             console.sendMessage(pluginName + "Connection and Tables Error: " + e);
         }
-        configs = new CECustomConfigs(this);
+        configs = new CECustomConfigs(CompleteEconomy.plugin);
         configs.copyDefaultConfigs();
         console.sendMessage(pluginName + "Loading config files");
         configs.loadCustomConfigs();

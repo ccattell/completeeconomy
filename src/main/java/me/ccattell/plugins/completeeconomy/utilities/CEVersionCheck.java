@@ -5,8 +5,8 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Locale;
 import javax.xml.parsers.DocumentBuilderFactory;
+import org.bukkit.ChatColor;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -21,7 +21,6 @@ public class CEVersionCheck {
     private URL filesFeed;
     private String version;
     private String link;
-    String this_version;
 
     public CEVersionCheck(CompleteEconomy plugin, String url) {
         this.plugin = plugin;
@@ -36,148 +35,75 @@ public class CEVersionCheck {
         try {
             InputStream input = this.filesFeed.openConnection().getInputStream();
             Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(input);
-            this_version = plugin.getDescription().getVersion();
-            System.out.println(this_version);
-            Channel UpdateChannel = Channel.valueOf(plugin.getConfig().getString("System.UpdateChannel").toUpperCase(Locale.ENGLISH));
-            System.out.println(UpdateChannel);
-//            boolean test = false;
-            // channel found?
-            boolean release = false;
-            boolean beta = false;
-            // versions
-            float r1 = 0;
-            float b1 = 0;
-            float a1 = 0;
-            // subversions
-            int r2 = 0;
-            int b2 = 0;
-            int a2 = 0;
-            // links
-            String r_link = "";
-            String b_link = "";
-            String a_link = "";
-            // versions
-            String r_vers = "";
-            String b_vers = "";
-            String a_vers = "";
-            int count = 0;
+
+            String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
+            boolean test = false;
             int i = 0;
             int num_files = document.getElementsByTagName("item").getLength();
-            System.out.println(num_files);
-//            while (test == false && i < num_files) {
-            while (count < 3 && i < num_files) {
+            plugin.console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
+            while (test == false && i < num_files) {
                 Node latestFile = document.getElementsByTagName("item").item(i);
                 NodeList children = latestFile.getChildNodes();
-                String tmp = children.item(1).getTextContent().replace("TARDIS ", "");
-//                link = children.item(3).getTextContent();
-                String[] data = tmp.split("-");
-                try {
-                    if (data.length < 2 && !release) {
-                        // found latest release build
-                        r1 = Float.parseFloat(data[0]);
-                        r_link = children.item(3).getTextContent();
-                        r_vers = tmp;
-                        release = true;
-                        ++count;
-                    } else if (data.length > 1) {
-                        if (data[1].equals("beta") && !beta) {
-                            // found latest beta build
-                            b1 = Float.parseFloat(data[0]);
-                            if (data.length > 2) {
-                                b2 = Integer.parseInt(data[2]);
-                            }
-                            b_link = children.item(3).getTextContent();
-                            b_vers = tmp;
-                            beta = true;
-                            ++count;
-                        }
-                        if (data[1].equals("pre")) { // change this to alpha for release
-                            // found latest alpha build
-                            a1 = Float.parseFloat(data[0]);
-                            if (data.length > 2) {
-                                a2 = Integer.parseInt(data[2]);
-                            }
-                            a_link = children.item(3).getTextContent();
-                            a_vers = tmp;
-                            ++count;
-                        }
+                version = children.item(1).getTextContent().replace("ComleteEconomy ", "");
+                link = children.item(3).getTextContent();
+                if (UpdateChannel.equalsIgnoreCase("release")) {
+                    if (!version.contains("alpha") && !version.contains("beta")) {
+                        test = true;
                     }
-                } catch (NumberFormatException nfe) {
-                    System.out.println("Could not parse number: " + nfe.getMessage());
+                } else if (UpdateChannel.equalsIgnoreCase("beta")) {
+                    if (!version.contains("alpha")) {
+                        test = true;
+                    }
+                } else {
+                    test = true;
                 }
-//                if (UpdateChannel.equalsIgnoreCase("release")) {
-//                    if (!version.contains("alpha") && !version.contains("beta")) {
-//                        test = true;
-//                    }
-//                } else if (UpdateChannel.equalsIgnoreCase("beta")) {
-//                    if (!version.contains("alpha")) {
-//                        test = true;
-//                    }
-//                } else {
-//                    test = true;
-//                }
                 i++;
             }
-            switch (UpdateChannel) {
-                case RELEASE:
-                    this.link = r_link;
-                    this.version = r_vers;
-                    return compareVersions(r1, r2);
-                case BETA:
-                    this.link = b_link;
-                    this.version = b_vers;
-                    return compareVersions(b1, b2);
-                default:
-                    this.link = a_link;
-                    this.version = a_vers;
-                    return compareVersions(a1, a2);
+            if (test == false) {
+                plugin.console.sendMessage(plugin.pluginName + "There are no files to test in your channel");
+            } else {
+                if (plugin.getDescription().getVersion().equals(version)) {
+                    plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
+                } else {
+                    String[] data = version.split("-");
+                    String version1 = version;
+                    if (data.length == 1) {
+                        version1 = version1.concat("-release");
+                        version1 = version1.concat("-1");
+                    } else if (data.length == 2) {
+                        version1 = version1.concat("-1");
+                    }
+                    version1 = version1.toLowerCase().replace("-release-", "4");
+                    version1 = version1.toLowerCase().replace("-pre-", "3");
+                    version1 = version1.toLowerCase().replace("-beta-", "2");
+                    version1 = version1.toLowerCase().replace("-alpha-", "1");
+                    double value1 = Double.parseDouble(version1);
+
+                    String[] data1 = plugin.getDescription().getVersion().split("-");
+                    String version2 = plugin.getDescription().getVersion();
+                    if (data1.length == 1) {
+                        version2 = version2.concat("-release");
+                        version2 = version2.concat("-1");
+                    } else if (data1.length == 2) {
+                        version2 = version2.concat("-1");
+                    }
+                    version2 = version2.toLowerCase().replace("-release-", "4");
+                    version2 = version2.toLowerCase().replace("-pre-", "3");
+                    version2 = version2.toLowerCase().replace("-beta-", "2");
+                    version2 = version2.toLowerCase().replace("-alpha-", "1");
+                    double value2 = Double.parseDouble(version2);
+
+                    if (value1 > value2) {
+                        plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + version + ChatColor.RESET);
+                        plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + link + ChatColor.RESET);
+                    } else if (value1 < value2) {
+                        plugin.console.sendMessage(plugin.pluginName + "You are using an unreleased version of the plugin!");
+                    }
+                }
             }
-//            if (test == false) {
-//                plugin.console.sendMessage(plugin.pluginName + "There are no files to test in your channel");
-//            } else {
-//                if (plugin.getDescription().getVersion().equals(version)) {
-//                    plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
-//                } else {
-//                    String[] data = version.split("-");
-//                    plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + version + ChatColor.RESET);
-//                    plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + link + ChatColor.RESET);
-//                }
-//            }
         } catch (Exception e) {
             System.out.println("Could not get latest channels: " + e);
         }
-
         return false;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    private boolean compareVersions(float a, int b) {
-        int minor = 0;
-        // get current version
-        String[] running = this_version.split("-");
-        float major = Float.parseFloat(running[0]);
-        if (running.length > 2) {
-            minor = Integer.parseInt(running[2]);
-        }
-        if (a > major) {
-            return true;
-        }
-        if (a == major && b > minor) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private enum Channel {
-
-        RELEASE, BETA, ALPHA;
     }
 }
