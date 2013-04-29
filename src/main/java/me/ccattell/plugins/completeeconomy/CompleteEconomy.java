@@ -46,19 +46,26 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
 
         plugin = this;
         console = getServer().getConsoleSender();
-        String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
-        if(!UpdateChannel.equalsIgnoreCase("none")){
-            this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/tardis/files.rss");
+        String UpdateChannel = getConfig().getString("System.UpdateChannel");
+        if (!UpdateChannel.equalsIgnoreCase("none")) {
+            this.versionCheck = new CEVersionCheck(this, "http://dev.bukkit.org/server-mods/tardis/files.rss");
+            if (versionCheck.updateNeeded()) {
+                // send details
+                plugin.console.sendMessage(pluginName + "A new version is available: " + ChatColor.GOLD + versionCheck.getVersion());
+                plugin.console.sendMessage(pluginName + "Get it from: " + ChatColor.GOLD + versionCheck.getLink());
+            } else {
+                plugin.console.sendMessage(pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
+            }
         }
         try {
-            if (CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")) {
-                console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading SQLite Database");
+            if (getConfig().getString("System.Database.Type").equals("sqlite")) {
+                console.sendMessage(pluginName + "Loading SQLite Database");
                 String path = getDataFolder() + File.separator + "CompleteEconomy.db";
                 service.setConnection(path);
                 new CEInitSQLite().initSQLite();
             } else {
                 // mysql
-                console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading MySQL Database");
+                console.sendMessage(pluginName + "Loading MySQL Database");
                 service.setConnection();
                 new CEInitMySQL().initMYSQL();
             }
@@ -67,7 +74,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         }
         configs = new CECustomConfigs(this);
         configs.copyDefaultConfigs();
-        console.sendMessage(CompleteEconomy.plugin.pluginName + "Loading config files");
+        console.sendMessage(pluginName + "Loading config files");
         configs.loadCustomConfigs();
         pm.registerEvents(new CEJoinListener(), this);
         pm.registerEvents(new CEDeathListener(), this);
