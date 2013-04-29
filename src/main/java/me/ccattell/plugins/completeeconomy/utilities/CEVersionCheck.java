@@ -40,10 +40,11 @@ public class CEVersionCheck {
             boolean test = false;
             int i = 0;
             int num_files = document.getElementsByTagName("item").getLength();
+            plugin.console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
             while(test == false && i < num_files){
                 Node latestFile = document.getElementsByTagName("item").item(i);
                 NodeList children = latestFile.getChildNodes();
-                version = children.item(1).getTextContent().replace("TARDIS ", "");
+                version = children.item(1).getTextContent().replace("ComleteEconomy ", "");
                 link = children.item(3).getTextContent();
                 if(UpdateChannel.equalsIgnoreCase("release")) {
                     if(!version.contains("alpha") && !version.contains("beta")){
@@ -65,8 +66,39 @@ public class CEVersionCheck {
                     plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
                 }else{
                     String[] data = version.split("-");
-                    plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + version + ChatColor.RESET);
-                    plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + link + ChatColor.RESET);
+                    String version1 = version;
+                    if(data.length == 1){
+                        version1 = version1.concat("-release");
+                        version1 = version1.concat("-1");
+                    }else if(data.length == 2){
+                        version1 = version1.concat("-1");
+                    }
+                    version1=version1.toLowerCase().replace("-release-", "4");
+                    version1=version1.toLowerCase().replace("-pre-", "3");
+                    version1=version1.toLowerCase().replace("-beta-", "2");
+                    version1=version1.toLowerCase().replace("-alpha-", "1");
+                    double value1 = Double.parseDouble(version1);
+                    
+                    String[] data1 = plugin.getDescription().getVersion().split("-");
+                    String version2 = plugin.getDescription().getVersion();
+                    if(data1.length == 1){
+                        version2 = version2.concat("-release");
+                        version2 = version2.concat("-1");
+                    }else if(data1.length == 2){
+                        version2 = version2.concat("-1");
+                    }
+                    version2=version2.toLowerCase().replace("-release-", "4");
+                    version2=version2.toLowerCase().replace("-pre-", "3");
+                    version2=version2.toLowerCase().replace("-beta-", "2");
+                    version2=version2.toLowerCase().replace("-alpha-", "1");
+                    double value2 = Double.parseDouble(version2);
+
+                    if(value1 > value2){
+                        plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + version + ChatColor.RESET);
+                        plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + link + ChatColor.RESET);
+                    }else if(value1 < value2){
+                        plugin.console.sendMessage(plugin.pluginName + "You are using an unreleased version of the plugin!");
+                    }
                 }
             }
         }catch(Exception e){
