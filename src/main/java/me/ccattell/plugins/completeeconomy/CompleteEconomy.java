@@ -48,7 +48,10 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         console = getServer().getConsoleSender();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if(!UpdateChannel.equalsIgnoreCase("none")){
-            this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/tardis/files.rss");
+            this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            if(this.versionCheck.updateNeeded()){
+                
+            }
         }
         try {
             if (CompleteEconomy.plugin.getConfig().getString("System.Database.Type").equals("sqlite")) {
