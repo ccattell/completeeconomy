@@ -5,15 +5,16 @@
       basepay: 1.0
       exp: 0.25
       break:
-        Dirt: 40
-        Sand: 40
-        Grass: 40
-        Clay: 50
-        Gravel: 50
-        Mycel: 60
-        Soul_Sand: 60
+        Grass: 10
+        Dirt: 10
+        Sand: 30
+        Clay: 40
+        Gravel: 60
+        Mycel: 70
+        Soul_Sand:150
     FISHING:
-    Herbalism:
+        Base: 300
+    Farming:
         Vine: 10
         Melon_Block: 20
         Pumpkin: 20
@@ -24,11 +25,13 @@
         Crops: 50
         Nether_Warts: 50
         Potato: 50
+        Brown_Mushroom: 150
+        Red_Mushroom: 150
+    Gardening:
         Red_Rose: 100
         Water_Lily: 100
         Yellow_Flower: 100
-        Brown_Mushroom: 150
-        Red_Mushroom: 150
+        Vine: 10
     Mining:
         Glowstone: 30
         Sandstone: 30
@@ -60,11 +63,3 @@
     Taming:
         Wolf: 250
         Ocelot: 500
-    UNARMED:
-    Woodcutting:
-        Huge_Mushroom_Red: 70
-        Huge_Mushroom_Brown: 70
-        Oak: 70
-        Spruce: 80
-        Birch: 90
-        Jungle: 100
