@@ -1,17 +1,24 @@
 Titles:
-  Enabled: true
-  
-  # Send a message to player when they are promoted?
   PromoteAnnounce: true
-
-  ShowTitleInChat: true
-  
   Levels:
-    Novice: 0
-    Apprentice: 20
-    Trained: 40
-    Professional: 60
-    Veteran: 80
-    Expert: 100
-    Master: 120
-    GrandMaster: 140
+    Beginner: 
+      Level: 0
+      Multiplier: 1
+    Novice:
+      Level: 30
+      Multiplier: 1.25
+    Apprentice:
+      Level: 60
+      Multiplier: 1.5
+    Journeyman:
+      Level: 90
+      Multiplier: 2
+    Expert:
+      Level: 120
+      Multiplier: 2.5
+    Master:
+      Level: 150
+      Multiplier: 3
+    GrandMaster:
+      Level: 180
+      Multiplier: 4
