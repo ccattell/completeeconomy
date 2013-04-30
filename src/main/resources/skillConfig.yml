@@ -1,65 +1,72 @@
-    ACROBATICS:
-    ARCHERY:
-    AXES:
-    Digging:
-      basepay: 1.0
-      exp: 0.25
-      break:
-        Grass: 10
-        Dirt: 10
-        Sand: 30
-        Clay: 40
-        Gravel: 60
-        Mycel: 70
-        Soul_Sand: 150
-    FISHING:
-        Base: 300
-    Farming:
-        Vine: 10
-        Melon_Block: 20
-        Pumpkin: 20
-        Cactus: 30
-        Cocoa: 30
-        Sugar_Cane_Block: 30
-        Carrot: 50
-        Crops: 50
-        Nether_Warts: 50
-        Potato: 50
-        Brown_Mushroom: 150
-        Red_Mushroom: 150
-    Gardening:
-        Red_Rose: 100
-        Water_Lily: 100
-        Yellow_Flower: 100
-        Vine: 10
-    Mining:
-        Glowstone: 30
-        Sandstone: 30
-        Stone: 30
-        Mossy_Cobblestone: 30
-        Netherrack: 30
-        Coal_Ore: 100
-        Ender_Stone: 150
-        Obsidian: 150
-        Redstone_Ore: 150
-        Quartz_Ore: 250
-        Iron_Ore: 250
-        Gold_Ore: 350
-        Lapis_Ore: 400
-        Diamond_Ore: 750
-        Emerald_Ore: 1000
-    POWERLEVEL:
-    REPAIR:
-    Smelting:
-        Coal_Ore: 10
-        Redstone_Ore: 15
-        Iron_Ore: 25
-        Quartz_Ore: 25
-        Gold_Ore: 35
-        Lapis_Ore: 40
-        Diamond_Ore: 75
-        Emerald_Ore: 100
-    SWORDS:
-    Taming:
-        Wolf: 250
-        Ocelot: 500
+Skills:
+  # action options are break, place, craft, repair, brew, enchant, fish, and defeat
+  # Send a message to player when they level up?
+  LevelAnnounce: true
+
+  ARCHERY:
+  AXES:
+  Digging:
+    basepay: 1.0
+    exp: 0.25
+    break:
+      Grass: 10
+      Dirt: 10
+      Sand: 30
+      Clay: 40
+      Gravel: 60
+      Mycel: 70
+      Soul_Sand: 150
+  FISHING:
+      Base: 300
+  Farming:
+    break:
+      Vine: 10
+      Melon_Block: 20
+      Pumpkin: 20
+      Cactus: 30
+      Cocoa: 30
+      Sugar_Cane_Block: 30
+      Carrot: 50
+      Crops: 50
+      Nether_Warts: 50
+      Potato: 50
+      Brown_Mushroom: 150
+      Red_Mushroom: 150
+  Gardening:
+    break:
+      Red_Rose: 100
+      Water_Lily: 100
+      Yellow_Flower: 100
+      Vine: 10
+  Mining:
+    break:
+      Glowstone: 30
+      Sandstone: 30
+      Stone: 30
+      Mossy_Cobblestone: 30
+      Netherrack: 30
+      Coal_Ore: 100
+      Ender_Stone: 150
+      Obsidian: 150
+      Redstone_Ore: 150
+      Quartz_Ore: 250
+      Iron_Ore: 250
+      Gold_Ore: 350
+      Lapis_Ore: 400
+      Diamond_Ore: 750
+      Emerald_Ore: 1000
+  POWERLEVEL:
+  REPAIR:
+  Smelting:
+    Coal_Ore: 10
+    Redstone_Ore: 15
+    Iron_Ore: 25
+    Quartz_Ore: 25
+    Gold_Ore: 35
+    Lapis_Ore: 40
+    Diamond_Ore: 75
+    Emerald_Ore: 100
+  SWORDS:
+  Taming:
+      Wolf: 250
+      Ocelot: 500
