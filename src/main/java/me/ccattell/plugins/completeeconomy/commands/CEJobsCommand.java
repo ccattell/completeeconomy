@@ -1,6 +1,6 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
-import java.util.ArrayList;
+import java.util.Set;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -38,7 +38,7 @@ public class CEJobsCommand implements CommandExecutor {
                     //player.sendMessage(moduleName + "Incorrect number of arguments");
                     //return true;
                 }
-                //Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+                Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
                 //sender.sendMessage(CompleteEconomy.plugin.configs.getJobConfig().getString(jobsList));
                 //new ArrayList();
             }
