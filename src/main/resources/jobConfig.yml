@@ -1,6 +1,6 @@
 Jobs:
   Enabled: true
-  Prefix: '[JOB]'
+  Prefix: '[JOBS]'
 
   MaxJobs:
     Default: 4

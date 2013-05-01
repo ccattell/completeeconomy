@@ -5,6 +5,7 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,19 +17,24 @@ import org.bukkit.entity.Player;
  */
 public class CEPayCommand implements CommandExecutor {
 
+    public String moduleName;
+    public String prefix = CompleteEconomy.plugin.getConfig().getString("System.Currency.Prefix");
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
 
         if (cmd.getName().equalsIgnoreCase("pay")) {
             Player player;
             if (sender instanceof Player) {
                 player = (Player) sender;
             } else {
-                sender.sendMessage("The pay command cannot be used from the console!");
+                sender.sendMessage(moduleName + "The pay command cannot be used from the console!");
                 return true;
             }
             if (!player.hasPermission("ce.pay")) {
-                player.sendMessage(CompleteEconomy.plugin.pluginName + "You don't have permission to use that command!");
+                player.sendMessage(moduleName + "You don't have permission to use that command!");
                 return true;
             } else {
                 String to_name;
@@ -36,18 +42,18 @@ public class CEPayCommand implements CommandExecutor {
                 float pay_amount;
 
                 if (args.length != 2) { // if args.length != 2 - incorrect number of arguments?
-                    player.sendMessage(CompleteEconomy.plugin.pluginName + "Incorrect number of arguments");
-                    return false;
+                    player.sendMessage(moduleName + "Incorrect number of arguments");
+                    return true;
                 }
-                try { // check it's a number, if not return false
+                try {
                     pay_amount = Float.parseFloat(args[0]);
                 } catch (NumberFormatException nfe) {
-                    return false;
+                    return true;
                 }
                 to_name = args[1];
                 from_name = player.getName();
                 if (from_name.equalsIgnoreCase(args[1])) { // can't pay yourself
-                    player.sendMessage(CompleteEconomy.plugin.pluginName + "You can't pay yourself!");
+                    player.sendMessage(moduleName + "You can't pay yourself!");
                     return true;
                 }
                 // name shouldn't be empty cause we're checking argument length
@@ -60,8 +66,8 @@ public class CEPayCommand implements CommandExecutor {
                     String s;
                     c = fq.getCash();
                     if (c < pay_amount) {
-                        player.sendMessage(CompleteEconomy.plugin.pluginName + "Not enough cash on hand to complete this transaction.");
-                        return false;
+                        player.sendMessage(moduleName + "Not enough cash on hand to complete this transaction.");
+                        return true;
                     } else {
                         HashMap<String, Object> where_to = new HashMap<String, Object>();
                         where_to.put("player_name", to_name);
@@ -72,16 +78,16 @@ public class CEPayCommand implements CommandExecutor {
                             CEQueryFactory qf = new CEQueryFactory();
                             qf.alterBalance("cash", from_name, -pay_amount);
                             qf.alterBalance("cash", to_name, pay_amount);
-                            player.sendMessage("You paid " + to_name + " " + s);
+                            player.sendMessage(moduleName + "You paid " + to_name + " " + s);
                             return true;
                         } else {
-                            player.sendMessage(CompleteEconomy.plugin.pluginName + to_name + " does not exist in the CE database! Check your spelling.");
-                            return false;
+                            player.sendMessage(moduleName + " does not exist in the CE database! Check your spelling.");
+                            return true;
                         }
                     }
                 }
             }
         }
-        return false;
+        return true;
     }
 }

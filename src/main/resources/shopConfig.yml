@@ -1,6 +1,6 @@
 Shops:
   Enabled: true
-  Prefix: '[SHOP]'
+  Prefix: '[SHOPS]'
 
     # Only open when player is online?
   Online: false

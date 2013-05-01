@@ -1,8 +1,10 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,12 +16,17 @@ import org.bukkit.entity.Player;
  */
 public class CECashCommand implements CommandExecutor {
 
+    public String moduleName;
+    public String prefix = CompleteEconomy.plugin.getConfig().getString("System.Currency.Prefix");
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
+
         if (cmd.getName().equalsIgnoreCase("cash")) {
             if (!sender.hasPermission("ce.cash")) {
-                sender.sendMessage("You don't have permission to use that command!");
+                sender.sendMessage(moduleName + "You don't have permission to use that command!");
                 return true;
             } else {
                 String name = "";
@@ -30,7 +37,7 @@ public class CECashCommand implements CommandExecutor {
                 boolean name_supplied = false; // use a boolean rather than comparing strings
                 if (args.length > 0) {
                     if (!sender.hasPermission("ce.admin")) { // console always has permission
-                        sender.sendMessage("You don't have permission to get another player's balance!");
+                        sender.sendMessage(moduleName + "You don't have permission to get another player's balance!");
                         return true;
                     }
                     // player name supplied
@@ -49,17 +56,17 @@ public class CECashCommand implements CommandExecutor {
                         c = rsm.getCash();
                         String s = new CEMajorMinor().getFormat(c);
                         String which = (name_supplied) ? name + "'s" : "Your";
-                        sender.sendMessage(which + " cash balance: " + s);
+                        sender.sendMessage(moduleName + which + " cash balance: " + s);
                     } else {
                         // player does not exist in the CEMain table
-                        sender.sendMessage(name + " does not exist in the CE database! Check your spelling.");
+                        sender.sendMessage(moduleName + name + " does not exist in the CE database! Check your spelling.");
                     }
                     return true;
                 } else {
-                    sender.sendMessage("You must supply a player name");
+                    sender.sendMessage(moduleName + "You must supply a player name");
                 }
             }
         }
-        return false;
+        return true;
     }
 }

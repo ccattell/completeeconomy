@@ -1,6 +1,6 @@
 Banking:
   Enabled: true
-  Prefix: '[BANK]'
+  Prefix: '[BANKS]'
 
   #Type options are Teller, Sign, Command, or All
   Type: Command
@@ -29,4 +29,4 @@ Banking:
 
 XPBanking:
   Enabled: true
-  Prefix: '[XP BANK]'
+  Prefix: '[XP BANKS]'

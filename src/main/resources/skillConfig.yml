@@ -1,6 +1,7 @@
 Skills:
   # action options are break, place, craft, repair, brew, enchant, fish, and defeat
   # Send a message to player when they level up?
+  Prefix: '[SKILLS]'
   LevelAnnounce: true
 
   ARCHERY:

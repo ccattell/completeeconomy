@@ -1,9 +1,11 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,19 +17,24 @@ import org.bukkit.entity.Player;
  */
 public class CEBankCommand implements CommandExecutor {
 
+    public String moduleName;
+    public String prefix = CompleteEconomy.plugin.configs.getBankConfig().getString("Banking.Prefix");
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        moduleName = ChatColor.GREEN + prefix + ChatColor.RESET + " ";
 
         if (cmd.getName().equalsIgnoreCase("bank")) {
             Player player;
             if (sender instanceof Player) {
                 player = (Player) sender;
             } else {
-                sender.sendMessage("The bank command cannot be used from the console!");
+                sender.sendMessage(moduleName + "The bank command cannot be used from the console!");
                 return true;
             }
             if (!sender.hasPermission("ce.bank")) {
-                sender.sendMessage("You don't have permission to use the bank!");
+                sender.sendMessage(moduleName + "You don't have permission to use the bank!");
                 return true;
             }
             String name = player.getName();
@@ -42,12 +49,12 @@ public class CEBankCommand implements CommandExecutor {
                 if (fq.resultSet()) {
                     balance = fq.getBank();
                     String s = new CEMajorMinor().getFormat(balance);
-                    sender.sendMessage("Your current bank balance is " + s);
+                    sender.sendMessage(moduleName + "Your current bank balance is " + s);
                     return true;
                 }
             } else if (args.length == 2) {
                 transaction_type = args[0];
-                try { // check it's a number, if not return false
+                try {
                     transaction_amount = Float.parseFloat(args[1]);
                 } catch (NumberFormatException nfe) {
                     return true;
@@ -63,10 +70,10 @@ public class CEBankCommand implements CommandExecutor {
                                 CEQueryFactory qf = new CEQueryFactory();
                                 qf.alterBalance("bank", name, -transaction_amount);
                                 qf.alterBalance("cash", name, transaction_amount);
-                                sender.sendMessage("Transaction complete");
+                                sender.sendMessage(moduleName + "Transaction complete");
                                 return true;
                             } else {
-                                sender.sendMessage("Insufficient funds to complete withdrawal");
+                                sender.sendMessage(moduleName + "Insufficient funds to complete withdrawal");
                                 return true;
                             }
                         }
@@ -76,20 +83,20 @@ public class CEBankCommand implements CommandExecutor {
                                 CEQueryFactory qf = new CEQueryFactory();
                                 qf.alterBalance("bank", name, transaction_amount);
                                 qf.alterBalance("cash", name, -transaction_amount);
-                                sender.sendMessage("Transaction complete");
+                                sender.sendMessage(moduleName + "Transaction complete");
                                 return true;
                             } else {
-                                sender.sendMessage("Insufficient funds to complete deposit");
+                                sender.sendMessage(moduleName + "Insufficient funds to complete deposit");
                                 return true;
                             }
                         }
                     }
                 }
             } else {
-                sender.sendMessage("Incorrect number of arguments");
+                sender.sendMessage(moduleName + "Incorrect number of arguments");
                 return true;
             }
         }
-        return false;
+        return true;
     }
 }

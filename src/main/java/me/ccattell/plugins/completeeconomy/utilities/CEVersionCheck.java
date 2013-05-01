@@ -40,7 +40,6 @@ public class CEVersionCheck {
             boolean test = false;
             int i = 0;
             int num_files = document.getElementsByTagName("item").getLength();
-            plugin.console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
             while (test == false && i < num_files) {
                 Node latestFile = document.getElementsByTagName("item").item(i);
                 NodeList children = latestFile.getChildNodes();
@@ -111,7 +110,7 @@ public class CEVersionCheck {
         } catch (Exception e) {
             System.out.println("Could not get latest channels: " + e);
         }
-        return false;
+        return true;
     }
     public String getVersion(){
         return version;
