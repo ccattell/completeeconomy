@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEJobsCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
@@ -48,6 +49,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         console = getServer().getConsoleSender();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if(!UpdateChannel.equalsIgnoreCase("none")){
+            plugin.console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
             this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
             if(this.versionCheck.updateNeeded()){
                 String update = this.versionCheck.getUpdate();
@@ -88,6 +90,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getCommand("pay").setExecutor(new CEPayCommand());
         getCommand("bank").setExecutor(new CEBankCommand());
         getCommand("xpbank").setExecutor(new CEXPBankCommand());
+        getCommand("jobs").setExecutor(new CEJobsCommand());
         new CEGiveInterest().interest();
     }
 }
