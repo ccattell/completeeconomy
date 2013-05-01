@@ -11,10 +11,14 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
  */
 public class CEMajorMinor {
 
-    String majorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorSingle");
-    String minorSingle = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorSingle");
-    String majorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MajorPlural");
-    String minorPlural = CompleteEconomy.plugin.getConfig().getString("System.Currency.MinorPlural");
+    String major[] = CompleteEconomy.plugin.getConfig().getString("System.Currency.Major").split(":");
+    String majorSingle = major[0];
+    String majorPlural = major[1];
+
+    String minor[] = CompleteEconomy.plugin.getConfig().getString("System.Currency.Minor").split(":");
+    String minorSingle = major[0];
+    String minorPlural = major[1];
+    
     String format = CompleteEconomy.plugin.getConfig().getString("System.Currency.Formatting");
 
     public void CEMajorMinor() {

@@ -16,12 +16,9 @@ System:
 
   Currency:
     Prefix: '[MONEY]'
-    MajorSingle: Dollar
-    MajorPlural: Dollars
-    # Major: [ 'Dollar', 'Dollars' ] // Would prefer this method
-    MinorSingle: Cent
-    MinorPlural: Cents
-    # Minor: [ 'Cent', 'Cents' ] // Would prefer this method
+
+    Major: Dollar:Dollars
+    Minor: Cent:Cents
 
     # Controls how money is formatted through methods
     # Example (separate) 1 Dollar 23 Cents
