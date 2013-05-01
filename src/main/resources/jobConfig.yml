@@ -18,4 +18,11 @@ Jobs:
     PaySpawners: false
     SpawnerDistance: 8
 
-
+  Types:
+    Miner:
+      - Mining
+      - Digging
+      - Smelting
+    Smith:
+      - Smelting
+      - Blacksmithing

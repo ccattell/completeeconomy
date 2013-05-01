@@ -1,23 +1,29 @@
 Skills:
-  # action options are break, place, craft, repair, brew, enchant, fish, and defeat
+  # action options are break, brew, craft, defeat, enchant, fish, place, repair, and tame
   # Send a message to player when they level up?
   Prefix: '[SKILLS]'
   LevelAnnounce: true
 
-  ARCHERY:
-  AXES:
+
+  Combat:
+    archerybonus: 1.5
   Digging:
-    basepay: 1.0
-    exp: 0.25
     break:
-      Grass: 10
-      Dirt: 10
-      Sand: 30
+      Grass:
+        Pay: 10
+        Experience: 5
+      Dirt: 
+        Pay: 10
+        Experience: 5
+      Sand: 
+        Pay: 30
+        Experience: 15
       Clay: 40
       Gravel: 60
       Mycel: 70
       Soul_Sand: 150
-  FISHING:
+  Fishing:
+    fish:
       Base: 300
   Farming:
     break:
@@ -56,8 +62,6 @@ Skills:
       Lapis_Ore: 400
       Diamond_Ore: 750
       Emerald_Ore: 1000
-  POWERLEVEL:
-  REPAIR:
   Smelting:
     Coal_Ore: 10
     Redstone_Ore: 15
@@ -67,7 +71,7 @@ Skills:
     Lapis_Ore: 40
     Diamond_Ore: 75
     Emerald_Ore: 100
-  SWORDS:
   Taming:
+    tame:
       Wolf: 250
       Ocelot: 500
