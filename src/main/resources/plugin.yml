@@ -35,7 +35,7 @@ commands:
     permission: ceadmin.command
     permission-message: You don't have permission to use admin commands
   cash:
-    description: This will display your bank account balance.
+    description: This will display your current cash holdings.
     usage: /<command>
     permission: ce.cash
     permission-message: You don't have permission to use this command
@@ -46,13 +46,20 @@ commands:
     permission-message: You don't have permission to pay other players
   bank:
     aliases: [b]
-    description: This will display your bank account balance.
+    description: This will access the bank module.
     usage: /<command>
     permission: ce.bank
     permission-message: You don't have permission to use the bank
   xpbank:
     aliases: [xpb]
-    description: This will display your XP account balance.
+    description: This will access the xp bank module.
     usage: /<command>
     permission: ce.xpbank
     permission-message: You don't have permission to use the xp bank
+  jobs:
+    aliases: [job, j]
+    description: This will access the jobs module.
+    usage: /<command>
+    permission: ce.jobs
+    permission-message: You don't have permission to use jobs
+  
