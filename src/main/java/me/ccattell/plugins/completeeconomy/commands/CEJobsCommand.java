@@ -1,5 +1,6 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
+import java.util.List;
 import java.util.Set;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import org.bukkit.ChatColor;
@@ -17,7 +18,6 @@ public class CEJobsCommand implements CommandExecutor {
     public String moduleName;
     public String prefix = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.Prefix");
 
-    
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -33,14 +33,30 @@ public class CEJobsCommand implements CommandExecutor {
             }
             if (!sender.hasPermission("ce.jobs")) {
                 sender.sendMessage(moduleName + "You don't have permission to use jobs!");
-            }else{
-                if (args.length != 2) { // if args.length != 2 - incorrect number of arguments?
-                    //player.sendMessage(moduleName + "Incorrect number of arguments");
-                    //return true;
+                return true;
+            } else {
+                if (args[0].equalsIgnoreCase("list")) {
+                    Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+                    player.sendMessage(CompleteEconomy.plugin.pluginName + "Available jobs");
+                    for (String job : jobsList) {
+                        player.sendMessage(job);
+                    }
+                    //sender.sendMessage(CompleteEconomy.plugin.configs.getJobConfig().getString(jobsList));
+                    //new ArrayList();
+                    return true;
                 }
-                Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
-                //sender.sendMessage(CompleteEconomy.plugin.configs.getJobConfig().getString(jobsList));
-                //new ArrayList();
+                if (args.length != 2) { // if args.length != 2 - incorrect number of arguments?
+                    player.sendMessage(moduleName + "Incorrect number of arguments");
+                    return true;
+                }
+                if (args[0].equalsIgnoreCase("info")) {
+                    // check args[1] is in the jobs list
+                    List<String> infoList = CompleteEconomy.plugin.configs.getJobConfig().getStringList("Jobs.Types." + args[1].toLowerCase());
+                    // loop thru list
+                    for (String info : infoList) {
+                        // send message
+                    }
+                }
             }
         }
         return true;
