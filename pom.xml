@@ -12,6 +12,7 @@
     </repositories>
     <build>
         <finalName>CompleteEconomy</finalName>
+        <directory>C:\Users\Charlie\Desktop\Hosting\MSM - Minecraft\Site\test_server_2\plugins</directory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
