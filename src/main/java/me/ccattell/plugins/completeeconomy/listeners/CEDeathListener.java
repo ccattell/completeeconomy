@@ -1,6 +1,6 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,7 +15,7 @@ public class CEDeathListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
         String name = event.getEntity().getName();
-        boolean purgeondeath = CompleteEconomy.plugin.getConfig().getBoolean("System.Currency.PurgeOnDeath");
+        boolean purgeondeath = plugin.getConfig().getBoolean("System.Currency.PurgeOnDeath");
         if(purgeondeath){
             qf.killBalance("cash", name);
         }

@@ -2,7 +2,7 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.List;
 import java.util.Set;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,9 +16,9 @@ import org.bukkit.entity.Player;
 public class CEJobsCommand implements CommandExecutor {
 
     public String moduleName;
-    public String prefix = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.Prefix");
-    public boolean DeleteOnQuit = CompleteEconomy.plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
-    public String ReJoinPercent = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
+    public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
+    public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
+    public String ReJoinPercent = plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -26,7 +26,7 @@ public class CEJobsCommand implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
             moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
-            Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+            Set<String> jobsList = plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
 
             Player player;
             if (sender instanceof Player) {
@@ -56,7 +56,7 @@ public class CEJobsCommand implements CommandExecutor {
                         player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                         return true;
                     }
-                    List<String> infoList = CompleteEconomy.plugin.configs.getJobConfig().getStringList("Jobs.Types." + job);
+                    List<String> infoList = plugin.configs.getJobConfig().getStringList("Jobs.Types." + job);
                     player.sendMessage(moduleName + "Job description for " + job + ":");
                     // loop thru list
                     for (String info : infoList) {

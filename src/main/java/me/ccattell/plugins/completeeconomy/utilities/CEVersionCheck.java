@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilderFactory;
+import org.bukkit.ChatColor;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -27,7 +28,7 @@ public class CEVersionCheck {
         try {
             this.filesFeed = new URL(url);
         } catch (MalformedURLException e) {
-            System.out.println("Could not get URL: " + e.getMessage());
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not get URL: " + e.getMessage() + ChatColor.RESET);
         }
     }
 
@@ -108,7 +109,7 @@ public class CEVersionCheck {
                 }
             }
         } catch (Exception e) {
-            System.out.println("Could not get latest channels: " + e);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not get latest channels: " + e + ChatColor.RESET);
         }
         return true;
     }

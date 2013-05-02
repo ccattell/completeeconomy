@@ -28,11 +28,11 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     CEDatabase service = CEDatabase.getInstance();
     public PluginDescriptionFile pdfFile;
     public ConsoleCommandSender console;
-    public String pluginName;
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();
     public CECustomConfigs configs;
     protected CEVersionCheck versionCheck;
+    public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
 
     @Override
     public void onDisable() {
@@ -43,25 +43,24 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public void onEnable() {
         saveDefaultConfig();
         pdfFile = getDescription();
-        pluginName = ChatColor.DARK_PURPLE + "[" + pdfFile.getName() + "]" + ChatColor.RESET + " ";
 
         plugin = this;
         console = getServer().getConsoleSender();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if(!UpdateChannel.equalsIgnoreCase("none")){
-            plugin.console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
+            console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
             this.versionCheck = new CEVersionCheck(this,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
             if(this.versionCheck.updateNeeded()){
                 String update = this.versionCheck.getUpdate();
                 if (update.equalsIgnoreCase("none")) {
-                    plugin.console.sendMessage(plugin.pluginName + "There are no files to test in your channel");                    
+                    console.sendMessage(pluginName + "There are no files to test in your channel");                    
                 } else if (update.equalsIgnoreCase("no")) {
-                    plugin.console.sendMessage(plugin.pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
+                    console.sendMessage(pluginName + "Congratulations, you are running the latest version of CompleteEconomy!");
                 } else if (update.equalsIgnoreCase("yes")) {
-                        plugin.console.sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + this.versionCheck.getVersion() + ChatColor.RESET);
-                        plugin.console.sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + this.versionCheck.getLink() + ChatColor.RESET);
+                        console.sendMessage(pluginName + ChatColor.GOLD + "A new version is available: " + ChatColor.DARK_GREEN + this.versionCheck.getVersion() + ChatColor.RESET);
+                        console.sendMessage(pluginName + ChatColor.GOLD + "Get it from: " + ChatColor.DARK_GREEN + this.versionCheck.getLink() + ChatColor.RESET);
                 } else if (update.equalsIgnoreCase("dev")) {
-                    plugin.console.sendMessage(plugin.pluginName + "You are using an unreleased version of the plugin!");
+                    console.sendMessage(pluginName + "You are using an unreleased version of the plugin!");
                 }
             }
         }
@@ -78,7 +77,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
                 new CEInitMySQL().initMYSQL();
             }
         } catch (Exception e) {
-            console.sendMessage(pluginName + "Connection and Tables Error: " + e);
+            console.sendMessage(pluginName + ChatColor.GOLD + "Connection and Tables Error: " + e + ChatColor.RESET);
         }
         configs = new CECustomConfigs(this);
         configs.copyDefaultConfigs();

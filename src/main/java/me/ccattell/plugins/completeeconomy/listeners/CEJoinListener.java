@@ -23,12 +23,12 @@ public class CEJoinListener implements Listener {
         String name = event.getPlayer().getName();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if(!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()){
-            this.versionCheck = new CEVersionCheck(CompleteEconomy.plugin,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            this.versionCheck = new CEVersionCheck(plugin,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
             if(this.versionCheck.updateNeeded()){
                 String update = this.versionCheck.getUpdate();
                 if (update.equalsIgnoreCase("yes")) {
-                    event.getPlayer().sendMessage(plugin.pluginName + "A new version is available: " + ChatColor.GOLD + this.versionCheck.getVersion() + ChatColor.RESET);
-                    event.getPlayer().sendMessage(plugin.pluginName + "Get it from: " + ChatColor.GOLD + this.versionCheck.getLink() + ChatColor.RESET);
+                    event.getPlayer().sendMessage(plugin.pluginName + ChatColor.GOLD + "A new version is available: " + ChatColor.DARK_GREEN + this.versionCheck.getVersion() + ChatColor.RESET);
+                    event.getPlayer().sendMessage(plugin.pluginName + ChatColor.GOLD + "Get it from: " + ChatColor.DARK_GREEN + this.versionCheck.getLink() + ChatColor.RESET);
                 }
             }
         }
