@@ -18,6 +18,10 @@ Jobs:
     PaySpawners: false
     SpawnerDistance: 8
 
+  DeleteOnQuit: false
+  # Only if DeleteOnQuit is false
+  ReJoinPercent: 80
+
   Types:
     Miner:
       - Mining

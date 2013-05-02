@@ -228,6 +228,46 @@ public class CEQueryFactory {
         }
     }
 
+    public void checkPlayerJob(String job, String player) {
+        Statement statement = null;
+        String query = "select * from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+            //need to return the number of rows found
+        } catch (SQLException e) {
+            System.out.println("Couldn't get " + job + " info! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Couldn't get " + job + " info, closing CEJobs! " + e.getMessage());
+            }
+        }
+    }
+
+    public void getPlayerJobs(String player) {
+        Statement statement = null;
+        String query = "select * from CEJobs WHERE player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+            //need to return the jobs found
+        } catch (SQLException e) {
+            System.out.println("Couldn't get " + player + "'s jobs! " + e.getMessage());
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage());
+            }
+        }
+    }
+
     public HashMap<Player, Float> getPlayers() {
         HashMap<Player, Float> data = new HashMap<Player, Float>();
         Statement statement = null;
