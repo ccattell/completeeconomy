@@ -35,27 +35,28 @@ public class CEJobsCommand implements CommandExecutor {
                 sender.sendMessage(moduleName + "You don't have permission to use jobs!");
                 return true;
             } else {
-                if (args[0].equalsIgnoreCase("list")) {
-                    Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
-                    player.sendMessage(CompleteEconomy.plugin.pluginName + "Available jobs");
-                    for (String job : jobsList) {
-                        player.sendMessage(job);
-                    }
-                    //sender.sendMessage(CompleteEconomy.plugin.configs.getJobConfig().getString(jobsList));
-                    //new ArrayList();
-                    return true;
-                }
-                if (args.length != 2) { // if args.length != 2 - incorrect number of arguments?
+                if (args.length == 0) { // if args.length != 2 - incorrect number of arguments?
                     player.sendMessage(moduleName + "Incorrect number of arguments");
                     return true;
                 }
-                if (args[0].equalsIgnoreCase("info")) {
+                if (args[0].equalsIgnoreCase("list") && args.length == 1) {
+                    Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+                    player.sendMessage(moduleName + "Available jobs:");
+                    for (String job : jobsList) {
+                        player.sendMessage(job);
+                    }
+                    return true;
+                }else if (args[0].equalsIgnoreCase("info") && args.length == 2) {
+                    
                     // check args[1] is in the jobs list
                     List<String> infoList = CompleteEconomy.plugin.configs.getJobConfig().getStringList("Jobs.Types." + args[1].toLowerCase());
                     // loop thru list
                     for (String info : infoList) {
                         // send message
                     }
+                }else{
+                    player.sendMessage(moduleName + "Incorrect number of arguments");
+                    return true;
                 }
             }
         }
