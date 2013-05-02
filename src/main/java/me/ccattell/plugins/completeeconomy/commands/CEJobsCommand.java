@@ -21,9 +21,11 @@ public class CEJobsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
-
         if (cmd.getName().equalsIgnoreCase("jobs")) {
+            // don't do anything unless it's our command
+            moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
+            Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+
             Player player;
             if (sender instanceof Player) {
                 player = (Player) sender;
@@ -40,23 +42,30 @@ public class CEJobsCommand implements CommandExecutor {
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("list") && args.length == 1) {
-                    Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
                     player.sendMessage(moduleName + "Available jobs:");
                     for (String job : jobsList) {
                         player.sendMessage(job);
                     }
                     return true;
-                }else if (args[0].equalsIgnoreCase("info") && args.length == 2) {
-                    
+                } else if (args[0].equalsIgnoreCase("info") && args.length == 2) {
+                    String job = args[1].toLowerCase();
                     // check args[1] is in the jobs list
-                    List<String> infoList = CompleteEconomy.plugin.configs.getJobConfig().getStringList("Jobs.Types." + args[1].toLowerCase());
+                    if (!jobsList.contains(job)) {
+                        player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list first!");
+                        return true;
+                    }
+                    List<String> infoList = CompleteEconomy.plugin.configs.getJobConfig().getStringList("Jobs.Types." + job);
+                    player.sendMessage(moduleName + "Job description for " + job + ":");
                     // loop thru list
                     for (String info : infoList) {
                         // send message
+                        player.sendMessage(info);
                     }
-                }else{
-                    player.sendMessage(moduleName + "Incorrect number of arguments");
                     return true;
+                } else {
+                    player.sendMessage(moduleName + "Incorrect number of arguments");
+                    // show them the proper usage
+                    return false;
                 }
             }
         }
