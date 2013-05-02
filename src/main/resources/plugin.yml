@@ -15,6 +15,7 @@ permissions:
       ce.pay: true
       ce.bank: true
       ce.xpbank: true
+      ce.jobs: true
     default: op
   ce.cash:
     description: Allow players to use the /cash command.
@@ -28,12 +29,10 @@ permissions:
   ce.xpbank:
     description: Allow players to use the /xpbank command.
     default: op
+  ce.jobs:
+    description: Allow players to use the /jobs command.
+    default: op
 commands:
-  ceadmin:
-    description: The CompleteEconomy command
-    usage: /<command>
-    permission: ceadmin.command
-    permission-message: You don't have permission to use admin commands
   cash:
     description: This will display your current cash holdings.
     usage: /<command>
@@ -46,20 +45,79 @@ commands:
     permission-message: You don't have permission to pay other players
   bank:
     aliases: [b]
-    description: This will access the bank module.
+    description: This will show your current bank balance.
     usage: /<command>
     permission: ce.bank
     permission-message: You don't have permission to use the bank
+    deposit:
+      aliases: [d]
+      description: This will deposit [amount] into your bank account.
+      usage: /<command> [amount]
+      permission: ce.bank
+      permission-message: You don't have permission to use the bank
+    withdrawal:
+      aliases: [w]
+      description: This will withdrawal [amount] from your bank account.
+      usage: /<command> [amount]
+      permission: ce.bank
+      permission-message: You don't have permission to use the bank
   xpbank:
     aliases: [xpb]
     description: This will access the xp bank module.
     usage: /<command>
     permission: ce.xpbank
     permission-message: You don't have permission to use the xp bank
+    deposit:
+      aliases: [d]
+      description: This will deposit [amount] into your xp bank.
+      usage: /<command> [amount]
+      permission: ce.xpbank
+      permission-message: You don't have permission to use the xp bank
+    withdrawal:
+      aliases: [w]
+      description: This will withdrawal [amount] from your xp bank.
+      usage: /<command> [amount]
+      permission: ce.xpbank
+      permission-message: You don't have permission to use the xp bank
   jobs:
-    aliases: [job, j]
+    aliases: [job]
     description: This will access the jobs module.
     usage: /<command>
     permission: ce.jobs
     permission-message: You don't have permission to use jobs
+    list:
+      aliases: [l]
+      description: This will display a list of available jobs.
+      usage: /<command>
+      permission: ce.jobs
+      permission-message: You don't have permission to use jobs
+    info:
+      aliases: [i]
+      description: This will display a detail of the selected job.
+      usage: /<command> [job]
+      permission: ce.jobs
+      permission-message: You don't have permission to use jobs
+    join:
+      aliases: [j]
+      description: This will add the selected job to your profile.
+      usage: /<command> [job]
+      permission: ce.jobs
+      permission-message: You don't have permission to use jobs
+    stats:
+      aliases: [s]
+      description: This will display the current levels of all jobs in your profile.
+      usage: /<command>
+      permission: ce.jobs
+      permission-message: You don't have permission to use jobs
+    quit:
+      aliases: [q, leave]
+      description: This will remove the selected job from your profile.
+      usage: /<command> [job]
+      permission: ce.jobs
+      permission-message: You don't have permission to use jobs
+  ceadmin:
+    description: The CompleteEconomy command
+    usage: /<command>
+    permission: ceadmin.command
+    permission-message: You don't have permission to use admin commands
   
