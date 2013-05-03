@@ -2,7 +2,6 @@ package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
@@ -16,6 +15,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * @author Charlie
  */
 public class CEJoinListener implements Listener {
+    public CompleteEconomy plugin;
     protected CEVersionCheck versionCheck;
 
     @EventHandler
@@ -55,7 +55,7 @@ public class CEJoinListener implements Listener {
             qf.doUpdate("CEMain", set, wherep);
         } else {
             // insert a record for new player
-            c = CompleteEconomy.plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
+            c = plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
             set.put("player_name", name);
             set.put("cash", c);
             set.put("bank", 0);

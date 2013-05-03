@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -16,6 +18,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
  */
 public class CECustomConfigs {
 
+    public ConsoleCommandSender console;
     private CompleteEconomy plugin;
     public FileConfiguration bankConfig = null;
     public FileConfiguration jobConfig = null;
@@ -103,7 +106,7 @@ public class CECustomConfigs {
                         out.write(buf, 0, len);
                     }
                 } catch (IOException io) {
-                    System.out.println("Could not save the file (" + file.toString() + ").");
+                    console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not save the file (" + file.toString() + ")." + ChatColor.RESET);
                 } finally {
                     if (out != null) {
                         try {
@@ -113,7 +116,7 @@ public class CECustomConfigs {
                     }
                 }
             } catch (FileNotFoundException e) {
-                System.out.println("File not found.");
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "File not found." + ChatColor.RESET);
             } finally {
                 if (in != null) {
                     try {

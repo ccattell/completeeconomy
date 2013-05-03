@@ -2,7 +2,7 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.List;
 import java.util.Set;
-import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,6 +15,7 @@ import org.bukkit.entity.Player;
  */
 public class CEJobsCommand implements CommandExecutor {
 
+    public CompleteEconomy plugin;
     public String moduleName;
     public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
     public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");

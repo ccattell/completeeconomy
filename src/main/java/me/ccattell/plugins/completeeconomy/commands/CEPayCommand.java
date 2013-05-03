@@ -17,8 +17,9 @@ import org.bukkit.entity.Player;
  */
 public class CEPayCommand implements CommandExecutor {
 
+    public CompleteEconomy plugin;
     public String moduleName;
-    public String prefix = CompleteEconomy.plugin.getConfig().getString("System.Currency.Prefix");
+    public String prefix = plugin.getConfig().getString("System.Currency.Prefix");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

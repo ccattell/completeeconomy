@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
 
 /**
  *
@@ -13,6 +15,8 @@ import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 public class CEDatabase {
 
     private static CEDatabase instance = new CEDatabase();
+    public CompleteEconomy plugin;
+    public ConsoleCommandSender console;
     public Connection connection = null;
     public Statement statement = null;
 
@@ -27,19 +31,19 @@ public class CEDatabase {
 
     public void setConnection() throws Exception {
         try {
-            System.out.println("Loading driver...");
+            console.sendMessage(plugin.pluginName + "Loading driver...");
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver loaded!");
+            console.sendMessage(plugin.pluginName + "Driver loaded!");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Cannot find the driver in the classpath!", e);
         }
-        String host = "jdbc:" + CompleteEconomy.plugin.getConfig().getString("System.Database.URL");
-        String user = CompleteEconomy.plugin.getConfig().getString("System.Database.Username");
-        String pass = CompleteEconomy.plugin.getConfig().getString("System.Database.Password");
+        String host = "jdbc:" + plugin.getConfig().getString("System.Database.URL");
+        String user = plugin.getConfig().getString("System.Database.Username");
+        String pass = plugin.getConfig().getString("System.Database.Password");
         try {
-            System.out.println("Connecting database...");
+            console.sendMessage(plugin.pluginName + "Connecting database...");
             connection = DriverManager.getConnection(host, user, pass);
-            System.out.println("Database connected!");
+            console.sendMessage(plugin.pluginName + "Database connected!");
         } catch (SQLException e) {
             throw new RuntimeException("Cannot connect the database!", e);
         }

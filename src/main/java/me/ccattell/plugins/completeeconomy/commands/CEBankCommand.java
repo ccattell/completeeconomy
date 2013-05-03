@@ -17,8 +17,9 @@ import org.bukkit.entity.Player;
  */
 public class CEBankCommand implements CommandExecutor {
 
+    public CompleteEconomy plugin;
     public String moduleName;
-    public String prefix = CompleteEconomy.plugin.configs.getBankConfig().getString("Banking.Prefix");
+    public String prefix = plugin.configs.getBankConfig().getString("Banking.Prefix");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

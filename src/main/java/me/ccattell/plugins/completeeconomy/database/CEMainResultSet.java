@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
 
 /**
  *
@@ -13,6 +16,8 @@ import java.util.Map;
  */
 public class CEMainResultSet {
 
+    public CompleteEconomy plugin;
+    public ConsoleCommandSender console;
     private CEDatabase service = CEDatabase.getInstance();
     private Connection connection = service.getConnection();
     private HashMap<String, Object> where;
@@ -69,7 +74,7 @@ public class CEMainResultSet {
                 return false;
             }
         } catch (SQLException e) {
-            System.out.println("ResultSet error for CEMain table! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CEMain table! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -80,7 +85,7 @@ public class CEMainResultSet {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Error closing CEMain table! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CEMain table! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return true;
