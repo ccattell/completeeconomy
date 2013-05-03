@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -17,6 +19,8 @@ import org.bukkit.entity.Player;
  */
 public class CEQueryFactory {
 
+    public CompleteEconomy plugin;
+    public ConsoleCommandSender console;
     CEDatabase service = CEDatabase.getInstance();
     Connection connection = service.getConnection();
 
@@ -67,7 +71,7 @@ public class CEQueryFactory {
             idRS = ps.getGeneratedKeys();
             return (idRS.next()) ? idRS.getInt(1) : -1;
         } catch (SQLException e) {
-            System.out.println("Update error for " + table + "! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return -1;
         } finally {
             try {
@@ -78,7 +82,7 @@ public class CEQueryFactory {
                     ps.close();
                 }
             } catch (Exception e) {
-                System.out.println("Error closing " + table + "! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -115,7 +119,6 @@ public class CEQueryFactory {
         updates = sbu.toString().substring(0, sbu.length() - 1);
         wheres = sbw.toString().substring(0, sbw.length() - 5);
         String query = "UPDATE " + table + " SET " + updates + " WHERE " + wheres;
-        //System.out.println(query);
         try {
             statement = connection.prepareStatement(query);
             int s = 1;
@@ -134,7 +137,7 @@ public class CEQueryFactory {
             data.clear();
             return (statement.executeUpdate() > 0);
         } catch (SQLException e) {
-            System.out.println("Update error for " + table + "! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -142,7 +145,7 @@ public class CEQueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Error closing " + table + "! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -172,12 +175,11 @@ public class CEQueryFactory {
         where.clear();
         values = sbw.toString().substring(0, sbw.length() - 5);
         String query = "DELETE FROM " + table + " WHERE " + values;
-        //System.out.println(query);
         try {
             statement = connection.createStatement();
             return (statement.executeUpdate(query) > 0);
         } catch (SQLException e) {
-            System.out.println("Delete error for " + table + "! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Delete error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -185,7 +187,7 @@ public class CEQueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Error closing " + table + "! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -197,14 +199,14 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            System.out.println("Alter " + field + " balance error! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Alter " + field + " balance error closing CEMain! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -216,14 +218,14 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            System.out.println("Alter " + field + " balance error! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Alter " + field + " balance error closing CEMain! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -236,14 +238,14 @@ public class CEQueryFactory {
             statement.executeUpdate(query);
             //need to return the number of rows found
         } catch (SQLException e) {
-            System.out.println("Couldn't get " + job + " info! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Couldn't get " + job + " info, closing CEJobs! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -256,14 +258,14 @@ public class CEQueryFactory {
             statement.executeUpdate(query);
             //need to return the jobs found
         } catch (SQLException e) {
-            System.out.println("Couldn't get " + player + "'s jobs! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -276,17 +278,17 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
-                data.put(CompleteEconomy.plugin.getServer().getPlayer(rs.getString("player_name")), rs.getFloat("bank"));
+                data.put(plugin.getServer().getPlayer(rs.getString("player_name")), rs.getFloat("bank"));
             }
         } catch (SQLException e) {
-            System.out.println("Get Players error! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                System.out.println("Get Players error closing CEMain! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return data;
