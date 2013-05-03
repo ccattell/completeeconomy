@@ -1,7 +1,7 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
@@ -15,7 +15,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * @author Charlie
  */
 public class CEJoinListener implements Listener {
-    public CompleteEconomy plugin;
     protected CEVersionCheck versionCheck;
 
     @EventHandler

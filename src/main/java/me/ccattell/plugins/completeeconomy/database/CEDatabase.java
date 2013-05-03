@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import org.bukkit.ChatColor;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.command.ConsoleCommandSender;
+
 
 /**
  *
@@ -15,7 +15,6 @@ import org.bukkit.command.ConsoleCommandSender;
 public class CEDatabase {
 
     private static CEDatabase instance = new CEDatabase();
-    public CompleteEconomy plugin;
     public ConsoleCommandSender console;
     public Connection connection = null;
     public Statement statement = null;

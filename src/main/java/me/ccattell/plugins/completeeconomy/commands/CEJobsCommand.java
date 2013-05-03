@@ -2,7 +2,7 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.List;
 import java.util.Set;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,18 +15,17 @@ import org.bukkit.entity.Player;
  */
 public class CEJobsCommand implements CommandExecutor {
 
-    public CompleteEconomy plugin;
-    public String prefix = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.Prefix");
+    public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
     public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
-    public boolean DeleteOnQuit = CompleteEconomy.plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
-    public String ReJoinPercent = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
+    public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
+    public String ReJoinPercent = plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
-            Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+            Set<String> jobsList = plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
 
             Player player;
             if (sender instanceof Player) {
@@ -41,12 +40,12 @@ public class CEJobsCommand implements CommandExecutor {
             } else {
                 if (args.length == 0) { // if args.length != 2 - incorrect number of arguments?
                     player.sendMessage(moduleName + "Incorrect number of arguments");
-                    return false;
+                    return true;
                 }
                 if (args[0].equalsIgnoreCase("list") && args.length == 1) {
                     player.sendMessage(moduleName + "Available jobs:");
                     for (String job : jobsList) {
-                        player.sendMessage(job);
+                        player.sendMessage("    " + job);
                     }
                     return true;
                 } else if (args[0].equalsIgnoreCase("info") && args.length == 2) {
@@ -62,7 +61,7 @@ public class CEJobsCommand implements CommandExecutor {
                     for (String info : infoList) {
                         //need to go one more layer deep and get info from skillsConfig on skills found associated with this job
                         // send message
-                        player.sendMessage(info);
+                        player.sendMessage("    " + info);
                     }
                     return true;
                 } else if (args[0].equalsIgnoreCase("join") && args.length == 2) {

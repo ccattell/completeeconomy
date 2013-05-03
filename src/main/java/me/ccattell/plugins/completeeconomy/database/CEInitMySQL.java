@@ -3,7 +3,7 @@ package me.ccattell.plugins.completeeconomy.database;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 
 /**
@@ -12,7 +12,6 @@ import org.bukkit.ChatColor;
  */
 public class CEInitMySQL {
 
-    public CompleteEconomy plugin;
     CEDatabase service = CEDatabase.getInstance();
     public Connection connection = service.getConnection();
     public Statement statement = null;

@@ -4,21 +4,20 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.entity.Player;
 
 public class CEGiveInterest {
 
-    public CompleteEconomy plugin;
-    boolean enabled = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
-    boolean online = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
-    boolean announce = CompleteEconomy.plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
-    long interval = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
+    boolean enabled = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
+    boolean online = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
+    boolean announce = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
+    long interval = plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
     // convert to float
-    float cutoff = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
+    float cutoff = plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
     // convert to float
-    float percent = CompleteEconomy.plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
+    float percent = plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
@@ -28,7 +27,7 @@ public class CEGiveInterest {
     public void interest() {
 
         if (enabled) {
-            CompleteEconomy.plugin.getServer().getScheduler().scheduleSyncRepeatingTask(CompleteEconomy.plugin, new Runnable() {
+            plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
                 @Override
                 public void run() {
 //                    plugin.getServer().getConsoleSender().sendMessage("Give Interest");

@@ -1,7 +1,7 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEXPCalculator;
@@ -17,8 +17,7 @@ import org.bukkit.entity.Player;
  */
 public class CEXPBankCommand implements CommandExecutor {
 
-    public CompleteEconomy plugin;
-    public String prefix = CompleteEconomy.plugin.configs.getBankConfig().getString("XPBanking.Prefix");
+    public String prefix = plugin.configs.getBankConfig().getString("XPBanking.Prefix");
     public String moduleName = ChatColor.AQUA + prefix + ChatColor.RESET + " ";
 
     @Override

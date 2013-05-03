@@ -1,11 +1,11 @@
 package me.ccattell.plugins.completeeconomy.utilities;
 
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilderFactory;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -17,14 +17,12 @@ import org.w3c.dom.NodeList;
  */
 public class CEVersionCheck {
 
-    private CompleteEconomy plugin;
     private URL filesFeed;
     private String version;
     private String link;
     private String update;
     
     public CEVersionCheck(CompleteEconomy plugin, String url){
-        this.plugin = plugin;
         try {
             this.filesFeed = new URL(url);
         } catch (MalformedURLException e) {
@@ -37,7 +35,7 @@ public class CEVersionCheck {
             InputStream input = this.filesFeed.openConnection().getInputStream();
             Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(input);
 
-            String UpdateChannel = CompleteEconomy.plugin.getConfig().getString("System.UpdateChannel");
+            String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
             boolean test = false;
             int i = 0;
             int num_files = document.getElementsByTagName("item").getLength();

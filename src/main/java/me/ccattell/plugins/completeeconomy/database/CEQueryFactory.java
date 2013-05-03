@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -19,7 +19,6 @@ import org.bukkit.entity.Player;
  */
 public class CEQueryFactory {
 
-    public CompleteEconomy plugin;
     public ConsoleCommandSender console;
     CEDatabase service = CEDatabase.getInstance();
     Connection connection = service.getConnection();

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import me.ccattell.plugins.completeeconomy.CompleteEconomy;
+import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
 
@@ -16,7 +16,6 @@ import org.bukkit.command.ConsoleCommandSender;
  */
 public class CEMainResultSet {
 
-    public CompleteEconomy plugin;
     public ConsoleCommandSender console;
     private CEDatabase service = CEDatabase.getInstance();
     private Connection connection = service.getConnection();
