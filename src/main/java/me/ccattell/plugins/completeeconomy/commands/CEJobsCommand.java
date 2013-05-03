@@ -16,18 +16,17 @@ import org.bukkit.entity.Player;
 public class CEJobsCommand implements CommandExecutor {
 
     public CompleteEconomy plugin;
-    public String moduleName;
-    public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
-    public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
-    public String ReJoinPercent = plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
+    public String prefix = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.Prefix");
+    public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
+    public boolean DeleteOnQuit = CompleteEconomy.plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
+    public String ReJoinPercent = CompleteEconomy.plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
-            moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
-            Set<String> jobsList = plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+            Set<String> jobsList = CompleteEconomy.plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
 
             Player player;
             if (sender instanceof Player) {

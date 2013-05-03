@@ -18,13 +18,11 @@ import org.bukkit.entity.Player;
 public class CEXPBankCommand implements CommandExecutor {
 
     public CompleteEconomy plugin;
-    public String moduleName;
-    public String prefix = plugin.configs.getBankConfig().getString("XPBanking.Prefix");
+    public String prefix = CompleteEconomy.plugin.configs.getBankConfig().getString("XPBanking.Prefix");
+    public String moduleName = ChatColor.AQUA + prefix + ChatColor.RESET + " ";
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
-        moduleName = ChatColor.AQUA + prefix + ChatColor.RESET + " ";
 
         if (cmd.getName().equalsIgnoreCase("xpbank")) {
             Player player;

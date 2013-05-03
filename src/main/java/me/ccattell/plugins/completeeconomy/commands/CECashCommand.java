@@ -17,13 +17,11 @@ import org.bukkit.entity.Player;
 public class CECashCommand implements CommandExecutor {
 
     public CompleteEconomy plugin;
-    public String moduleName;
-    public String prefix = plugin.getConfig().getString("System.Currency.Prefix");
+    public String prefix = CompleteEconomy.plugin.getConfig().getString("System.Currency.Prefix");
+    public String moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
-        moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
 
         if (cmd.getName().equalsIgnoreCase("cash")) {
             if (!sender.hasPermission("ce.cash")) {

@@ -1,26 +1,26 @@
 package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
-import org.bukkit.event.Listener;
-import org.bukkit.ChatColor;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.command.ConsoleCommandSender;
-import org.bukkit.plugin.java.JavaPlugin;
-import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
+import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEJobsCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
-import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
+import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class CompleteEconomy extends JavaPlugin implements Listener {
 
