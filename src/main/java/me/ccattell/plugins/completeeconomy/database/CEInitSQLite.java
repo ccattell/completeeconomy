@@ -24,7 +24,7 @@ public class CEInitSQLite {
             statement = connection.createStatement();
             String queryCE = "CREATE TABLE IF NOT EXISTS CEMain (player_name TEXT PRIMARY KEY COLLATE NOCASE, cash REAL DEFAULT 0.0, bank REAL DEFAULT 0.0, xp REAL DEFAULT 0.0, last_login INTEGER DEFAULT 0)";
             statement.executeUpdate(queryCE);
-            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name TEXT PRIMARY KEY COLLATE NOCASE, job text NOT NULL COLLATE NOCASE, experience INTEGER DEFAULT 0, level INTEGER DEFAULT 0, status TEXT NOT NULL COLLATE NOCASE)";
+            String queryJobs = "CREATE TABLE IF NOT EXISTS CEJobs (player_name TEXT COLLATE NOCASE, job text NOT NULL COLLATE NOCASE, experience INTEGER DEFAULT 0, level INTEGER DEFAULT 0, status TEXT NOT NULL COLLATE NOCASE)";
             statement.executeUpdate(queryJobs);
         } catch (SQLException e) {
             plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not create SQLite tables: " + e.getMessage() + ChatColor.RESET);

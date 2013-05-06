@@ -19,7 +19,6 @@ import org.bukkit.entity.Player;
  */
 public class CEQueryFactory {
 
-    public ConsoleCommandSender console;
     CEDatabase service = CEDatabase.getInstance();
     Connection connection = service.getConnection();
 
@@ -70,7 +69,7 @@ public class CEQueryFactory {
             idRS = ps.getGeneratedKeys();
             return (idRS.next()) ? idRS.getInt(1) : -1;
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return -1;
         } finally {
             try {
@@ -81,7 +80,7 @@ public class CEQueryFactory {
                     ps.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -136,7 +135,7 @@ public class CEQueryFactory {
             data.clear();
             return (statement.executeUpdate() > 0);
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Update error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -144,7 +143,7 @@ public class CEQueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -178,7 +177,7 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             return (statement.executeUpdate(query) > 0);
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Delete error for " + table + "! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Delete error for " + table + "! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -186,7 +185,7 @@ public class CEQueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing " + table + "! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -198,14 +197,14 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -217,36 +216,49 @@ public class CEQueryFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
 
-    public void checkPlayerJob(String job, String player) {
+    public String checkPlayerJob(String job, String player) {
         Statement statement = null;
-        String query = "select * from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "'";
+        String query = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'active'";
+        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'inactive'";
         try {
             statement = connection.createStatement();
-            statement.executeUpdate(query);
-            //need to return the number of rows found
+            ResultSet rs = statement.executeQuery(query);
+            int rowCount = rs.getInt("rowcount");
+
+            ResultSet rs2 = statement.executeQuery(query2);
+            int rowCount2 = rs2.getInt("rowcount");
+
+            if(rowCount2 != 0){
+                return "inactive";
+            }else if(rowCount != 0){
+                return "active";
+            }else{
+                return "none";
+            }
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
             }
         }
+        return "none";
     }
 
     public void getPlayerJobs(String player) {
@@ -257,14 +269,14 @@ public class CEQueryFactory {
             statement.executeUpdate(query);
             //need to return the jobs found
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
             }
         }
     }
@@ -280,14 +292,14 @@ public class CEQueryFactory {
                 data.put(plugin.getServer().getPlayer(rs.getString("player_name")), rs.getFloat("bank"));
             }
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error! " + e.getMessage() + ChatColor.RESET);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error closing CEMain! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error closing CEMain! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return data;

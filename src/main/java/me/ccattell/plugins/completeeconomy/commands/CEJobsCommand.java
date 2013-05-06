@@ -1,8 +1,10 @@
 package me.ccattell.plugins.completeeconomy.commands;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
+import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,6 +17,7 @@ import org.bukkit.entity.Player;
  */
 public class CEJobsCommand implements CommandExecutor {
 
+    CEQueryFactory qf = new CEQueryFactory();
     public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
     public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
     public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
@@ -23,6 +26,8 @@ public class CEJobsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        HashMap<String, Object> seta = new HashMap<String, Object>();
+        HashMap<String, Object> setw = new HashMap<String, Object>();
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
             Set<String> jobsList = plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
@@ -82,12 +87,23 @@ public class CEJobsCommand implements CommandExecutor {
                         player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                         return true;
                     }
-                    //check to see if player already has that job
-                    //if(!player has job){
-                    //    doInsert("CEJobs", player = player, job = found_job, status = active)
-                    //}else if(player has inactive job){
-                    //    doUpdate("CEJobs", status = active, level = level * ReJoinPercent, experience = 0 where player = player and job = found_job)
-                    //}
+                    String jobCheck = qf.checkPlayerJob(found_job, player.getName());
+                    if(jobCheck.equalsIgnoreCase("active")){
+                        player.sendMessage(moduleName + "You already have that job!");
+                        return true;
+                    }else if(jobCheck.equalsIgnoreCase("inactive")){
+                        player.sendMessage(moduleName + "Rejoining that job!");
+                        setw.put("player_name", "player_name");
+                        setw.put("job", "found_job");
+                        seta.put("status", "active");
+                        qf.doUpdate("CEJobs", seta, setw);
+                    }else if(jobCheck.equalsIgnoreCase("none")){
+                        player.sendMessage(moduleName + "Joining that job!");
+                        seta.put("player_name", player.getName());
+                        seta.put("job", found_job);
+                        seta.put("status", "active");
+                        qf.doInsert("CEJobs", seta);
+                    }
                     return true;
                 } else if (args[0].equalsIgnoreCase("stats") && args.length == 1) {
                     //check to see if player has any jobs
@@ -113,9 +129,14 @@ public class CEJobsCommand implements CommandExecutor {
                         return true;
                     }
                     if(DeleteOnQuit){
-                     //   doDelete("CEJobs", player = player and job = found_job);
+                        setw.put("player_name", "player_name");
+                        setw.put("job", "found_job");
+                        qf.doDelete("CEJobs", setw);
                     }else{
-                     //   doUpdate("CEJobs", status = 'Inactive' where player = player and job = found_job);
+                        setw.put("player_name", "player_name");
+                        setw.put("job", "found_job");
+                        seta.put("status", "active");
+                        qf.doUpdate("CEJobs", seta, setw);
                     }
                     return true;
                 } else {
