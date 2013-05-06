@@ -19,7 +19,7 @@ public class CEJobsCommand implements CommandExecutor {
     public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
     public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
     public String ReJoinPercent = plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
-    public boolean found_job;
+    public String found_job;
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -52,20 +52,17 @@ public class CEJobsCommand implements CommandExecutor {
                     String job = args[1];
                     for (String jobs : jobsList) {
                         if (jobs.equalsIgnoreCase(job)) {
-                            found_job = true;
+                            found_job = jobs;
                             break;
-                        }else{
-                            found_job = false;
                         }
                     }
-                    if(found_job == true){
-                    }else{
+                    if(found_job.equals("")){
                         player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                         return true;
                     }
                     // check args[1] is in the jobs list
-                    List<String> infoList = plugin.configs.getJobConfig().getStringList("Jobs.Types." + job);
-                    player.sendMessage(moduleName + "Job description for " + job + ":");
+                    List<String> infoList = plugin.configs.getJobConfig().getStringList("Jobs.Types." + found_job);
+                    player.sendMessage(moduleName + "Job description for " + found_job + ":");
                     // loop thru list
                     for (String info : infoList) {
                         //need to go one more layer deep and get info from skillsConfig on skills found associated with this job
