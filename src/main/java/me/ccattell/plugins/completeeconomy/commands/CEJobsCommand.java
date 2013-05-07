@@ -112,6 +112,8 @@ public class CEJobsCommand implements CommandExecutor {
                     //} else {
                     //    for (String info : infoList) {
                             // send message
+                    // message needs to be in this format
+                    // Lvl 29 Miner 2592/3920 XP
                     //        player.sendMessage(info);
                     //    }
                     //}
