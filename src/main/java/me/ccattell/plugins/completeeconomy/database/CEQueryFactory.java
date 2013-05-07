@@ -261,12 +261,24 @@ public class CEQueryFactory {
         return "none";
     }
 
-    public void getPlayerJobs(String player) {
+    public HashMap getPlayerJobs(String player) {
+        long level_exp;
+        HashMap<String, String> data = new HashMap<String, String>();
         Statement statement = null;
-        String query = "select * from CEJobs WHERE player_name = '" + player + "'";
+        String query = "select * from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
+        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
         try {
             statement = connection.createStatement();
-            statement.executeUpdate(query);
+
+            ResultSet rs2 = statement.executeQuery(query2);
+            int num_jobs = rs2.getInt("rowcount");
+
+            ResultSet rs = statement.executeQuery(query);
+
+            while (rs.next()) {
+                level_exp = Math.round(100 * Math.pow(1.10+(0.01*(num_jobs-1)),rs.getInt("level")-1));
+                data.put(rs.getString("job"),rs.getInt("level")+","+rs.getInt("experience")+","+level_exp);
+            }
             //need to return the jobs found
         } catch (SQLException e) {
             plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + e.getMessage() + ChatColor.RESET);
@@ -279,6 +291,7 @@ public class CEQueryFactory {
                 plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
             }
         }
+        return data;
     }
 
     public HashMap<Player, Float> getPlayers() {

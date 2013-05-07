@@ -2,6 +2,7 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
@@ -106,17 +107,12 @@ public class CEJobsCommand implements CommandExecutor {
                     }
                     return true;
                 } else if (args[0].equalsIgnoreCase("stats") && args.length == 1) {
-                    //check to see if player has any jobs
-                    //if (!player has job) {
-                    //    player.sendMessage(moduleName + "Could not find any jobs you have, use /jobs list to find out the jobs you can join!");
-                    //} else {
-                    //    for (String info : infoList) {
-                            // send message
-                    // message needs to be in this format
-                    // Lvl 29 Miner 2592/3920 XP
-                    //        player.sendMessage(info);
-                    //    }
-                    //}
+                    HashMap<String, String> jobs_stats = qf.getPlayerJobs(player.getName());
+                    player.sendMessage(moduleName + "Stats report for " + player.getName());
+                    for (Map.Entry<String, String> entry : jobs_stats.entrySet()) {
+                        String stats[] = entry.getValue().split(",");
+                        player.sendMessage("    Lvl " + stats[0] + " " + entry.getKey() + " " + stats[1] + "/" + stats[2] + " XP");
+                    }
                     return true;
                 } else if (args[0].equalsIgnoreCase("quit") && args.length == 2) {
                     String job = args[1];
@@ -131,13 +127,15 @@ public class CEJobsCommand implements CommandExecutor {
                         return true;
                     }
                     if(DeleteOnQuit){
-                        setw.put("player_name", "player_name");
-                        setw.put("job", "found_job");
+                        player.sendMessage(moduleName + "Deleting " + found_job);
+                        setw.put("player_name", player.getName());
+                        setw.put("job", found_job);
                         qf.doDelete("CEJobs", setw);
                     }else{
-                        setw.put("player_name", "player_name");
-                        setw.put("job", "found_job");
-                        seta.put("status", "active");
+                        player.sendMessage(moduleName + "Quitting " + found_job);
+                        setw.put("player_name", player.getName());
+                        setw.put("job", found_job);
+                        seta.put("status", "inactive");
                         qf.doUpdate("CEJobs", seta, setw);
                     }
                     return true;
