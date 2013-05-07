@@ -94,8 +94,8 @@ public class CEJobsCommand implements CommandExecutor {
                         return true;
                     }else if(jobCheck.equalsIgnoreCase("inactive")){
                         player.sendMessage(moduleName + "Rejoining that job!");
-                        setw.put("player_name", "player_name");
-                        setw.put("job", "found_job");
+                        setw.put("player_name", player.getName());
+                        setw.put("job", found_job);
                         seta.put("status", "active");
                         qf.doUpdate("CEJobs", seta, setw);
                     }else if(jobCheck.equalsIgnoreCase("none")){
