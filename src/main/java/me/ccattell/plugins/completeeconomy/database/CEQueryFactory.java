@@ -276,7 +276,7 @@ public class CEQueryFactory {
             ResultSet rs = statement.executeQuery(query);
 
             while (rs.next()) {
-                level_exp = Math.round(100 * Math.pow(1.10+(0.01*(num_jobs-1)),rs.getInt("level")-1));
+                level_exp = Math.round(100 * Math.pow(1.13,rs.getInt("level")));
                 data.put(rs.getString("job"),rs.getInt("level")+","+rs.getInt("experience")+","+level_exp);
             }
             //need to return the jobs found
