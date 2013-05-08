@@ -22,11 +22,11 @@ Jobs:
   # Only if DeleteOnQuit is false
   ReJoinPercent: 80
 
-  Types:
-    Miner:
-      - Mining
-      - Digging
-      - Smelting
-    Smith:
-      - Smelting
-      - Blacksmithing
+Skills:
+  Prefix: '[SKILL]'
+  LevelAnnounce: true
+
+Titles:
+  Enabled: true
+  Prefix: '[TITLE]'
+  PromoteAnnounce: true

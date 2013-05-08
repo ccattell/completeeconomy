@@ -1,16 +1,17 @@
 Shops:
   Enabled: true
-  Prefix: '[SHOPS]'
+  Prefix: '[SHOP]'
 
-    # Only open when player is online?
+  # Only open when player is online?
   Online: false
 
-    #Type options are ItemFrame, Sign, Chest, or All
-  Type: ItemFrame
-
-    # Send a message to player when someone purchases?
+  # Send a message to owner when someone purchases?
   Announce: true
 
-    # Need to work out how this can be accomplished
-    # Allows kits to be made by players to be sold in shops?
+Kits:
+  Enabled: true
+  Prefix: '[KIT]'
+
+  # Need to work out how this can be accomplished
+  # Allows kits to be made by players to be sold in shops?
   PlayerKits: true

@@ -1,0 +1,8 @@
+Jobs:
+    Miner:
+      - Mining
+      - Digging
+      - Smelting
+    Smith:
+      - Smelting
+      - Blacksmithing

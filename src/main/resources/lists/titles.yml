@@ -1,0 +1,22 @@
+Titles:
+  Beginner: 
+    Level: 0
+    Multiplier: 1
+  Novice:
+    Level: 25
+    Multiplier: 1.25
+  Apprentice:
+    Level: 50
+    Multiplier: 1.5
+  Journeyman:
+    Level: 75
+    Multiplier: 2
+  Expert:
+    Level: 100
+    Multiplier: 2.5
+  Master:
+    Level: 125
+    Multiplier: 3
+  GrandMaster:
+    Level: 150
+    Multiplier: 4
