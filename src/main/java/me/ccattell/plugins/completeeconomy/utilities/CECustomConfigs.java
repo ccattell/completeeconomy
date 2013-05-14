@@ -22,30 +22,40 @@ public class CECustomConfigs {
     private CompleteEconomy plugin;
     public FileConfiguration bankConfig = null;
     public FileConfiguration jobConfig = null;
-    public FileConfiguration kitConfig = null;
-    public FileConfiguration shopConfig = null;
-    public FileConfiguration skillConfig = null;
-    public FileConfiguration titleConfig = null;
+    public FileConfiguration jobList = null;
+    public FileConfiguration kitList = null;
+    public FileConfiguration shopList = null;
+    public FileConfiguration skillList = null;
+    public FileConfiguration titleList = null;
     private File bankConfigFile = null;
     private File jobConfigFile = null;
-    private File kitConfigFile = null;
-    private File shopConfigFile = null;
-    private File skillConfigFile = null;
-    private File titleConfigFile = null;
+    private File jobListFile = null;
+    private File kitListFile = null;
+    private File shopListFile = null;
+    private File skillListFile = null;
+    private File titleListFile = null;
 
     public CECustomConfigs(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
     public void copyDefaultConfigs() {
+        File listsDir = new File(plugin.getDataFolder() + File.separator + "lists");
+        if (!listsDir.exists()) {
+            boolean result = listsDir.mkdir();
+            if (result) {
+                listsDir.setWritable(true);
+                listsDir.setExecutable(true);
+            }
+        }
         copy(plugin.getDataFolder() + File.separator + "bankConfig.yml", plugin.getResource("bankConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "jobConfig.yml", plugin.getResource("jobConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "shopConfig.yml", plugin.getResource("shopConfig.yml"));
-//        copy(plugin.getDataFolder() + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
-//        copy(plugin.getDataFolder() + File.separator + "kits.yml", plugin.getResource("kits.yml"));
-//        copy(plugin.getDataFolder() + File.separator + "skills.yml", plugin.getResource("skills.yml"));
-//        copy(plugin.getDataFolder() + File.separator + "titles.yml", plugin.getResource("titles.yml"));
-//        copy(plugin.getDataFolder() + File.separator + "treasures.yml", plugin.getResource("treasures.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "kits.yml", plugin.getResource("kits.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "skills.yml", plugin.getResource("skills.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "titles.yml", plugin.getResource("titles.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "treasures.yml", plugin.getResource("treasures.yml"));
     }
 
     public void loadCustomConfigs() {
@@ -53,14 +63,16 @@ public class CECustomConfigs {
         this.bankConfig = YamlConfiguration.loadConfiguration(bankConfigFile);
         this.jobConfigFile = new File(plugin.getDataFolder(), "jobConfig.yml");
         this.jobConfig = YamlConfiguration.loadConfiguration(jobConfigFile);
-//        this.kitConfigFile = new File(plugin.getDataFolder(), "kitConfig.yml");
-//        this.kitConfig = YamlConfiguration.loadConfiguration(kitConfigFile);
-//        this.shopConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
-//        this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
-//        this.skillConfigFile = new File(plugin.getDataFolder(), "skillConfig.yml");
-//        this.skillConfig = YamlConfiguration.loadConfiguration(skillConfigFile);
-//        this.titleConfigFile = new File(plugin.getDataFolder(), "titleConfig.yml");
-//        this.titleConfig = YamlConfiguration.loadConfiguration(titleConfigFile);
+        this.jobListFile = new File(plugin.getDataFolder(), "jobs.yml");
+        this.jobList = YamlConfiguration.loadConfiguration(jobListFile);
+        this.kitListFile = new File(plugin.getDataFolder(), "kits.yml");
+        this.kitList = YamlConfiguration.loadConfiguration(kitListFile);
+        this.shopListFile = new File(plugin.getDataFolder(), "shops.yml");
+        this.shopList = YamlConfiguration.loadConfiguration(shopListFile);
+        this.skillListFile = new File(plugin.getDataFolder(), "skills.yml");
+        this.skillList = YamlConfiguration.loadConfiguration(skillListFile);
+        this.titleListFile = new File(plugin.getDataFolder(), "titles.yml");
+        this.titleList = YamlConfiguration.loadConfiguration(titleListFile);
     }
 
     public FileConfiguration getBankConfig() {
@@ -71,21 +83,25 @@ public class CECustomConfigs {
         return jobConfig;
     }
 
-//    public FileConfiguration getKitConfig() {
-//        return kitConfig;
-//    }
+    public FileConfiguration getJobList() {
+        return jobList;
+    }
 
-//    public FileConfiguration getShopConfig() {
-//        return shopConfig;
-//    }
+    public FileConfiguration getKitList() {
+        return kitList;
+    }
 
-//    public FileConfiguration getSkillConfig() {
-//        return skillConfig;
-//    }
+    public FileConfiguration getShopList() {
+        return shopList;
+    }
 
-//    public FileConfiguration getTitleConfig() {
-//        return titleConfig;
-//    }
+    public FileConfiguration getSkillList() {
+        return skillList;
+    }
+
+    public FileConfiguration getTitleList() {
+        return titleList;
+    }
 
     /**
      * Copies a custom config file to the Complete Economy plugin directory if
