@@ -4,12 +4,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.entity.Player;
 
 public class CEGiveInterest {
 
+    private CompleteEconomy plugin;
     boolean enabled = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
     boolean online = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
     boolean announce = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
@@ -21,7 +22,8 @@ public class CEGiveInterest {
     CEQueryFactory qf = new CEQueryFactory();
 
     // add class constructor
-    public void CEGiveInterest() {
+    public void CEGiveInterest(CompleteEconomy plugin) {
+        this.plugin = plugin;
     }
 
     public void interest() {

@@ -1,7 +1,7 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
-import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
+import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
@@ -15,15 +15,21 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * @author Charlie
  */
 public class CEJoinListener implements Listener {
+
     protected CEVersionCheck versionCheck;
+    private CompleteEconomy plugin;
+
+    public void CEJoinListener(CompleteEconomy plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         String name = event.getPlayer().getName();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
-        if(!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()){
-            this.versionCheck = new CEVersionCheck(plugin,"http://dev.bukkit.org/server-mods/complete-economy/files.rss");
-            if(this.versionCheck.updateNeeded()){
+        if (!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()) {
+            this.versionCheck = new CEVersionCheck(plugin, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            if (this.versionCheck.updateNeeded()) {
                 String update = this.versionCheck.getUpdate();
                 if (update.equalsIgnoreCase("yes")) {
                     event.getPlayer().sendMessage(plugin.pluginName + ChatColor.GOLD + "A new version is available: " + ChatColor.DARK_GREEN + this.versionCheck.getVersion() + ChatColor.RESET);
@@ -45,7 +51,7 @@ public class CEJoinListener implements Listener {
         CEQueryFactory qf = new CEQueryFactory();
         if (rsm.resultSet()) {
             // found a record so load data
-            c = rsm.getCash();
+            // c = rsm.getCash();
             // do something with it
             // update last_login
             set.put("last_login", System.currentTimeMillis());

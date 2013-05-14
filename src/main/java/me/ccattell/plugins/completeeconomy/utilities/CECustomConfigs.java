@@ -81,7 +81,7 @@ public class CECustomConfigs {
         this.titleListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "titles.yml");
         this.titleList = YamlConfiguration.loadConfiguration(titleListFile);
         this.treasureListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "treasures.yml");
-        this.treasureList = YamlConfiguration.loadConfiguration(titleListFile);
+        this.treasureList = YamlConfiguration.loadConfiguration(treasureListFile);
     }
 
     public FileConfiguration getBankConfig() {

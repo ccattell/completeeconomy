@@ -12,7 +12,6 @@
     </repositories>
     <build>
         <finalName>CompleteEconomy</finalName>
-        <directory>C:\Users\Charlie\Desktop\Hosting\MSM - Minecraft\Site\test_server_2\plugins</directory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -29,7 +28,7 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.5.2-R0.1</version>
+            <version>1.5.2-R0.2-SNAPSHOT</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
