@@ -19,7 +19,7 @@ public class CEMinerListener implements Listener {
 
     public void CEJoinListener(CompleteEconomy plugin) {
         this.plugin = plugin;
-        this.blocks = Arrays.asList(new Integer[]{1, 2, 3});
+        this.blocks = Arrays.asList(new Integer[]{1, 14, 15, 16, 21, 24, 48, 49, 56, 73, 74, 87, 89, 121, 129, 153});
     }
 
     @EventHandler
@@ -41,6 +41,7 @@ public class CEMinerListener implements Listener {
         int drops = getDropsForSkill(name);
         HashMap<Integer, Integer> counts = plugin.getMiningQueue().get(name);
         if (counts == null) {
+            // first time ever mining
             HashMap<Integer, Integer> newcount = new HashMap<Integer, Integer>();
             newcount.put(id, drops);
             plugin.getMiningQueue().put(name, newcount);
