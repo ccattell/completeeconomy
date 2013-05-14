@@ -22,18 +22,22 @@ public class CECustomConfigs {
     private CompleteEconomy plugin;
     public FileConfiguration bankConfig = null;
     public FileConfiguration jobConfig = null;
+    public FileConfiguration shopConfig = null;
     public FileConfiguration jobList = null;
     public FileConfiguration kitList = null;
     public FileConfiguration shopList = null;
     public FileConfiguration skillList = null;
     public FileConfiguration titleList = null;
+    public FileConfiguration treasureList = null;
     private File bankConfigFile = null;
     private File jobConfigFile = null;
+    private File shopConfigFile = null;
     private File jobListFile = null;
     private File kitListFile = null;
     private File shopListFile = null;
     private File skillListFile = null;
     private File titleListFile = null;
+    private File treasureListFile = null;
 
     public CECustomConfigs(CompleteEconomy plugin) {
         this.plugin = plugin;
@@ -53,6 +57,7 @@ public class CECustomConfigs {
         copy(plugin.getDataFolder() + File.separator + "shopConfig.yml", plugin.getResource("shopConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "kits.yml", plugin.getResource("kits.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "shops.yml", plugin.getResource("shops.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "skills.yml", plugin.getResource("skills.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "titles.yml", plugin.getResource("titles.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "treasures.yml", plugin.getResource("treasures.yml"));
@@ -63,16 +68,20 @@ public class CECustomConfigs {
         this.bankConfig = YamlConfiguration.loadConfiguration(bankConfigFile);
         this.jobConfigFile = new File(plugin.getDataFolder(), "jobConfig.yml");
         this.jobConfig = YamlConfiguration.loadConfiguration(jobConfigFile);
-        this.jobListFile = new File(plugin.getDataFolder(), "jobs.yml");
+        this.jobConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
+        this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
+        this.jobListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "jobs.yml");
         this.jobList = YamlConfiguration.loadConfiguration(jobListFile);
-        this.kitListFile = new File(plugin.getDataFolder(), "kits.yml");
+        this.kitListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "kits.yml");
         this.kitList = YamlConfiguration.loadConfiguration(kitListFile);
-        this.shopListFile = new File(plugin.getDataFolder(), "shops.yml");
+        this.shopListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "shops.yml");
         this.shopList = YamlConfiguration.loadConfiguration(shopListFile);
-        this.skillListFile = new File(plugin.getDataFolder(), "skills.yml");
+        this.skillListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "skills.yml");
         this.skillList = YamlConfiguration.loadConfiguration(skillListFile);
-        this.titleListFile = new File(plugin.getDataFolder(), "titles.yml");
+        this.titleListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "titles.yml");
         this.titleList = YamlConfiguration.loadConfiguration(titleListFile);
+        this.treasureListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "treasures.yml");
+        this.treasureList = YamlConfiguration.loadConfiguration(titleListFile);
     }
 
     public FileConfiguration getBankConfig() {
@@ -81,6 +90,10 @@ public class CECustomConfigs {
 
     public FileConfiguration getJobConfig() {
         return jobConfig;
+    }
+
+    public FileConfiguration getShopConfig() {
+        return shopConfig;
     }
 
     public FileConfiguration getJobList() {
@@ -101,6 +114,10 @@ public class CECustomConfigs {
 
     public FileConfiguration getTitleList() {
         return titleList;
+    }
+
+    public FileConfiguration getTreasureList() {
+        return treasureList;
     }
 
     /**
