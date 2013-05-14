@@ -33,7 +33,7 @@ public class CEJobsCommand implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
             if(JobsEnabled){
-                Set<String> jobsList = plugin.configs.getJobConfig().getConfigurationSection("Jobs.Types").getKeys(false);
+                Set<String> jobsList = plugin.configs.getJobList().getConfigurationSection("Jobs").getKeys(false);
 
                 Player player;
                 if (sender instanceof Player) {
@@ -69,7 +69,7 @@ public class CEJobsCommand implements CommandExecutor {
                             return true;
                         }
                         // check args[1] is in the jobs list
-                        List<String> skillList = plugin.configs.getJobConfig().getStringList("Jobs.Types." + found_job);
+                        List<String> skillList = plugin.configs.getJobList().getStringList("Jobs." + found_job);
                         player.sendMessage(moduleName + "Job description for " + found_job + ":");
                         // loop thru list
                         for (String skill : skillList) {
