@@ -44,21 +44,55 @@ Skills:
       Coal_Ore:
         Pay: 16
         Experience: 8
-      Ender_Stone: 150
-      Obsidian: 150
-      Redstone_Ore: 150
-      Quartz_Ore: 250
-      Iron_Ore: 250
-      Gold_Ore: 350
-      Lapis_Ore: 400
-      Diamond_Ore: 750
-      Emerald_Ore: 1000
+      Ender_Stone:
+        Pay: 30
+        Experience: 15
+      Obsidian:
+        Pay: 30
+        Experience: 15
+      Redstone_Ore:
+        Pay: 30
+        Experience: 15
+      Quartz_Ore:
+        Pay: 50
+        Experience: 25
+      Iron_Ore:
+        Pay: 50
+        Experience: 25
+      Gold_Ore:
+        Pay: 70
+        Experience: 35
+      Lapis_Ore:
+        Pay: 80
+        Experience: 40
+      Diamond_Ore:
+        Pay: 150
+        Experience: 75
+      Emerald_Ore:
+        Pay: 200
+        Experience: 100
   Smelting:
-    Coal_Ore: 10
-    Redstone_Ore: 15
-    Iron_Ore: 25
-    Quartz_Ore: 25
-    Gold_Ore: 35
-    Lapis_Ore: 40
-    Diamond_Ore: 75
-    Emerald_Ore: 100
+    Coal_Ore:
+      Pay: 2
+      Experience: 1
+    Redstone_Ore:
+      Pay: 4
+      Experience: 2
+    Iron_Ore:
+      Pay: 6
+      Experience: 3
+    Quartz_Ore:
+      Pay: 6
+      Experience: 3
+    Gold_Ore: 
+      Pay: 8
+      Experience: 4
+    Lapis_Ore:
+      Pay: 8
+      Experience: 4
+    Diamond_Ore:
+      Pay: 16
+      Experience: 8
+    Emerald_Ore:
+      Pay: 20
+      Experience: 10
