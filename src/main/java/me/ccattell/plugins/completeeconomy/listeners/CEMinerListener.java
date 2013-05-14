@@ -30,6 +30,11 @@ public class CEMinerListener implements Listener {
         if (!blocks.contains(id)) {
             return;
         }
+        // is the player a miner?
+        boolean miner = true;
+        if (!miner) {
+            return;
+        }
         // yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
