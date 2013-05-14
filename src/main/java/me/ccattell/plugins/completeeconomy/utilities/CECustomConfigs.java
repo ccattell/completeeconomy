@@ -40,10 +40,12 @@ public class CECustomConfigs {
     public void copyDefaultConfigs() {
         copy(plugin.getDataFolder() + File.separator + "bankConfig.yml", plugin.getResource("bankConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "jobConfig.yml", plugin.getResource("jobConfig.yml"));
-        copy(plugin.getDataFolder() + File.separator + "kitConfig.yml", plugin.getResource("kitConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "shopConfig.yml", plugin.getResource("shopConfig.yml"));
-        copy(plugin.getDataFolder() + File.separator + "skillConfig.yml", plugin.getResource("skillConfig.yml"));
-        copy(plugin.getDataFolder() + File.separator + "titleConfig.yml", plugin.getResource("titleConfig.yml"));
+//        copy(plugin.getDataFolder() + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
+//        copy(plugin.getDataFolder() + File.separator + "kits.yml", plugin.getResource("kits.yml"));
+//        copy(plugin.getDataFolder() + File.separator + "skills.yml", plugin.getResource("skills.yml"));
+//        copy(plugin.getDataFolder() + File.separator + "titles.yml", plugin.getResource("titles.yml"));
+//        copy(plugin.getDataFolder() + File.separator + "treasures.yml", plugin.getResource("treasures.yml"));
     }
 
     public void loadCustomConfigs() {
@@ -51,14 +53,14 @@ public class CECustomConfigs {
         this.bankConfig = YamlConfiguration.loadConfiguration(bankConfigFile);
         this.jobConfigFile = new File(plugin.getDataFolder(), "jobConfig.yml");
         this.jobConfig = YamlConfiguration.loadConfiguration(jobConfigFile);
-        this.kitConfigFile = new File(plugin.getDataFolder(), "kitConfig.yml");
-        this.kitConfig = YamlConfiguration.loadConfiguration(kitConfigFile);
-        this.shopConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
-        this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
-        this.skillConfigFile = new File(plugin.getDataFolder(), "skillConfig.yml");
-        this.skillConfig = YamlConfiguration.loadConfiguration(skillConfigFile);
-        this.titleConfigFile = new File(plugin.getDataFolder(), "titleConfig.yml");
-        this.titleConfig = YamlConfiguration.loadConfiguration(titleConfigFile);
+//        this.kitConfigFile = new File(plugin.getDataFolder(), "kitConfig.yml");
+//        this.kitConfig = YamlConfiguration.loadConfiguration(kitConfigFile);
+//        this.shopConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
+//        this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
+//        this.skillConfigFile = new File(plugin.getDataFolder(), "skillConfig.yml");
+//        this.skillConfig = YamlConfiguration.loadConfiguration(skillConfigFile);
+//        this.titleConfigFile = new File(plugin.getDataFolder(), "titleConfig.yml");
+//        this.titleConfig = YamlConfiguration.loadConfiguration(titleConfigFile);
     }
 
     public FileConfiguration getBankConfig() {
@@ -69,21 +71,21 @@ public class CECustomConfigs {
         return jobConfig;
     }
 
-    public FileConfiguration getKitConfig() {
-        return kitConfig;
-    }
+//    public FileConfiguration getKitConfig() {
+//        return kitConfig;
+//    }
 
-    public FileConfiguration getShopConfig() {
-        return shopConfig;
-    }
+//    public FileConfiguration getShopConfig() {
+//        return shopConfig;
+//    }
 
-    public FileConfiguration getSkillConfig() {
-        return skillConfig;
-    }
+//    public FileConfiguration getSkillConfig() {
+//        return skillConfig;
+//    }
 
-    public FileConfiguration getTitleConfig() {
-        return titleConfig;
-    }
+//    public FileConfiguration getTitleConfig() {
+//        return titleConfig;
+//    }
 
     /**
      * Copies a custom config file to the Complete Economy plugin directory if
