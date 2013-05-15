@@ -35,7 +35,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public CECustomConfigs configs;
     protected CEVersionCheck versionCheck;
     public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
-    public HashMap<String, HashMap<Integer, Integer>> miningQueue = new HashMap<String, HashMap<Integer, Integer>>();
+    public HashMap<String, HashMap<String, Integer>> miningQueue = new HashMap<String, HashMap<String, Integer>>();
 
     @Override
     public void onDisable() {
@@ -98,7 +98,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEMiningRunnable(this), 300L, 1200L);
     }
 
-    public HashMap<String, HashMap<Integer, Integer>> getMiningQueue() {
+    public HashMap<String, HashMap<String, Integer>> getMiningQueue() {
         return miningQueue;
     }
 }

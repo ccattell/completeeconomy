@@ -1,98 +1,99 @@
 Skills:
   # action options are break, brew, craft, defeat, enchant, fish, place, repair, and tame
-
+  ## do we actually need action options? Surely this will be determined by the listsener type...
+  # use Bukkit Material names: http://jd.bukkit.org/dev/apidocs/org/bukkit/Material.html (to make life easier)
   Digging:
     break:
-      Grass:
+      GRASS:
         Pay: 2
         Experience: 1
-      Dirt: 
+      DIRT:
         Pay: 2
         Experience: 1
-      Sand: 
+      SAND:
         Pay: 6
         Experience: 3
-      Gravel:
+      GRAVEL:
         Pay: 6
         Experience: 3
-      Clay:
+      CLAY:
         Pay: 8
         Experience: 4
-      Mycel:
+      MYCEL:
         Pay: 14
         Experience: 7
-      Soul_Sand:
+      SOUL_SAND:
         Pay: 30
         Experience: 15
   Mining:
     break:
-      Glowstone:
-        Pay: 6
-        Experience: 3        
-      Sandstone:
+      GLOWSTONE:
         Pay: 6
         Experience: 3
-      Stone:
+      SANDSTONE:
         Pay: 6
         Experience: 3
-      Mossy_Cobblestone:
+      STONE:
         Pay: 6
         Experience: 3
-      Netherrack:
+      MOSSY_COBBLESTONE:
         Pay: 6
         Experience: 3
-      Coal_Ore:
+      NETHERRACK:
+        Pay: 6
+        Experience: 3
+      COAL_ORE:
         Pay: 16
         Experience: 8
-      Ender_Stone:
+      ENDER_STONE:
         Pay: 30
         Experience: 15
-      Obsidian:
+      OBSIDIAN:
         Pay: 30
         Experience: 15
-      Redstone_Ore:
+      REDSTONE_ORE:
         Pay: 30
         Experience: 15
-      Quartz_Ore:
+      QUARTZ_ORE:
         Pay: 50
         Experience: 25
-      Iron_Ore:
+      IRON_ORE:
         Pay: 50
         Experience: 25
-      Gold_Ore:
+      GOLD_ORE:
         Pay: 70
         Experience: 35
-      Lapis_Ore:
+      LAPIS_ORE:
         Pay: 80
         Experience: 40
-      Diamond_Ore:
+      DIAMOND_ORE:
         Pay: 150
         Experience: 75
-      Emerald_Ore:
+      EMERALD_ORE:
         Pay: 200
         Experience: 100
   Smelting:
-    Coal_Ore:
+    COAL_ORE:
       Pay: 2
       Experience: 1
-    Redstone_Ore:
+    REDSTONE_ORE:
       Pay: 4
       Experience: 2
-    Iron_Ore:
+    IRON_ORE:
       Pay: 6
       Experience: 3
-    Quartz_Ore:
+    QUARTZ_ORE:
       Pay: 6
       Experience: 3
-    Gold_Ore: 
+    GOLD_ORE:
       Pay: 8
       Experience: 4
-    Lapis_Ore:
+    LAPIS_ORE:
       Pay: 8
       Experience: 4
-    Diamond_Ore:
+    DIAMOND_ORE:
       Pay: 16
       Experience: 8
-    Emerald_Ore:
+    EMERALD_ORE:
       Pay: 20
       Experience: 10

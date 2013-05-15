@@ -25,6 +25,7 @@ public class CEJobsCommand implements CommandExecutor {
     public boolean DeleteOnQuit = plugin.configs.getJobConfig().getBoolean("Jobs.DeleteOnQuit");
     public String ReJoinPercent = plugin.configs.getJobConfig().getString("Jobs.ReJoinPercent");
     public String found_job;
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -32,7 +33,7 @@ public class CEJobsCommand implements CommandExecutor {
         HashMap<String, Object> setw = new HashMap<String, Object>();
         if (cmd.getName().equalsIgnoreCase("jobs")) {
             // don't do anything unless it's our command
-            if(JobsEnabled){
+            if (JobsEnabled) {
                 Set<String> jobsList = plugin.configs.getJobList().getConfigurationSection("Jobs").getKeys(false);
 
                 Player player;
@@ -64,7 +65,7 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if(found_job.equals("")){
+                        if (found_job.equals("")) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
@@ -73,7 +74,7 @@ public class CEJobsCommand implements CommandExecutor {
                         player.sendMessage(moduleName + "Job description for " + found_job + ":");
                         // loop thru list
                         for (String skill : skillList) {
-                            //need to go one more layer deep and get info from skillsConfig on skills found associated with this job
+                            //need to go one more layer deep and get info from skillsList on skills found associated with this job
                             // send message
                             player.sendMessage("    " + skill);
                         }
@@ -86,21 +87,20 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if(found_job.equals("")){
+                        if (found_job.equals("")) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
                         String jobCheck = qf.checkPlayerJob(found_job, player.getName());
-                        if(jobCheck.equalsIgnoreCase("active")){
+                        if (jobCheck.equalsIgnoreCase("active")) {
                             player.sendMessage(moduleName + "You already have that job!");
-                            return true;
-                        }else if(jobCheck.equalsIgnoreCase("inactive")){
+                        } else if (jobCheck.equalsIgnoreCase("inactive")) {
                             player.sendMessage(moduleName + "Rejoining that job!");
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
                             seta.put("status", "active");
                             qf.doUpdate("CEJobs", seta, setw);
-                        }else if(jobCheck.equalsIgnoreCase("none")){
+                        } else if (jobCheck.equalsIgnoreCase("none")) {
                             player.sendMessage(moduleName + "Joining that job!");
                             seta.put("player_name", player.getName());
                             seta.put("job", found_job);
@@ -124,16 +124,16 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if(found_job.equals("")){
+                        if (found_job.equals("")) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
-                        if(DeleteOnQuit){
+                        if (DeleteOnQuit) {
                             player.sendMessage(moduleName + "Deleting " + found_job);
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
                             qf.doDelete("CEJobs", setw);
-                        }else{
+                        } else {
                             player.sendMessage(moduleName + "Quitting " + found_job);
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
@@ -147,7 +147,7 @@ public class CEJobsCommand implements CommandExecutor {
                         return false;
                     }
                 }
-            }else{
+            } else {
                 sender.sendMessage(moduleName + "Jobs have been disabled");
             }
         }

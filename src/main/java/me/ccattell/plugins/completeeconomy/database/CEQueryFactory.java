@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
 import org.bukkit.ChatColor;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -240,11 +239,11 @@ public class CEQueryFactory {
             ResultSet rs2 = statement.executeQuery(query2);
             int rowCount2 = rs2.getInt("rowcount");
 
-            if(rowCount2 != 0){
+            if (rowCount2 != 0) {
                 return "inactive";
-            }else if(rowCount != 0){
+            } else if (rowCount != 0) {
                 return "active";
-            }else{
+            } else {
                 return "none";
             }
         } catch (SQLException e) {
@@ -261,34 +260,34 @@ public class CEQueryFactory {
         return "none";
     }
 
-    public HashMap getPlayerJobs(String player) {
+    public HashMap<String, String> getPlayerJobs(String player) {
         long level_exp;
         HashMap<String, String> data = new HashMap<String, String>();
         Statement statement = null;
         String query = "select * from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
-        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
+//        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
         try {
             statement = connection.createStatement();
 
-            ResultSet rs2 = statement.executeQuery(query2);
-            int num_jobs = rs2.getInt("rowcount");
+//            ResultSet rs2 = statement.executeQuery(query2);
+//            int num_jobs = rs2.getInt("rowcount");
 
             ResultSet rs = statement.executeQuery(query);
 
             while (rs.next()) {
-                level_exp = Math.round(100 * Math.pow(1.13,rs.getInt("level")));
-                data.put(rs.getString("job"),rs.getInt("level")+","+rs.getInt("experience")+","+level_exp);
+                level_exp = Math.round(100 * Math.pow(1.13, rs.getInt("level")));
+                data.put(rs.getString("job"), rs.getInt("level") + "," + rs.getInt("experience") + "," + level_exp);
             }
             //need to return the jobs found
         } catch (SQLException e) {
-            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + e.getMessage() + ChatColor.RESET);
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs! " + ChatColor.RESET + e.getMessage());
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + ChatColor.RESET + e.getMessage());
             }
         }
         return data;
