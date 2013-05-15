@@ -12,12 +12,12 @@ import org.bukkit.event.block.BlockBreakEvent;
  *
  * @author Charlie
  */
-public class CEMinerListener implements Listener {
+public class CEMiningListener implements Listener {
 
     private CompleteEconomy plugin;
     private List<Integer> blocks;
 
-    public void CEJoinListener(CompleteEconomy plugin) {
+    public void CEMiningListener(CompleteEconomy plugin) {
         this.plugin = plugin;
         this.blocks = Arrays.asList(new Integer[]{1, 14, 15, 16, 21, 24, 48, 49, 56, 73, 74, 87, 89, 121, 129, 153});
     }
@@ -30,12 +30,12 @@ public class CEMinerListener implements Listener {
         if (!blocks.contains(id)) {
             return;
         }
-        // is the player a miner?
+        // does the player have mining skills as part of there job description?
         boolean miner = true;
         if (!miner) {
             return;
         }
-        // yes, so add it to the queue
+        // yes & yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
         int drops = getDropsForSkill(name);
