@@ -1,222 +1,268 @@
 #1
-Stone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - mining 
-      - excavating
+STONE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - mining
   Place:
-    Pay: 5 
-    Exp: 3 
-    Skill: 
+    Pay: 5
+    Exp: 3
+    Skill:
       - building
   Craft:
-    Pay: 3 
-    Exp: 2 
-    Skill: 
+    Pay: 3
+    Exp: 2
+    Skill:
       - smelting
 #2
-Grass:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
+GRASS:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
       - skill name 
 #3
-Dirt:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+DIRT:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #4
-Cobblestone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+COBBLESTONE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #5
-Oak Wood Plank:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+WOOD:0:
+  DefaultPrice: 10
+  Alias: Oak Wood Plank
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Craft:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #5:1
-Spruce Wood Plank:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+WOOD:1:
+  DefaultPrice: 10
+  Alias: Spruce Wood Plank
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Craft:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #5:2
-Birch Wood Plank:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+WOOD:2:
+  DefaultPrice: 10
+  Alias: Birch Wood Plank
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Craft:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #5:3
-Jungle Wood Plank:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+WOOD:3:
+  DefaultPrice: 10
+  Alias: Jungle Wood Plank
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Craft:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #6
-Oak Sapling:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SAPLING:0:
+  DefaultPrice: 10
+  Alias: Oak Sapling
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #6:1
-Spruce Sapling:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SAPLING:1:
+  DefaultPrice: 10
+  Alias: Spruce Sapling
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #6:2
-Birch Sapling:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SAPLING:2:
+  DefaultPrice: 10
+  Alias: Birch Sapling
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #6:3
-Jungle Sapling:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
-#7
-Bedrock:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
-#8
-Water:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
-#9
-Stationary Water:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
-#10
-Lava:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
-#11
-Stationary Lava:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SAPLING:3:
+  DefaultPrice: 10
+  Alias: Jungle Sapling
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
+  Place:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #12
-Sand:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SAND:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #13
-Gravel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+GRAVEL:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #14
-Gold Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+GOLD_ORE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #15
-Iron Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+IRON_ORE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #16
-Coal Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+COAL_ORE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #17
-Oak Wood:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LOG:0:
+  DefaultPrice: 10
+  Alias: Oak Log
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #17:1
-Spruce Wood:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LOG:1:
+  DefaultPrice: 10
+  Alias: Spruce Log
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #17:2
-Birch Wood:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LOG:2:
+  DefaultPrice: 10
+  Alias: Birch Log
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #17:3
-Jungle Wood:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LOG:3:
+  DefaultPrice: 10
+  Alias: Jungle Log
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #18
 Oak Leaves:
   DefaultPrice: 10  
@@ -3308,96 +3354,36 @@ Minecart with Hopper:
 #2256
 13 Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2257
 Cat Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2258
 Blocks Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2259
 Chirp Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2260
 Far Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2261
 Mall Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2262
 Mellohi Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2263
 Stal Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2264
 Strad Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2265
 Ward Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2266
 11 Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
 #2267
 Wait Disc:
   DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
