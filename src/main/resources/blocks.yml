@@ -459,135 +459,151 @@ PISTON_EXTENSION:
     Skill:
       - skill name
 #35
-White Wool:
+WOOL:0:
   DefaultPrice: 10
+  Alias: White Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:1
-Orange Wool:
+WOOL:1:
   DefaultPrice: 10
+  Alias: Orange Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:2
-Magenta Wool:
+WOOL:2:
   DefaultPrice: 10
+  Alias: Magenta Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:3
-Light Blue Wool:
+WOOL:3:
   DefaultPrice: 10
+  Alias: Light Blue Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:4
-Yellow Wool:
+WOOL:4:
   DefaultPrice: 10
+  Alias: Yellow Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:5
-Light Green Wool:
+WOOL:5:
   DefaultPrice: 10
+  Alias: Light Green Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:6
-Pink Wool:
+WOOL:6:
   DefaultPrice: 10
+  Alias: Pink Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:7
-Gray Wool:
+WOOL:7:
   DefaultPrice: 10
+  Alias: Gray Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:8
-Light Gray Wool:
+WOOL:8:
   DefaultPrice: 10
+  Alias: Light Gray Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:9
-Cyan Wool:
+WOOL:9:
   DefaultPrice: 10
+  Alias: Cyan Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:10
-Purple Wool:
+WOOL:10:
   DefaultPrice: 10
+  Alias: Purple Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:11
-Blue Wool:
+WOOL:11:
   DefaultPrice: 10
+  Alias: Blue Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:12
-Brown Wool:
+WOOL:12:
   DefaultPrice: 10
+  Alias: Brown Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:13
-Dark Green Wool:
+WOOL:13:
   DefaultPrice: 10
+  Alias: Dark Green Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:14
-Red Wool:
+WOOL:14:
   DefaultPrice: 10
+  Alias: Red Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #35:15
-Black Wool:
+WOOL:15:
   DefaultPrice: 10
+  Alias: Black Wool
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #37
-Dandelion:
+YELLOW_FLOWER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -595,7 +611,7 @@ Dandelion:
     Skill:
       - skill name
 #38
-Rose:
+RED_ROSE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -603,7 +619,7 @@ Rose:
     Skill:
       - skill name
 #39
-Brown Mushroom:
+BROWN_MUSHROOM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -611,7 +627,7 @@ Brown Mushroom:
     Skill:
       - skill name
 #40
-Red Mushroom:
+RED_MUSHROOM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -619,7 +635,7 @@ Red Mushroom:
     Skill:
       - skill name
 #41
-Gold Block:
+GOLD_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -627,143 +643,86 @@ Gold Block:
     Skill:
       - skill name
 #42
-Iron Block:
+IRON_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
-#43
-Double Stone Slab:
+STEP:0:
   DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:1
-Double Sandstone Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:2
-Double Wooden Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:3
-Double Cobblestone Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:4
-Double Brick Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:5
-Double Stone Brick Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:6
-Double Nether Brick Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#43:7
-Double Quartz Slab:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#44
-Stone Slab:
-  DefaultPrice: 10
+  Alias: Stone Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:1
-Sandstone Slab:
+STEP:1:
   DefaultPrice: 10
+  Alias: Sandstone Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:2
-Wooden Slab:
+STEP:2:
   DefaultPrice: 10
+  Alias: Wooden Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:3
-Cobblestone Slab:
+STEP:3:
   DefaultPrice: 10
+  Alias: Cobblestone Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:4
-Brick Slab:
+STEP:4:
   DefaultPrice: 10
+  Alias: Brick Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:5
-Stone Brick Slab:
+STEP:5:
   DefaultPrice: 10
+  Alias: Stone Brick Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:6
-Nether Brick Slab:
+STEP:6:
   DefaultPrice: 10
+  Alias: Nether Brick Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #44:7
-Quartz Slab:
+STEP:7:
   DefaultPrice: 10
+  Alias: Quartz Slab
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #45
-Brick:
+BRICK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -779,7 +738,7 @@ TNT:
     Skill:
       - skill name
 #47
-Bookshelf:
+BOOKSHELF:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -787,7 +746,7 @@ Bookshelf:
     Skill:
       - skill name
 #48
-Mossy Cobblestone:
+MOSSY_COBBLESTONE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -795,7 +754,7 @@ Mossy Cobblestone:
     Skill:
       - skill name
 #49
-Obsidian:
+OBSIDIAN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -803,23 +762,7 @@ Obsidian:
     Skill:
       - skill name
 #50
-Torch:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#51
-Fire:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#52
-Monster Spawner:
+TORCH:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -827,23 +770,16 @@ Monster Spawner:
     Skill:
       - skill name
 #53
-Oak Wood Stairs:
+WOOD_STAIRS:
   DefaultPrice: 10
+  Alias: Oak Wood Stairs
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #54
-Chest:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#55
-Redstone Wire:
+CHEST:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -851,7 +787,7 @@ Redstone Wire:
     Skill:
       - skill name
 #56
-Diamond Ore:
+DIAMOND_ORE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -859,7 +795,7 @@ Diamond Ore:
     Skill:
       - skill name
 #57
-Diamond Block:
+DIAMOND_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -867,55 +803,16 @@ Diamond Block:
     Skill:
       - skill name
 #58
-Workbench:
+WORKBENCH:
   DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#59
-Wheat Crops:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#60
-Soil:
-  DefaultPrice: 10
+  Alias: Crafting Table
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #61
-Furnace:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#62
-Burning Furnace:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#63
-Sign Post:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#64
-Wooden Door Block:
+FURNACE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -923,7 +820,7 @@ Wooden Door Block:
     Skill:
       - skill name
 #65
-Ladder:
+LADDER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -931,7 +828,7 @@ Ladder:
     Skill:
       - skill name
 #66
-Rails:
+RAILS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -939,7 +836,7 @@ Rails:
     Skill:
       - skill name
 #67
-Cobblestone Stairs:
+COBBLESTONE_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
