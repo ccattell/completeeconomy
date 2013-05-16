@@ -65,7 +65,7 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if (found_job.equals("")) {
+                        if (found_job.isEmpty()) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
@@ -87,7 +87,7 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if (found_job.equals("")) {
+                        if (found_job.isEmpty()) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
@@ -124,7 +124,7 @@ public class CEJobsCommand implements CommandExecutor {
                                 break;
                             }
                         }
-                        if (found_job.equals("")) {
+                        if (found_job.isEmpty()) {
                             player.sendMessage(moduleName + "Could not find a job with that name, use /jobs list to find one!");
                             return true;
                         }
