@@ -12,36 +12,39 @@ import org.bukkit.event.block.BlockBreakEvent;
  *
  * @author Charlie
  */
-public class CEMiningListener implements Listener {
+public class CEBreakListener implements Listener {
 
     private CompleteEconomy plugin;
 
-    public void CEMiningListener(CompleteEconomy plugin) {
+    public void CEBreakListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
     @EventHandler
-    public void onMine(BlockBreakEvent event) {
+    public void onBlockBreak(BlockBreakEvent event) {
         // get block
         String type = event.getBlock().getType().toString();
+        byte data = event.getBlock().getData();
+        String block = (data > 0) ? type + ":" + data : type;
+
         // is it a mining skills block?
-        if (!plugin.configs.skillList.contains(type + ".break")) {
+        if (!plugin.configs.skillList.contains(block + ".break")) {
             return;
         }
         // does the player have mining skills as part of their job description?
-        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.skillList.getString(type + ".break.skill"))) {
+        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.skillList.getString(block + ".break.skill"))) {
             return;
         }
         // yes & yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
         int drops = getDropsForSkill(name);
-        HashMap<String, Integer> counts = plugin.getMiningQueue().get(name);
+        HashMap<String, Integer> counts = plugin.getBreakQueue().get(name);
         if (counts == null) {
             // first time ever mining
             HashMap<String, Integer> newcount = new HashMap<String, Integer>();
             newcount.put(name, drops);
-            plugin.getMiningQueue().put(name, newcount);
+            plugin.getBreakQueue().put(name, newcount);
         } else {
             int minecount = counts.get(name);
             if (minecount == 0) {
@@ -51,7 +54,7 @@ public class CEMiningListener implements Listener {
                 // increase count
                 counts.put(name, minecount + drops);
             }
-            plugin.getMiningQueue().put(name, counts);
+            plugin.getBreakQueue().put(name, counts);
         }
     }
 

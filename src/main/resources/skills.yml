@@ -1,7 +1,5 @@
 #Skills:
-#  # action options are break, brew, craft, defeat, enchant, fish, place, repair, and tame
-#  ## do we actually need action options? Surely this will be determined by the listsener type...
-#  # use Bukkit Material names: http://jd.bukkit.org/dev/apidocs/org/bukkit/Material.html (to make life easier)
+#  # action options are break, smelt, brew, craft, defeat, enchant, fish, place, repair, and tame
 #  Digging:
 #    break:
 #      GRASS:
@@ -964,7 +962,26 @@ LEATHER_LEGGINGS:
     pay: 2
     experience: 1
     skill: Couturier
+# oak
 LEAVES:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# spruce
+LEAVES:1:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# birch
+LEAVES:2:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# jungle
+LEAVES:3:
   break:
     pay: 2
     experience: 1
@@ -973,8 +990,30 @@ LEVER:
 
 LOCKED_CHEST:
 
+# oak
 LOG:
-
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# spruce
+LOG:1:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# birch
+LOG:2:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+# jungle
+LOG:3:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
 LONG_GRASS:
   break:
     pay: 2
@@ -1120,7 +1159,10 @@ POISONOUS_POTATO:
     experience: -1
     skill: Horticulture
 PORK:
-
+  defeat:
+    pay: 2
+    experience: 1
+    skill: Hunting
 PORTAL:
 
 POTATO:
@@ -1200,11 +1242,20 @@ RAILS:
     experience: 1
     skill: Crafting
 RAW_BEEF:
-
+  defeat:
+    pay: 2
+    experience: 1
+    skill: Hunting
 RAW_CHICKEN:
-
+  defeat:
+    pay: 2
+    experience: 1
+    skill: Hunting
 RAW_FISH:
-
+  fish:
+    pay: 2
+    experience: 1
+    skill: Fishing
 RECORD_10:
 
 RECORD_11:
@@ -1572,7 +1623,38 @@ WEB:
 
 WHEAT:
 
+# oak
 WOOD:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# spruce
+WOOD:1:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# birch
+WOOD:2:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# jungle
+WOOD:3:
   place:
     pay: 2
     experience: 1
@@ -1600,7 +1682,38 @@ WOOD_DOOR:
     pay: 2
     experience: 1
     skill: Crafting
+# oak
 WOOD_DOUBLE_STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# spruce
+WOOD_DOUBLE_STEP:1:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# birch
+WOOD_DOUBLE_STEP:2:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# jungle
+WOOD_DOUBLE_STEP:3:
   place:
     pay: 2
     experience: 1
@@ -1642,7 +1755,38 @@ WOOD_STAIRS:
     pay: 2
     experience: 1
     skill: Crafting
+# oak
 WOOD_STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# spruce
+WOOD_STEP:1:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# birch
+WOOD_STEP:2:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+# jungle
+WOOD_STEP:3:
   place:
     pay: 2
     experience: 1
@@ -1686,3 +1830,4 @@ YELLOW_FLOWER:
     pay: 2
     experience: 1
     skill: Horticulture
+## Add all mob types

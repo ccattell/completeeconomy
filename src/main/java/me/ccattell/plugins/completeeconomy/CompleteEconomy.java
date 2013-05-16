@@ -12,7 +12,7 @@ import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
-import me.ccattell.plugins.completeeconomy.runnables.CEMiningRunnable;
+import me.ccattell.plugins.completeeconomy.runnables.CEBreakRunnable;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
@@ -35,7 +35,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public CECustomConfigs configs;
     protected CEVersionCheck versionCheck;
     public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
-    public HashMap<String, HashMap<String, Integer>> miningQueue = new HashMap<String, HashMap<String, Integer>>();
+    public HashMap<String, HashMap<String, Integer>> breakQueue = new HashMap<String, HashMap<String, Integer>>();
 
     @Override
     public void onDisable() {
@@ -95,10 +95,10 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getCommand("jobs").setExecutor(new CEJobsCommand());
         new CEGiveInterest().interest();
         // start a repeating task to process the mining queue
-        getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEMiningRunnable(this), 300L, 1200L);
+        getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEBreakRunnable(this), 300L, 1200L);
     }
 
-    public HashMap<String, HashMap<String, Integer>> getMiningQueue() {
-        return miningQueue;
+    public HashMap<String, HashMap<String, Integer>> getBreakQueue() {
+        return breakQueue;
     }
 }
