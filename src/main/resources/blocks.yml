@@ -28,7 +28,7 @@ GRASS:
     Pay: 20
     Exp: 10
     Skill:
-      - skill name 
+      - skill name
 #3
 DIRT:
   DefaultPrice: 10
@@ -369,3029 +369,3030 @@ SANDSTONE:2:
       - skill name
 #25
 Note Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #26
 Bed Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #27
 Powered Rail:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #28
 Detector Rail:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #29
 Sticky Piston:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #30
 Web:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #31
 Dead Shrub:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #31:1
 Grass:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #31:2
 Fern:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #32
 Dead Shrub:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #33
 Piston:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #34
 Piston Head:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35
 White Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:1
 Orange Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:2
 Magenta Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:3
 Light Blue Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:4
 Yellow Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:5
 Light Green Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:6
 Pink Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:7
 Gray Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:8
 Light Gray Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:9
 Cyan Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:10
 Purple Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:11
 Blue Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:12
 Brown Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:13
 Dark Green Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:14
 Red Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #35:15
 Black Wool:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #37
 Dandelion:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #38
 Rose:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #39
 Brown Mushroom:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #40
 Red Mushroom:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #41
 Gold Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #42
 Iron Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43
 Double Stone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:1
 Double Sandstone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:2
 Double Wooden Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:3
 Double Cobblestone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:4
 Double Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:5
 Double Stone Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:6
 Double Nether Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #43:7
 Double Quartz Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44
 Stone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:1
 Sandstone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:2
 Wooden Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:3
 Cobblestone Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:4
 Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:5
 Stone Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:6
 Nether Brick Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #44:7
 Quartz Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #45
 Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #46
 TNT:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #47
 Bookshelf:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #48
 Mossy Cobblestone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #49
 Obsidian:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #50
 Torch:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #51
 Fire:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #52
 Monster Spawner:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #53
 Oak Wood Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #54
 Chest:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #55
 Redstone Wire:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #56
 Diamond Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #57
 Diamond Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #58
 Workbench:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #59
 Wheat Crops:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #60
 Soil:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #61
 Furnace:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #62
 Burning Furnace:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #63
 Sign Post:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #64
 Wooden Door Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #65
 Ladder:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #66
 Rails:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #67
 Cobblestone Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #68
 Wall Sign:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #69
 Lever:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #70
 Stone Pressure Plate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #71
 Iron Door Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #72
 Wooden Pressure Plate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #73
 Redstone Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #74
 Glowing Redstone Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #75
 Redstone Torch (off):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #76
 Redstone Torch (on):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #77
 Stone Button:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #78
 Snow:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #79
 Ice:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #80
 Snow Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #81
 Cactus:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #82
 Clay:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #83
 Sugar Cane:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #84
 Jukebox:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #85
 Fence:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #86
 Pumpkin:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #87
 Netherrack:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #88
 Soul Sand:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #89
 Glowstone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #90
 Portal:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #91
 Jack-O-Lantern:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #92
 Cake Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #93
 Redstone Repeater Block (off):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #94
 Redstone Repeater Block (on):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #95
 Locked Chest:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #96
 Trapdoor:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #97
 Stone (Silverfish):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #97:1
 Cobblestone (Silverfish):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #97:2
 Stone Brick (Silverfish):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #98
 Stone Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #98:1
 Mossy Stone Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #98:2
 Cracked Stone Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #98:3
 Chiseled Stone Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #99
 Red Mushroom Cap:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #100
 Brown Mushroom Cap:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #101
 Iron Bars:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #102
 Glass Pane:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #103
 Melon Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #104
 Pumpkin Stem:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #105
 Melon Stem:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #106
 Vines:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #107
 Fence Gate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #108
 Brick Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #109
 Stone Brick Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #110
 Mycelium:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #111
 Lily Pad:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #112
 Nether Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #113
 Nether Brick Fence:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #114
 Nether Brick Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #115
 Nether Wart:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #116
 Enchantment Table:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #117
 Brewing Stand:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #118
 Cauldron:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #119
 End Portal:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #120
 End Portal Frame:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #121
 End Stone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #122
 Dragon Egg:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #123
 Redstone Lamp (inactive):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #124
 Redstone Lamp (active):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #125
 Double Oak Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #125:1
 Double Spruce Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #125:2
 Double Birch Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #125:3
 Double Jungle Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #126
 Oak Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #126:1
 Spruce Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #126:2
 Birch Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #126:3
 Jungle Wood Slab:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #127
 Cocoa Plant:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #128
 Sandstone Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #129
 Emerald Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #130
 Ender Chest:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #131
 Tripwire Hook:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #132
 Tripwire:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #133
 Emerald Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #134
 Spruce Wood Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #135
 Birch Wood Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #136
 Jungle Wood Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #137
 Command Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #138
 Beacon Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #139
 Cobblestone Wall:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #139:1
 Mossy Cobblestone Wall:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #140
 Flower Pot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #141
 Carrots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #142
 Potatoes:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #143
 Wooden Button:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #144
 Mob Head:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #145
 Anvil:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #146
 Trapped Chest:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #147
 Weighted Pressure Plate (light):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #148
 Weighted Pressure Plate (heavy):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #149
 Redstone Comparator (inactive):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #150
 Redstone Comparator (active):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #151
 Daylight Sensor:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #152
 Redstone Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #153
 Nether Quartz Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #154
 Hopper:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #155
 Quartz Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #155:1
 Chiseled Quartz Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #155:2
 Pillar Quartz Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #156
 Quartz Stairs:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #157
 Activator Rail:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #158
 Dropper:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #256
 Iron Shovel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #257
 Iron Pickaxe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #258
 Iron Axe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #259
 Flint and Steel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #260
 Apple:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #261
 Bow:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #262
 Arrow:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #263
 Coal:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #263:1
 Charcoal:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #264
 Diamond:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #265
 Iron Ingot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #266
 Gold Ingot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #267
 Iron Sword:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #268
 Wooden Sword:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #269
 Wooden Shovel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #270
 Wooden Pickaxe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #271
 Wooden Axe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #272
 Stone Sword:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #273
 Stone Shovel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #274
 Stone Pickaxe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #275
 Stone Axe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #276
 Diamond Sword:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #277
 Diamond Shovel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #278
 Diamond Pickaxe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #279
 Diamond Axe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #280
 Stick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #281
 Bowl:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #282
 Mushroom Soup:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #283
 Gold Sword:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #284
 Gold Shovel:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #285
 Gold Pickaxe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #286
 Gold Axe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #287
 String:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #288
 Feather:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #289
 Sulphur:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #290
 Wooden Hoe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #291
 Stone Hoe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #292
 Iron Hoe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #293
 Diamond Hoe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #294
 Gold Hoe:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #295
 Wheat Seeds:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #296
 Wheat:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #297
 Bread:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #298
 Leather Helmet:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #299
 Leather Chestplate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #300
 Leather Leggings:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #301
 Leather Boots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #302
 Chainmail Helmet:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #303
 Chainmail Chestplate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #304
 Chainmail Leggings:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #305
 Chainmail Boots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #306
 Iron Helmet:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #307
 Iron Chestplate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #308
 Iron Leggings:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #309
 Iron Boots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #310
 Diamond Helmet:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #311
 Diamond Chestplate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #312
 Diamond Leggings:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #313
 Diamond Boots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #314
 Gold Helmet:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #315
 Gold Chestplate:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #316
 Gold Leggings:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #317
 Gold Boots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #318
 Flint:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #319
 Raw Porkchop:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #320
 Cooked Porkchop:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #321
 Painting:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #322
 Golden Apple:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #322:1
 Enchanted Golden Apple:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #323
 Sign:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #324
 Wooden Door:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #325
 Bucket:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #326
 Water Bucket:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #327
 Lava Bucket:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #328
 Minecart:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #329
 Saddle:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #330
 Iron Door:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #331
 Redstone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #332
 Snowball:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #333
 Boat:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #334
 Leather:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #335
 Milk Bucket:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #336
 Clay Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #337
 Clay Balls:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #338
 Sugarcane:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #339
 Paper:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #340
 Book:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #341
 Slimeball:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #342
 Storage Minecart:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #343
 Powered Minecart:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #344
 Egg:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #345
 Compass:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #346
 Fishing Rod:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #347
 Clock:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #348
 Glowstone Dust:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #349
 Raw Fish:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #350
 Cooked Fish:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351
 Ink Sack:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:1
 Rose Red:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:2
 Cactus Green:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:3
 Coco Beans:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:4
 Lapis Lazuli:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:5
 Purple Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:6
 Cyan Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:7
 Light Gray Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:8
 Gray Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:9
 Pink Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:10
 Lime Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:11
 Dandelion Yellow:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:12
 Light Blue Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:13
 Magenta Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:14
 Orange Dye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #351:15
 Bone Meal:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #352
 Bone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #353
 Sugar:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #354
 Cake:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #355
 Bed:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #356
 Redstone Repeater:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #357
 Cookie:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #358
 Map:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #359
 Shears:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #360
 Melon:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #361
 Pumpkin Seeds:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #362
 Melon Seeds:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #363
 Raw Beef:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #364
 Steak:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #365
 Raw Chicken:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #366
 Cooked Chicken:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #367
 Rotten Flesh:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #368
 Ender Pearl:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #369
 Blaze Rod:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #370
 Ghast Tear:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #371
 Gold Nugget:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #372
 Nether Wart Seeds:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #373
 Potion:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #374
 Glass Bottle:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #375
 Spider Eye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #376
 Fermented Spider Eye:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #377
 Blaze Powder:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #378
 Magma Cream:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #379
 Brewing Stand:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #380
 Cauldron:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #381
 Eye of Ender:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #382
 Glistering Melon:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:50
 Spawn Creeper:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:51
 Spawn Skeleton:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:52
 Spawn Spider:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:54
 Spawn Zombie:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:55
 Spawn Slime:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:56
 Spawn Ghast:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:57
 Spawn Pigman:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:58
 Spawn Enderman:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:59
 Spawn Cave Spider:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:60
 Spawn Silverfish:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:61
 Spawn Blaze:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:62
 Spawn Magma Cube:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:65
 Spawn Bat:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:66
 Spawn Witch:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:90
 Spawn Pig:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:91
 Spawn Sheep:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:92
 Spawn Cow:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:93
 Spawn Chicken:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:94
 Spawn Squid:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:95
 Spawn Wolf:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:96
 Spawn Mooshroom:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:98
 Spawn Ocelot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #383:120
 Spawn Villager:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #384
 Bottle o' Enchanting:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #385
 Fire Charge:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #386
 Book and Quill:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #387
 Written Book:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #388
 Emerald:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #389
 Item Frame:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #390
 Flower Pot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #391
 Carrots:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #392
 Potato:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #393
 Baked Potato:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #394
 Poisonous Potato:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #395
 Map:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #396
 Golden Carrot:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #397
 Mob Head (Skeleton):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #397:1
 Mob Head (Wither Skeleton):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #397:2
 Mob Head (Zombie):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #397:3
 Mob Head (Human):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #397:4
 Mob Head (Creeper):
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #398
 Carrot on a Stick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #399
 Nether Star:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #400
 Pumpkin Pie:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #401
 Firework Rocket:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #402
 Firework Star:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #403
 Enchanted Book:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #404
 Redstone Comparator:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #405
 Nether Brick:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #406
 Nether Quartz:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #407
 Minecart with TNT:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #408
 Minecart with Hopper:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+  DefaultPrice: 10 
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #2256
 13 Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2257
 Cat Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2258
 Blocks Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2259
 Chirp Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2260
 Far Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2261
 Mall Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2262
 Mellohi Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2263
 Stal Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2264
 Strad Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2265
 Ward Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2266
 11 Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
 #2267
 Wait Disc:
-  DefaultPrice: 10  
+  DefaultPrice: 10 
