@@ -1,99 +1,1688 @@
-Skills:
-  # action options are break, brew, craft, defeat, enchant, fish, place, repair, and tame
-  ## do we actually need action options? Surely this will be determined by the listsener type...
-  # use Bukkit Material names: http://jd.bukkit.org/dev/apidocs/org/bukkit/Material.html (to make life easier)
-  Digging:
-    break:
-      GRASS:
-        Pay: 2
-        Experience: 1
-      DIRT:
-        Pay: 2
-        Experience: 1
-      SAND:
-        Pay: 6
-        Experience: 3
-      GRAVEL:
-        Pay: 6
-        Experience: 3
-      CLAY:
-        Pay: 8
-        Experience: 4
-      MYCEL:
-        Pay: 14
-        Experience: 7
-      SOUL_SAND:
-        Pay: 30
-        Experience: 15
-  Mining:
-    break:
-      GLOWSTONE:
-        Pay: 6
-        Experience: 3
-      SANDSTONE:
-        Pay: 6
-        Experience: 3
-      STONE:
-        Pay: 6
-        Experience: 3
-      MOSSY_COBBLESTONE:
-        Pay: 6
-        Experience: 3
-      NETHERRACK:
-        Pay: 6
-        Experience: 3
-      COAL_ORE:
-        Pay: 16
-        Experience: 8
-      ENDER_STONE:
-        Pay: 30
-        Experience: 15
-      OBSIDIAN:
-        Pay: 30
-        Experience: 15
-      REDSTONE_ORE:
-        Pay: 30
-        Experience: 15
-      QUARTZ_ORE:
-        Pay: 50
-        Experience: 25
-      IRON_ORE:
-        Pay: 50
-        Experience: 25
-      GOLD_ORE:
-        Pay: 70
-        Experience: 35
-      LAPIS_ORE:
-        Pay: 80
-        Experience: 40
-      DIAMOND_ORE:
-        Pay: 150
-        Experience: 75
-      EMERALD_ORE:
-        Pay: 200
-        Experience: 100
-  Smelting:
-    COAL_ORE:
-      Pay: 2
-      Experience: 1
-    REDSTONE_ORE:
-      Pay: 4
-      Experience: 2
-    IRON_ORE:
-      Pay: 6
-      Experience: 3
-    QUARTZ_ORE:
-      Pay: 6
-      Experience: 3
-    GOLD_ORE:
-      Pay: 8
-      Experience: 4
-    LAPIS_ORE:
-      Pay: 8
-      Experience: 4
-    DIAMOND_ORE:
-      Pay: 16
-      Experience: 8
-    EMERALD_ORE:
-      Pay: 20
-      Experience: 10
+#Skills:
+#  # action options are break, brew, craft, defeat, enchant, fish, place, repair, and tame
+#  ## do we actually need action options? Surely this will be determined by the listsener type...
+#  # use Bukkit Material names: http://jd.bukkit.org/dev/apidocs/org/bukkit/Material.html (to make life easier)
+#  Digging:
+#    break:
+#      GRASS:
+#        Pay: 2
+#        Experience: 1
+#      DIRT:
+#        Pay: 2
+#        Experience: 1
+#      SAND:
+#        Pay: 6
+#        Experience: 3
+#      GRAVEL:
+#        Pay: 6
+#        Experience: 3
+#      CLAY:
+#        Pay: 8
+#        Experience: 4
+#      MYCEL:
+#        Pay: 14
+#        Experience: 7
+#      SOUL_SAND:
+#        Pay: 30
+#        Experience: 15
+#  Mining:
+#    break:
+#      GLOWSTONE:
+#        Pay: 6
+#        Experience: 3
+#      SANDSTONE:
+#        Pay: 6
+#        Experience: 3
+#      STONE:
+#        Pay: 6
+#        Experience: 3
+#      MOSSY_COBBLESTONE:
+#        Pay: 6
+#        Experience: 3
+#      NETHERRACK:
+#        Pay: 6
+#        Experience: 3
+#      COAL_ORE:
+#        Pay: 16
+#        Experience: 8
+#      ENDER_STONE:
+#        Pay: 30
+#        Experience: 15
+#      OBSIDIAN:
+#        Pay: 30
+#        Experience: 15
+#      REDSTONE_ORE:
+#        Pay: 30
+#        Experience: 15
+#      QUARTZ_ORE:
+#        Pay: 50
+#        Experience: 25
+#      IRON_ORE:
+#        Pay: 50
+#        Experience: 25
+#      GOLD_ORE:
+#        Pay: 70
+#        Experience: 35
+#      LAPIS_ORE:
+#        Pay: 80
+#        Experience: 40
+#      DIAMOND_ORE:
+#        Pay: 150
+#        Experience: 75
+#      EMERALD_ORE:
+#        Pay: 200
+#        Experience: 100
+#  Smelting:
+#    COAL_ORE:
+#      Pay: 2
+#      Experience: 1
+#    REDSTONE_ORE:
+#      Pay: 4
+#      Experience: 2
+#    IRON_ORE:
+#      Pay: 6
+#      Experience: 3
+#    QUARTZ_ORE:
+#      Pay: 6
+#      Experience: 3
+#    GOLD_ORE:
+#      Pay: 8
+#      Experience: 4
+#    LAPIS_ORE:
+#      Pay: 8
+#      Experience: 4
+#    DIAMOND_ORE:
+#      Pay: 16
+#      Experience: 8
+#    EMERALD_ORE:
+#      Pay: 20
+#      Experience: 10
+ACTIVATOR_RAIL:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+ANVIL:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+APPLE:
+
+ARROW:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BAKED_POTATO:
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Cooking
+BEACON:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BED:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BED_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+BEDROCK:
+
+BIRCH_WOOD_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BLAZE_POWDER:
+
+BLAZE_ROD:
+
+BOAT:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BONE:
+
+BOOK:
+
+BOOK_AND_QUILL:
+
+BOOKSHELF:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BOW:
+
+BOWL:
+
+BREAD:
+
+BREWING_STAND:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+BREWING_STAND_ITEM:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BRICK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BRICK_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+BROWN_MUSHROOM:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+BUCKET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+CACTUS:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+CAKE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Cooking
+CAKE_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+CARROT:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+CARROT_ITEM:
+
+CARROT_STICK:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+CAULDRON:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+CAULDRON_ITEM:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+CHAINMAIL_BOOTS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+CHAINMAIL_CHESTPLATE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+CHAINMAIL_HELMET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+CHAINMAIL_LEGGINGS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+CHEST:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+CLAY:
+  break:
+    pay: 8
+    experience: 4
+    skill: Digging
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+CLAY_BALL:
+
+CLAY_BRICK:
+
+COAL:
+
+COAL_ORE:
+  break:
+    pay: 16
+    experience: 8
+    skill: Mining
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Smelting
+COBBLE_WALL:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+COBBLESTONE:
+  break:
+    pay: 2
+    experience: 1
+    skill: Smelting
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+COBBLESTONE_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+COCOA:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+COMMAND:
+
+COMPASS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+COOKED_BEEF:
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Cooking
+COOKED_CHICKEN:
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Cooking
+COOKED_FISH:
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Cooking
+COOKIE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Cooking
+CROPS:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+DAYLIGHT_DETECTOR:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DEAD_BUSH:
+
+DETECTOR_RAIL:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DIAMOND:
+
+DIAMOND_AXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+DIAMOND_BLOCK:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DIAMOND_BOOTS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+DIAMOND_CHESTPLATE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+DIAMOND_HELMET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+DIAMOND_HOE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+DIAMOND_LEGGINGS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+DIAMOND_ORE:
+  break:
+    pay: 150
+    experience: 75
+    skill: Mining
+  smelt:
+    pay: 16
+    experience: 8
+    skill: Smelting
+DIAMOND_PICKAXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+DIAMOND_SPADE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+DIAMOND_SWORD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Armoury
+DIODE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DIODE_BLOCK_OFF:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+DIRT:
+  break:
+    pay: 2
+    experience: 1
+    skill: Digging
+DISPENSER:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DOUBLE_STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+DRAGON_EGG:
+
+DROPPER:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+EGG:
+
+EMERALD:
+
+EMERALD_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+EMERALD_ORE:
+  break:
+    pay: 200
+    experience: 100
+    skill: Mining
+  smelt:
+    pay: 20
+    experience: 10
+    skill: Smelting
+EMPTY_MAP:
+
+ENCHANTED_BOOK:
+
+ENCHANTMENT_TABLE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+ENDER_CHEST:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+ENDER_PEARL:
+
+ENDER_PORTAL:
+
+ENDER_PORTAL_FRAME:
+
+ENDER_STONE:
+  break:
+    pay: 30
+    experience: 15
+    skill: Mining
+EXP_BOTTLE:
+
+EXPLOSIVE_MINECART:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+EYE_OF_ENDER:
+
+FEATHER:
+
+FENCE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+FENCE_GATE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+FERMENTED_SPIDER_EYE:
+
+FIRE:
+
+FIREBALL:
+
+FIREWORK:
+
+FIREWORK_CHARGE:
+
+FISHING_ROD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+FLINT:
+
+FLINT_AND_STEEL:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+FLOWER_POT:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+FLOWER_POT_ITEM:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+FURNACE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+GHAST_TEAR:
+
+GLASS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+GLASS_BOTTLE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Brewing
+GLOWSTONE:
+  break:
+    pay: 6
+    experience: 3
+    skill: Mining
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+GLOWSTONE_DUST:
+
+GOLD_AXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+GOLD_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+GOLD_BOOTS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+GOLD_CHESTPLATE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+GOLD_HELMET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+GOLD_HOE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+GOLD_INGOT:
+
+GOLD_LEGGINGS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+GOLD_NUGGET:
+
+GOLD_ORE:
+  break:
+    pay: 70
+    experience: 55
+    skill: Mining
+  smelt:
+    pay: 8
+    experience: 4
+    skill: Smelting
+GOLD_PICKAXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+GOLD_PLATE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+GOLD_RECORD:
+
+GOLD_SPADE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+GOLD_SWORD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Armoury
+GOLDEN_APPLE:
+
+GOLDEN_CARROT:
+
+GRASS:
+  break:
+    pay: 2
+    experience: 1
+    skill: Digging
+GRAVEL:
+  break:
+    pay: 6
+    experience: 3
+    skill: Digging
+GREEN_RECORD:
+
+GRILLED_PORK:
+
+HOPPER:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+HOPPER_MINECART:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+HUGE_MUSHROOM_1:
+
+HUGE_MUSHROOM_2:
+
+ICE:
+
+INK_SACK:
+
+IRON_AXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+IRON_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+IRON_BOOTS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+IRON_CHESTPLATE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+IRON_DOOR:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+IRON_DOOR_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+IRON_FENCE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+IRON_HELMET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+IRON_HOE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+IRON_INGOT:
+
+IRON_LEGGINGS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+IRON_ORE:
+  break:
+    pay: 50
+    experience: 25
+    skill: Mining
+  smelt:
+    pay: 6
+    experience: 3
+    skill: Smelting
+IRON_PICKAXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+IRON_PLATE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+IRON_SPADE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+IRON_SWORD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Armoury
+ITEM_FRAME:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+JACK_O_LANTERN:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+JUKEBOX:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+JUNGLE_WOOD_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+LADDER:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+LAPIS_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+LAPIS_ORE:
+  break:
+    pay: 80
+    experience: 40
+    skill: Mining
+  smelt:
+    pay: 8
+    experience: 4
+    skill: Smelting
+LAVA:
+
+LAVA_BUCKET:
+
+LEATHER:
+
+LEATHER_BOOTS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+LEATHER_CHESTPLATE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+LEATHER_HELMET:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+LEATHER_LEGGINGS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Couturier
+LEAVES:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+LEVER:
+
+LOCKED_CHEST:
+
+LOG:
+
+LONG_GRASS:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+MAGMA_CREAM:
+
+MAP:
+
+MELON:
+
+MELON_BLOCK:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+MELON_SEEDS:
+
+MELON_STEM:
+
+MILK_BUCKET:
+
+MINECART:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+MOB_SPAWNER:
+
+MONSTER_EGG:
+
+MONSTER_EGGS:
+
+MOSSY_COBBLESTONE:
+  break:
+    pay: 6
+    experience: 3
+    skill: Mining
+MUSHROOM_SOUP:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Cooking
+MYCEL:
+  break:
+    pay: 14
+    experience: 7
+    skill: Digging
+NETHER_BRICK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+NETHER_BRICK_ITEM:
+
+NETHER_BRICK_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+NETHER_FENCE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+NETHER_STALK:
+
+NETHER_STAR:
+
+NETHER_WARTS:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+NETHERRACK:
+  break:
+    pay: 6
+    experience: 3
+    skill: Mining
+NOTE_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+OBSIDIAN:
+  break:
+    pay: 30
+    experience: 15
+    skill: Mining
+PAINTING:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PAPER:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PISTON_BASE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PISTON_EXTENSION:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PISTON_MOVING_PIECE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PISTON_STICKY_BASE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+POISONOUS_POTATO:
+  break:
+    pay: -2
+    experience: -1
+    skill: Horticulture
+PORK:
+
+PORTAL:
+
+POTATO:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+POTATO_ITEM:
+
+POTION:
+
+POWERED_MINECART:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+POWERED_RAIL:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+PUMPKIN:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+PUMPKIN_PIE:
+
+PUMPKIN_SEEDS:
+
+PUMPKIN_STEM:
+
+QUARTZ:
+
+QUARTZ_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+QUARTZ_ORE:
+  break:
+    pay: 50
+    experience: 25
+    skill: Mining
+  smelt:
+    pay: 6
+    experience: 3
+    skill: Smelting
+QUARTZ_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+RAILS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+RAW_BEEF:
+
+RAW_CHICKEN:
+
+RAW_FISH:
+
+RECORD_10:
+
+RECORD_11:
+
+RECORD_12:
+
+RECORD_3:
+
+RECORD_4:
+
+RECORD_5:
+
+RECORD_6:
+
+RECORD_7:
+
+RECORD_8:
+
+RECORD_9:
+
+RED_MUSHROOM:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+RED_ROSE:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+REDSTONE:
+
+REDSTONE_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+REDSTONE_COMPARATOR:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+REDSTONE_COMPARATOR_OFF:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+REDSTONE_LAMP_OFF:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+REDSTONE_ORE:
+  break:
+    pay: 30
+    experience: 15
+    skill: Mining
+  smelt:
+    pay: 4
+    experience: 2
+    skill: Smelting
+REDSTONE_TORCH_OFF:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+REDSTONE_WIRE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+ROTTEN_FLESH:
+
+SADDLE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SAND:
+  break:
+    pay: 6
+    experience: 3
+    skill: Digging
+SANDSTONE:
+  break:
+    pay: 6
+    experience: 3
+    skill: Mining
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SANDSTONE_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SAPLING:
+
+SEEDS:
+
+SHEARS:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+SIGN:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SIGN_POST:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+SKULL:
+
+SKULL_ITEM:
+
+SLIME_BALL:
+
+SMOOTH_BRICK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SMOOTH_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SNOW:
+
+SNOW_BALL:
+
+SNOW_BLOCK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+SOIL:
+
+SOUL_SAND:
+  break:
+    pay: 30
+    experience: 15
+    skill: Digging
+SPECKLED_MELON:
+
+SPIDER_EYE:
+
+SPONGE:
+
+SPRUCE_WOOD_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STATIONARY_LAVA:
+
+STATIONARY_WATER:
+
+STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STICK:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STONE:
+  break:
+    pay: 6
+    experience: 3
+    skill: Mining
+  smelt:
+    pay: 2
+    experience: 1
+    skill: Smelting
+STONE_AXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+STONE_BUTTON:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STONE_HOE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+STONE_PICKAXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+STONE_PLATE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STONE_SPADE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+STONE_SWORD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Armoury
+STORAGE_MINECART:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+STRING:
+
+SUGAR:
+
+SUGAR_CANE:
+
+SUGAR_CANE_BLOCK:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+SULPHUR:
+
+THIN_GLASS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+TNT:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+TORCH:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+TRAP_DOOR:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+TRAPPED_CHEST:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+TRIPWIRE:
+
+TRIPWIRE_HOOK:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+VINE:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+WALL_SIGN:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+WATCH:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+WATER:
+
+WATER_BUCKET:
+
+WATER_LILY:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
+WEB:
+
+WHEAT:
+
+WOOD:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_AXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+WOOD_BUTTON:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Mechanics
+WOOD_DOOR:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_DOUBLE_STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_HOE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+WOOD_PICKAXE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+WOOD_PLATE:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_SPADE:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Toolmaking
+WOOD_STAIRS:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_STEP:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOD_SWORD:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Armoury
+WOODEN_DOOR:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WOOL:
+
+WORKBENCH:
+  place:
+    pay: 2
+    experience: 1
+    skill: Building
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+WRITTEN_BOOK:
+  craft:
+    pay: 2
+    experience: 1
+    skill: Crafting
+YELLOW_FLOWER:
+  break:
+    pay: 2
+    experience: 1
+    skill: Horticulture
