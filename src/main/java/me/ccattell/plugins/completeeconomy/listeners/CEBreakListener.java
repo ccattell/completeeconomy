@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.runnables.CERunnableData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -39,21 +40,28 @@ public class CEBreakListener implements Listener {
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
         int drops = getDropsForSkill(name);
-        HashMap<String, Integer> counts = plugin.getBreakQueue().get(name);
+        HashMap<String, CERunnableData> counts = plugin.getBreakQueue().get(name);
         if (counts == null) {
             // first time ever mining
-            HashMap<String, Integer> newcount = new HashMap<String, Integer>();
-            newcount.put(name, drops);
+            HashMap<String, CERunnableData> newcount = new HashMap<String, CERunnableData>();
+            CERunnableData rd = new CERunnableData();
+            rd.setCount(drops);
+            rd.setSkill(plugin.configs.skillList.getString(block + ".break.skill"));
+            newcount.put(name, rd);
             plugin.getBreakQueue().put(name, newcount);
         } else {
-            int minecount = counts.get(name);
-            if (minecount == 0) {
-                // first time they've mined this block
-                counts.put(name, drops);
+            CERunnableData rd_data = counts.get(block);
+            if (rd_data == null) {
+                // first time they've broken this block
+                rd_data = new CERunnableData();
+                rd_data.setSkill(plugin.configs.skillList.getString(block + ".break.skill"));
+                rd_data.setCount(drops);
             } else {
+                int minecount = rd_data.getCount();
                 // increase count
-                counts.put(name, minecount + drops);
+                rd_data.setCount(minecount + drops);
             }
+            counts.put(block, rd_data);
             plugin.getBreakQueue().put(name, counts);
         }
     }
