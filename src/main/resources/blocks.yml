@@ -843,16 +843,8 @@ COBBLESTONE_STAIRS:
     Exp: 10
     Skill:
       - skill name
-#68
-Wall Sign:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
 #69
-Lever:
+LEVER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -860,47 +852,25 @@ Lever:
     Skill:
       - skill name
 #70
-Stone Pressure Plate:
+STONE_PLATE:
   DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#71
-Iron Door Block:
-  DefaultPrice: 10
+  Alias: Stone Pressure Plate
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #72
-Wooden Pressure Plate:
+WOOD_PLATE:
   DefaultPrice: 10
+  Alias: Wooden Pressure Plate
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #73
-Redstone Ore:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#74
-Glowing Redstone Ore:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#75
-Redstone Torch (off):
+REDSTONE_ORE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -908,15 +878,16 @@ Redstone Torch (off):
     Skill:
       - skill name
 #76
-Redstone Torch (on):
+REDSTONE_TORCH_ON:
   DefaultPrice: 10
+  Alias: Redstone Torch
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #77
-Stone Button:
+STONE_BUTTON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -924,7 +895,7 @@ Stone Button:
     Skill:
       - skill name
 #78
-Snow:
+SNOW:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -932,7 +903,7 @@ Snow:
     Skill:
       - skill name
 #79
-Ice:
+ICE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -940,7 +911,7 @@ Ice:
     Skill:
       - skill name
 #80
-Snow Block:
+SNOW_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -948,7 +919,7 @@ Snow Block:
     Skill:
       - skill name
 #81
-Cactus:
+CACTUS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -956,7 +927,7 @@ Cactus:
     Skill:
       - skill name
 #82
-Clay:
+CLAY:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -964,15 +935,16 @@ Clay:
     Skill:
       - skill name
 #83
-Sugar Cane:
+SUGAR_CANE_BLOCK:
   DefaultPrice: 10
+  Alias: Sugar Cane
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #84
-Jukebox:
+JUKEBOX:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -980,7 +952,7 @@ Jukebox:
     Skill:
       - skill name
 #85
-Fence:
+FENCE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -988,7 +960,7 @@ Fence:
     Skill:
       - skill name
 #86
-Pumpkin:
+PUMPKIN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -996,7 +968,7 @@ Pumpkin:
     Skill:
       - skill name
 #87
-Netherrack:
+NETHERRACK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1004,7 +976,7 @@ Netherrack:
     Skill:
       - skill name
 #88
-Soul Sand:
+SOUL_SAND:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1012,15 +984,7 @@ Soul Sand:
     Skill:
       - skill name
 #89
-Glowstone:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#90
-Portal:
+GLOWSTONE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1028,7 +992,7 @@ Portal:
     Skill:
       - skill name
 #91
-Jack-O-Lantern:
+JACK_O_LANTERN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1036,63 +1000,16 @@ Jack-O-Lantern:
     Skill:
       - skill name
 #92
-Cake Block:
+CAKE_BLOCK:
   DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#93
-Redstone Repeater Block (off):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#94
-Redstone Repeater Block (on):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#95
-Locked Chest:
-  DefaultPrice: 10
+  Alias: Cake
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #96
-Trapdoor:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#97
-Stone (Silverfish):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#97:1
-Cobblestone (Silverfish):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
-      - skill name
-#97:2
-Stone Brick (Silverfish):
+TRAP_DOOR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1100,32 +1017,36 @@ Stone Brick (Silverfish):
     Skill:
       - skill name
 #98
-Stone Brick:
+SMOOTH_BRICK:0:
   DefaultPrice: 10
+  Alias: Stone Bricks
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #98:1
-Mossy Stone Brick:
+SMOOTH_BRICK:1:
   DefaultPrice: 10
+  Alias: Mossy Stone Brick
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #98:2
-Cracked Stone Brick:
+SMOOTH_BRICK:2:
   DefaultPrice: 10
+  Alias: Cracked Stone Brick
   Break:
     Pay: 20
     Exp: 10
     Skill:
       - skill name
 #98:3
-Chiseled Stone Brick:
+SMOOTH_BRICK:3:
   DefaultPrice: 10
+  Alias: Chiseled Stone Brick
   Break:
     Pay: 20
     Exp: 10
