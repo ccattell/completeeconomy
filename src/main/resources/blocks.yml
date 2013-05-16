@@ -264,101 +264,109 @@ LOG:3:
     Skill:
       - skill name
 #18
-Oak Leaves:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LEAVES:0:
+  DefaultPrice: 10
+  Alias: Oak Leaves
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #18:1
-Spruce Leaves:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LEAVES:1:
+  DefaultPrice: 10
+  Alias: Spruce Leaves
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #18:2
-Birch Leaves:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LEAVES:2:
+  DefaultPrice: 10
+  Alias: Birch Leaves
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #18:3
-Jungle Leaves:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LEAVES:3:
+  DefaultPrice: 10
+  Alias: Jungle Leaves
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #19
-Sponge:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SPONGE:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #20
-Glass:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+GLASS:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #21
-Lapis Lazuli Ore:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LAPIS_ORE:
+  DefaultPrice: 10
+  Alias: Lapis Lazuli Ore
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #22
-Lapis Lazuli Block:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+LAPIS_BLOCK:
+  DefaultPrice: 10
+  Alias: Lapis Lazuli Block
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #23
-Dispenser:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+DISPENSER:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #24
-Sandstone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SANDSTONE:0:
+  DefaultPrice: 10
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #24:1
-Chiseled Sandstone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SANDSTONE:1:
+  DefaultPrice: 10
+  Alias: Chiseled Sandstone
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #24:2
-Smooth Sandstone:
-  DefaultPrice: 10  
-  Break: 
-    Pay: 20 
-    Exp: 10 
-    Skill: 
-      - skill name 
+SANDSTONE:2:
+  DefaultPrice: 10
+  Alias: Smooth Sandstone
+  Break:
+    Pay: 20
+    Exp: 10
+    Skill:
+      - skill name
 #25
 Note Block:
   DefaultPrice: 10  
