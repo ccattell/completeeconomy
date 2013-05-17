@@ -1,3212 +1,3218 @@
 #1
 STONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - mining
-  Place:
-    Pay: 5
-    Exp: 3
-    Skill:
+  place:
+    pay: 5
+    exp: 3
+    skill:
       - building
-  Craft:
-    Pay: 3
-    Exp: 2
-    Skill:
+  craft:
+    pay: 3
+    exp: 2
+    skill:
       - smelting
 #2
 GRASS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #3
 DIRT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #4
 COBBLESTONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #5
 WOOD:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Oak Wood Plank
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Craft:
-    Pay: 20
-    Exp: 10
-    Skill:
+  craft:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #5:1
 WOOD:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Spruce Wood Plank
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Craft:
-    Pay: 20
-    Exp: 10
-    Skill:
+  craft:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #5:2
 WOOD:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Birch Wood Plank
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Craft:
-    Pay: 20
-    Exp: 10
-    Skill:
+  craft:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #5:3
 WOOD:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Jungle Wood Plank
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Craft:
-    Pay: 20
-    Exp: 10
-    Skill:
+  craft:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #6
 SAPLING:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Oak Sapling
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #6:1
 SAPLING:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Spruce Sapling
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #6:2
 SAPLING:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Birch Sapling
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #6:3
 SAPLING:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Jungle Sapling
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
-  Place:
-    Pay: 20
-    Exp: 10
-    Skill:
+  place:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #12
 SAND:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #13
 GRAVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #14
 GOLD_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #15
 IRON_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #16
 COAL_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #17
 LOG:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Oak Log
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #17:1
 LOG:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Spruce Log
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #17:2
 LOG:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Birch Log
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #17:3
 LOG:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Jungle Log
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #18
 LEAVES:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Oak Leaves
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #18:1
 LEAVES:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Spruce Leaves
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #18:2
 LEAVES:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Birch Leaves
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #18:3
 LEAVES:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Jungle Leaves
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #19
 SPONGE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #20
 GLASS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #21
 LAPIS_ORE:
-  DefaultPrice: 10
+  buy: 10
   Alias: Lapis Lazuli Ore
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #22
 LAPIS_BLOCK:
-  DefaultPrice: 10
+  buy: 10
   Alias: Lapis Lazuli Block
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #23
 DISPENSER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #24
 SANDSTONE:0:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #24:1
 SANDSTONE:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Chiseled Sandstone
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #24:2
 SANDSTONE:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Smooth Sandstone
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #25
 NOTE_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #27
 POWERED_RAIL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #28
 DETECTOR_RAIL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #29
 PISTON_STICKY_BASE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #30
 WEB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #31
 LONG_GRASS:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Dead Bush
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #31:1
 LONG_GRASS:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Long Grass
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #31:2
 LONG_GRASS:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Fern
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #32
 DEAD_BUSH:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #33
 PISTON_BASE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #34
 PISTON_EXTENSION:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35
 WOOL:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: White Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:1
 WOOL:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Orange Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:2
 WOOL:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Magenta Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:3
 WOOL:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Light Blue Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:4
 WOOL:4:
-  DefaultPrice: 10
+  buy: 10
   Alias: Yellow Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:5
 WOOL:5:
-  DefaultPrice: 10
+  buy: 10
   Alias: Light Green Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:6
 WOOL:6:
-  DefaultPrice: 10
+  buy: 10
   Alias: Pink Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:7
 WOOL:7:
-  DefaultPrice: 10
+  buy: 10
   Alias: Gray Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:8
 WOOL:8:
-  DefaultPrice: 10
+  buy: 10
   Alias: Light Gray Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:9
 WOOL:9:
-  DefaultPrice: 10
+  buy: 10
   Alias: Cyan Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:10
 WOOL:10:
-  DefaultPrice: 10
+  buy: 10
   Alias: Purple Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:11
 WOOL:11:
-  DefaultPrice: 10
+  buy: 10
   Alias: Blue Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:12
 WOOL:12:
-  DefaultPrice: 10
+  buy: 10
   Alias: Brown Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:13
 WOOL:13:
-  DefaultPrice: 10
+  buy: 10
   Alias: Dark Green Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:14
 WOOL:14:
-  DefaultPrice: 10
+  buy: 10
   Alias: Red Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #35:15
 WOOL:15:
-  DefaultPrice: 10
+  buy: 10
   Alias: Black Wool
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #37
 YELLOW_FLOWER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #38
 RED_ROSE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #39
 BROWN_MUSHROOM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #40
 RED_MUSHROOM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #41
 GOLD_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #42
 IRON_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 STEP:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Stone Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:1
 STEP:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Sandstone Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:2
 STEP:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Wooden Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:3
 STEP:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Cobblestone Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:4
 STEP:4:
-  DefaultPrice: 10
+  buy: 10
   Alias: Brick Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:5
 STEP:5:
-  DefaultPrice: 10
+  buy: 10
   Alias: Stone Brick Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:6
 STEP:6:
-  DefaultPrice: 10
+  buy: 10
   Alias: Nether Brick Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #44:7
 STEP:7:
-  DefaultPrice: 10
+  buy: 10
   Alias: Quartz Slab
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #45
 BRICK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #46
 TNT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #47
 BOOKSHELF:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #48
 MOSSY_COBBLESTONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #49
 OBSIDIAN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #50
 TORCH:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #53
 WOOD_STAIRS:
-  DefaultPrice: 10
+  buy: 10
   Alias: Oak Wood Stairs
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #54
 CHEST:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #56
 DIAMOND_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #57
 DIAMOND_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #58
 WORKBENCH:
-  DefaultPrice: 10
+  buy: 10
   Alias: Crafting Table
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #61
 FURNACE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #65
 LADDER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #66
 RAILS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #67
 COBBLESTONE_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #69
 LEVER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #70
 STONE_PLATE:
-  DefaultPrice: 10
+  buy: 10
   Alias: Stone Pressure Plate
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #72
 WOOD_PLATE:
-  DefaultPrice: 10
+  buy: 10
   Alias: Wooden Pressure Plate
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #73
 REDSTONE_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #76
 REDSTONE_TORCH_ON:
-  DefaultPrice: 10
+  buy: 10
   Alias: Redstone Torch
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #77
 STONE_BUTTON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #78
 SNOW:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #79
 ICE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #80
 SNOW_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #81
 CACTUS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #82
 CLAY:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #83
 SUGAR_CANE_BLOCK:
-  DefaultPrice: 10
+  buy: 10
   Alias: Sugar Cane
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #84
 JUKEBOX:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #85
 FENCE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #86
 PUMPKIN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #87
 NETHERRACK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #88
 SOUL_SAND:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #89
 GLOWSTONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #91
 JACK_O_LANTERN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #92
 CAKE_BLOCK:
-  DefaultPrice: 10
+  buy: 10
   Alias: Cake
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #96
 TRAP_DOOR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #98
 SMOOTH_BRICK:0:
-  DefaultPrice: 10
+  buy: 10
   Alias: Stone Bricks
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #98:1
 SMOOTH_BRICK:1:
-  DefaultPrice: 10
+  buy: 10
   Alias: Mossy Stone Brick
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #98:2
 SMOOTH_BRICK:2:
-  DefaultPrice: 10
+  buy: 10
   Alias: Cracked Stone Brick
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #98:3
 SMOOTH_BRICK:3:
-  DefaultPrice: 10
+  buy: 10
   Alias: Chiseled Stone Brick
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #99
-RED_MUSHROOM_CAP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+HUGE_MUSHROOM_1:
+  buy: 10
+  Alias: Red Mushroom Cap
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #100
-BROWN_MUSHROOM_CAP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+HUGE_MUSHROOM_2:
+  buy: 10
+  Alias: Brown Mushroom Cap
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #101
-IRON_BARS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+IRON_FENCE:
+  buy: 10
+  Alias: Iron Bars
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #102
-GLASS_PANE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+THIN_GLASS:
+  buy: 10
+  Alias: Glass Pane
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #103
 MELON_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #104
 PUMPKIN_STEM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #105
 MELON_STEM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #106
-VINES:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+VINE:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #107
 FENCE_GATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #108
 BRICK_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #109
-STONE_BRICK_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+SMOOTH_STAIRS:
+  buy: 10
+  Alias: Stone Brick Stairs
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #110
-MYCELIUM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+MYCEL:
+  buy: 10
+  Alias: Mycelium
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #111
 LILY_PAD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #112
 NETHER_BRICK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #113
 NETHER_BRICK_FENCE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #114
 NETHER_BRICK_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #115
 NETHER_WART:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #116
 ENCHANTMENT_TABLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #117
 BREWING_STAND:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #118
 CAULDRON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #119
 END_PORTAL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #120
 END_PORTAL_FRAME:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #121
 END_STONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #122
 DRAGON_EGG:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #123
 REDSTONE_LAMP_(INACTIVE):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #124
 REDSTONE_LAMP_(ACTIVE):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #125
 DOUBLE_OAK_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #125:1
 DOUBLE_SPRUCE_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #125:2
 DOUBLE_BIRCH_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #125:3
 DOUBLE_JUNGLE_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #126
 OAK_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #126:1
 SPRUCE_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #126:2
 BIRCH_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #126:3
 JUNGLE_WOOD_SLAB:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #127
 COCOA_PLANT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #128
 SANDSTONE_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #129
 EMERALD_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #130
 ENDER_CHEST:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #131
 TRIPWIRE_HOOK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #132
 TRIPWIRE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #133
 EMERALD_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #134
 SPRUCE_WOOD_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #135
 BIRCH_WOOD_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #136
 JUNGLE_WOOD_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #137
 COMMAND_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #138
 BEACON_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #139
 COBBLESTONE_WALL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #139:1
 MOSSY_COBBLESTONE_WALL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #140
 FLOWER_POT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #141
 CARROTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #142
 POTATOES:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #143
 WOODEN_BUTTON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #144
 MOB_HEAD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #145
 ANVIL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #146
 TRAPPED_CHEST:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #147
 WEIGHTED_PRESSURE_PLATE_(LIGHT):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #148
 WEIGHTED_PRESSURE_PLATE_(HEAVY):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #149
 REDSTONE_COMPARATOR_(INACTIVE):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #150
 REDSTONE_COMPARATOR_(ACTIVE):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #151
 DAYLIGHT_SENSOR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #152
 REDSTONE_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #153
 NETHER_QUARTZ_ORE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #154
 HOPPER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #155
 QUARTZ_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #155:1
 CHISELED_QUARTZ_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #155:2
 PILLAR_QUARTZ_BLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #156
 QUARTZ_STAIRS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #157
 ACTIVATOR_RAIL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #158
 DROPPER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #256
 IRON_SHOVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #257
 IRON_PICKAXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #258
 IRON_AXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #259
 FLINT_AND_STEEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #260
 APPLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #261
 BOW:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #262
 ARROW:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #263
 COAL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #263:1
 CHARCOAL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #264
 DIAMOND:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #265
 IRON_INGOT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #266
 GOLD_INGOT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #267
 IRON_SWORD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #268
 WOODEN_SWORD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #269
 WOODEN_SHOVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #270
 WOODEN_PICKAXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #271
 WOODEN_AXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #272
 STONE_SWORD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #273
 STONE_SHOVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #274
 STONE_PICKAXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #275
 STONE_AXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #276
 DIAMOND_SWORD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #277
 DIAMOND_SHOVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #278
 DIAMOND_PICKAXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #279
 DIAMOND_AXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #280
 STICK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #281
 BOWL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #282
 MUSHROOM_SOUP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #283
 GOLD_SWORD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #284
 GOLD_SHOVEL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #285
 GOLD_PICKAXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #286
 GOLD_AXE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #287
 STRING:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #288
 FEATHER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #289
 SULPHUR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #290
 WOODEN_HOE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #291
 STONE_HOE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #292
 IRON_HOE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #293
 DIAMOND_HOE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #294
 GOLD_HOE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #295
 WHEAT_SEEDS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #296
 WHEAT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #297
 BREAD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #298
 LEATHER_HELMET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #299
 LEATHER_CHESTPLATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #300
 LEATHER_LEGGINGS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #301
 LEATHER_BOOTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #302
 CHAINMAIL_HELMET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #303
 CHAINMAIL_CHESTPLATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #304
 CHAINMAIL_LEGGINGS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #305
 CHAINMAIL_BOOTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #306
 IRON_HELMET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #307
 IRON_CHESTPLATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #308
 IRON_LEGGINGS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #309
 IRON_BOOTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #310
 DIAMOND_HELMET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #311
 DIAMOND_CHESTPLATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #312
 DIAMOND_LEGGINGS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #313
 DIAMOND_BOOTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #314
 GOLD_HELMET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #315
 GOLD_CHESTPLATE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #316
 GOLD_LEGGINGS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #317
 GOLD_BOOTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #318
 FLINT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #319
 RAW_PORKCHOP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #320
 COOKED_PORKCHOP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #321
 PAINTING:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #322
 GOLDEN_APPLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #322:1
 ENCHANTED_GOLDEN_APPLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #323
 SIGN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #324
 WOODEN_DOOR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #325
 BUCKET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #326
 WATER_BUCKET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #327
 LAVA_BUCKET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #328
 MINECART:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #329
 SADDLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #330
 IRON_DOOR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #331
 REDSTONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #332
 SNOWBALL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #333
 BOAT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #334
 LEATHER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #335
 MILK_BUCKET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #336
 CLAY_BRICK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #337
 CLAY_BALLS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #338
 SUGARCANE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #339
 PAPER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #340
 BOOK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #341
 SLIMEBALL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #342
 STORAGE_MINECART:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #343
 POWERED_MINECART:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #344
 EGG:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #345
 COMPASS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #346
 FISHING_ROD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #347
 CLOCK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #348
 GLOWSTONE_DUST:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #349
 RAW_FISH:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #350
 COOKED_FISH:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351
 INK_SACK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:1
 ROSE_RED:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:2
 CACTUS_GREEN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:3
 COCO_BEANS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:4
 LAPIS_LAZULI:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:5
 PURPLE_DYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:6
 CYAN_DYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:7
 LIGHT_GRAY_DYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:8
 GRAY_DYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:9
 PINK_DYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:10
 Lime Dye:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:11
 Dandelion Yellow:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:12
 Light Blue Dye:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:13
 Magenta Dye:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:14
 Orange Dye:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #351:15
 Bone Meal:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #352
 BONE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #353
 SUGAR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #354
 CAKE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #355
 BED:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #356
 REDSTONE_REPEATER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #357
 COOKIE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #358
 MAP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #359
 SHEARS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #360
 MELON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #361
 PUMPKIN_SEEDS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #362
 MELON_SEEDS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #363
 RAW_BEEF:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #364
 STEAK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #365
 RAW_CHICKEN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #366
 COOKED_CHICKEN:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #367
 ROTTEN_FLESH:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #368
 ENDER_PEARL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #369
 BLAZE_ROD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #370
 GHAST_TEAR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #371
 GOLD_NUGGET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #372
 NETHER_WART_SEEDS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #373
 POTION:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #374
 GLASS_BOTTLE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #375
 SPIDER_EYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #376
 FERMENTED_SPIDER_EYE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #377
 BLAZE_POWDER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #378
 MAGMA_CREAM:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #379
 BREWING_STAND:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #380
 CAULDRON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #381
 EYE_OF_ENDER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #382
 GLISTERING_MELON:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:50
 Spawn Creeper:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:51
 Spawn Skeleton:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:52
 Spawn Spider:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:54
 Spawn Zombie:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:55
 Spawn Slime:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:56
 Spawn Ghast:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:57
 Spawn Pigman:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:58
 Spawn Enderman:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:59
 Spawn Cave Spider:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:60
 Spawn Silverfish:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:61
 Spawn Blaze:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:62
 Spawn Magma Cube:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:65
 Spawn Bat:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:66
 Spawn Witch:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:90
 Spawn Pig:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:91
 Spawn Sheep:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:92
 Spawn Cow:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:93
 Spawn Chicken:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:94
 Spawn Squid:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:95
 Spawn Wolf:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:96
 Spawn Mooshroom:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:98
 Spawn Ocelot:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #383:120
 Spawn Villager:
-  DefaultPrice: 10
-  Break:
+  buy: 10
+  break:
 
-    Pay: 20
-    Exp: 10
-    Skill:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #384
 BOTTLE_O'_ENCHANTING:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #385
 FIRE_CHARGE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #386
 BOOK_AND_QUILL:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #387
 WRITTEN_BOOK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #388
 EMERALD:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #389
 ITEM_FRAME:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #390
 FLOWER_POT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #391
 CARROTS:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #392
 POTATO:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #393
 BAKED_POTATO:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #394
 POISONOUS_POTATO:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #395
 MAP:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #396
 GOLDEN_CARROT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #397
 MOB_HEAD_(SKELETON):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #397:1
 MOB_HEAD_(WITHER_SKELETON):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #397:2
 MOB_HEAD_(ZOMBIE):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #397:3
 MOB_HEAD_(HUMAN):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #397:4
 MOB_HEAD_(CREEPER):
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #398
 CARROT_ON_A_STICK:
 
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #399
 NETHER_STAR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #400
 PUMPKIN_PIE:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #401
 FIREWORK_ROCKET:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #402
 FIREWORK_STAR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #403
 ENCHANTED_BOOK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #404
 REDSTONE_COMPARATOR:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #405
 NETHER_BRICK:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #406
 NETHER_QUARTZ:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #407
 MINECART_WITH_TNT:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #408
 MINECART_WITH_HOPPER:
-  DefaultPrice: 10
-  Break:
-    Pay: 20
-    Exp: 10
-    Skill:
+  buy: 10
+  break:
+    pay: 20
+    exp: 10
+    skill:
       - skill name
 #2256
 13_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2257
 CAT_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2258
 BLOCKS_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2259
 CHIRP_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2260
 FAR_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2261
 MALL_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2262
 MELLOHI_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2263
 STAL_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2264
 STRAD_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2265
 WARD_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2266
 11_DISC:
-  DefaultPrice: 10
+  buy: 10
 #2267
 WAIT_DISC:
-  DefaultPrice: 10
+  buy: 10
