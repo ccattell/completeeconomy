@@ -1053,7 +1053,7 @@ SMOOTH_BRICK:3:
     Skill:
       - skill name
 #99
-Red Mushroom Cap:
+RED_MUSHROOM_CAP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1061,7 +1061,7 @@ Red Mushroom Cap:
     Skill:
       - skill name
 #100
-Brown Mushroom Cap:
+BROWN_MUSHROOM_CAP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1069,7 +1069,7 @@ Brown Mushroom Cap:
     Skill:
       - skill name
 #101
-Iron Bars:
+IRON_BARS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1077,7 +1077,7 @@ Iron Bars:
     Skill:
       - skill name
 #102
-Glass Pane:
+GLASS_PANE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1085,7 +1085,7 @@ Glass Pane:
     Skill:
       - skill name
 #103
-Melon Block:
+MELON_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1093,7 +1093,7 @@ Melon Block:
     Skill:
       - skill name
 #104
-Pumpkin Stem:
+PUMPKIN_STEM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1101,7 +1101,7 @@ Pumpkin Stem:
     Skill:
       - skill name
 #105
-Melon Stem:
+MELON_STEM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1109,7 +1109,7 @@ Melon Stem:
     Skill:
       - skill name
 #106
-Vines:
+VINES:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1117,7 +1117,7 @@ Vines:
     Skill:
       - skill name
 #107
-Fence Gate:
+FENCE_GATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1125,7 +1125,7 @@ Fence Gate:
     Skill:
       - skill name
 #108
-Brick Stairs:
+BRICK_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1133,7 +1133,7 @@ Brick Stairs:
     Skill:
       - skill name
 #109
-Stone Brick Stairs:
+STONE_BRICK_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1141,7 +1141,7 @@ Stone Brick Stairs:
     Skill:
       - skill name
 #110
-Mycelium:
+MYCELIUM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1149,7 +1149,7 @@ Mycelium:
     Skill:
       - skill name
 #111
-Lily Pad:
+LILY_PAD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1157,7 +1157,7 @@ Lily Pad:
     Skill:
       - skill name
 #112
-Nether Brick:
+NETHER_BRICK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1165,7 +1165,7 @@ Nether Brick:
     Skill:
       - skill name
 #113
-Nether Brick Fence:
+NETHER_BRICK_FENCE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1173,7 +1173,7 @@ Nether Brick Fence:
     Skill:
       - skill name
 #114
-Nether Brick Stairs:
+NETHER_BRICK_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1181,7 +1181,7 @@ Nether Brick Stairs:
     Skill:
       - skill name
 #115
-Nether Wart:
+NETHER_WART:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1189,7 +1189,7 @@ Nether Wart:
     Skill:
       - skill name
 #116
-Enchantment Table:
+ENCHANTMENT_TABLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1197,7 +1197,7 @@ Enchantment Table:
     Skill:
       - skill name
 #117
-Brewing Stand:
+BREWING_STAND:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1205,7 +1205,7 @@ Brewing Stand:
     Skill:
       - skill name
 #118
-Cauldron:
+CAULDRON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1213,7 +1213,7 @@ Cauldron:
     Skill:
       - skill name
 #119
-End Portal:
+END_PORTAL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1221,7 +1221,7 @@ End Portal:
     Skill:
       - skill name
 #120
-End Portal Frame:
+END_PORTAL_FRAME:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1229,7 +1229,7 @@ End Portal Frame:
     Skill:
       - skill name
 #121
-End Stone:
+END_STONE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1237,7 +1237,7 @@ End Stone:
     Skill:
       - skill name
 #122
-Dragon Egg:
+DRAGON_EGG:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1245,7 +1245,7 @@ Dragon Egg:
     Skill:
       - skill name
 #123
-Redstone Lamp (inactive):
+REDSTONE_LAMP_(INACTIVE):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1253,7 +1253,7 @@ Redstone Lamp (inactive):
     Skill:
       - skill name
 #124
-Redstone Lamp (active):
+REDSTONE_LAMP_(ACTIVE):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1261,7 +1261,7 @@ Redstone Lamp (active):
     Skill:
       - skill name
 #125
-Double Oak Wood Slab:
+DOUBLE_OAK_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1269,7 +1269,7 @@ Double Oak Wood Slab:
     Skill:
       - skill name
 #125:1
-Double Spruce Wood Slab:
+DOUBLE_SPRUCE_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1277,7 +1277,7 @@ Double Spruce Wood Slab:
     Skill:
       - skill name
 #125:2
-Double Birch Wood Slab:
+DOUBLE_BIRCH_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1285,7 +1285,7 @@ Double Birch Wood Slab:
     Skill:
       - skill name
 #125:3
-Double Jungle Wood Slab:
+DOUBLE_JUNGLE_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1293,7 +1293,7 @@ Double Jungle Wood Slab:
     Skill:
       - skill name
 #126
-Oak Wood Slab:
+OAK_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1301,7 +1301,7 @@ Oak Wood Slab:
     Skill:
       - skill name
 #126:1
-Spruce Wood Slab:
+SPRUCE_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1309,7 +1309,7 @@ Spruce Wood Slab:
     Skill:
       - skill name
 #126:2
-Birch Wood Slab:
+BIRCH_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1317,7 +1317,7 @@ Birch Wood Slab:
     Skill:
       - skill name
 #126:3
-Jungle Wood Slab:
+JUNGLE_WOOD_SLAB:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1325,7 +1325,7 @@ Jungle Wood Slab:
     Skill:
       - skill name
 #127
-Cocoa Plant:
+COCOA_PLANT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1333,7 +1333,7 @@ Cocoa Plant:
     Skill:
       - skill name
 #128
-Sandstone Stairs:
+SANDSTONE_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1341,7 +1341,7 @@ Sandstone Stairs:
     Skill:
       - skill name
 #129
-Emerald Ore:
+EMERALD_ORE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1349,7 +1349,7 @@ Emerald Ore:
     Skill:
       - skill name
 #130
-Ender Chest:
+ENDER_CHEST:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1357,7 +1357,7 @@ Ender Chest:
     Skill:
       - skill name
 #131
-Tripwire Hook:
+TRIPWIRE_HOOK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1365,7 +1365,7 @@ Tripwire Hook:
     Skill:
       - skill name
 #132
-Tripwire:
+TRIPWIRE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1373,7 +1373,7 @@ Tripwire:
     Skill:
       - skill name
 #133
-Emerald Block:
+EMERALD_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1381,7 +1381,7 @@ Emerald Block:
     Skill:
       - skill name
 #134
-Spruce Wood Stairs:
+SPRUCE_WOOD_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1389,7 +1389,7 @@ Spruce Wood Stairs:
     Skill:
       - skill name
 #135
-Birch Wood Stairs:
+BIRCH_WOOD_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1397,7 +1397,7 @@ Birch Wood Stairs:
     Skill:
       - skill name
 #136
-Jungle Wood Stairs:
+JUNGLE_WOOD_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1405,7 +1405,7 @@ Jungle Wood Stairs:
     Skill:
       - skill name
 #137
-Command Block:
+COMMAND_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1413,7 +1413,7 @@ Command Block:
     Skill:
       - skill name
 #138
-Beacon Block:
+BEACON_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1421,7 +1421,7 @@ Beacon Block:
     Skill:
       - skill name
 #139
-Cobblestone Wall:
+COBBLESTONE_WALL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1429,7 +1429,7 @@ Cobblestone Wall:
     Skill:
       - skill name
 #139:1
-Mossy Cobblestone Wall:
+MOSSY_COBBLESTONE_WALL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1437,7 +1437,7 @@ Mossy Cobblestone Wall:
     Skill:
       - skill name
 #140
-Flower Pot:
+FLOWER_POT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1445,7 +1445,7 @@ Flower Pot:
     Skill:
       - skill name
 #141
-Carrots:
+CARROTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1453,7 +1453,7 @@ Carrots:
     Skill:
       - skill name
 #142
-Potatoes:
+POTATOES:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1461,7 +1461,7 @@ Potatoes:
     Skill:
       - skill name
 #143
-Wooden Button:
+WOODEN_BUTTON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1469,7 +1469,7 @@ Wooden Button:
     Skill:
       - skill name
 #144
-Mob Head:
+MOB_HEAD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1477,7 +1477,7 @@ Mob Head:
     Skill:
       - skill name
 #145
-Anvil:
+ANVIL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1485,7 +1485,7 @@ Anvil:
     Skill:
       - skill name
 #146
-Trapped Chest:
+TRAPPED_CHEST:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1493,7 +1493,7 @@ Trapped Chest:
     Skill:
       - skill name
 #147
-Weighted Pressure Plate (light):
+WEIGHTED_PRESSURE_PLATE_(LIGHT):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1501,7 +1501,7 @@ Weighted Pressure Plate (light):
     Skill:
       - skill name
 #148
-Weighted Pressure Plate (heavy):
+WEIGHTED_PRESSURE_PLATE_(HEAVY):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1509,7 +1509,7 @@ Weighted Pressure Plate (heavy):
     Skill:
       - skill name
 #149
-Redstone Comparator (inactive):
+REDSTONE_COMPARATOR_(INACTIVE):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1517,7 +1517,7 @@ Redstone Comparator (inactive):
     Skill:
       - skill name
 #150
-Redstone Comparator (active):
+REDSTONE_COMPARATOR_(ACTIVE):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1525,7 +1525,7 @@ Redstone Comparator (active):
     Skill:
       - skill name
 #151
-Daylight Sensor:
+DAYLIGHT_SENSOR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1533,7 +1533,7 @@ Daylight Sensor:
     Skill:
       - skill name
 #152
-Redstone Block:
+REDSTONE_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1541,7 +1541,7 @@ Redstone Block:
     Skill:
       - skill name
 #153
-Nether Quartz Ore:
+NETHER_QUARTZ_ORE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1549,7 +1549,7 @@ Nether Quartz Ore:
     Skill:
       - skill name
 #154
-Hopper:
+HOPPER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1557,7 +1557,7 @@ Hopper:
     Skill:
       - skill name
 #155
-Quartz Block:
+QUARTZ_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1565,7 +1565,7 @@ Quartz Block:
     Skill:
       - skill name
 #155:1
-Chiseled Quartz Block:
+CHISELED_QUARTZ_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1573,7 +1573,7 @@ Chiseled Quartz Block:
     Skill:
       - skill name
 #155:2
-Pillar Quartz Block:
+PILLAR_QUARTZ_BLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1581,7 +1581,7 @@ Pillar Quartz Block:
     Skill:
       - skill name
 #156
-Quartz Stairs:
+QUARTZ_STAIRS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1589,7 +1589,7 @@ Quartz Stairs:
     Skill:
       - skill name
 #157
-Activator Rail:
+ACTIVATOR_RAIL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1597,7 +1597,7 @@ Activator Rail:
     Skill:
       - skill name
 #158
-Dropper:
+DROPPER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1605,7 +1605,7 @@ Dropper:
     Skill:
       - skill name
 #256
-Iron Shovel:
+IRON_SHOVEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1613,7 +1613,7 @@ Iron Shovel:
     Skill:
       - skill name
 #257
-Iron Pickaxe:
+IRON_PICKAXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1621,7 +1621,7 @@ Iron Pickaxe:
     Skill:
       - skill name
 #258
-Iron Axe:
+IRON_AXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1629,7 +1629,7 @@ Iron Axe:
     Skill:
       - skill name
 #259
-Flint and Steel:
+FLINT_AND_STEEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1637,7 +1637,7 @@ Flint and Steel:
     Skill:
       - skill name
 #260
-Apple:
+APPLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1645,7 +1645,7 @@ Apple:
     Skill:
       - skill name
 #261
-Bow:
+BOW:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1653,7 +1653,7 @@ Bow:
     Skill:
       - skill name
 #262
-Arrow:
+ARROW:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1661,7 +1661,7 @@ Arrow:
     Skill:
       - skill name
 #263
-Coal:
+COAL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1669,7 +1669,7 @@ Coal:
     Skill:
       - skill name
 #263:1
-Charcoal:
+CHARCOAL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1677,7 +1677,7 @@ Charcoal:
     Skill:
       - skill name
 #264
-Diamond:
+DIAMOND:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1685,7 +1685,7 @@ Diamond:
     Skill:
       - skill name
 #265
-Iron Ingot:
+IRON_INGOT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1693,7 +1693,7 @@ Iron Ingot:
     Skill:
       - skill name
 #266
-Gold Ingot:
+GOLD_INGOT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1701,7 +1701,7 @@ Gold Ingot:
     Skill:
       - skill name
 #267
-Iron Sword:
+IRON_SWORD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1709,7 +1709,7 @@ Iron Sword:
     Skill:
       - skill name
 #268
-Wooden Sword:
+WOODEN_SWORD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1717,7 +1717,7 @@ Wooden Sword:
     Skill:
       - skill name
 #269
-Wooden Shovel:
+WOODEN_SHOVEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1725,7 +1725,7 @@ Wooden Shovel:
     Skill:
       - skill name
 #270
-Wooden Pickaxe:
+WOODEN_PICKAXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1733,7 +1733,7 @@ Wooden Pickaxe:
     Skill:
       - skill name
 #271
-Wooden Axe:
+WOODEN_AXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1741,7 +1741,7 @@ Wooden Axe:
     Skill:
       - skill name
 #272
-Stone Sword:
+STONE_SWORD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1749,7 +1749,7 @@ Stone Sword:
     Skill:
       - skill name
 #273
-Stone Shovel:
+STONE_SHOVEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1757,7 +1757,7 @@ Stone Shovel:
     Skill:
       - skill name
 #274
-Stone Pickaxe:
+STONE_PICKAXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1765,7 +1765,7 @@ Stone Pickaxe:
     Skill:
       - skill name
 #275
-Stone Axe:
+STONE_AXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1773,7 +1773,7 @@ Stone Axe:
     Skill:
       - skill name
 #276
-Diamond Sword:
+DIAMOND_SWORD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1781,7 +1781,7 @@ Diamond Sword:
     Skill:
       - skill name
 #277
-Diamond Shovel:
+DIAMOND_SHOVEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1789,7 +1789,7 @@ Diamond Shovel:
     Skill:
       - skill name
 #278
-Diamond Pickaxe:
+DIAMOND_PICKAXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1797,7 +1797,7 @@ Diamond Pickaxe:
     Skill:
       - skill name
 #279
-Diamond Axe:
+DIAMOND_AXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1805,7 +1805,7 @@ Diamond Axe:
     Skill:
       - skill name
 #280
-Stick:
+STICK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1813,7 +1813,7 @@ Stick:
     Skill:
       - skill name
 #281
-Bowl:
+BOWL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1821,7 +1821,7 @@ Bowl:
     Skill:
       - skill name
 #282
-Mushroom Soup:
+MUSHROOM_SOUP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1829,7 +1829,7 @@ Mushroom Soup:
     Skill:
       - skill name
 #283
-Gold Sword:
+GOLD_SWORD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1837,7 +1837,7 @@ Gold Sword:
     Skill:
       - skill name
 #284
-Gold Shovel:
+GOLD_SHOVEL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1845,7 +1845,7 @@ Gold Shovel:
     Skill:
       - skill name
 #285
-Gold Pickaxe:
+GOLD_PICKAXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1853,7 +1853,7 @@ Gold Pickaxe:
     Skill:
       - skill name
 #286
-Gold Axe:
+GOLD_AXE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1861,7 +1861,7 @@ Gold Axe:
     Skill:
       - skill name
 #287
-String:
+STRING:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1869,7 +1869,7 @@ String:
     Skill:
       - skill name
 #288
-Feather:
+FEATHER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1877,7 +1877,7 @@ Feather:
     Skill:
       - skill name
 #289
-Sulphur:
+SULPHUR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1885,7 +1885,7 @@ Sulphur:
     Skill:
       - skill name
 #290
-Wooden Hoe:
+WOODEN_HOE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1893,7 +1893,7 @@ Wooden Hoe:
     Skill:
       - skill name
 #291
-Stone Hoe:
+STONE_HOE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1901,7 +1901,7 @@ Stone Hoe:
     Skill:
       - skill name
 #292
-Iron Hoe:
+IRON_HOE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1909,7 +1909,7 @@ Iron Hoe:
     Skill:
       - skill name
 #293
-Diamond Hoe:
+DIAMOND_HOE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1917,7 +1917,7 @@ Diamond Hoe:
     Skill:
       - skill name
 #294
-Gold Hoe:
+GOLD_HOE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1925,7 +1925,7 @@ Gold Hoe:
     Skill:
       - skill name
 #295
-Wheat Seeds:
+WHEAT_SEEDS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1933,7 +1933,7 @@ Wheat Seeds:
     Skill:
       - skill name
 #296
-Wheat:
+WHEAT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1941,7 +1941,7 @@ Wheat:
     Skill:
       - skill name
 #297
-Bread:
+BREAD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1949,7 +1949,7 @@ Bread:
     Skill:
       - skill name
 #298
-Leather Helmet:
+LEATHER_HELMET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1957,7 +1957,7 @@ Leather Helmet:
     Skill:
       - skill name
 #299
-Leather Chestplate:
+LEATHER_CHESTPLATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1965,7 +1965,7 @@ Leather Chestplate:
     Skill:
       - skill name
 #300
-Leather Leggings:
+LEATHER_LEGGINGS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1973,7 +1973,7 @@ Leather Leggings:
     Skill:
       - skill name
 #301
-Leather Boots:
+LEATHER_BOOTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1981,7 +1981,7 @@ Leather Boots:
     Skill:
       - skill name
 #302
-Chainmail Helmet:
+CHAINMAIL_HELMET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1989,7 +1989,7 @@ Chainmail Helmet:
     Skill:
       - skill name
 #303
-Chainmail Chestplate:
+CHAINMAIL_CHESTPLATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -1997,7 +1997,7 @@ Chainmail Chestplate:
     Skill:
       - skill name
 #304
-Chainmail Leggings:
+CHAINMAIL_LEGGINGS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2005,7 +2005,7 @@ Chainmail Leggings:
     Skill:
       - skill name
 #305
-Chainmail Boots:
+CHAINMAIL_BOOTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2013,7 +2013,7 @@ Chainmail Boots:
     Skill:
       - skill name
 #306
-Iron Helmet:
+IRON_HELMET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2021,7 +2021,7 @@ Iron Helmet:
     Skill:
       - skill name
 #307
-Iron Chestplate:
+IRON_CHESTPLATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2029,7 +2029,7 @@ Iron Chestplate:
     Skill:
       - skill name
 #308
-Iron Leggings:
+IRON_LEGGINGS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2037,7 +2037,7 @@ Iron Leggings:
     Skill:
       - skill name
 #309
-Iron Boots:
+IRON_BOOTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2045,7 +2045,7 @@ Iron Boots:
     Skill:
       - skill name
 #310
-Diamond Helmet:
+DIAMOND_HELMET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2053,7 +2053,7 @@ Diamond Helmet:
     Skill:
       - skill name
 #311
-Diamond Chestplate:
+DIAMOND_CHESTPLATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2061,7 +2061,7 @@ Diamond Chestplate:
     Skill:
       - skill name
 #312
-Diamond Leggings:
+DIAMOND_LEGGINGS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2069,7 +2069,7 @@ Diamond Leggings:
     Skill:
       - skill name
 #313
-Diamond Boots:
+DIAMOND_BOOTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2077,7 +2077,7 @@ Diamond Boots:
     Skill:
       - skill name
 #314
-Gold Helmet:
+GOLD_HELMET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2085,7 +2085,7 @@ Gold Helmet:
     Skill:
       - skill name
 #315
-Gold Chestplate:
+GOLD_CHESTPLATE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2093,7 +2093,7 @@ Gold Chestplate:
     Skill:
       - skill name
 #316
-Gold Leggings:
+GOLD_LEGGINGS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2101,7 +2101,7 @@ Gold Leggings:
     Skill:
       - skill name
 #317
-Gold Boots:
+GOLD_BOOTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2109,7 +2109,7 @@ Gold Boots:
     Skill:
       - skill name
 #318
-Flint:
+FLINT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2117,7 +2117,7 @@ Flint:
     Skill:
       - skill name
 #319
-Raw Porkchop:
+RAW_PORKCHOP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2125,7 +2125,7 @@ Raw Porkchop:
     Skill:
       - skill name
 #320
-Cooked Porkchop:
+COOKED_PORKCHOP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2133,7 +2133,7 @@ Cooked Porkchop:
     Skill:
       - skill name
 #321
-Painting:
+PAINTING:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2141,7 +2141,7 @@ Painting:
     Skill:
       - skill name
 #322
-Golden Apple:
+GOLDEN_APPLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2149,7 +2149,7 @@ Golden Apple:
     Skill:
       - skill name
 #322:1
-Enchanted Golden Apple:
+ENCHANTED_GOLDEN_APPLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2157,7 +2157,7 @@ Enchanted Golden Apple:
     Skill:
       - skill name
 #323
-Sign:
+SIGN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2165,7 +2165,7 @@ Sign:
     Skill:
       - skill name
 #324
-Wooden Door:
+WOODEN_DOOR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2173,7 +2173,7 @@ Wooden Door:
     Skill:
       - skill name
 #325
-Bucket:
+BUCKET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2181,7 +2181,7 @@ Bucket:
     Skill:
       - skill name
 #326
-Water Bucket:
+WATER_BUCKET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2189,7 +2189,7 @@ Water Bucket:
     Skill:
       - skill name
 #327
-Lava Bucket:
+LAVA_BUCKET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2197,7 +2197,7 @@ Lava Bucket:
     Skill:
       - skill name
 #328
-Minecart:
+MINECART:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2205,7 +2205,7 @@ Minecart:
     Skill:
       - skill name
 #329
-Saddle:
+SADDLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2213,7 +2213,7 @@ Saddle:
     Skill:
       - skill name
 #330
-Iron Door:
+IRON_DOOR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2221,7 +2221,7 @@ Iron Door:
     Skill:
       - skill name
 #331
-Redstone:
+REDSTONE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2229,7 +2229,7 @@ Redstone:
     Skill:
       - skill name
 #332
-Snowball:
+SNOWBALL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2237,7 +2237,7 @@ Snowball:
     Skill:
       - skill name
 #333
-Boat:
+BOAT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2245,7 +2245,7 @@ Boat:
     Skill:
       - skill name
 #334
-Leather:
+LEATHER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2253,7 +2253,7 @@ Leather:
     Skill:
       - skill name
 #335
-Milk Bucket:
+MILK_BUCKET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2261,7 +2261,7 @@ Milk Bucket:
     Skill:
       - skill name
 #336
-Clay Brick:
+CLAY_BRICK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2269,7 +2269,7 @@ Clay Brick:
     Skill:
       - skill name
 #337
-Clay Balls:
+CLAY_BALLS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2277,7 +2277,7 @@ Clay Balls:
     Skill:
       - skill name
 #338
-Sugarcane:
+SUGARCANE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2285,7 +2285,7 @@ Sugarcane:
     Skill:
       - skill name
 #339
-Paper:
+PAPER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2293,7 +2293,7 @@ Paper:
     Skill:
       - skill name
 #340
-Book:
+BOOK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2301,7 +2301,7 @@ Book:
     Skill:
       - skill name
 #341
-Slimeball:
+SLIMEBALL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2309,7 +2309,7 @@ Slimeball:
     Skill:
       - skill name
 #342
-Storage Minecart:
+STORAGE_MINECART:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2317,7 +2317,7 @@ Storage Minecart:
     Skill:
       - skill name
 #343
-Powered Minecart:
+POWERED_MINECART:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2325,7 +2325,7 @@ Powered Minecart:
     Skill:
       - skill name
 #344
-Egg:
+EGG:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2333,7 +2333,7 @@ Egg:
     Skill:
       - skill name
 #345
-Compass:
+COMPASS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2341,7 +2341,7 @@ Compass:
     Skill:
       - skill name
 #346
-Fishing Rod:
+FISHING_ROD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2349,7 +2349,7 @@ Fishing Rod:
     Skill:
       - skill name
 #347
-Clock:
+CLOCK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2357,7 +2357,7 @@ Clock:
     Skill:
       - skill name
 #348
-Glowstone Dust:
+GLOWSTONE_DUST:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2365,7 +2365,7 @@ Glowstone Dust:
     Skill:
       - skill name
 #349
-Raw Fish:
+RAW_FISH:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2373,7 +2373,7 @@ Raw Fish:
     Skill:
       - skill name
 #350
-Cooked Fish:
+COOKED_FISH:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2381,7 +2381,7 @@ Cooked Fish:
     Skill:
       - skill name
 #351
-Ink Sack:
+INK_SACK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2389,7 +2389,7 @@ Ink Sack:
     Skill:
       - skill name
 #351:1
-Rose Red:
+ROSE_RED:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2397,7 +2397,7 @@ Rose Red:
     Skill:
       - skill name
 #351:2
-Cactus Green:
+CACTUS_GREEN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2405,7 +2405,7 @@ Cactus Green:
     Skill:
       - skill name
 #351:3
-Coco Beans:
+COCO_BEANS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2413,7 +2413,7 @@ Coco Beans:
     Skill:
       - skill name
 #351:4
-Lapis Lazuli:
+LAPIS_LAZULI:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2421,7 +2421,7 @@ Lapis Lazuli:
     Skill:
       - skill name
 #351:5
-Purple Dye:
+PURPLE_DYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2429,7 +2429,7 @@ Purple Dye:
     Skill:
       - skill name
 #351:6
-Cyan Dye:
+CYAN_DYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2437,7 +2437,7 @@ Cyan Dye:
     Skill:
       - skill name
 #351:7
-Light Gray Dye:
+LIGHT_GRAY_DYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2445,7 +2445,7 @@ Light Gray Dye:
     Skill:
       - skill name
 #351:8
-Gray Dye:
+GRAY_DYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2453,7 +2453,7 @@ Gray Dye:
     Skill:
       - skill name
 #351:9
-Pink Dye:
+PINK_DYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2509,7 +2509,7 @@ Bone Meal:
     Skill:
       - skill name
 #352
-Bone:
+BONE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2517,7 +2517,7 @@ Bone:
     Skill:
       - skill name
 #353
-Sugar:
+SUGAR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2525,7 +2525,7 @@ Sugar:
     Skill:
       - skill name
 #354
-Cake:
+CAKE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2533,7 +2533,7 @@ Cake:
     Skill:
       - skill name
 #355
-Bed:
+BED:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2541,7 +2541,7 @@ Bed:
     Skill:
       - skill name
 #356
-Redstone Repeater:
+REDSTONE_REPEATER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2549,7 +2549,7 @@ Redstone Repeater:
     Skill:
       - skill name
 #357
-Cookie:
+COOKIE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2557,7 +2557,7 @@ Cookie:
     Skill:
       - skill name
 #358
-Map:
+MAP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2565,7 +2565,7 @@ Map:
     Skill:
       - skill name
 #359
-Shears:
+SHEARS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2573,7 +2573,7 @@ Shears:
     Skill:
       - skill name
 #360
-Melon:
+MELON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2581,7 +2581,7 @@ Melon:
     Skill:
       - skill name
 #361
-Pumpkin Seeds:
+PUMPKIN_SEEDS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2589,7 +2589,7 @@ Pumpkin Seeds:
     Skill:
       - skill name
 #362
-Melon Seeds:
+MELON_SEEDS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2597,7 +2597,7 @@ Melon Seeds:
     Skill:
       - skill name
 #363
-Raw Beef:
+RAW_BEEF:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2605,7 +2605,7 @@ Raw Beef:
     Skill:
       - skill name
 #364
-Steak:
+STEAK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2613,7 +2613,7 @@ Steak:
     Skill:
       - skill name
 #365
-Raw Chicken:
+RAW_CHICKEN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2621,7 +2621,7 @@ Raw Chicken:
     Skill:
       - skill name
 #366
-Cooked Chicken:
+COOKED_CHICKEN:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2629,7 +2629,7 @@ Cooked Chicken:
     Skill:
       - skill name
 #367
-Rotten Flesh:
+ROTTEN_FLESH:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2637,7 +2637,7 @@ Rotten Flesh:
     Skill:
       - skill name
 #368
-Ender Pearl:
+ENDER_PEARL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2645,7 +2645,7 @@ Ender Pearl:
     Skill:
       - skill name
 #369
-Blaze Rod:
+BLAZE_ROD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2653,7 +2653,7 @@ Blaze Rod:
     Skill:
       - skill name
 #370
-Ghast Tear:
+GHAST_TEAR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2661,7 +2661,7 @@ Ghast Tear:
     Skill:
       - skill name
 #371
-Gold Nugget:
+GOLD_NUGGET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2669,7 +2669,7 @@ Gold Nugget:
     Skill:
       - skill name
 #372
-Nether Wart Seeds:
+NETHER_WART_SEEDS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2677,7 +2677,7 @@ Nether Wart Seeds:
     Skill:
       - skill name
 #373
-Potion:
+POTION:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2685,7 +2685,7 @@ Potion:
     Skill:
       - skill name
 #374
-Glass Bottle:
+GLASS_BOTTLE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2693,7 +2693,7 @@ Glass Bottle:
     Skill:
       - skill name
 #375
-Spider Eye:
+SPIDER_EYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2701,7 +2701,7 @@ Spider Eye:
     Skill:
       - skill name
 #376
-Fermented Spider Eye:
+FERMENTED_SPIDER_EYE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2709,7 +2709,7 @@ Fermented Spider Eye:
     Skill:
       - skill name
 #377
-Blaze Powder:
+BLAZE_POWDER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2717,7 +2717,7 @@ Blaze Powder:
     Skill:
       - skill name
 #378
-Magma Cream:
+MAGMA_CREAM:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2725,7 +2725,7 @@ Magma Cream:
     Skill:
       - skill name
 #379
-Brewing Stand:
+BREWING_STAND:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2733,7 +2733,7 @@ Brewing Stand:
     Skill:
       - skill name
 #380
-Cauldron:
+CAULDRON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2741,7 +2741,7 @@ Cauldron:
     Skill:
       - skill name
 #381
-Eye of Ender:
+EYE_OF_ENDER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2749,7 +2749,7 @@ Eye of Ender:
     Skill:
       - skill name
 #382
-Glistering Melon:
+GLISTERING_MELON:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2942,7 +2942,7 @@ Spawn Villager:
     Skill:
       - skill name
 #384
-Bottle o' Enchanting:
+BOTTLE_O'_ENCHANTING:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2950,7 +2950,7 @@ Bottle o' Enchanting:
     Skill:
       - skill name
 #385
-Fire Charge:
+FIRE_CHARGE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2958,7 +2958,7 @@ Fire Charge:
     Skill:
       - skill name
 #386
-Book and Quill:
+BOOK_AND_QUILL:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2966,7 +2966,7 @@ Book and Quill:
     Skill:
       - skill name
 #387
-Written Book:
+WRITTEN_BOOK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2974,7 +2974,7 @@ Written Book:
     Skill:
       - skill name
 #388
-Emerald:
+EMERALD:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2982,7 +2982,7 @@ Emerald:
     Skill:
       - skill name
 #389
-Item Frame:
+ITEM_FRAME:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2990,7 +2990,7 @@ Item Frame:
     Skill:
       - skill name
 #390
-Flower Pot:
+FLOWER_POT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -2998,7 +2998,7 @@ Flower Pot:
     Skill:
       - skill name
 #391
-Carrots:
+CARROTS:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3006,7 +3006,7 @@ Carrots:
     Skill:
       - skill name
 #392
-Potato:
+POTATO:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3014,7 +3014,7 @@ Potato:
     Skill:
       - skill name
 #393
-Baked Potato:
+BAKED_POTATO:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3022,7 +3022,7 @@ Baked Potato:
     Skill:
       - skill name
 #394
-Poisonous Potato:
+POISONOUS_POTATO:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3030,7 +3030,7 @@ Poisonous Potato:
     Skill:
       - skill name
 #395
-Map:
+MAP:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3038,7 +3038,7 @@ Map:
     Skill:
       - skill name
 #396
-Golden Carrot:
+GOLDEN_CARROT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3046,7 +3046,7 @@ Golden Carrot:
     Skill:
       - skill name
 #397
-Mob Head (Skeleton):
+MOB_HEAD_(SKELETON):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3054,7 +3054,7 @@ Mob Head (Skeleton):
     Skill:
       - skill name
 #397:1
-Mob Head (Wither Skeleton):
+MOB_HEAD_(WITHER_SKELETON):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3062,7 +3062,7 @@ Mob Head (Wither Skeleton):
     Skill:
       - skill name
 #397:2
-Mob Head (Zombie):
+MOB_HEAD_(ZOMBIE):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3070,7 +3070,7 @@ Mob Head (Zombie):
     Skill:
       - skill name
 #397:3
-Mob Head (Human):
+MOB_HEAD_(HUMAN):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3078,7 +3078,7 @@ Mob Head (Human):
     Skill:
       - skill name
 #397:4
-Mob Head (Creeper):
+MOB_HEAD_(CREEPER):
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3086,7 +3086,7 @@ Mob Head (Creeper):
     Skill:
       - skill name
 #398
-Carrot on a Stick:
+CARROT_ON_A_STICK:
 
   DefaultPrice: 10
   Break:
@@ -3095,7 +3095,7 @@ Carrot on a Stick:
     Skill:
       - skill name
 #399
-Nether Star:
+NETHER_STAR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3103,7 +3103,7 @@ Nether Star:
     Skill:
       - skill name
 #400
-Pumpkin Pie:
+PUMPKIN_PIE:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3111,7 +3111,7 @@ Pumpkin Pie:
     Skill:
       - skill name
 #401
-Firework Rocket:
+FIREWORK_ROCKET:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3119,7 +3119,7 @@ Firework Rocket:
     Skill:
       - skill name
 #402
-Firework Star:
+FIREWORK_STAR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3127,7 +3127,7 @@ Firework Star:
     Skill:
       - skill name
 #403
-Enchanted Book:
+ENCHANTED_BOOK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3135,7 +3135,7 @@ Enchanted Book:
     Skill:
       - skill name
 #404
-Redstone Comparator:
+REDSTONE_COMPARATOR:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3143,7 +3143,7 @@ Redstone Comparator:
     Skill:
       - skill name
 #405
-Nether Brick:
+NETHER_BRICK:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3151,7 +3151,7 @@ Nether Brick:
     Skill:
       - skill name
 #406
-Nether Quartz:
+NETHER_QUARTZ:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3159,7 +3159,7 @@ Nether Quartz:
     Skill:
       - skill name
 #407
-Minecart with TNT:
+MINECART_WITH_TNT:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3167,7 +3167,7 @@ Minecart with TNT:
     Skill:
       - skill name
 #408
-Minecart with Hopper:
+MINECART_WITH_HOPPER:
   DefaultPrice: 10
   Break:
     Pay: 20
@@ -3175,38 +3175,38 @@ Minecart with Hopper:
     Skill:
       - skill name
 #2256
-13 Disc:
+13_DISC:
   DefaultPrice: 10
 #2257
-Cat Disc:
+CAT_DISC:
   DefaultPrice: 10
 #2258
-Blocks Disc:
+BLOCKS_DISC:
   DefaultPrice: 10
 #2259
-Chirp Disc:
+CHIRP_DISC:
   DefaultPrice: 10
 #2260
-Far Disc:
+FAR_DISC:
   DefaultPrice: 10
 #2261
-Mall Disc:
+MALL_DISC:
   DefaultPrice: 10
 #2262
-Mellohi Disc:
+MELLOHI_DISC:
   DefaultPrice: 10
 #2263
-Stal Disc:
+STAL_DISC:
   DefaultPrice: 10
 #2264
-Strad Disc:
+STRAD_DISC:
   DefaultPrice: 10
 #2265
-Ward Disc:
+WARD_DISC:
   DefaultPrice: 10
 #2266
-11 Disc:
+11_DISC:
   DefaultPrice: 10
 #2267
-Wait Disc:
+WAIT_DISC:
   DefaultPrice: 10
