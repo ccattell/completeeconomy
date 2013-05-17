@@ -2720,7 +2720,7 @@ MAGMA_CREAM:
     skill:
       - skill name
 #379
-BREWING_STAND:
+BREWING_STAND_ITEM:
   buy: 10
   break:
     pay: 20
@@ -2728,7 +2728,7 @@ BREWING_STAND:
     skill:
       - skill name
 #380
-CAULDRON:
+CAULDRON_ITEM:
   buy: 10
   break:
     pay: 20
@@ -2744,7 +2744,7 @@ EYE_OF_ENDER:
     skill:
       - skill name
 #382
-GLISTERING_MELON:
+SPECKLED_MELON:
   buy: 10
   break:
     pay: 20
@@ -2752,186 +2752,208 @@ GLISTERING_MELON:
     skill:
       - skill name
 #383:50
-Spawn Creeper:
+MONSTER_EGG:50:
   buy: 10
+  alias: Spawn Creeper
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:51
-Spawn Skeleton:
+MONSTER_EGG:51:
   buy: 10
+  alias: Spawn Skeleton
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:52
-Spawn Spider:
+MONSTER_EGG:52:
   buy: 10
+  alias: Spawn Spider
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:54
-Spawn Zombie:
+MONSTER_EGG:54:
   buy: 10
+  alias: Spawn Zombie
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:55
-Spawn Slime:
+MONSTER_EGG:55:
   buy: 10
+  alias: Spawn Slime
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:56
-Spawn Ghast:
+MONSTER_EGG:56:
   buy: 10
+  alias: Spawn Ghast
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:57
-Spawn Pigman:
+MONSTER_EGG:57:
   buy: 10
+  alias: Spawn Pigman
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:58
-Spawn Enderman:
+MONSTER_EGG:58:
   buy: 10
+  alias: Spawn Enderman
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:59
-Spawn Cave Spider:
+MONSTER_EGG:59:
   buy: 10
+  alias: Spawn Cave Spider
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:60
-Spawn Silverfish:
+MONSTER_EGG:60:
   buy: 10
+  alias: Spawn Silverfish
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:61
-Spawn Blaze:
+MONSTER_EGG:61:
   buy: 10
+  alias: Spawn Blaze
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:62
-Spawn Magma Cube:
+MONSTER_EGG:62:
   buy: 10
+  alias: Spawn Magma Cube
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:65
-Spawn Bat:
+MONSTER_EGG:65:
   buy: 10
+  alias: Spawn Bat
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:66
-Spawn Witch:
+MONSTER_EGG:66:
   buy: 10
+  alias: Spawn Witch
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:90
-Spawn Pig:
+MONSTER_EGG:90:
   buy: 10
+  alias: Spawn Pig
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:91
-Spawn Sheep:
+MONSTER_EGG:91:
   buy: 10
+  alias: Spawn Sheep
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:92
-Spawn Cow:
+MONSTER_EGG:92:
   buy: 10
+  alias: Spawn Cow
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:93
-Spawn Chicken:
+MONSTER_EGG:93:
   buy: 10
+  alias: Spawn Chicken
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:94
-Spawn Squid:
+MONSTER_EGG:94:
   buy: 10
+  alias: Spawn Squid
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:95
-Spawn Wolf:
+MONSTER_EGG:95:
   buy: 10
+  alias: Spawn Wolf
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:96
-Spawn Mooshroom:
+MONSTER_EGG:96:
   buy: 10
+  alias: Spawn Mooshroom
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:98
-Spawn Ocelot:
+MONSTER_EGG:98:
   buy: 10
+  alias: Spawn Ocelot
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #383:120
-Spawn Villager:
+MONSTER_EGG:120:
   buy: 10
+  alias: Spawn Villager
   break:
-
     pay: 20
     exp: 10
     skill:
