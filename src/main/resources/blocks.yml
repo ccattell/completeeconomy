@@ -1431,7 +1431,7 @@ POTATO:
     skill:
       - skill name
 #143
-WOODEN_BUTTON:
+WOOD_BUTTON:
   buy: 10
   break:
     pay: 20
@@ -1464,7 +1464,7 @@ TRAPPED_CHEST:
     skill:
       - skill name
 #147
-WEIGHTED_PRESSURE_PLATE_(LIGHT):
+GOLD_PLATE:
   buy: 10
   break:
     pay: 20
@@ -1472,7 +1472,7 @@ WEIGHTED_PRESSURE_PLATE_(LIGHT):
     skill:
       - skill name
 #148
-WEIGHTED_PRESSURE_PLATE_(HEAVY):
+IRON_PLATE:
   buy: 10
   break:
     pay: 20
@@ -1480,24 +1480,18 @@ WEIGHTED_PRESSURE_PLATE_(HEAVY):
     skill:
       - skill name
 #149
-REDSTONE_COMPARATOR_(INACTIVE):
+REDSTONE_COMPARATOR_OFF:
   buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#150
-REDSTONE_COMPARATOR_(ACTIVE):
-  buy: 10
+  alias: Redstone Comparator
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #151
-DAYLIGHT_SENSOR:
+DAYLIGHT_DETECTOR:
   buy: 10
+  alias: Daylight Sensor
   break:
     pay: 20
     exp: 10
@@ -1512,7 +1506,7 @@ REDSTONE_BLOCK:
     skill:
       - skill name
 #153
-NETHER_QUARTZ_ORE:
+QUARTZ_ORE:
   buy: 10
   break:
     pay: 20
@@ -1528,7 +1522,7 @@ HOPPER:
     skill:
       - skill name
 #155
-QUARTZ_BLOCK:
+QUARTZ_BLOCK:0:
   buy: 10
   break:
     pay: 20
@@ -1536,16 +1530,18 @@ QUARTZ_BLOCK:
     skill:
       - skill name
 #155:1
-CHISELED_QUARTZ_BLOCK:
+QUARTZ_BLOCK:1:
   buy: 10
+  alias: Chiseled Quartz Block
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #155:2
-PILLAR_QUARTZ_BLOCK:
+QUARTZ_BLOCK:2:
   buy: 10
+  alias: Pillar Quartz Block
   break:
     pay: 20
     exp: 10
@@ -1576,8 +1572,9 @@ DROPPER:
     skill:
       - skill name
 #256
-IRON_SHOVEL:
+IRON_SPADE:
   buy: 10
+  alias: Iron Shovel
   break:
     pay: 20
     exp: 10
@@ -1632,7 +1629,7 @@ ARROW:
     skill:
       - skill name
 #263
-COAL:
+COAL:0:
   buy: 10
   break:
     pay: 20
@@ -1640,8 +1637,9 @@ COAL:
     skill:
       - skill name
 #263:1
-CHARCOAL:
+COAL:1:
   buy: 10
+  alias: Charcoal
   break:
     pay: 20
     exp: 10
@@ -1680,7 +1678,7 @@ IRON_SWORD:
     skill:
       - skill name
 #268
-WOODEN_SWORD:
+WOOD_SWORD:
   buy: 10
   break:
     pay: 20
@@ -1688,15 +1686,16 @@ WOODEN_SWORD:
     skill:
       - skill name
 #269
-WOODEN_SHOVEL:
+WOOD_SPADE:
   buy: 10
+  alias: Wood Shovel
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #270
-WOODEN_PICKAXE:
+WOOD_PICKAXE:
   buy: 10
   break:
     pay: 20
@@ -1704,7 +1703,7 @@ WOODEN_PICKAXE:
     skill:
       - skill name
 #271
-WOODEN_AXE:
+WOOD_AXE:
   buy: 10
   break:
     pay: 20
@@ -1720,8 +1719,9 @@ STONE_SWORD:
     skill:
       - skill name
 #273
-STONE_SHOVEL:
+STONE_SPADE:
   buy: 10
+  alias: Stone Shovel
   break:
     pay: 20
     exp: 10
@@ -1752,8 +1752,9 @@ DIAMOND_SWORD:
     skill:
       - skill name
 #277
-DIAMOND_SHOVEL:
+DIAMOND_SPADE:
   buy: 10
+  alias: Diamond Shovel
   break:
     pay: 20
     exp: 10
@@ -1808,8 +1809,9 @@ GOLD_SWORD:
     skill:
       - skill name
 #284
-GOLD_SHOVEL:
+GOLD_SPADE:
   buy: 10
+  alias: Gold Shovel
   break:
     pay: 20
     exp: 10
@@ -1850,13 +1852,14 @@ FEATHER:
 #289
 SULPHUR:
   buy: 10
+  alias: Gunpowder
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #290
-WOODEN_HOE:
+WOOD_HOE:
   buy: 10
   break:
     pay: 20
@@ -1896,7 +1899,7 @@ GOLD_HOE:
     skill:
       - skill name
 #295
-WHEAT_SEEDS:
+SEEDS:
   buy: 10
   break:
     pay: 20
@@ -2088,16 +2091,18 @@ FLINT:
     skill:
       - skill name
 #319
-RAW_PORKCHOP:
+PORK:
   buy: 10
+  alias: Raw Porkchop
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #320
-COOKED_PORKCHOP:
+GRILLD_PORK:
   buy: 10
+  alias: Cooked Porkchop
   break:
     pay: 20
     exp: 10
@@ -2112,7 +2117,7 @@ PAINTING:
     skill:
       - skill name
 #322
-GOLDEN_APPLE:
+GOLDEN_APPLE:0:
   buy: 10
   break:
     pay: 20
@@ -2120,8 +2125,9 @@ GOLDEN_APPLE:
     skill:
       - skill name
 #322:1
-ENCHANTED_GOLDEN_APPLE:
+GOLDEN_APPLE:1:
   buy: 10
+  alias: Enchanted Golden Apple
   break:
     pay: 20
     exp: 10
@@ -2136,7 +2142,7 @@ SIGN:
     skill:
       - skill name
 #324
-WOODEN_DOOR:
+WOOD_DOOR:
   buy: 10
   break:
     pay: 20
@@ -2240,7 +2246,7 @@ CLAY_BRICK:
     skill:
       - skill name
 #337
-CLAY_BALLS:
+CLAY_BALL:
   buy: 10
   break:
     pay: 20
@@ -2248,7 +2254,7 @@ CLAY_BALLS:
     skill:
       - skill name
 #338
-SUGARCANE:
+SUGAR_CANE:
   buy: 10
   break:
     pay: 20
@@ -2272,7 +2278,7 @@ BOOK:
     skill:
       - skill name
 #341
-SLIMEBALL:
+SLIME_BALL:
   buy: 10
   break:
     pay: 20
@@ -2320,8 +2326,9 @@ FISHING_ROD:
     skill:
       - skill name
 #347
-CLOCK:
+WATCH:
   buy: 10
+  alias: Clock
   break:
     pay: 20
     exp: 10
@@ -2352,7 +2359,7 @@ COOKED_FISH:
     skill:
       - skill name
 #351
-INK_SACK:
+INK_SACK:0:
   buy: 10
   break:
     pay: 20
@@ -2360,120 +2367,135 @@ INK_SACK:
     skill:
       - skill name
 #351:1
-ROSE_RED:
+INK_SACK:1:
   buy: 10
+  alias: Rose Red
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:2
-CACTUS_GREEN:
+INK_SACK:2:
   buy: 10
+  alias: Cactus Green
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:3
-COCO_BEANS:
+INK_SACK:3:
   buy: 10
+  alias: Cocoa Beans
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:4
-LAPIS_LAZULI:
+INK_SACK:4:
   buy: 10
+  alias: Lapis Lazuli
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:5
-PURPLE_DYE:
+INK_SACK:5:
   buy: 10
+  alias: Purple Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:6
-CYAN_DYE:
+INK_SACK:6:
   buy: 10
+  alias: Cyan Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:7
-LIGHT_GRAY_DYE:
+INK_SACK:7:
   buy: 10
+  alias: Light Gray Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:8
-GRAY_DYE:
+INK_SACK:8:
   buy: 10
+  alias: Gray Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:9
-PINK_DYE:
+INK_SACK:9:
   buy: 10
+  alias: Pink Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:10
-Lime Dye:
+INK_SACK:10:
   buy: 10
+  alias: Lime Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:11
-Dandelion Yellow:
+INK_SACK:11:
   buy: 10
+  alias: Dandelion Yellow
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:12
-Light Blue Dye:
+INK_SACK:12:
   buy: 10
+  alias: Light Blue Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:13
-Magenta Dye:
+INK_SACK:13:
   buy: 10
+  alias: Magenta Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:14
-Orange Dye:
+INK_SACK:14:
   buy: 10
+  alias: Orange Dye
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #351:15
-Bone Meal:
+INK_SACK:15:
   buy: 10
+  alias: Bone Meal
   break:
     pay: 20
     exp: 10
@@ -2576,8 +2598,9 @@ RAW_BEEF:
     skill:
       - skill name
 #364
-STEAK:
+COOKED_BEEF:
   buy: 10
+  alias: Steak
   break:
     pay: 20
     exp: 10
@@ -2640,8 +2663,9 @@ GOLD_NUGGET:
     skill:
       - skill name
 #372
-NETHER_WART_SEEDS:
+NETHER_STALK:
   buy: 10
+  alias: Nether Wart
   break:
     pay: 20
     exp: 10
