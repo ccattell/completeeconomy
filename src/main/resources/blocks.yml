@@ -58,7 +58,7 @@ COBBLESTONE:
 #5
 WOOD:0:
   buy: 10
-  Alias: Oak Wood Plank
+  alias: Oak Wood Plank
   break:
     pay: 20
     exp: 10
@@ -77,7 +77,7 @@ WOOD:0:
 #5:1
 WOOD:1:
   buy: 10
-  Alias: Spruce Wood Plank
+  alias: Spruce Wood Plank
   break:
     pay: 20
     exp: 10
@@ -96,7 +96,7 @@ WOOD:1:
 #5:2
 WOOD:2:
   buy: 10
-  Alias: Birch Wood Plank
+  alias: Birch Wood Plank
   break:
     pay: 20
     exp: 10
@@ -115,7 +115,7 @@ WOOD:2:
 #5:3
 WOOD:3:
   buy: 10
-  Alias: Jungle Wood Plank
+  alias: Jungle Wood Plank
   break:
     pay: 20
     exp: 10
@@ -134,7 +134,7 @@ WOOD:3:
 #6
 SAPLING:0:
   buy: 10
-  Alias: Oak Sapling
+  alias: Oak Sapling
   break:
     pay: 20
     exp: 10
@@ -148,7 +148,7 @@ SAPLING:0:
 #6:1
 SAPLING:1:
   buy: 10
-  Alias: Spruce Sapling
+  alias: Spruce Sapling
   break:
     pay: 20
     exp: 10
@@ -162,7 +162,7 @@ SAPLING:1:
 #6:2
 SAPLING:2:
   buy: 10
-  Alias: Birch Sapling
+  alias: Birch Sapling
   break:
     pay: 20
     exp: 10
@@ -176,7 +176,7 @@ SAPLING:2:
 #6:3
 SAPLING:3:
   buy: 10
-  Alias: Jungle Sapling
+  alias: Jungle Sapling
   break:
     pay: 20
     exp: 10
@@ -230,7 +230,7 @@ COAL_ORE:
 #17
 LOG:0:
   buy: 10
-  Alias: Oak Log
+  alias: Oak Log
   break:
     pay: 20
     exp: 10
@@ -239,7 +239,7 @@ LOG:0:
 #17:1
 LOG:1:
   buy: 10
-  Alias: Spruce Log
+  alias: Spruce Log
   break:
     pay: 20
     exp: 10
@@ -248,7 +248,7 @@ LOG:1:
 #17:2
 LOG:2:
   buy: 10
-  Alias: Birch Log
+  alias: Birch Log
   break:
     pay: 20
     exp: 10
@@ -257,7 +257,7 @@ LOG:2:
 #17:3
 LOG:3:
   buy: 10
-  Alias: Jungle Log
+  alias: Jungle Log
   break:
     pay: 20
     exp: 10
@@ -266,7 +266,7 @@ LOG:3:
 #18
 LEAVES:0:
   buy: 10
-  Alias: Oak Leaves
+  alias: Oak Leaves
   break:
     pay: 20
     exp: 10
@@ -275,7 +275,7 @@ LEAVES:0:
 #18:1
 LEAVES:1:
   buy: 10
-  Alias: Spruce Leaves
+  alias: Spruce Leaves
   break:
     pay: 20
     exp: 10
@@ -284,7 +284,7 @@ LEAVES:1:
 #18:2
 LEAVES:2:
   buy: 10
-  Alias: Birch Leaves
+  alias: Birch Leaves
   break:
     pay: 20
     exp: 10
@@ -293,7 +293,7 @@ LEAVES:2:
 #18:3
 LEAVES:3:
   buy: 10
-  Alias: Jungle Leaves
+  alias: Jungle Leaves
   break:
     pay: 20
     exp: 10
@@ -318,7 +318,7 @@ GLASS:
 #21
 LAPIS_ORE:
   buy: 10
-  Alias: Lapis Lazuli Ore
+  alias: Lapis Lazuli Ore
   break:
     pay: 20
     exp: 10
@@ -327,7 +327,7 @@ LAPIS_ORE:
 #22
 LAPIS_BLOCK:
   buy: 10
-  Alias: Lapis Lazuli Block
+  alias: Lapis Lazuli Block
   break:
     pay: 20
     exp: 10
@@ -352,7 +352,7 @@ SANDSTONE:0:
 #24:1
 SANDSTONE:1:
   buy: 10
-  Alias: Chiseled Sandstone
+  alias: Chiseled Sandstone
   break:
     pay: 20
     exp: 10
@@ -361,7 +361,7 @@ SANDSTONE:1:
 #24:2
 SANDSTONE:2:
   buy: 10
-  Alias: Smooth Sandstone
+  alias: Smooth Sandstone
   break:
     pay: 20
     exp: 10
@@ -410,7 +410,7 @@ WEB:
 #31
 LONG_GRASS:0:
   buy: 10
-  Alias: Dead Bush
+  alias: Dead Bush
   break:
     pay: 20
     exp: 10
@@ -419,7 +419,7 @@ LONG_GRASS:0:
 #31:1
 LONG_GRASS:0:
   buy: 10
-  Alias: Long Grass
+  alias: Long Grass
   break:
     pay: 20
     exp: 10
@@ -428,7 +428,7 @@ LONG_GRASS:0:
 #31:2
 LONG_GRASS:0:
   buy: 10
-  Alias: Fern
+  alias: Fern
   break:
     pay: 20
     exp: 10
@@ -461,7 +461,7 @@ PISTON_EXTENSION:
 #35
 WOOL:0:
   buy: 10
-  Alias: White Wool
+  alias: White Wool
   break:
     pay: 20
     exp: 10
@@ -470,7 +470,7 @@ WOOL:0:
 #35:1
 WOOL:1:
   buy: 10
-  Alias: Orange Wool
+  alias: Orange Wool
   break:
     pay: 20
     exp: 10
@@ -479,7 +479,7 @@ WOOL:1:
 #35:2
 WOOL:2:
   buy: 10
-  Alias: Magenta Wool
+  alias: Magenta Wool
   break:
     pay: 20
     exp: 10
@@ -488,7 +488,7 @@ WOOL:2:
 #35:3
 WOOL:3:
   buy: 10
-  Alias: Light Blue Wool
+  alias: Light Blue Wool
   break:
     pay: 20
     exp: 10
@@ -497,7 +497,7 @@ WOOL:3:
 #35:4
 WOOL:4:
   buy: 10
-  Alias: Yellow Wool
+  alias: Yellow Wool
   break:
     pay: 20
     exp: 10
@@ -506,7 +506,7 @@ WOOL:4:
 #35:5
 WOOL:5:
   buy: 10
-  Alias: Light Green Wool
+  alias: Light Green Wool
   break:
     pay: 20
     exp: 10
@@ -515,7 +515,7 @@ WOOL:5:
 #35:6
 WOOL:6:
   buy: 10
-  Alias: Pink Wool
+  alias: Pink Wool
   break:
     pay: 20
     exp: 10
@@ -524,7 +524,7 @@ WOOL:6:
 #35:7
 WOOL:7:
   buy: 10
-  Alias: Gray Wool
+  alias: Gray Wool
   break:
     pay: 20
     exp: 10
@@ -533,7 +533,7 @@ WOOL:7:
 #35:8
 WOOL:8:
   buy: 10
-  Alias: Light Gray Wool
+  alias: Light Gray Wool
   break:
     pay: 20
     exp: 10
@@ -542,7 +542,7 @@ WOOL:8:
 #35:9
 WOOL:9:
   buy: 10
-  Alias: Cyan Wool
+  alias: Cyan Wool
   break:
     pay: 20
     exp: 10
@@ -551,7 +551,7 @@ WOOL:9:
 #35:10
 WOOL:10:
   buy: 10
-  Alias: Purple Wool
+  alias: Purple Wool
   break:
     pay: 20
     exp: 10
@@ -560,7 +560,7 @@ WOOL:10:
 #35:11
 WOOL:11:
   buy: 10
-  Alias: Blue Wool
+  alias: Blue Wool
   break:
     pay: 20
     exp: 10
@@ -569,7 +569,7 @@ WOOL:11:
 #35:12
 WOOL:12:
   buy: 10
-  Alias: Brown Wool
+  alias: Brown Wool
   break:
     pay: 20
     exp: 10
@@ -578,7 +578,7 @@ WOOL:12:
 #35:13
 WOOL:13:
   buy: 10
-  Alias: Dark Green Wool
+  alias: Dark Green Wool
   break:
     pay: 20
     exp: 10
@@ -587,7 +587,7 @@ WOOL:13:
 #35:14
 WOOL:14:
   buy: 10
-  Alias: Red Wool
+  alias: Red Wool
   break:
     pay: 20
     exp: 10
@@ -596,7 +596,7 @@ WOOL:14:
 #35:15
 WOOL:15:
   buy: 10
-  Alias: Black Wool
+  alias: Black Wool
   break:
     pay: 20
     exp: 10
@@ -652,7 +652,7 @@ IRON_BLOCK:
       - skill name
 STEP:0:
   buy: 10
-  Alias: Stone Slab
+  alias: Stone Slab
   break:
     pay: 20
     exp: 10
@@ -661,7 +661,7 @@ STEP:0:
 #44:1
 STEP:1:
   buy: 10
-  Alias: Sandstone Slab
+  alias: Sandstone Slab
   break:
     pay: 20
     exp: 10
@@ -670,7 +670,7 @@ STEP:1:
 #44:2
 STEP:2:
   buy: 10
-  Alias: Wooden Slab
+  alias: Wooden Slab
   break:
     pay: 20
     exp: 10
@@ -679,7 +679,7 @@ STEP:2:
 #44:3
 STEP:3:
   buy: 10
-  Alias: Cobblestone Slab
+  alias: Cobblestone Slab
   break:
     pay: 20
     exp: 10
@@ -688,7 +688,7 @@ STEP:3:
 #44:4
 STEP:4:
   buy: 10
-  Alias: Brick Slab
+  alias: Brick Slab
   break:
     pay: 20
     exp: 10
@@ -697,7 +697,7 @@ STEP:4:
 #44:5
 STEP:5:
   buy: 10
-  Alias: Stone Brick Slab
+  alias: Stone Brick Slab
   break:
     pay: 20
     exp: 10
@@ -706,7 +706,7 @@ STEP:5:
 #44:6
 STEP:6:
   buy: 10
-  Alias: Nether Brick Slab
+  alias: Nether Brick Slab
   break:
     pay: 20
     exp: 10
@@ -715,7 +715,7 @@ STEP:6:
 #44:7
 STEP:7:
   buy: 10
-  Alias: Quartz Slab
+  alias: Quartz Slab
   break:
     pay: 20
     exp: 10
@@ -772,7 +772,7 @@ TORCH:
 #53
 WOOD_STAIRS:
   buy: 10
-  Alias: Oak Wood Stairs
+  alias: Oak Wood Stairs
   break:
     pay: 20
     exp: 10
@@ -805,7 +805,7 @@ DIAMOND_BLOCK:
 #58
 WORKBENCH:
   buy: 10
-  Alias: Crafting Table
+  alias: Crafting Table
   break:
     pay: 20
     exp: 10
@@ -854,7 +854,7 @@ LEVER:
 #70
 STONE_PLATE:
   buy: 10
-  Alias: Stone Pressure Plate
+  alias: Stone Pressure Plate
   break:
     pay: 20
     exp: 10
@@ -863,7 +863,7 @@ STONE_PLATE:
 #72
 WOOD_PLATE:
   buy: 10
-  Alias: Wooden Pressure Plate
+  alias: Wooden Pressure Plate
   break:
     pay: 20
     exp: 10
@@ -880,7 +880,7 @@ REDSTONE_ORE:
 #76
 REDSTONE_TORCH_ON:
   buy: 10
-  Alias: Redstone Torch
+  alias: Redstone Torch
   break:
     pay: 20
     exp: 10
@@ -937,7 +937,7 @@ CLAY:
 #83
 SUGAR_CANE_BLOCK:
   buy: 10
-  Alias: Sugar Cane
+  alias: Sugar Cane
   break:
     pay: 20
     exp: 10
@@ -1002,7 +1002,7 @@ JACK_O_LANTERN:
 #92
 CAKE_BLOCK:
   buy: 10
-  Alias: Cake
+  alias: Cake
   break:
     pay: 20
     exp: 10
@@ -1019,7 +1019,7 @@ TRAP_DOOR:
 #98
 SMOOTH_BRICK:0:
   buy: 10
-  Alias: Stone Bricks
+  alias: Stone Bricks
   break:
     pay: 20
     exp: 10
@@ -1028,7 +1028,7 @@ SMOOTH_BRICK:0:
 #98:1
 SMOOTH_BRICK:1:
   buy: 10
-  Alias: Mossy Stone Brick
+  alias: Mossy Stone Brick
   break:
     pay: 20
     exp: 10
@@ -1037,7 +1037,7 @@ SMOOTH_BRICK:1:
 #98:2
 SMOOTH_BRICK:2:
   buy: 10
-  Alias: Cracked Stone Brick
+  alias: Cracked Stone Brick
   break:
     pay: 20
     exp: 10
@@ -1046,7 +1046,7 @@ SMOOTH_BRICK:2:
 #98:3
 SMOOTH_BRICK:3:
   buy: 10
-  Alias: Chiseled Stone Brick
+  alias: Chiseled Stone Brick
   break:
     pay: 20
     exp: 10
@@ -1055,7 +1055,7 @@ SMOOTH_BRICK:3:
 #99
 HUGE_MUSHROOM_1:
   buy: 10
-  Alias: Red Mushroom Cap
+  alias: Red Mushroom Cap
   break:
     pay: 20
     exp: 10
@@ -1064,7 +1064,7 @@ HUGE_MUSHROOM_1:
 #100
 HUGE_MUSHROOM_2:
   buy: 10
-  Alias: Brown Mushroom Cap
+  alias: Brown Mushroom Cap
   break:
     pay: 20
     exp: 10
@@ -1073,7 +1073,7 @@ HUGE_MUSHROOM_2:
 #101
 IRON_FENCE:
   buy: 10
-  Alias: Iron Bars
+  alias: Iron Bars
   break:
     pay: 20
     exp: 10
@@ -1082,7 +1082,7 @@ IRON_FENCE:
 #102
 THIN_GLASS:
   buy: 10
-  Alias: Glass Pane
+  alias: Glass Pane
   break:
     pay: 20
     exp: 10
@@ -1139,7 +1139,7 @@ BRICK_STAIRS:
 #109
 SMOOTH_STAIRS:
   buy: 10
-  Alias: Stone Brick Stairs
+  alias: Stone Brick Stairs
   break:
     pay: 20
     exp: 10
@@ -1148,15 +1148,16 @@ SMOOTH_STAIRS:
 #110
 MYCEL:
   buy: 10
-  Alias: Mycelium
+  alias: Mycelium
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #111
-LILY_PAD:
+WATER_LILY:
   buy: 10
+  alias: Lily Pad
   break:
     pay: 20
     exp: 10
@@ -1219,24 +1220,27 @@ CAULDRON:
     skill:
       - skill name
 #119
-END_PORTAL:
+ENDER_PORTAL:
   buy: 10
+  alias: End Portal
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #120
-END_PORTAL_FRAME:
+ENDER_PORTAL_FRAME:
   buy: 10
+  alias: End Portal Frame
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #121
-END_STONE:
+ENDER_STONE:
   buy: 10
+  alias: End Stone
   break:
     pay: 20
     exp: 10
@@ -1251,88 +1255,45 @@ DRAGON_EGG:
     skill:
       - skill name
 #123
-REDSTONE_LAMP_(INACTIVE):
+REDSTONE_LAMP_OFF:
   buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#124
-REDSTONE_LAMP_(ACTIVE):
-  buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#125
-DOUBLE_OAK_WOOD_SLAB:
-  buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#125:1
-DOUBLE_SPRUCE_WOOD_SLAB:
-  buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#125:2
-DOUBLE_BIRCH_WOOD_SLAB:
-  buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#125:3
-DOUBLE_JUNGLE_WOOD_SLAB:
-  buy: 10
+  alias: Redstone Lamp
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #126
-OAK_WOOD_SLAB:
+WOOD_STEP:0:
   buy: 10
+  alias: Oak Wood Slab
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #126:1
-SPRUCE_WOOD_SLAB:
+WOOD_STEP:1:
   buy: 10
+  alias: Spruce Wood Slab
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #126:2
-BIRCH_WOOD_SLAB:
+WOOD_STEP:2:
   buy: 10
+  alias: Birch Wood Slab
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #126:3
-JUNGLE_WOOD_SLAB:
+WOOD_STEP:3:
   buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#127
-COCOA_PLANT:
-  buy: 10
+  alias: Jungle Wood Slab
   break:
     pay: 20
     exp: 10
@@ -1411,15 +1372,16 @@ JUNGLE_WOOD_STAIRS:
     skill:
       - skill name
 #137
-COMMAND_BLOCK:
+COMMAND:
   buy: 10
+  alias: Command Block
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #138
-BEACON_BLOCK:
+BEACON:
   buy: 10
   break:
     pay: 20
@@ -1427,16 +1389,18 @@ BEACON_BLOCK:
     skill:
       - skill name
 #139
-COBBLESTONE_WALL:
+COBBLE_WALL:0:
   buy: 10
+  alias: Cobblestone Wall
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #139:1
-MOSSY_COBBLESTONE_WALL:
+COBBLE_WALL:1:
   buy: 10
+  alias: Mossy Cobblestone Wall
   break:
     pay: 20
     exp: 10
@@ -1451,7 +1415,7 @@ FLOWER_POT:
     skill:
       - skill name
 #141
-CARROTS:
+CARROT:
   buy: 10
   break:
     pay: 20
@@ -1459,7 +1423,7 @@ CARROTS:
     skill:
       - skill name
 #142
-POTATOES:
+POTATO:
   buy: 10
   break:
     pay: 20
@@ -1475,8 +1439,9 @@ WOODEN_BUTTON:
     skill:
       - skill name
 #144
-MOB_HEAD:
+SKULL:
   buy: 10
+  alias: Mob Head
   break:
     pay: 20
     exp: 10
