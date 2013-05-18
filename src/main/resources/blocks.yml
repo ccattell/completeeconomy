@@ -1588,6 +1588,7 @@ IRON_PICKAXE:
     exp: 10
     skill:
       - skill name
+
 #258
 IRON_AXE:
   buy: 10
@@ -2959,16 +2960,18 @@ MONSTER_EGG:120:
     skill:
       - skill name
 #384
-BOTTLE_O'_ENCHANTING:
+EXP_BOTTLE:
   buy: 10
+  alias: Bottle o' Enchanting
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #385
-FIRE_CHARGE:
+FIREBALL:
   buy: 10
+  alias: Fire Charge
   break:
     pay: 20
     exp: 10
@@ -3007,24 +3010,27 @@ ITEM_FRAME:
     skill:
       - skill name
 #390
-FLOWER_POT:
+FLOWER_POT_ITEM:
   buy: 10
+  alias: Flower Pot
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #391
-CARROTS:
+CARROT_ITEM:
   buy: 10
+  alias: Carrot
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #392
-POTATO:
+POTATO_ITEM:
   buy: 10
+  alias: Potato
   break:
     pay: 20
     exp: 10
@@ -3047,7 +3053,7 @@ POISONOUS_POTATO:
     skill:
       - skill name
 #395
-MAP:
+EMPTY_MAP:
   buy: 10
   break:
     pay: 20
@@ -3063,49 +3069,54 @@ GOLDEN_CARROT:
     skill:
       - skill name
 #397
-MOB_HEAD_(SKELETON):
+SKULL_ITEM:0:
   buy: 10
+  alias: Skeleton Skull
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #397:1
-MOB_HEAD_(WITHER_SKELETON):
+SKULL_ITEM:1:
   buy: 10
+  alias: Wither Skeleton Skull
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #397:2
-MOB_HEAD_(ZOMBIE):
+SKULL_ITEM:2:
   buy: 10
+  alias: Zombie Head
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #397:3
-MOB_HEAD_(HUMAN):
+SKULL_ITEM:3:
   buy: 10
+  alias: Head
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #397:4
-MOB_HEAD_(CREEPER):
+SKULL_ITEM:4:
   buy: 10
+  alias: Creeper Head
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #398
-CARROT_ON_A_STICK:
-
+CARROT_STICK:
   buy: 10
+  alias: Carrot on a Stick
   break:
     pay: 20
     exp: 10
@@ -3128,16 +3139,18 @@ PUMPKIN_PIE:
     skill:
       - skill name
 #401
-FIREWORK_ROCKET:
+FIREWORK:
   buy: 10
+  alias: Firework Rocket
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #402
-FIREWORK_STAR:
+FIREWORK_CHARGE:
   buy: 10
+  alias: Firework Star
   break:
     pay: 20
     exp: 10
@@ -3160,70 +3173,86 @@ REDSTONE_COMPARATOR:
     skill:
       - skill name
 #405
-NETHER_BRICK:
+NETHER_BRICK_ITEM:
   buy: 10
+  alias: Nether Brick
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #406
-NETHER_QUARTZ:
+QUARTZ:
   buy: 10
+  alias: Nether Quartz
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #407
-MINECART_WITH_TNT:
+EXPLOSIVE_MINECART:
   buy: 10
+  alias: Minecart with TNT
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #408
-MINECART_WITH_HOPPER:
+HOPPER_MINECART:
   buy: 10
+  alias: Minecart with Hopper
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
 #2256
-13_DISC:
+GOLD_RECORD:
   buy: 10
+  alias: Music Disc - 13
 #2257
-CAT_DISC:
+GREEN_RECORD:
   buy: 10
+  alias: Music Disc - cat
 #2258
-BLOCKS_DISC:
+RECORD_3:
   buy: 10
+  alias: Music Disc - blocks
 #2259
-CHIRP_DISC:
+RECORD_4:
   buy: 10
+  alias: Music Disc - chirp
 #2260
-FAR_DISC:
+RECORD_5:
   buy: 10
+  alias: Music Disc - far
 #2261
-MALL_DISC:
+RECORD_6:
   buy: 10
+  alias: Music Disc - mall
 #2262
-MELLOHI_DISC:
+RECORD_7:
   buy: 10
+  alias: Music Disc - mellohi
 #2263
-STAL_DISC:
+RECORD_8:
   buy: 10
+  alias: Music Disc - stal
 #2264
-STRAD_DISC:
+RECORD_9:
   buy: 10
+  alias: Music Disc - strad
 #2265
-WARD_DISC:
+RECORD_10:
   buy: 10
+  alias: Music Disc - ward
 #2266
-11_DISC:
+RECORD_11:
   buy: 10
+  alias: Music Disc - 11
 #2267
-WAIT_DISC:
+RECORD_12:
   buy: 10
+  alias: Music Disc - wait
