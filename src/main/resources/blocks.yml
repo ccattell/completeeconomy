@@ -2289,6 +2289,7 @@ SLIME_BALL:
 #342
 STORAGE_MINECART:
   buy: 10
+  alias: Minecart with Chest
   break:
     pay: 20
     exp: 10
@@ -2297,6 +2298,7 @@ STORAGE_MINECART:
 #343
 POWERED_MINECART:
   buy: 10
+  alias: Minecart with Furnace
   break:
     pay: 20
     exp: 10
@@ -2673,13 +2675,582 @@ NETHER_STALK:
     skill:
       - skill name
 #373
-POTION:
+#373:0
+POTION:0:
   buy: 10
-  break:
+  alias: Water Bottle
+  brew:
     pay: 20
     exp: 10
     skill:
-      - skill name
+      - potion making
+#373:16
+POTION:16:
+  buy: 10
+  alias: Awkward Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:32
+POTION:32:
+  buy: 10
+  alias: Thick Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:64
+POTION:64:
+  buy: 10
+  alias: Mundane Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8193
+POTION:8193:
+  buy: 10
+  alias: Regeneration Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8194
+POTION:8194:
+  buy: 10
+  alias: Swiftness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8195
+POTION:8195:
+  buy: 10
+  alias: Fire Resistance Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8196
+POTION:8196:
+  buy: 10
+  alias: Poison Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8197
+POTION:8197:
+  buy: 10
+  alias: Healing Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8198
+POTION:8198:
+  buy: 10
+  alias: Night Vision Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8200
+POTION:8200:
+  buy: 10
+  alias: Weakness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8201
+POTION:8201:
+  buy: 10
+  alias: Strength Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8202
+POTION:8202:
+  buy: 10
+  alias: Slowness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8204
+POTION:8204:
+  buy: 10
+  alias: Harming Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8206
+POTION:8206:
+  buy: 10
+  alias: Invisibility Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8225
+POTION:8225:
+  buy: 10
+  alias: Regeneration Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8226
+POTION:8226:
+  buy: 10
+  alias: Swiftness Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8228
+POTION:8228:
+  buy: 10
+  alias: Poison Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8229
+POTION:8229:
+  buy: 10
+  alias: Healing Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8233
+POTION:8233:
+  buy: 10
+  alias: Strength Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8236
+POTION:8236:
+  buy: 10
+  alias: Harming Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8257
+POTION:8257:
+  buy: 10
+  alias: Regeneration Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8258
+POTION:8258:
+  buy: 10
+  alias: Swiftness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8259
+POTION:8259:
+  buy: 10
+  alias: Fire Resistance Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8260
+POTION:8260:
+  buy: 10
+  alias: Poison Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8262
+POTION:8262:
+  buy: 10
+  alias: Night Vision Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8264
+POTION:8264:
+  buy: 10
+  alias: Weakness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8265
+POTION:8265:
+  buy: 10
+  alias: Strength Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8266
+POTION:8266:
+  buy: 10
+  alias: Slowness Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8270
+POTION:8270:
+  buy: 10
+  alias: Invisibility Potion
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8289
+POTION:8289:
+  buy: 10
+  alias: Regeneration Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8290
+POTION:8290:
+  buy: 10
+  alias: Swiftness Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8292
+POTION:8292:
+  buy: 10
+  alias: Poison Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:8297
+POTION:8297:
+  buy: 10
+  alias: Strength Potion II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16385
+POTION:16385:
+  buy: 10
+  alias: Regeneration Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16386
+POTION:16386:
+  buy: 10
+  alias: Swiftness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16387
+POTION:16387:
+  buy: 10
+  alias: Fire Resistance Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16388
+POTION:16388:
+  buy: 10
+  alias: Poison Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16389
+POTION:16389:
+  buy: 10
+  alias: Healing Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16390
+POTION:16390:
+  buy: 10
+  alias: Night Vision Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16392
+POTION:16392:
+  buy: 10
+  alias: Weakness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16393
+POTION:16393:
+  buy: 10
+  alias: Strength Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16394
+POTION:16394:
+  buy: 10
+  alias: Slowness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16396
+POTION:16396:
+  buy: 10
+  alias: Harming Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16398
+POTION:16398:
+  buy: 10
+  alias: Invisibility Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16417
+POTION:16417:
+  buy: 10
+  alias: Regeneration Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16418
+POTION:16418:
+  buy: 10
+  alias: Swiftness Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16420
+POTION:16420:
+  buy: 10
+  alias: Poison Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16421
+POTION:16421:
+  buy: 10
+  alias: Healing Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16425
+POTION:16425:
+  buy: 10
+  alias: Strength Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16428
+POTION:16428:
+  buy: 10
+  alias: Harming Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16449
+POTION:16449:
+  buy: 10
+  alias: Regeneration Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16450
+POTION:16450:
+  buy: 10
+  alias: Swiftness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16451
+POTION:16451:
+  buy: 10
+  alias: Fire Resistance Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16452
+POTION:16452:
+  buy: 10
+  alias: Poison Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16454
+POTION:16454:
+  buy: 10
+  alias: Night Vision Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16456
+POTION:16456:
+  buy: 10
+  alias: Weakness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16457
+POTION:16457:
+  buy: 10
+  alias: Strength Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16458
+POTION:16458:
+  buy: 10
+  alias: Slowness Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16462
+POTION:16462:
+  buy: 10
+  alias: Invisibility Splash
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16481
+POTION:16481:
+  buy: 10
+  alias: Regeneration Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16482
+POTION:16482:
+  buy: 10
+  alias: Swiftness Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16484
+POTION:16484:
+  buy: 10
+  alias: Poison Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
+#373:16489:
+POTION:16489:
+  buy: 10
+  alias: Strength Splash II
+  brew:
+    pay: 20
+    exp: 10
+    skill:
+      - potion making
 #374
 GLASS_BOTTLE:
   buy: 10
