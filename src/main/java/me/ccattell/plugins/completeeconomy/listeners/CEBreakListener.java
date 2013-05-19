@@ -30,7 +30,9 @@ public class CEBreakListener implements Listener {
 
         // is it a breakable block?
         if (!plugin.configs.blockList.contains(block + ".break")) {
+            //would be better to return an array of the skills associated with this block here instead of boolean, then check the player for those skills.
             return;
+            //need to check somehwere if the player is using the right tool for this block, so they can get a small boost to thier exp.
         }
         // does the player have mining skills as part of their job description?
         if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getString(block + ".break.skill"))) {
