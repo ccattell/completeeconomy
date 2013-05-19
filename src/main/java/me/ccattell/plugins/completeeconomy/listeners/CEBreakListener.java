@@ -28,12 +28,12 @@ public class CEBreakListener implements Listener {
         byte data = event.getBlock().getData();
         String block = (data > 0) ? type + ":" + data : type;
 
-        // is it a mining skills block?
-        if (!plugin.configs.skillList.contains(block + ".break")) {
+        // is it a breakable block?
+        if (!plugin.configs.blockList.contains(block + ".break")) {
             return;
         }
         // does the player have mining skills as part of their job description?
-        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.skillList.getString(block + ".break.skill"))) {
+        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getString(block + ".break.skill"))) {
             return;
         }
         // yes & yes, so add it to the queue
@@ -46,7 +46,7 @@ public class CEBreakListener implements Listener {
             HashMap<String, CERunnableData> newcount = new HashMap<String, CERunnableData>();
             CERunnableData rd = new CERunnableData();
             rd.setCount(drops);
-            rd.setSkill(plugin.configs.skillList.getString(block + ".break.skill"));
+            rd.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
             newcount.put(name, rd);
             plugin.getBreakQueue().put(name, newcount);
         } else {
@@ -54,7 +54,7 @@ public class CEBreakListener implements Listener {
             if (rd_data == null) {
                 // first time they've broken this block
                 rd_data = new CERunnableData();
-                rd_data.setSkill(plugin.configs.skillList.getString(block + ".break.skill"));
+                rd_data.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
                 rd_data.setCount(drops);
             } else {
                 int minecount = rd_data.getCount();

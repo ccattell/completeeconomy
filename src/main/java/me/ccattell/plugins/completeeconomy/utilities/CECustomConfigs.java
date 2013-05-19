@@ -26,7 +26,7 @@ public class CECustomConfigs {
     public FileConfiguration jobList = null;
     public FileConfiguration kitList = null;
     public FileConfiguration shopList = null;
-    public FileConfiguration skillList = null;
+    public FileConfiguration blockList = null;
     public FileConfiguration titleList = null;
     public FileConfiguration treasureList = null;
     private File bankConfigFile = null;
@@ -35,7 +35,7 @@ public class CECustomConfigs {
     private File jobListFile = null;
     private File kitListFile = null;
     private File shopListFile = null;
-    private File skillListFile = null;
+    private File blockListFile = null;
     private File titleListFile = null;
     private File treasureListFile = null;
 
@@ -58,7 +58,7 @@ public class CECustomConfigs {
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "kits.yml", plugin.getResource("kits.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "shops.yml", plugin.getResource("shops.yml"));
-        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "skills.yml", plugin.getResource("skills.yml"));
+        copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "blocks.yml", plugin.getResource("blocks.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "titles.yml", plugin.getResource("titles.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "treasures.yml", plugin.getResource("treasures.yml"));
     }
@@ -76,8 +76,8 @@ public class CECustomConfigs {
         this.kitList = YamlConfiguration.loadConfiguration(kitListFile);
         this.shopListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "shops.yml");
         this.shopList = YamlConfiguration.loadConfiguration(shopListFile);
-        this.skillListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "skills.yml");
-        this.skillList = YamlConfiguration.loadConfiguration(skillListFile);
+        this.blockListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "blocks.yml");
+        this.blockList = YamlConfiguration.loadConfiguration(blockListFile);
         this.titleListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "titles.yml");
         this.titleList = YamlConfiguration.loadConfiguration(titleListFile);
         this.treasureListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "treasures.yml");
@@ -108,8 +108,8 @@ public class CECustomConfigs {
         return shopList;
     }
 
-    public FileConfiguration getSkillList() {
-        return skillList;
+    public FileConfiguration getBlockList() {
+        return blockList;
     }
 
     public FileConfiguration getTitleList() {

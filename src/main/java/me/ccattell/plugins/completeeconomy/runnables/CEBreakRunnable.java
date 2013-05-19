@@ -40,7 +40,7 @@ public class CEBreakRunnable implements Runnable {
                     HashMap<String, CERunnableData> counts = m.getValue();
                     for (Map.Entry<String, CERunnableData> c : counts.entrySet()) {
                         // get the value of mineable from the skills list
-                        experience += plugin.configs.getSkillList().getInt(c.getKey() + "break.experience") * c.getValue().getCount();
+                        experience += plugin.configs.getBlockList().getInt(c.getKey() + "break.experience") * c.getValue().getCount();
                         skill = c.getValue().getSkill();
                     }
                     HashMap<String, Object> set = new HashMap<String, Object>();
