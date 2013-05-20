@@ -30,11 +30,12 @@ public class CEBreakListener implements Listener {
 
         // is it a breakable block?
         if (!plugin.configs.blockList.contains(block + ".break")) {
-            //would be better to return an array of the skills associated with this block here instead of boolean, then check the player for those skills.
+            // listeners don't return values...
             return;
-            //need to check somehwere if the player is using the right tool for this block, so they can get a small boost to thier exp.
+            // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to thier exp.
+            // so the correct tool either needs to added to blocks.yml or we need a separate lookup table
         }
-        // does the player have mining skills as part of their job description?
+        // does the player have a break skill as part of their job description?
         if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getString(block + ".break.skill"))) {
             return;
         }
@@ -44,7 +45,7 @@ public class CEBreakListener implements Listener {
         int drops = getDropsForSkill(name);
         HashMap<String, CERunnableData> counts = plugin.getBreakQueue().get(name);
         if (counts == null) {
-            // first time ever mining
+            // first time ever breaking
             HashMap<String, CERunnableData> newcount = new HashMap<String, CERunnableData>();
             CERunnableData rd = new CERunnableData();
             rd.setCount(drops);
@@ -77,7 +78,7 @@ public class CEBreakListener implements Listener {
         // get active player jobs
         HashMap<String, String> jobs = new CEQueryFactory().getPlayerJobs(p);
         if (jobs.size() > 0) {
-            // check whether a job has mining skills
+            // check whether a job has break skills
             for (Map.Entry<String, String> job : jobs.entrySet()) {
                 if (plugin.configs.jobList.getStringList("Jobs." + job.getKey()).contains("s")) {
                     return true;
