@@ -13,6 +13,7 @@ public class CERunnableData {
     private String block;
     private String skill;
     private String job;
+    private boolean correctTool;
     private int count;
 
     public CERunnableData() {
@@ -48,6 +49,14 @@ public class CERunnableData {
 
     public void setJob(String job) {
         this.job = job;
+    }
+
+    public boolean isCorrectTool() {
+        return correctTool;
+    }
+
+    public void setCorrectTool(boolean correctTool) {
+        this.correctTool = correctTool;
     }
 
     public int getCount() {
