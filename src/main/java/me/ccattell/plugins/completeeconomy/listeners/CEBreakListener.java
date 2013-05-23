@@ -29,6 +29,23 @@ public class CEBreakListener implements Listener {
         String block = (data > 0) ? type + ":" + data : type;
 
         // is it a breakable block?
+        /*
+         * Player break a block
+         * 
+         * 1) we check the block list for the skills, pay, and exp associated with breaking the block
+         * 
+         * 2) we check the internal block list for valid tool type for breaking the block
+         * 
+         * 4) we check to see if player holds any jobs associated with the skills found in block list
+         * 
+         * 5) we calculate how much xp we award to the player's skill and job levels (including configurable xp boost for held jobs and valid tool used)
+         *      exp = (block_exp * (1.05 ^ skill_level)) * (1 + tool_boost_percent + job_boost_percent));
+         * 
+         * 6) we calculate how much pay we award to the player's cash on hand for held jobs only
+         *      pay = block_pay * (1.04 ^ job_level);
+         * 
+         * 7) add job xp, skill xp, and pay into player's queue
+         */
         if (!plugin.configs.blockList.contains(block + ".break")) {
             // listeners don't return values...
             return;
