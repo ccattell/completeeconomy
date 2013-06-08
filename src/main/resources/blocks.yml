@@ -1,6 +1,6 @@
 #1
 STONE:
-  buy: 10
+  buy: 1.58
   break:
     pay: 20
     exp: 10
@@ -18,7 +18,7 @@ STONE:
       - smelting
 #2
 GRASS:
-  buy: 10
+  buy: 1.00
   break:
     pay: 20
     exp: 10
@@ -31,7 +31,7 @@ GRASS:
       - skill name
 #3
 DIRT:
-  buy: 10
+  buy: 0.5
   break:
     pay: 20
     exp: 10
@@ -44,7 +44,7 @@ DIRT:
       - skill name
 #4
 COBBLESTONE:
-  buy: 10
+  buy: 0.5
   break:
     pay: 20
     exp: 10
@@ -57,7 +57,7 @@ COBBLESTONE:
       - skill name
 #5
 WOOD:0:
-  buy: 10
+  buy: 1.31
   alias: Oak Wood Plank
   break:
     pay: 20
@@ -76,7 +76,7 @@ WOOD:0:
       - skill name
 #5:1
 WOOD:1:
-  buy: 10
+  buy: 1.31
   alias: Spruce Wood Plank
   break:
     pay: 20
@@ -95,7 +95,7 @@ WOOD:1:
       - skill name
 #5:2
 WOOD:2:
-  buy: 10
+  buy: 1.31
   alias: Birch Wood Plank
   break:
     pay: 20
@@ -114,7 +114,7 @@ WOOD:2:
       - skill name
 #5:3
 WOOD:3:
-  buy: 10
+  buy: 1.31
   alias: Jungle Wood Plank
   break:
     pay: 20
@@ -133,7 +133,7 @@ WOOD:3:
       - skill name
 #6
 SAPLING:0:
-  buy: 10
+  buy: 5
   alias: Oak Sapling
   break:
     pay: 20
@@ -147,7 +147,7 @@ SAPLING:0:
       - skill name
 #6:1
 SAPLING:1:
-  buy: 10
+  buy: 5
   alias: Spruce Sapling
   break:
     pay: 20
@@ -161,7 +161,7 @@ SAPLING:1:
       - skill name
 #6:2
 SAPLING:2:
-  buy: 10
+  buy: 5
   alias: Birch Sapling
   break:
     pay: 20
@@ -175,7 +175,7 @@ SAPLING:2:
       - skill name
 #6:3
 SAPLING:3:
-  buy: 10
+  buy: 5
   alias: Jungle Sapling
   break:
     pay: 20
@@ -189,7 +189,7 @@ SAPLING:3:
       - skill name
 #12
 SAND:
-  buy: 10
+  buy: 0.5
   break:
     pay: 20
     exp: 10
@@ -197,7 +197,7 @@ SAND:
       - skill name
 #13
 GRAVEL:
-  buy: 10
+  buy: 0.5
   break:
     pay: 20
     exp: 10
@@ -205,7 +205,7 @@ GRAVEL:
       - skill name
 #14
 GOLD_ORE:
-  buy: 10
+  buy: 50
   break:
     pay: 20
     exp: 10
@@ -213,7 +213,7 @@ GOLD_ORE:
       - skill name
 #15
 IRON_ORE:
-  buy: 10
+  buy: 15
   break:
     pay: 20
     exp: 10
@@ -229,7 +229,7 @@ COAL_ORE:
       - skill name
 #17
 LOG:0:
-  buy: 10
+  buy: 5
   alias: Oak Log
   break:
     pay: 20
@@ -238,7 +238,7 @@ LOG:0:
       - skill name
 #17:1
 LOG:1:
-  buy: 10
+  buy: 5
   alias: Spruce Log
   break:
     pay: 20
@@ -247,7 +247,7 @@ LOG:1:
       - skill name
 #17:2
 LOG:2:
-  buy: 10
+  buy: 5
   alias: Birch Log
   break:
     pay: 20
@@ -256,7 +256,7 @@ LOG:2:
       - skill name
 #17:3
 LOG:3:
-  buy: 10
+  buy: 5
   alias: Jungle Log
   break:
     pay: 20
@@ -265,7 +265,7 @@ LOG:3:
       - skill name
 #18
 LEAVES:0:
-  buy: 10
+  buy: 2
   alias: Oak Leaves
   break:
     pay: 20
@@ -274,7 +274,7 @@ LEAVES:0:
       - skill name
 #18:1
 LEAVES:1:
-  buy: 10
+  buy: 2
   alias: Spruce Leaves
   break:
     pay: 20
@@ -283,7 +283,7 @@ LEAVES:1:
       - skill name
 #18:2
 LEAVES:2:
-  buy: 10
+  buy: 2
   alias: Birch Leaves
   break:
     pay: 20
@@ -292,7 +292,7 @@ LEAVES:2:
       - skill name
 #18:3
 LEAVES:3:
-  buy: 10
+  buy: 2
   alias: Jungle Leaves
   break:
     pay: 20
@@ -301,7 +301,7 @@ LEAVES:3:
       - skill name
 #19
 SPONGE:
-  buy: 10
+  buy: 500
   break:
     pay: 20
     exp: 10
@@ -309,7 +309,7 @@ SPONGE:
       - skill name
 #20
 GLASS:
-  buy: 10
+  buy: 1.58
   break:
     pay: 20
     exp: 10
@@ -317,7 +317,7 @@ GLASS:
       - skill name
 #21
 LAPIS_ORE:
-  buy: 10
+  buy: 20
   alias: Lapis Lazuli Ore
   break:
     pay: 20
@@ -326,7 +326,7 @@ LAPIS_ORE:
       - skill name
 #22
 LAPIS_BLOCK:
-  buy: 10
+  buy: 28.35
   alias: Lapis Lazuli Block
   break:
     pay: 20
@@ -335,7 +335,7 @@ LAPIS_BLOCK:
       - skill name
 #23
 DISPENSER:
-  buy: 10
+  buy: 14.07
   break:
     pay: 20
     exp: 10
@@ -343,7 +343,7 @@ DISPENSER:
       - skill name
 #24
 SANDSTONE:0:
-  buy: 10
+  buy: 2.1
   break:
     pay: 20
     exp: 10
@@ -351,7 +351,7 @@ SANDSTONE:0:
       - skill name
 #24:1
 SANDSTONE:1:
-  buy: 10
+  buy: 2.32
   alias: Chiseled Sandstone
   break:
     pay: 20
@@ -360,7 +360,7 @@ SANDSTONE:1:
       - skill name
 #24:2
 SANDSTONE:2:
-  buy: 10
+  buy: 2.21
   alias: Smooth Sandstone
   break:
     pay: 20
@@ -369,7 +369,7 @@ SANDSTONE:2:
       - skill name
 #25
 NOTE_BLOCK:
-  buy: 10
+  buy: 14.18
   break:
     pay: 20
     exp: 10
@@ -377,7 +377,7 @@ NOTE_BLOCK:
       - skill name
 #27
 POWERED_RAIL:
-  buy: 10
+  buy: 56.87
   break:
     pay: 20
     exp: 10
@@ -385,7 +385,7 @@ POWERED_RAIL:
       - skill name
 #28
 DETECTOR_RAIL:
-  buy: 10
+  buy: 18.74
   break:
     pay: 20
     exp: 10
@@ -393,7 +393,7 @@ DETECTOR_RAIL:
       - skill name
 #29
 PISTON_STICKY_BASE:
-  buy: 10
+  buy: 38.88
   break:
     pay: 20
     exp: 10
@@ -401,7 +401,7 @@ PISTON_STICKY_BASE:
       - skill name
 #30
 WEB:
-  buy: 10
+  buy: 2.25
   break:
     pay: 20
     exp: 10
@@ -409,7 +409,6 @@ WEB:
       - skill name
 #31
 LONG_GRASS:0:
-  buy: 10
   alias: Dead Bush
   break:
     pay: 20
@@ -418,7 +417,6 @@ LONG_GRASS:0:
       - skill name
 #31:1
 LONG_GRASS:0:
-  buy: 10
   alias: Long Grass
   break:
     pay: 20
@@ -427,7 +425,6 @@ LONG_GRASS:0:
       - skill name
 #31:2
 LONG_GRASS:0:
-  buy: 10
   alias: Fern
   break:
     pay: 20
@@ -436,7 +433,6 @@ LONG_GRASS:0:
       - skill name
 #32
 DEAD_BUSH:
-  buy: 10
   break:
     pay: 20
     exp: 10
@@ -444,15 +440,7 @@ DEAD_BUSH:
       - skill name
 #33
 PISTON_BASE:
-  buy: 10
-  break:
-    pay: 20
-    exp: 10
-    skill:
-      - skill name
-#34
-PISTON_EXTENSION:
-  buy: 10
+  buy: 27.02
   break:
     pay: 20
     exp: 10
@@ -460,7 +448,7 @@ PISTON_EXTENSION:
       - skill name
 #35
 WOOL:0:
-  buy: 10
+  buy: 5
   alias: White Wool
   break:
     pay: 20
@@ -469,7 +457,7 @@ WOOL:0:
       - skill name
 #35:1
 WOOL:1:
-  buy: 10
+  buy: 5.83
   alias: Orange Wool
   break:
     pay: 20
@@ -478,7 +466,7 @@ WOOL:1:
       - skill name
 #35:2
 WOOL:2:
-  buy: 10
+  buy: 6.93
   alias: Magenta Wool
   break:
     pay: 20
@@ -487,7 +475,7 @@ WOOL:2:
       - skill name
 #35:3
 WOOL:3:
-  buy: 10
+  buy: 7.87
   alias: Light Blue Wool
   break:
     pay: 20
@@ -496,7 +484,7 @@ WOOL:3:
       - skill name
 #35:4
 WOOL:4:
-  buy: 10
+  buy: 5.80
   alias: Yellow Wool
   break:
     pay: 20
@@ -505,7 +493,7 @@ WOOL:4:
       - skill name
 #35:5
 WOOL:5:
-  buy: 10
+  buy: 9.69
   alias: Light Green Wool
   break:
     pay: 20
@@ -514,7 +502,7 @@ WOOL:5:
       - skill name
 #35:6
 WOOL:6:
-  buy: 10
+  buy: 6.50
   alias: Pink Wool
   break:
     pay: 20
@@ -523,7 +511,7 @@ WOOL:6:
       - skill name
 #35:7
 WOOL:7:
-  buy: 10
+  buy: 7.87
   alias: Gray Wool
   break:
     pay: 20
@@ -532,7 +520,7 @@ WOOL:7:
       - skill name
 #35:8
 WOOL:8:
-  buy: 10
+  buy: 7.52
   alias: Light Gray Wool
   break:
     pay: 20
@@ -544,13 +532,13 @@ WOOL:9:
   buy: 10
   alias: Cyan Wool
   break:
-    pay: 20
+    pay: 10.38
     exp: 10
     skill:
       - skill name
 #35:10
 WOOL:10:
-  buy: 10
+  buy: 7.19
   alias: Purple Wool
   break:
     pay: 20
@@ -559,7 +547,7 @@ WOOL:10:
       - skill name
 #35:11
 WOOL:11:
-  buy: 10
+  buy: 8.40
   alias: Blue Wool
   break:
     pay: 20
@@ -568,7 +556,7 @@ WOOL:11:
       - skill name
 #35:12
 WOOL:12:
-  buy: 10
+  buy: 10.50
   alias: Brown Wool
   break:
     pay: 20
@@ -577,7 +565,7 @@ WOOL:12:
       - skill name
 #35:13
 WOOL:13:
-  buy: 10
+  buy: 11.87
   alias: Dark Green Wool
   break:
     pay: 20
@@ -586,7 +574,7 @@ WOOL:13:
       - skill name
 #35:14
 WOOL:14:
-  buy: 10
+  buy: 5.80
   alias: Red Wool
   break:
     pay: 20
@@ -595,7 +583,7 @@ WOOL:14:
       - skill name
 #35:15
 WOOL:15:
-  buy: 10
+  buy: 8.40
   alias: Black Wool
   break:
     pay: 20
@@ -604,7 +592,7 @@ WOOL:15:
       - skill name
 #37
 YELLOW_FLOWER:
-  buy: 10
+  buy: 1
   break:
     pay: 20
     exp: 10
@@ -612,7 +600,7 @@ YELLOW_FLOWER:
       - skill name
 #38
 RED_ROSE:
-  buy: 10
+  buy: 1
   break:
     pay: 20
     exp: 10
@@ -620,7 +608,7 @@ RED_ROSE:
       - skill name
 #39
 BROWN_MUSHROOM:
-  buy: 10
+  buy: 1
   break:
     pay: 20
     exp: 10
@@ -628,7 +616,7 @@ BROWN_MUSHROOM:
       - skill name
 #40
 RED_MUSHROOM:
-  buy: 10
+  buy: 1
   break:
     pay: 20
     exp: 10
@@ -636,7 +624,7 @@ RED_MUSHROOM:
       - skill name
 #41
 GOLD_BLOCK:
-  buy: 10
+  buy: 506.05
   break:
     pay: 20
     exp: 10
@@ -644,14 +632,15 @@ GOLD_BLOCK:
       - skill name
 #42
 IRON_BLOCK:
-  buy: 10
+  buy: 158.76
   break:
     pay: 20
     exp: 10
     skill:
       - skill name
+#44:0
 STEP:0:
-  buy: 10
+  buy: 0.83
   alias: Stone Slab
   break:
     pay: 20
@@ -660,7 +649,7 @@ STEP:0:
       - skill name
 #44:1
 STEP:1:
-  buy: 10
+  buy: 1.10
   alias: Sandstone Slab
   break:
     pay: 20
@@ -669,7 +658,7 @@ STEP:1:
       - skill name
 #44:2
 STEP:2:
-  buy: 10
+  buy: 0.69
   alias: Wooden Slab
   break:
     pay: 20
@@ -678,7 +667,7 @@ STEP:2:
       - skill name
 #44:3
 STEP:3:
-  buy: 10
+  buy: 0.26
   alias: Cobblestone Slab
   break:
     pay: 20
@@ -687,7 +676,7 @@ STEP:3:
       - skill name
 #44:4
 STEP:4:
-  buy: 10
+  buy: 9.26
   alias: Brick Slab
   break:
     pay: 20
@@ -696,7 +685,7 @@ STEP:4:
       - skill name
 #44:5
 STEP:5:
-  buy: 10
+  buy: 0.87
   alias: Stone Brick Slab
   break:
     pay: 20
@@ -705,7 +694,7 @@ STEP:5:
       - skill name
 #44:6
 STEP:6:
-  buy: 10
+  buy: 13.89
   alias: Nether Brick Slab
   break:
     pay: 20
@@ -714,7 +703,7 @@ STEP:6:
       - skill name
 #44:7
 STEP:7:
-  buy: 10
+  buy: 38.59
   alias: Quartz Slab
   break:
     pay: 20
@@ -723,7 +712,7 @@ STEP:7:
       - skill name
 #45
 BRICK:
-  buy: 10
+  buy: 17.64
   break:
     pay: 20
     exp: 10
@@ -731,7 +720,7 @@ BRICK:
       - skill name
 #46
 TNT:
-  buy: 10
+  buy: 54.60
   break:
     pay: 20
     exp: 10
@@ -739,7 +728,7 @@ TNT:
       - skill name
 #47
 BOOKSHELF:
-  buy: 10
+  buy: 51.76
   break:
     pay: 20
     exp: 10
@@ -755,7 +744,7 @@ MOSSY_COBBLESTONE:
       - skill name
 #49
 OBSIDIAN:
-  buy: 10
+  buy: 50
   break:
     pay: 20
     exp: 10
@@ -763,7 +752,7 @@ OBSIDIAN:
       - skill name
 #50
 TORCH:
-  buy: 10
+  buy: 2.28
   break:
     pay: 20
     exp: 10
@@ -771,7 +760,7 @@ TORCH:
       - skill name
 #53
 WOOD_STAIRS:
-  buy: 10
+  buy: 2.07
   alias: Oak Wood Stairs
   break:
     pay: 20
@@ -780,7 +769,7 @@ WOOD_STAIRS:
       - skill name
 #54
 CHEST:
-  buy: 10
+  buy: 11.03
   break:
     pay: 20
     exp: 10
@@ -788,7 +777,7 @@ CHEST:
       - skill name
 #56
 DIAMOND_ORE:
-  buy: 10
+  buy: 505
   break:
     pay: 20
     exp: 10
@@ -796,7 +785,7 @@ DIAMOND_ORE:
       - skill name
 #57
 DIAMOND_BLOCK:
-  buy: 10
+  buy: 4725
   break:
     pay: 20
     exp: 10
@@ -804,7 +793,7 @@ DIAMOND_BLOCK:
       - skill name
 #58
 WORKBENCH:
-  buy: 10
+  buy: 5.51
   alias: Crafting Table
   break:
     pay: 20
@@ -813,7 +802,7 @@ WORKBENCH:
       - skill name
 #61
 FURNACE:
-  buy: 10
+  buy: 4.20
   break:
     pay: 20
     exp: 10
@@ -821,7 +810,7 @@ FURNACE:
       - skill name
 #65
 LADDER:
-  buy: 10
+  buy: 1.69
   break:
     pay: 20
     exp: 10
@@ -829,7 +818,7 @@ LADDER:
       - skill name
 #66
 RAILS:
-  buy: 10
+  buy: 6.70
   break:
     pay: 20
     exp: 10
@@ -837,7 +826,7 @@ RAILS:
       - skill name
 #67
 COBBLESTONE_STAIRS:
-  buy: 10
+  buy: 0.79
   break:
     pay: 20
     exp: 10
@@ -845,7 +834,7 @@ COBBLESTONE_STAIRS:
       - skill name
 #69
 LEVER:
-  buy: 10
+  buy: 1.25
   break:
     pay: 20
     exp: 10
@@ -853,7 +842,7 @@ LEVER:
       - skill name
 #70
 STONE_PLATE:
-  buy: 10
+  buy: 3.31
   alias: Stone Pressure Plate
   break:
     pay: 20
@@ -862,7 +851,7 @@ STONE_PLATE:
       - skill name
 #72
 WOOD_PLATE:
-  buy: 10
+  buy: 2.76
   alias: Wooden Pressure Plate
   break:
     pay: 20
@@ -871,7 +860,7 @@ WOOD_PLATE:
       - skill name
 #73
 REDSTONE_ORE:
-  buy: 10
+  buy: 15
   break:
     pay: 20
     exp: 10
@@ -879,7 +868,7 @@ REDSTONE_ORE:
       - skill name
 #76
 REDSTONE_TORCH_ON:
-  buy: 10
+  buy: 3.87
   alias: Redstone Torch
   break:
     pay: 20
@@ -888,7 +877,7 @@ REDSTONE_TORCH_ON:
       - skill name
 #77
 STONE_BUTTON:
-  buy: 10
+  buy: 3.31
   break:
     pay: 20
     exp: 10
@@ -896,7 +885,6 @@ STONE_BUTTON:
       - skill name
 #78
 SNOW:
-  buy: 10
   break:
     pay: 20
     exp: 10
@@ -904,7 +892,7 @@ SNOW:
       - skill name
 #79
 ICE:
-  buy: 10
+  buy: 7
   break:
     pay: 20
     exp: 10
@@ -912,7 +900,7 @@ ICE:
       - skill name
 #80
 SNOW_BLOCK:
-  buy: 10
+  buy: 4.20
   break:
     pay: 20
     exp: 10
@@ -920,7 +908,7 @@ SNOW_BLOCK:
       - skill name
 #81
 CACTUS:
-  buy: 10
+  buy: 5
   break:
     pay: 20
     exp: 10
@@ -928,7 +916,7 @@ CACTUS:
       - skill name
 #82
 CLAY:
-  buy: 10
+  buy: 12.60
   break:
     pay: 20
     exp: 10
@@ -936,7 +924,6 @@ CLAY:
       - skill name
 #83
 SUGAR_CANE_BLOCK:
-  buy: 10
   alias: Sugar Cane
   break:
     pay: 20
