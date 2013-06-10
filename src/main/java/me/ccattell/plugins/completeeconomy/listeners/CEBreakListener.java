@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.runnables.CERunnableData;
+import me.ccattell.plugins.completeeconomy.runnables.CEBreakData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -31,20 +31,28 @@ public class CEBreakListener implements Listener {
         // is it a breakable block?
         /*
          * Player break a block
-         * 
+         *
+         * a) check if the player the skill and the block has the break
+         *
+         * b) add data to a data class and then add the class to the queue
+         *
+         * c) the end, keep the listener simple - no major calculations are done here
+         *
+         * ****** Everything below here is done on the queued items, NOT in the listener ************
+         *
          * 1) we check the block list for the skills, pay, and exp associated with breaking the block
-         * 
+         *
          * 2) we check the internal block list for valid tool type for breaking the block
-         * 
+         *
          * 4) we check to see if player holds any jobs associated with the skills found in block list
-         * 
+         *
          * 5) we calculate how much xp we award to the player's skill and job levels (including configurable xp boost for held jobs and valid tool used)
          *      exp = (block_exp * (1.05 ^ skill_level)) * (1 + tool_boost_percent + job_boost_percent));
-         * 
+         *
          * 6) we calculate how much pay we award to the player's cash on hand for held jobs only
          *      pay = block_pay * (1.04 ^ job_level);
-         * 
-         * 7) add job xp, skill xp, and pay into player's queue
+         *
+         * 7) give job xp, skill xp, and pay to player
          */
         if (!plugin.configs.blockList.contains(block + ".break")) {
             // listeners don't return values...
@@ -59,31 +67,13 @@ public class CEBreakListener implements Listener {
         // yes & yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
-        int drops = getDropsForSkill(name);
-        HashMap<String, CERunnableData> counts = plugin.getBreakQueue().get(name);
-        if (counts == null) {
-            // first time ever breaking
-            HashMap<String, CERunnableData> newcount = new HashMap<String, CERunnableData>();
-            CERunnableData rd = new CERunnableData();
-            rd.setCount(drops);
-            rd.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
-            newcount.put(name, rd);
-            plugin.getBreakQueue().put(name, newcount);
-        } else {
-            CERunnableData rd_data = counts.get(block);
-            if (rd_data == null) {
-                // first time they've broken this block
-                rd_data = new CERunnableData();
-                rd_data.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
-                rd_data.setCount(drops);
-            } else {
-                int minecount = rd_data.getCount();
-                // increase count
-                rd_data.setCount(minecount + drops);
-            }
-            counts.put(block, rd_data);
-            plugin.getBreakQueue().put(name, counts);
-        }
+        CEBreakData rd = new CEBreakData();
+        rd.setPlayer(name);
+        rd.setBlock(block);
+        rd.setDrops(getDropsForSkill(name));
+        rd.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
+        rd.setTool(event.getPlayer().getItemInHand().getTypeId());
+        plugin.getBreakQueue().add(rd);
     }
 
     private int getDropsForSkill(String player) {

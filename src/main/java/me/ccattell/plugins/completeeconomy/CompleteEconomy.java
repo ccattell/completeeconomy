@@ -1,7 +1,9 @@
 package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEJobsCommand;
@@ -13,7 +15,7 @@ import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.runnables.CEBreakRunnable;
-import me.ccattell.plugins.completeeconomy.runnables.CERunnableData;
+import me.ccattell.plugins.completeeconomy.runnables.CEBreakData;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
 import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
 import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
@@ -36,7 +38,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
     public CECustomConfigs configs;
     protected CEVersionCheck versionCheck;
     public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
-    public HashMap<String, HashMap<String, CERunnableData>> breakQueue = new HashMap<String, HashMap<String, CERunnableData>>();
+    public List<CEBreakData> breakQueue = new ArrayList<CEBreakData>();
 
     @Override
     public void onDisable() {
@@ -99,7 +101,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEBreakRunnable(this), 300L, 1200L);
     }
 
-    public HashMap<String, HashMap<String, CERunnableData>> getBreakQueue() {
+    public List<CEBreakData> getBreakQueue() {
         return breakQueue;
     }
 }

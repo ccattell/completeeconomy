@@ -7,16 +7,16 @@ package me.ccattell.plugins.completeeconomy.runnables;
  *
  * @author eccentric_nz
  */
-public class CERunnableData {
+public class CEBreakData {
 
     private String player;
     private String block;
     private String skill;
     private String job;
-    private boolean correctTool;
-    private int count;
+    private int tool;
+    private int drops;
 
-    public CERunnableData() {
+    public CEBreakData() {
     }
 
     public String getPlayer() {
@@ -51,19 +51,19 @@ public class CERunnableData {
         this.job = job;
     }
 
-    public boolean isCorrectTool() {
-        return correctTool;
+    public int getTool() {
+        return tool;
     }
 
-    public void setCorrectTool(boolean correctTool) {
-        this.correctTool = correctTool;
+    public void setTool(int tool) {
+        this.tool = tool;
     }
 
-    public int getCount() {
-        return count;
+    public int getDrops() {
+        return drops;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setDrops(int drops) {
+        this.drops = drops;
     }
 }
