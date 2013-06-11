@@ -1,5 +1,5 @@
 System:
-  
+
   # Updates can be none (for no update warnings), alpha, beta, and release
   UpdateChannel: release
   Database:
@@ -24,7 +24,7 @@ System:
     # Example (separate) 1 Dollar 23 Cents
     # Example (combined) 0.23 Dollars and 1.23 Dollars
     Formatting: combined
-    
+
     # Purges all cash on hand when player dies
     PurgeOnDeath: true
 
@@ -37,3 +37,6 @@ System:
 
     #Days to purge inactive accounts
     Interval: 14
+
+  Levels:
+    ValidTool: 1.05

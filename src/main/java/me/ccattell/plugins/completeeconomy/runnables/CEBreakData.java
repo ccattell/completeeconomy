@@ -1,11 +1,8 @@
-/*
- *  Copyright 2013 eccentric_nz.
- */
 package me.ccattell.plugins.completeeconomy.runnables;
 
 /**
  *
- * @author eccentric_nz
+ * @author charlie
  */
 public class CEBreakData {
 
