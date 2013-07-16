@@ -68,7 +68,7 @@ public class CECustomConfigs {
         this.bankConfig = YamlConfiguration.loadConfiguration(bankConfigFile);
         this.jobConfigFile = new File(plugin.getDataFolder(), "jobConfig.yml");
         this.jobConfig = YamlConfiguration.loadConfiguration(jobConfigFile);
-        this.jobConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
+        this.shopConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
         this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
         this.jobListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "jobs.yml");
         this.jobList = YamlConfiguration.loadConfiguration(jobListFile);

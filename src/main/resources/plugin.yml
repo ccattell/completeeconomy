@@ -32,6 +32,15 @@ permissions:
   ce.jobs:
     description: Allow players to use the /jobs command.
     default: op
+  ce.shop:
+    description: Allow players to use the /shop command.
+    default: op
+  ce.shop.own:
+    description: Allow players to own and manage a shop.
+    default: op
+  ce.kit:
+    description: Allow players to use the /kit command.
+    default: op
 commands:
   cash:
     description: This will display your current cash holdings.
@@ -115,6 +124,53 @@ commands:
       usage: /<command> [job]
       permission: ce.jobs
       permission-message: You don't have permission to use jobs
+  shop:
+    description: This will access the shops module.
+    usage: /<command>
+    permission: ce.shop
+    permission-message: You don't have permission to use shops
+    create:
+      aliases: [c, add]
+      description: This will create a new shop.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to create a shop
+    delete:
+      aliases: [d, remove]
+      description: This will delete an existing shop.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to delete a shop
+    edit:
+      aliases: [e, change, update]
+      description: This will edit an existing shop.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to edit a shop
+    setowner:
+      aliases: [o, owner, transfer, changeowner]
+      description: This will change the owner of a shop.
+      usage: /<command> [shop name] [new owner]
+      permission: ce.shop.own
+      permission-message: You don't have permission to transfer a shop
+    setmode:
+      aliases: [m, mode, changemode]
+      description: This will change the buy/sell mode of an item in a shop.
+      usage: /<command> [mode]
+      permission: ce.shop.own
+      permission-message: You don't have permission to change modes
+    setprice:
+      aliases: [p, price, changeprice]
+      description: This will change the price of an item in a shop.
+      usage: /<command> [mode] [price]
+      permission: ce.shop.own
+      permission-message: You don't have permission to change prices
+  kit:
+    description: This will access the kits module.
+    usage: /<command>
+    permission: ce.kit
+    permission-message: You don't have permission to use kits
+    
   ceadmin:
     description: The CompleteEconomy command
     usage: /<command>

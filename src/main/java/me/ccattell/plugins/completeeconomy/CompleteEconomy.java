@@ -2,12 +2,12 @@ package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEJobsCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
+import me.ccattell.plugins.completeeconomy.commands.CEShopCommand;
 import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
@@ -96,6 +96,7 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         getCommand("bank").setExecutor(new CEBankCommand());
         getCommand("xpbank").setExecutor(new CEXPBankCommand());
         getCommand("jobs").setExecutor(new CEJobsCommand());
+        getCommand("shop").setExecutor(new CEShopCommand());
         new CEGiveInterest().interest();
         // start a repeating task to process the mining queue
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEBreakRunnable(this), 300L, 1200L);
