@@ -165,6 +165,24 @@ commands:
       usage: /<command> [mode] [price]
       permission: ce.shop.own
       permission-message: You don't have permission to change prices
+    save:
+      aliases: [s]
+      description: This will set a shop to active mode.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to save that shop
+    open:
+      aliases: [s]
+      description: This will set a shop status to open.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to open that shop
+    close:
+      aliases: [s]
+      description: This will set a shop status to closed.
+      usage: /<command> [shop name]
+      permission: ce.shop.own
+      permission-message: You don't have permission to close that shop
   kit:
     description: This will access the kits module.
     usage: /<command>

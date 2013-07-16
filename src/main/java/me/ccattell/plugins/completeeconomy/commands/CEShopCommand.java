@@ -48,9 +48,11 @@ public class CEShopCommand implements CommandExecutor {
                       //Delete from shops DB
                       player.sendMessage(moduleName + "Delete a shop");
                       return true;
-                    } else if ((args[0].equalsIgnoreCase("edit") || args[0].equalsIgnoreCase("e") || args[0].equalsIgnoreCase("chnge") || args[0].equalsIgnoreCase("update")) && args.length == 2) {
+                    } else if ((args[0].equalsIgnoreCase("edit") || args[0].equalsIgnoreCase("e") || args[0].equalsIgnoreCase("change") || args[0].equalsIgnoreCase("update")) && args.length == 2) {
                       //Check to see if shop exists in shops DB and is owned by player
-                      //Edit a shop in shops DB
+                      //Check to see if player has any other shops in edit mode needing to be saved
+                      //Close the shop for purchases
+                      //Change a shop in shops DB to edit mode
                       player.sendMessage(moduleName + "Edit a shop");
                       return true;
                     } else if ((args[0].equalsIgnoreCase("setowner") || args[0].equalsIgnoreCase("changeowner") || args[0].equalsIgnoreCase("owner") || args[0].equalsIgnoreCase("o") || args[0].equalsIgnoreCase("transfer") || args[0].equalsIgnoreCase("t"))&& args.length == 3) {
@@ -67,6 +69,21 @@ public class CEShopCommand implements CommandExecutor {
                       //Check to see if item clicked on exists in shops DB and is owned by player
                       //Edit item's price in shops DB
                       player.sendMessage(moduleName + "Change an item's price");
+                      return true;
+                    } else if ((args[0].equalsIgnoreCase("save") || args[0].equalsIgnoreCase("s")) && args.length == 2) {
+                      //Check to see if shop exists in shops DB and is owned by player
+                      //Change a shop in shops DB to active mode
+                      player.sendMessage(moduleName + "Save shop");
+                      return true;
+                    } else if ((args[0].equalsIgnoreCase("open")) && args.length == 2) {
+                      //Check to see if shop exists in shops DB and is owned by player
+                      //Change a shop in shops DB status to open
+                      player.sendMessage(moduleName + "Opened shop");
+                      return true;
+                    } else if ((args[0].equalsIgnoreCase("close")) && args.length == 2) {
+                      //Check to see if shop exists in shops DB and is owned by player
+                      //Change a shop in shops DB status to closed
+                      player.sendMessage(moduleName + "Closed shop");
                       return true;
                     } else {
                       player.sendMessage(moduleName + "Incorrect number of arguments");
