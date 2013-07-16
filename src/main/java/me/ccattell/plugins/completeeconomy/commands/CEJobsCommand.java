@@ -51,13 +51,13 @@ public class CEJobsCommand implements CommandExecutor {
                         player.sendMessage(moduleName + "Incorrect number of arguments");
                         return true;
                     }
-                    if (args[0].equalsIgnoreCase("list") && args.length == 1) {
+                    if ((args[0].equalsIgnoreCase("list") || args[0].equalsIgnoreCase("l")) && args.length == 1) {
                         player.sendMessage(moduleName + "Available jobs:");
                         for (String job : jobsList) {
                             player.sendMessage("    " + job);
                         }
                         return true;
-                    } else if (args[0].equalsIgnoreCase("info") && args.length == 2) {
+                    } else if ((args[0].equalsIgnoreCase("info") || args[0].equalsIgnoreCase("i")) && args.length == 2) {
                         String job = args[1];
                         for (String jobs : jobsList) {
                             if (jobs.equalsIgnoreCase(job)) {
@@ -79,7 +79,7 @@ public class CEJobsCommand implements CommandExecutor {
                             player.sendMessage("    " + skill);
                         }
                         return true;
-                    } else if (args[0].equalsIgnoreCase("join") && args.length == 2) {
+                    } else if ((args[0].equalsIgnoreCase("join") || args[0].equalsIgnoreCase("j")) && args.length == 2) {
                         String job = args[1];
                         for (String jobs : jobsList) {
                             if (jobs.equalsIgnoreCase(job)) {
@@ -108,7 +108,7 @@ public class CEJobsCommand implements CommandExecutor {
                             qf.doInsert("CEJobs", seta);
                         }
                         return true;
-                    } else if (args[0].equalsIgnoreCase("stats") && args.length == 1) {
+                    } else if ((args[0].equalsIgnoreCase("stats") || args[0].equalsIgnoreCase("s")) && args.length == 1) {
                         HashMap<String, String> jobs_stats = qf.getPlayerJobs(player.getName());
                         player.sendMessage(moduleName + "Stats report for " + player.getName());
                         for (Map.Entry<String, String> entry : jobs_stats.entrySet()) {
@@ -116,7 +116,7 @@ public class CEJobsCommand implements CommandExecutor {
                             player.sendMessage("    Lvl " + stats[0] + " " + entry.getKey() + " " + stats[1] + "/" + stats[2] + " XP");
                         }
                         return true;
-                    } else if (args[0].equalsIgnoreCase("quit") && args.length == 2) {
+                    } else if ((args[0].equalsIgnoreCase("quit") || args[0].equalsIgnoreCase("q") || args[0].equalsIgnoreCase("leave")) && args.length == 2) {
                         String job = args[1];
                         for (String jobs : jobsList) {
                             if (jobs.equalsIgnoreCase(job)) {
