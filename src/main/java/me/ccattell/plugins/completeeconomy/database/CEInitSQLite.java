@@ -28,6 +28,8 @@ public class CEInitSQLite {
             statement.executeUpdate(queryJobs);
             String querySkills = "CREATE TABLE IF NOT EXISTS CESkills (player_name TEXT COLLATE NOCASE, skill text NOT NULL COLLATE NOCASE, experience REAL DEFAULT 0, level REAL DEFAULT 1)";
             statement.executeUpdate(querySkills);
+            String queryShops = "CREATE TABLE IF NOT EXISTS CEShops (player_name TEXT COLLATE NOCASE, shop_name text NOT NULL COLLATE NOCASE, status text NOT NULL COLLATE NOCASE)";
+            statement.executeUpdate(queryShops);
         } catch (SQLException e) {
             plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not create SQLite tables: " + e.getMessage() + ChatColor.RESET);
         }

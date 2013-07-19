@@ -260,6 +260,39 @@ public class CEQueryFactory {
         return "none";
     }
 
+    public String checkShop(String shop, String player) {
+        Statement statement = null;
+        String query = "select COUNT(*) AS rowcount from CEShops WHERE shop_name = '" + shop + "'";
+        String query2 = "select COUNT(*) AS rowcount from CEShops WHERE shop_name = '" + shop + "' and player_name = '" + player + "'";
+        try {
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            int rowCount = rs.getInt("rowcount");
+
+            ResultSet rs2 = statement.executeQuery(query2);
+            int rowCount2 = rs2.getInt("rowcount");
+
+            if (rowCount2 != 0) {
+                return "found";
+            } else if (rowCount != 0) {
+                return "other";
+            } else {
+                return "none";
+            }
+        } catch (SQLException e) {
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info! " + e.getMessage() + ChatColor.RESET);
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CEJobs! " + e.getMessage() + ChatColor.RESET);
+            }
+        }
+        return "none";
+    }
+
     public HashMap<String, String> getPlayerJobs(String player) {
         long level_exp;
         HashMap<String, String> data = new HashMap<String, String>();
