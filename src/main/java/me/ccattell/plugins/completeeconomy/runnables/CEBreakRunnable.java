@@ -91,16 +91,16 @@ public class CEBreakRunnable implements Runnable {
     }
 
     public double getJobBoost(String player, String job) {
-        return 1D;
+        return 0.01D;
     }
 
     public double getToolMultiplier(int tool, String block) {
-        double m = 1D;
+        double m = 0.01D;
         String[] data = block.split(":");
         int id = Material.getMaterial(data[0]).getId();
         List<Integer> validTools = tb.getLookup().get(id);
         if (validTools.contains(tool)) {
-            m = plugin.getConfig().getDouble("System.Levels.ValidTool");
+            m = plugin.getConfig().getDouble("System.Levels.ValidTool") / 100D;
         }
         return m;
     }
