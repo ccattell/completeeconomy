@@ -91,11 +91,12 @@ public class CEBreakRunnable implements Runnable {
     }
 
     public double getJobBoost(String player, String job) {
-        return 0.01D;
+        // not implemented yet
+        return 0.00D;
     }
 
     public double getToolMultiplier(int tool, String block) {
-        double m = 0.01D;
+        double m = 0.00D;
         String[] data = block.split(":");
         int id = Material.getMaterial(data[0]).getId();
         List<Integer> validTools = tb.getLookup().get(id);
