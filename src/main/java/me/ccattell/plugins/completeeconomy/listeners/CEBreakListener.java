@@ -28,7 +28,6 @@ public class CEBreakListener implements Listener {
         String type = event.getBlock().getType().toString();
         byte data = event.getBlock().getData();
         String block = (data > 0) ? type + ":" + data : type;
-        System.out.println("Someone broke a: " + block);
         // is it a breakable block?
         /*
          * Player break a block
@@ -56,7 +55,6 @@ public class CEBreakListener implements Listener {
          * 7) give job xp, skill xp, and pay to player
          */
         if (!plugin.configs.blockList.contains(block + ".break")) {
-            System.out.println("Couldn't find block: " + block);
             // listeners don't return values...
             return;
             // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to their exp.
@@ -64,7 +62,6 @@ public class CEBreakListener implements Listener {
         }
         // does the player have a break skill as part of their job description?
         if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getStringList(block + ".break.skill"))) {
-            System.out.println("Player didn't have break skill: " + block);
             return;
         }
         // yes & yes, so add it to the queue
@@ -74,10 +71,9 @@ public class CEBreakListener implements Listener {
         rd.setPlayer(name);
         rd.setBlock(block);
         rd.setDrops(getDropsForSkill(name));
-        rd.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
+        rd.setSkills(plugin.configs.blockList.getStringList(block + ".break.skill"));
         rd.setTool(event.getPlayer().getItemInHand().getTypeId());
         plugin.getBreakQueue().add(rd);
-        System.out.println("Added " + block + " to queue");
     }
 
     private int getDropsForSkill(String player) {

@@ -1,5 +1,7 @@
 package me.ccattell.plugins.completeeconomy.runnables;
 
+import java.util.List;
+
 /**
  *
  * @author charlie
@@ -8,7 +10,7 @@ public class CEBreakData {
 
     private String player;
     private String block;
-    private String skill;
+    private List<String> skills;
     private String job;
     private int tool;
     private int drops;
@@ -32,12 +34,12 @@ public class CEBreakData {
         this.block = block;
     }
 
-    public String getSkill() {
-        return skill;
+    public List<String> getSkills() {
+        return skills;
     }
 
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
     }
 
     public String getJob() {

@@ -18,15 +18,17 @@ public class CEBreakRunnable implements Runnable {
 
     private CompleteEconomy plugin;
     private CEQueryFactory qf;
-    private CEToolBoost tb = new CEToolBoost();
+    private CEToolBoost tb;
 
     public CEBreakRunnable(CompleteEconomy plugin) {
         this.plugin = plugin;
         this.qf = new CEQueryFactory();
+        this.tb = new CEToolBoost();
     }
 
     @Override
     public void run() {
+
         // get own thread to run in
         CEBukkitWorker<Boolean, String, CompleteEconomy> worker = new CEBukkitWorker<Boolean, String, CompleteEconomy>(plugin) {
             // get the mining queue
@@ -39,19 +41,23 @@ public class CEBreakRunnable implements Runnable {
                 // clear it
                 queue.clear();
                 // loop through clone
+
                 for (CEBreakData m : work) {
                     String p = m.getPlayer();
-                    String skill = m.getSkill();
-                    double skill_level = getSkillLevel(p, skill);
+                    List<String> skills = m.getSkills();
+                    double skill_level = getSkillLevel(p);
                     // how do we know what job the mining skill belongs to ???
                     HashMap<String, String> jobs = new CEQueryFactory().getPlayerJobs(p);
                     // this needs to move...
                     // check whether a job has mining skills
                     String j = "";
                     for (Map.Entry<String, String> job : jobs.entrySet()) {
-                        if (plugin.configs.jobList.getStringList("Jobs." + job.getKey()).contains(skill)) {
-                            j = job.getKey();
-                            break;
+                        //System.out.println("Job: " + job.getKey() + " - Skill: " + skills);
+                        for (String skill : skills) {
+                            if (plugin.configs.jobList.getStringList("Jobs." + job.getKey()).contains(skill)) {
+                                j = job.getKey();
+                                break;
+                            }
                         }
                     }
                     double job_boost_percent = getJobBoost(p, j);
@@ -59,16 +65,12 @@ public class CEBreakRunnable implements Runnable {
                     // determine if correct tool
                     double tool_boost_percent = getToolMultiplier(m.getTool(), m.getBlock());
                     // exp = (block_exp * (Math.pow(1.05, skill_level))) * (1 + tool_boost_percent + job_boost_percent));
-                    double exp = (plugin.configs.getBlockList().getInt(m.getBlock() + "break.experience") * skill_level) * (1 + tool_boost_percent + job_boost_percent);
-                    HashMap<String, Object> set = new HashMap<String, Object>();
-                    set.put("experience", exp);
-                    HashMap<String, Object> where = new HashMap<String, Object>();
-                    where.put("player_name", p);
-                    where.put("job", j);
-                    qf.doUpdate("CEJobs", set, where);
+                    double exp = (plugin.configs.getBlockList().getInt(m.getBlock() + ".break.exp") * (Math.pow(1.05, skill_level))) * (1 + tool_boost_percent + job_boost_percent);
+                    //System.out.println("Experience: " + exp);
+                    qf.alterExperience(exp, p, j);
 
-                    // calculate pay - pay = block_pay * (1.04 ^ job_level);
-                    // calculate pay - pay = block_pay * (1.04 ^ job_level) * drops; ?
+                    // calculate pay - pay = block_pay * (Math.pow(1.04, job_level));
+                    // calculate pay - pay = (block_pay * (Math.pow(1.04, job_level))) * drops; ?
 
                 }
                 return true;
@@ -77,7 +79,7 @@ public class CEBreakRunnable implements Runnable {
         worker.execute();
     }
 
-    public double getSkillLevel(String player, String skill) {
+    public double getSkillLevel(String player) {
         double power = 1;
         HashMap<String, Object> where = new HashMap<String, Object>();
         where.put("player_name", player);
@@ -98,7 +100,7 @@ public class CEBreakRunnable implements Runnable {
         int id = Material.getMaterial(data[0]).getId();
         List<Integer> validTools = tb.getLookup().get(id);
         if (validTools.contains(tool)) {
-            m = plugin.getConfig().getDouble("System.Levels.VaildTool");
+            m = plugin.getConfig().getDouble("System.Levels.ValidTool");
         }
         return m;
     }

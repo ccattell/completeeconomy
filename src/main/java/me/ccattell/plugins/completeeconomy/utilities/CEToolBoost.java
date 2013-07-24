@@ -21,7 +21,7 @@ public class CEToolBoost {
     // what about enchanted tools like silk touch that let you get blocks like ORES ?
     HashMap<Integer, List<Integer>> lookup = new HashMap<Integer, List<Integer>>();
 
-    public void CEToolBoost() {
+    public CEToolBoost() {
 //AIR(0, 0)
         lookup.put(1, pickaxes); //STONE
         lookup.put(2, spades); //GRASS
