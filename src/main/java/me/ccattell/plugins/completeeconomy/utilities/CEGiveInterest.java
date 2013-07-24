@@ -11,19 +11,26 @@ import org.bukkit.entity.Player;
 public class CEGiveInterest {
 
     private CompleteEconomy plugin;
-    boolean enabled = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
-    boolean online = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
-    boolean announce = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
-    long interval = plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
-    // convert to float
-    float cutoff = plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
-    // convert to float
-    float percent = plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
-    CEQueryFactory qf = new CEQueryFactory();
+    boolean enabled;
+    boolean online;
+    boolean announce;
+    long interval;
+    float cutoff;
+    float percent;
+    CEQueryFactory qf;
 
     // add class constructor
     public void CEGiveInterest(CompleteEconomy plugin) {
         this.plugin = plugin;
+        this.enabled = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
+        this.online = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");
+        this.announce = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Announce");
+        this.interval = plugin.configs.getBankConfig().getInt("Banking.Interest.Interval") * 20;
+        // convert to float
+        this.cutoff = plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
+        // convert to float
+        this.percent = plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
+        this.qf = new CEQueryFactory();
     }
 
     public void interest() {
@@ -62,7 +69,7 @@ public class CEGiveInterest {
     }
 
     public static float toCents(float value) {
-        value = value * 100;
+        value *= 100;
         long tmp = Math.round(value);
         return (float) tmp / 100;
     }

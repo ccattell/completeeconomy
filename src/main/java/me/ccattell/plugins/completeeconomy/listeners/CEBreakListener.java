@@ -57,7 +57,7 @@ public class CEBreakListener implements Listener {
         if (!plugin.configs.blockList.contains(block + ".break")) {
             // listeners don't return values...
             return;
-            // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to thier exp.
+            // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to their exp.
             // so the correct tool either needs to added to blocks.yml or we need a separate lookup table
         }
         // does the player have a break skill as part of their job description?
