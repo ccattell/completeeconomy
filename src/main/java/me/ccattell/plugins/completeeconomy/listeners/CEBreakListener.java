@@ -1,6 +1,7 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
 import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
@@ -17,7 +18,7 @@ public class CEBreakListener implements Listener {
 
     private CompleteEconomy plugin;
 
-    public void CEBreakListener(CompleteEconomy plugin) {
+    public CEBreakListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -27,12 +28,12 @@ public class CEBreakListener implements Listener {
         String type = event.getBlock().getType().toString();
         byte data = event.getBlock().getData();
         String block = (data > 0) ? type + ":" + data : type;
-
+        System.out.println("Someone broke a: " + block);
         // is it a breakable block?
         /*
          * Player break a block
          *
-         * a) check if the player the skill and the block has the break
+         * a) check if the player has the skill and the block has the break
          *
          * b) add data to a data class and then add the class to the queue
          *
@@ -55,13 +56,15 @@ public class CEBreakListener implements Listener {
          * 7) give job xp, skill xp, and pay to player
          */
         if (!plugin.configs.blockList.contains(block + ".break")) {
+            System.out.println("Couldn't find block: " + block);
             // listeners don't return values...
             return;
             // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to their exp.
             // so the correct tool either needs to added to blocks.yml or we need a separate lookup table
         }
         // does the player have a break skill as part of their job description?
-        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getString(block + ".break.skill"))) {
+        if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getStringList(block + ".break.skill"))) {
+            System.out.println("Player didn't have break skill: " + block);
             return;
         }
         // yes & yes, so add it to the queue
@@ -74,6 +77,7 @@ public class CEBreakListener implements Listener {
         rd.setSkill(plugin.configs.blockList.getString(block + ".break.skill"));
         rd.setTool(event.getPlayer().getItemInHand().getTypeId());
         plugin.getBreakQueue().add(rd);
+        System.out.println("Added " + block + " to queue");
     }
 
     private int getDropsForSkill(String player) {
@@ -81,14 +85,16 @@ public class CEBreakListener implements Listener {
         return 1;
     }
 
-    private boolean hasBreakSkill(String p, String s) {
+    private boolean hasBreakSkill(String p, List<String> list) {
         // get active player jobs
         HashMap<String, String> jobs = new CEQueryFactory().getPlayerJobs(p);
         if (jobs.size() > 0) {
             // check whether a job has break skills
             for (Map.Entry<String, String> job : jobs.entrySet()) {
-                if (plugin.configs.jobList.getStringList("Jobs." + job.getKey()).contains("s")) {
-                    return true;
+                for (String s : list) {
+                    if (plugin.configs.jobList.getStringList("Jobs." + job.getKey()).contains(s)) {
+                        return true;
+                    }
                 }
             }
         }

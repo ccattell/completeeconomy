@@ -12,6 +12,7 @@ import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
 import me.ccattell.plugins.completeeconomy.database.CEDatabase;
 import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
 import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
+import me.ccattell.plugins.completeeconomy.listeners.CEBreakListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
 import me.ccattell.plugins.completeeconomy.runnables.CEBreakRunnable;
@@ -22,12 +23,11 @@ import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class CompleteEconomy extends JavaPlugin implements Listener {
+public class CompleteEconomy extends JavaPlugin {
 
     public static CompleteEconomy plugin;
     CEDatabase service = CEDatabase.getInstance();
@@ -89,8 +89,9 @@ public class CompleteEconomy extends JavaPlugin implements Listener {
         configs.copyDefaultConfigs();
         console.sendMessage(pluginName + "Loading config files");
         configs.loadCustomConfigs();
-        pm.registerEvents(new CEJoinListener(), this);
-        pm.registerEvents(new CEDeathListener(), this);
+        pm.registerEvents(new CEJoinListener(this), this);
+        pm.registerEvents(new CEDeathListener(this), this);
+        pm.registerEvents(new CEBreakListener(this), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
         getCommand("bank").setExecutor(new CEBankCommand());

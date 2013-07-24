@@ -19,7 +19,7 @@ public class CEJoinListener implements Listener {
     protected CEVersionCheck versionCheck;
     private CompleteEconomy plugin;
 
-    public void CEJoinListener(CompleteEconomy plugin) {
+    public CEJoinListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
