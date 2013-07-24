@@ -36,7 +36,7 @@ DIRT:
     pay: 20
     exp: 10
     skill:
-      - skill name
+      - Mining
   place:
     pay: 20
     exp: 10
@@ -56,7 +56,7 @@ COBBLESTONE:
     skill:
       - skill name
 #5
-WOOD:0:
+WOOD:
   buy: 1.31
   alias: Oak Wood Plank
   break:
@@ -132,7 +132,7 @@ WOOD:3:
     skill:
       - skill name
 #6
-SAPLING:0:
+SAPLING:
   buy: 5
   alias: Oak Sapling
   break:
@@ -228,7 +228,7 @@ COAL_ORE:
     skill:
       - skill name
 #17
-LOG:0:
+LOG:
   buy: 5
   alias: Oak Log
   break:
@@ -264,7 +264,7 @@ LOG:3:
     skill:
       - skill name
 #18
-LEAVES:0:
+LEAVES:
   buy: 2
   alias: Oak Leaves
   break:
@@ -342,7 +342,7 @@ DISPENSER:
     skill:
       - skill name
 #24
-SANDSTONE:0:
+SANDSTONE:
   buy: 2.1
   break:
     pay: 20
@@ -408,7 +408,7 @@ WEB:
     skill:
       - skill name
 #31
-LONG_GRASS:0:
+LONG_GRASS:
   alias: Dead Bush
   break:
     pay: 20
@@ -416,7 +416,7 @@ LONG_GRASS:0:
     skill:
       - skill name
 #31:1
-LONG_GRASS:0:
+LONG_GRASS:
   alias: Long Grass
   break:
     pay: 20
@@ -424,7 +424,7 @@ LONG_GRASS:0:
     skill:
       - skill name
 #31:2
-LONG_GRASS:0:
+LONG_GRASS:
   alias: Fern
   break:
     pay: 20
@@ -447,7 +447,7 @@ PISTON_BASE:
     skill:
       - skill name
 #35
-WOOL:0:
+WOOL:
   buy: 5
   alias: White Wool
   break:
@@ -639,7 +639,7 @@ IRON_BLOCK:
     skill:
       - skill name
 #44:0
-STEP:0:
+STEP:
   buy: 0.83
   alias: Stone Slab
   break:
@@ -1004,7 +1004,7 @@ TRAP_DOOR:
     skill:
       - skill name
 #98
-SMOOTH_BRICK:0:
+SMOOTH_BRICK:
   buy: 10
   alias: Stone Bricks
   break:
@@ -1251,7 +1251,7 @@ REDSTONE_LAMP_OFF:
     skill:
       - skill name
 #126
-WOOD_STEP:0:
+WOOD_STEP:
   buy: 10
   alias: Oak Wood Slab
   break:
@@ -1376,7 +1376,7 @@ BEACON:
     skill:
       - skill name
 #139
-COBBLE_WALL:0:
+COBBLE_WALL:
   buy: 10
   alias: Cobblestone Wall
   break:
@@ -1509,7 +1509,7 @@ HOPPER:
     skill:
       - skill name
 #155
-QUARTZ_BLOCK:0:
+QUARTZ_BLOCK:
   buy: 10
   break:
     pay: 20
@@ -1617,7 +1617,7 @@ ARROW:
     skill:
       - skill name
 #263
-COAL:0:
+COAL:
   buy: 10
   break:
     pay: 20
@@ -2105,7 +2105,7 @@ PAINTING:
     skill:
       - skill name
 #322
-GOLDEN_APPLE:0:
+GOLDEN_APPLE:
   buy: 10
   break:
     pay: 20
@@ -2349,7 +2349,7 @@ COOKED_FISH:
     skill:
       - skill name
 #351
-INK_SACK:0:
+INK_SACK:
   buy: 10
   break:
     pay: 20
@@ -2663,7 +2663,7 @@ NETHER_STALK:
       - skill name
 #373
 #373:0
-POTION:0:
+POTION:
   buy: 10
   alias: Water Bottle
   brew:
@@ -3627,7 +3627,7 @@ GOLDEN_CARROT:
     skill:
       - skill name
 #397
-SKULL_ITEM:0:
+SKULL_ITEM:
   buy: 10
   alias: Skeleton Skull
   break:
