@@ -101,7 +101,7 @@ public class CEBreakRunnable implements Runnable {
         int id = Material.getMaterial(data[0]).getId();
         List<Integer> validTools = tb.getLookup().get(id);
         if (validTools.contains(tool)) {
-            m = plugin.getConfig().getDouble("System.Levels.ValidTool") / 100D;
+            m = plugin.getConfig().getDouble("System.Levels.ValidTool") / 10D;
         }
         return m;
     }
