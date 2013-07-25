@@ -306,10 +306,54 @@ public class CEQueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CEJobs! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CESHopss! " + ChatColor.RESET + e.getMessage());
             }
         }
         return "none";
+    }
+
+    public String checkShopStatus(String shop) {
+        Statement statement = null;
+        String query = "select * from CEShops WHERE shop_name = '" + shop + "'";
+        try {
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            String current_status = rs.getString("status");
+            return current_status;
+        } catch (SQLException e) {
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info! " + e.getMessage() + ChatColor.RESET);
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CEShops! " + e.getMessage() + ChatColor.RESET);
+            }
+        }
+        return "none";
+    }
+
+    public int checkPLayerShops(String player) {
+        Statement statement = null;
+        String query = "select COUNT(*) as rowcount from CEShops WHERE player_name = '" + player + "' and status = 'edit'";
+        try {
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            int rowCount = rs.getInt("rowcount");
+            return rowCount;
+        } catch (SQLException e) {
+            plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get info! " + e.getMessage() + ChatColor.RESET);
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (Exception e) {
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get info, closing CEShops! " + e.getMessage() + ChatColor.RESET);
+            }
+        }
+        return 0;
     }
 
     public HashMap<String, String> getPlayerJobs(String player) {

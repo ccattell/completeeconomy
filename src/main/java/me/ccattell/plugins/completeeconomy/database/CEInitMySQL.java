@@ -30,6 +30,8 @@ public class CEInitMySQL {
             statement.executeUpdate(querySkills);
             String queryShops = "CREATE TABLE IF NOT EXISTS CEShops (player_name text NOT NULL, shop_name text NOT NULL, status text NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
             statement.executeUpdate(queryShops);
+            String queryShopInventory = "CREATE TABLE IF NOT EXISTS CEShopInventory (shop_name text NOT NULL, mode text NOT NULL, item text NOT NULL, quantity int(11) NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
+            statement.executeUpdate(queryShopInventory);
         } catch (SQLException e) {
             plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not create MySQL tables: " + e.getMessage() + ChatColor.RESET);
         }
