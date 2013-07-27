@@ -30,7 +30,7 @@ public class CEInitSQLite {
             statement.executeUpdate(querySkills);
             String queryShops = "CREATE TABLE IF NOT EXISTS CEShops (player_name TEXT COLLATE NOCASE, shop_name text NOT NULL COLLATE NOCASE, status text NOT NULL COLLATE NOCASE)";
             statement.executeUpdate(queryShops);
-            String queryShopInventory = "CREATE TABLE IF NOT EXISTS CEShopInventory (shop_name text NOT NULL COLLATE NOCASE, mode text NOT NULL COLLATE NOCASE, item text NOT NULL COLLATE NOCASE, quantity REAL DEFAULT 0, buy_price REAL DEFAULT 0, sell_price REAL DEFAULT 0 NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
+            String queryShopInventory = "CREATE TABLE IF NOT EXISTS CEShopInventory (shop_name text NOT NULL COLLATE NOCASE, mode text NOT NULL COLLATE NOCASE, item text NOT NULL COLLATE NOCASE, quantity REAL DEFAULT 0, buy_price REAL DEFAULT 0, sell_price REAL DEFAULT 0 NOT NULL)";
             statement.executeUpdate(queryShopInventory);
         } catch (SQLException e) {
             plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Could not create SQLite tables: " + e.getMessage() + ChatColor.RESET);
