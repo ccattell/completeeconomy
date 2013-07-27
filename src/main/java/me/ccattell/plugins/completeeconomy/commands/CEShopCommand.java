@@ -48,10 +48,10 @@ public class CEShopCommand implements CommandExecutor {
                         int shopsInEdit = qf.checkPLayerShops(player.getName());
                         if(shopsInEdit != 0){
                             player.sendMessage(moduleName + "You already have a shop in edit mode, please save it first");
-                            return false;
+                            return true;
                         }
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -66,14 +66,14 @@ public class CEShopCommand implements CommandExecutor {
                             setw.put("status", "edit");
                             qf.doInsert("CEShops", setw);
                             player.sendMessage(moduleName + "Created shop '" + tmp + "'");
-                            return false;
+                            return true;
                         }else{
                             player.sendMessage(moduleName + "'" + tmp + "' already exists, please choose another name");
-                            return false;
+                            return true;
                         }
                     }else if ((args[0].equalsIgnoreCase("delete") || args[0].equalsIgnoreCase("destroy") || args[0].equalsIgnoreCase("d") || args[0].equalsIgnoreCase("remove")) && count > 1) {
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -84,10 +84,10 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
                             //Return all itemframes and inventory to player
                             //Detroy itemframes and signson the wall
@@ -95,16 +95,16 @@ public class CEShopCommand implements CommandExecutor {
                             setw.put("shop_name", tmp);
                             qf.doDelete("CEShops", setw);
                             player.sendMessage(moduleName + "Deleted '" + tmp + "'");
-                            return false;
+                            return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("edit") || args[0].equalsIgnoreCase("e") || args[0].equalsIgnoreCase("change") || args[0].equalsIgnoreCase("update")) && count > 1) {
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         int shopsInEdit = qf.checkPLayerShops(player.getName());
                         if(shopsInEdit != 0){
                             player.sendMessage(moduleName + "You already have a shop in edit mode, please save it first");
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -115,15 +115,15 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
                             String current_status = qf.checkShopStatus(tmp);
                             if(current_status.equalsIgnoreCase("edit")){
                                 player.sendMessage(moduleName + "'" + tmp + "' is already in edit mode");
-                                return false;
+                                return true;
                             }
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
@@ -131,14 +131,14 @@ public class CEShopCommand implements CommandExecutor {
                             qf.doUpdate("CEShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + "' is now in edit mode");
                             //broadcast closed message to all players?????
-                            return false;
+                            return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("setowner") || args[0].equalsIgnoreCase("changeowner") || args[0].equalsIgnoreCase("owner") || args[0].equalsIgnoreCase("o") || args[0].equalsIgnoreCase("transfer") || args[0].equalsIgnoreCase("t"))&& count > 1) {
                         if (count < 3) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
-                        for (int i = 3; i < count; i++) {
+                        for (int i = 2; i < count-1; i++) {
                             buf.append(" ").append(args[i]);
                         }
                         String tmp = buf.toString();
@@ -146,37 +146,45 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
-                            String recipient = args[1];
-
-                            //check to see if recipient player is online
+                            String recipient = args[count-1];
+                            if (plugin.getServer().getPlayer(recipient) == null) {
+                                player.sendMessage(moduleName + recipient + " was not found on this server, perhaps is it misspelled?");
+                                return true;
+                            }
 
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("player_name", recipient);
                             qf.doUpdate("CEShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + "' has been transferred to " + recipient);
-                            return false;
+                            if (plugin.getServer().getPlayer(recipient).isOnline()) {
+                                Player targetPlayer = player.getServer().getPlayer(args[count-1]);
+                                targetPlayer.sendMessage(moduleName + player.getName() + " has transferred '" + tmp + "' to you, Enjoy!");
+                            }else{
+                             //queue a mail to the recipient
+                            }
+                            return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("setmode") || args[0].equalsIgnoreCase("changemode") || args[0].equalsIgnoreCase("mode") || args[0].equalsIgnoreCase("m")) && count > 1) {
                         //Check to see if item clicked on exists in shops DB and is owned by player
                         //make sure shop is closed and in edit mode
                         //Edit item's mode in shops DB
                         player.sendMessage(moduleName + "Change an item's mode");
-                        return false;
+                        return true;
                     } else if ((args[0].equalsIgnoreCase("setprice") || args[0].equalsIgnoreCase("changeprice") || args[0].equalsIgnoreCase("price") || args[0].equalsIgnoreCase("p")) && count > 1) {
                         //Check to see if item clicked on exists in shops DB and is owned by player
                         //make sure shop is closed and in edit mode
                         //Edit item's price in shops DB
                         player.sendMessage(moduleName + "Change an item's price");
-                        return false;
+                        return true;
                     } else if ((args[0].equalsIgnoreCase("save") || args[0].equalsIgnoreCase("s")) && count > 1) {
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -187,26 +195,26 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
                             String current_status = qf.checkShopStatus(tmp);
                             if(!current_status.equalsIgnoreCase("edit")){
                                 player.sendMessage(moduleName + "'" + tmp + "' is not in edit mode");
-                                return false;
+                                return true;
                             }
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("status", "closed");
                             qf.doUpdate("CEShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + " has been saved, dont forget to open it");
-                            return false;
+                            return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("open")) && count > 1) {
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -217,15 +225,15 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
                             String current_status = qf.checkShopStatus(tmp);
                             if(current_status.equalsIgnoreCase("open")){
                                 player.sendMessage(moduleName + "'" + tmp + "' is already open!");
-                                return false;
+                                return true;
                             }
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
@@ -233,11 +241,11 @@ public class CEShopCommand implements CommandExecutor {
                             qf.doUpdate("CEShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + " is now open for business");
                             //broadcast closed message to all players?????
-                            return false;
+                            return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("close")) && count > 1) {
                         if (count < 2) {
-                            return false;
+                            return true;
                         }
                         StringBuilder buf = new StringBuilder(args[1]);
                         for (int i = 2; i < count; i++) {
@@ -248,15 +256,15 @@ public class CEShopCommand implements CommandExecutor {
                         String shopCheck = qf.checkShop(tmp,player.getName());
                         if(shopCheck.equalsIgnoreCase("none")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not exist, are you sure you have the right name?");
-                            return false;
+                            return true;
                         }else if(shopCheck.equalsIgnoreCase("other")){
                             player.sendMessage(moduleName + "'" + tmp + "' does not belong to you, what are you trying to do?");
-                            return false;
+                            return true;
                         }else{
                             String current_status = qf.checkShopStatus(tmp);
                             if(!current_status.equalsIgnoreCase("open")){
                                 player.sendMessage(moduleName + "'" + tmp + "' is not open!");
-                                return false;
+                                return true;
                             }
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
@@ -269,7 +277,7 @@ public class CEShopCommand implements CommandExecutor {
                     } else {
                       player.sendMessage(moduleName + "not enough arguments");
                       // show them the proper usage
-                      return false;
+                      return true;
                     }
                     
                 }
