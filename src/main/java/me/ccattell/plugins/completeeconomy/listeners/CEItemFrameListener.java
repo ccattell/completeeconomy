@@ -1,14 +1,13 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 import org.bukkit.ChatColor;
+import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.Player;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 
 /**
  *
@@ -17,21 +16,21 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class CEItemFrameListener implements Listener {
 
     CompleteEconomy plugin;
+    public String prefix;
+    public String moduleName;
 
     public CEItemFrameListener(CompleteEconomy plugin) {
         this.plugin = plugin;
+        prefix = this.plugin.configs.getShopConfig().getString("Shops.Prefix");
+        moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
     }
-    public String prefix = plugin.configs.getShopConfig().getString("Shops.Prefix");
-    public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
 
     @EventHandler
-    public void onItemFrameInteract(PlayerInteractEvent event) {
+    public void onItemFrameInteract(PlayerInteractEntityEvent event) {
         Player player = event.getPlayer();
-        String name = player.getName();
-        Action action = event.getAction();
-        if (player.isSneaking() && action.equals(Action.RIGHT_CLICK_BLOCK)) {
+        //String name = player.getName();
+        if (player.isSneaking() && event.getRightClicked() instanceof ItemFrame) {
             player.sendMessage(moduleName + "You already have a shop in edit mode, please save it first");
-        
         }
     }
 }
