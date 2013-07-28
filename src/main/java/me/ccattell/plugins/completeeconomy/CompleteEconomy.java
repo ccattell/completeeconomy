@@ -15,6 +15,7 @@ import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
 import me.ccattell.plugins.completeeconomy.listeners.CEBreakListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
 import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
+import me.ccattell.plugins.completeeconomy.listeners.CEItemFrameListener;
 import me.ccattell.plugins.completeeconomy.runnables.CEBreakRunnable;
 import me.ccattell.plugins.completeeconomy.runnables.CEBreakData;
 import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
@@ -92,6 +93,7 @@ public class CompleteEconomy extends JavaPlugin {
         pm.registerEvents(new CEJoinListener(this), this);
         pm.registerEvents(new CEDeathListener(this), this);
         pm.registerEvents(new CEBreakListener(this), this);
+        pm.registerEvents(new CEItemFrameListener(this), this);
         getCommand("cash").setExecutor(new CECashCommand());
         getCommand("pay").setExecutor(new CEPayCommand());
         getCommand("bank").setExecutor(new CEBankCommand());
