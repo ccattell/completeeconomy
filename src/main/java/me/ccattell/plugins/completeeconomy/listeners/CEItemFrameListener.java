@@ -74,19 +74,12 @@ public class CEItemFrameListener implements Listener {
             if (b.getTypeId() == 0) {
                 b.setTypeIdAndData(68, dir_data, true);
                 Sign sign = (Sign) b.getState();
-                sign.setLine(0, Alias);
-                sign.setLine(1, block);
-                sign.setLine(2, BuyPrice);
+                sign.setLine(0, player.getName());
+                sign.setLine(1, Alias);
+                sign.setLine(2, "Buy: "+BuyPrice);
                 sign.update();
+                player.sendMessage(moduleName + "Create a " + Alias + " sign at " + x + ", " + new_y + ", " + z + " facing " + direction + " with a buy price of " + BuyPrice);
             }
-
-
-            //need to check to see if block at new_y is AIR, then place new sign filled with the following:
-            //player name
-            //Alias
-            //Buy: BuyPrice
-            //empty
-            player.sendMessage(moduleName + "Create a " + Alias + " sign at " + x + ", " + new_y + ", " + z + " facing " + direction + " with a buy price of " + BuyPrice);
         }
     }
 }
