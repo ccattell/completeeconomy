@@ -74,9 +74,9 @@ public class CEItemFrameListener implements Listener {
             if (b.getTypeId() == 0) {
                 b.setTypeIdAndData(68, dir_data, true);
                 Sign sign = (Sign) b.getState();
-                sign.setLine(0, player.getName());
-                sign.setLine(1, Alias);
-                sign.setLine(2, "Buy: "+BuyPrice);
+                sign.setLine(0, player.getName()); // what if player name is 16 chars long - you can only fit 15 chars
+                sign.setLine(1, Alias); // aliases can only be 15 chars long!
+                sign.setLine(2, "Buy: " + BuyPrice);
                 sign.update();
                 player.sendMessage(moduleName + "Create a " + Alias + " sign at " + x + ", " + new_y + ", " + z + " facing " + direction + " with a buy price of " + BuyPrice);
             }
