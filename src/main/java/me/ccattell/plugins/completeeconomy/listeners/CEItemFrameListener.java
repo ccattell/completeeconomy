@@ -6,12 +6,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
 
@@ -82,4 +87,31 @@ public class CEItemFrameListener implements Listener {
             }
         }
     }
+    
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onUpdateInteract(PlayerInteractEvent event) {
+        final Player player = event.getPlayer();
+        final String playerNameStr = player.getName();
+        String blockName;
+        if (plugin.trackPlayers.containsKey(playerNameStr)) {
+            blockName = plugin.trackPlayers.get(playerNameStr);
+        } else {
+            return;
+        }
+        Block block = event.getClickedBlock();
+        if (block != null) {
+            Material blockType = block.getType();
+            Location block_loc = block.getLocation();
+            World bw = block_loc.getWorld();
+            int bx = block_loc.getBlockX();
+            int by = block_loc.getBlockY();
+            int bz = block_loc.getBlockZ();
+            byte blockData = block.getData();
+            if (blockType == Material.WALL_SIGN) {
+                player.sendMessage(moduleName + "Update sign mode");
+            }
+        }
+
+    }
+
 }

@@ -2,6 +2,7 @@ package me.ccattell.plugins.completeeconomy;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
 import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
@@ -33,6 +34,7 @@ public class CompleteEconomy extends JavaPlugin {
     public static CompleteEconomy plugin;
     CEDatabase service = CEDatabase.getInstance();
     public PluginDescriptionFile pdfFile;
+    public HashMap<String, String> trackPlayers = new HashMap<String, String>();
     public ConsoleCommandSender console;
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();

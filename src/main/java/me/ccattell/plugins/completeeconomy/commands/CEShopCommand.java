@@ -171,10 +171,15 @@ public class CEShopCommand implements CommandExecutor {
                             return true;
                         }
                     } else if ((args[0].equalsIgnoreCase("setmode") || args[0].equalsIgnoreCase("changemode") || args[0].equalsIgnoreCase("mode") || args[0].equalsIgnoreCase("m")) && count > 1) {
-                        //Check to see if item clicked on exists in shops DB and is owned by player
-                        //make sure shop is closed and in edit mode
-                        //Edit item's mode in shops DB
-                        player.sendMessage(moduleName + "Change an item's mode");
+                        int shopsInEdit = qf.checkPLayerShops(player.getName());
+                        if(shopsInEdit != 0){
+                            String mode = args[1];
+                            plugin.trackPlayers.put(player.getName(), mode);
+                            //Check to see if item clicked on exists in shops DB, belongs to shop in edit mode, and is owned by player
+                            //Edit item's mode in shops DB
+                        }else{
+                            player.sendMessage(moduleName + "You do not currently have a shop in edit mode");
+                        }
                         return true;
                     } else if ((args[0].equalsIgnoreCase("setprice") || args[0].equalsIgnoreCase("changeprice") || args[0].equalsIgnoreCase("price") || args[0].equalsIgnoreCase("p")) && count > 1) {
                         //Check to see if item clicked on exists in shops DB and is owned by player
