@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
 import org.bukkit.entity.Player;
 
-public class CEGiveInterest {
+public class GiveInterest {
 
     private CompleteEconomy plugin;
     boolean enabled;
@@ -17,7 +17,7 @@ public class CEGiveInterest {
     long interval;
     float cutoff;
     float percent;
-    CEQueryFactory qf;
+    QueryFactory qf;
 
     // add class constructor
     public void CEGiveInterest(CompleteEconomy plugin) {
@@ -30,7 +30,7 @@ public class CEGiveInterest {
         this.cutoff = plugin.configs.getBankConfig().getInt("Banking.Interest.Cutoff") * 1.0F;
         // convert to float
         this.percent = plugin.configs.getBankConfig().getInt("Banking.Interest.Amount") * 1.0F;
-        this.qf = new CEQueryFactory();
+        this.qf = new QueryFactory();
     }
 
     public void interest() {
@@ -59,7 +59,7 @@ public class CEGiveInterest {
                     if (credit > 0) { // don't give interest unless there is some
                         qf.alterBalance("bank", entry.getKey().getName(), credit);
                         if (announce) {
-                            String s = new CEMajorMinor().getFormat(credit);
+                            String s = new MajorMinor().getFormat(credit);
                             entry.getKey().sendMessage("You recieved " + s + " in interest on your savings!");
                         }
                     }

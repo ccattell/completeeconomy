@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.runnables.CEBreakData;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
+import me.ccattell.plugins.completeeconomy.runnables.BreakData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -14,11 +14,11 @@ import org.bukkit.event.block.BlockBreakEvent;
  *
  * @author Charlie
  */
-public class CEBreakListener implements Listener {
+public class BreakListener implements Listener {
 
     private CompleteEconomy plugin;
 
-    public CEBreakListener(CompleteEconomy plugin) {
+    public BreakListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -67,7 +67,7 @@ public class CEBreakListener implements Listener {
         // yes & yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
-        CEBreakData rd = new CEBreakData();
+        BreakData rd = new BreakData();
         rd.setPlayer(name);
         rd.setBlock(block);
         rd.setDrops(getDropsForSkill(name));
@@ -83,7 +83,7 @@ public class CEBreakListener implements Listener {
 
     private boolean hasBreakSkill(String p, List<String> list) {
         // get active player jobs
-        HashMap<String, String> jobs = new CEQueryFactory().getPlayerJobs(p);
+        HashMap<String, String> jobs = new QueryFactory().getPlayerJobs(p);
         if (jobs.size() > 0) {
             // check whether a job has break skills
             for (Map.Entry<String, String> job : jobs.entrySet()) {

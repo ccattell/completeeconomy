@@ -10,9 +10,9 @@ import org.bukkit.ChatColor;
  *
  * @author Charlie
  */
-public class CEInitSQLite {
+public class InitSQLite {
 
-    CEDatabase service = CEDatabase.getInstance();
+    Database service = Database.getInstance();
     public Connection connection = service.getConnection();
     public Statement statement = null;
 

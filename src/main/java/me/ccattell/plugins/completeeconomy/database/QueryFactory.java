@@ -16,12 +16,12 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CEQueryFactory {
+public class QueryFactory {
 
-    CEDatabase service = CEDatabase.getInstance();
+    Database service = Database.getInstance();
     Connection connection = service.getConnection();
 
-    public CEQueryFactory() {
+    public QueryFactory() {
     }
 
     /**

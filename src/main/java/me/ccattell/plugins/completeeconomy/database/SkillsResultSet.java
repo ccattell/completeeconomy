@@ -14,10 +14,10 @@ import org.bukkit.command.ConsoleCommandSender;
  *
  * @author Charlie
  */
-public class CESkillsResultSet {
+public class SkillsResultSet {
 
     public ConsoleCommandSender console;
-    private CEDatabase service = CEDatabase.getInstance();
+    private Database service = Database.getInstance();
     private Connection connection = service.getConnection();
     private HashMap<String, Object> where;
     private String player_name;
@@ -25,7 +25,7 @@ public class CESkillsResultSet {
     private double experience;
     private double level;
 
-    public CESkillsResultSet(HashMap<String, Object> where) {
+    public SkillsResultSet(HashMap<String, Object> where) {
         this.where = where;
     }
 

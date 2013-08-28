@@ -14,10 +14,10 @@ import org.bukkit.command.ConsoleCommandSender;
  *
  * @author Charlie
  */
-public class CEMainResultSet {
+public class MainResultSet {
 
     public ConsoleCommandSender console;
-    private CEDatabase service = CEDatabase.getInstance();
+    private Database service = Database.getInstance();
     private Connection connection = service.getConnection();
     private HashMap<String, Object> where;
     private String player_name;
@@ -26,7 +26,7 @@ public class CEMainResultSet {
     private float xp;
     private long last_login;
 
-    public CEMainResultSet(HashMap<String, Object> where) {
+    public MainResultSet(HashMap<String, Object> where) {
         this.where = where;
     }
 

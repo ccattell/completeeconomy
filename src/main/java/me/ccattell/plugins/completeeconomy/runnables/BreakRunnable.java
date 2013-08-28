@@ -5,36 +5,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.database.CESkillsResultSet;
-import me.ccattell.plugins.completeeconomy.utilities.CEToolBoost;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
+import me.ccattell.plugins.completeeconomy.database.SkillsResultSet;
+import me.ccattell.plugins.completeeconomy.utilities.ToolBoost;
 import org.bukkit.Material;
 
 /**
  *
  * @author Charlie
  */
-public class CEBreakRunnable implements Runnable {
+public class BreakRunnable implements Runnable {
 
     private CompleteEconomy plugin;
-    private CEQueryFactory qf;
-    private CEToolBoost tb;
+    private QueryFactory qf;
+    private ToolBoost tb;
 
-    public CEBreakRunnable(CompleteEconomy plugin) {
+    public BreakRunnable(CompleteEconomy plugin) {
         this.plugin = plugin;
-        this.qf = new CEQueryFactory();
-        this.tb = new CEToolBoost();
+        this.qf = new QueryFactory();
+        this.tb = new ToolBoost();
     }
 
     @Override
     public void run() {
 
         // get own thread to run in
-        CEBukkitWorker<Boolean, String, CompleteEconomy> worker = new CEBukkitWorker<Boolean, String, CompleteEconomy>(plugin) {
+        BukkitWorker<Boolean, String, CompleteEconomy> worker = new BukkitWorker<Boolean, String, CompleteEconomy>(plugin) {
             // get the mining queue
-            List<CEBreakData> queue = plugin.getBreakQueue();
+            List<BreakData> queue = plugin.getBreakQueue();
             // copy it
-            List<CEBreakData> work = new ArrayList<CEBreakData>(queue);
+            List<BreakData> work = new ArrayList<BreakData>(queue);
 
             @Override
             protected Boolean doInBackground() throws Exception {
@@ -42,12 +42,12 @@ public class CEBreakRunnable implements Runnable {
                 queue.clear();
                 // loop through clone
 
-                for (CEBreakData m : work) {
+                for (BreakData m : work) {
                     String p = m.getPlayer();
                     List<String> skills = m.getSkills();
                     double skill_level = getSkillLevel(p);
                     // how do we know what job the mining skill belongs to ???
-                    HashMap<String, String> jobs = new CEQueryFactory().getPlayerJobs(p);
+                    HashMap<String, String> jobs = new QueryFactory().getPlayerJobs(p);
                     // this needs to move...
                     // check whether a job has mining skills
                     String j = "";
@@ -83,7 +83,7 @@ public class CEBreakRunnable implements Runnable {
         double power = 1;
         HashMap<String, Object> where = new HashMap<String, Object>();
         where.put("player_name", player);
-        CESkillsResultSet srs = new CESkillsResultSet(where);
+        SkillsResultSet srs = new SkillsResultSet(where);
         if (srs.resultSet()) {
             power = srs.getLevel();
         }

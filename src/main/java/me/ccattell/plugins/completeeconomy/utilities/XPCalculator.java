@@ -16,7 +16,7 @@ import org.bukkit.entity.Player;
  * for an implementation that avoids the problems of getTotalExperience(), which
  * doesn't work properly after a player has enchanted something.
  */
-public class CEXPCalculator {
+public class XPCalculator {
 
     // this is to stop the lookup tables growing without control
     private static int hardMaxLevel = 100000;
@@ -34,7 +34,7 @@ public class CEXPCalculator {
     }
 
     public static void setHardMaxLevel(int hardMaxLevel) {
-        CEXPCalculator.hardMaxLevel = hardMaxLevel;
+        XPCalculator.hardMaxLevel = hardMaxLevel;
     }
 
     /**
@@ -92,7 +92,7 @@ public class CEXPCalculator {
      *
      * @param player The player for this TARDISXPRewarder object
      */
-    public CEXPCalculator(Player player) {
+    public XPCalculator(Player player) {
         this.playerName = player.getName();
         getPlayer(); // ensure it's a valid player name
     }

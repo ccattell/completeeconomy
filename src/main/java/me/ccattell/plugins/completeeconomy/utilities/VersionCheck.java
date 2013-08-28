@@ -15,14 +15,14 @@ import org.w3c.dom.NodeList;
  *
  * @author Charlie
  */
-public class CEVersionCheck {
+public class VersionCheck {
 
     private URL filesFeed;
     private String version;
     private String link;
     private String update;
     
-    public CEVersionCheck(CompleteEconomy plugin, String url){
+    public VersionCheck(CompleteEconomy plugin, String url){
         try {
             this.filesFeed = new URL(url);
         } catch (MalformedURLException e) {

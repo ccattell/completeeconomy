@@ -14,10 +14,10 @@ import org.bukkit.command.ConsoleCommandSender;
  *
  * @author Charlie
  */
-public class CEJobsResultSet {
+public class JobsResultSet {
 
     public ConsoleCommandSender console;
-    private CEDatabase service = CEDatabase.getInstance();
+    private Database service = Database.getInstance();
     private Connection connection = service.getConnection();
     private HashMap<String, Object> where;
     private String player_name;
@@ -27,7 +27,7 @@ public class CEJobsResultSet {
     // should status be a simple boolean value - enabled/disabled ?
     private String status;
 
-    public CEJobsResultSet(HashMap<String, Object> where) {
+    public JobsResultSet(HashMap<String, Object> where) {
         this.where = where;
     }
 

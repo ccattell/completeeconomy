@@ -12,14 +12,14 @@ import org.bukkit.command.ConsoleCommandSender;
  *
  * @author Charlie and Buwaroblahblah die
  */
-public class CEDatabase {
+public class Database {
 
-    private static CEDatabase instance = new CEDatabase();
+    private static Database instance = new Database();
     public ConsoleCommandSender console;
     public Connection connection = null;
     public Statement statement = null;
 
-    public static synchronized CEDatabase getInstance() {
+    public static synchronized Database getInstance() {
         return instance;
     }
 

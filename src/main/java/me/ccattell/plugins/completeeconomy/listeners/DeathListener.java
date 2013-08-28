@@ -1,7 +1,7 @@
 package me.ccattell.plugins.completeeconomy.listeners;
 
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -10,11 +10,11 @@ import org.bukkit.event.entity.PlayerDeathEvent;
  *
  * @author Charlie
  */
-public class CEDeathListener implements Listener {
+public class DeathListener implements Listener {
 
     CompleteEconomy plugin;
 
-    public CEDeathListener(CompleteEconomy plugin) {
+    public DeathListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -23,7 +23,7 @@ public class CEDeathListener implements Listener {
         String name = event.getEntity().getName();
         boolean purgeondeath = plugin.getConfig().getBoolean("System.Currency.PurgeOnDeath");
         if (purgeondeath) {
-            new CEQueryFactory().killBalance("cash", name);
+            new QueryFactory().killBalance("cash", name);
         }
         event.getEntity().sendMessage("You Suck, Grandmaster " + name + "!");
     }

@@ -31,13 +31,13 @@ import org.bukkit.plugin.Plugin;
  * instance is stopped/disabled
  *
  * @param <T> the result type returned by this
- * {@code CEBukkitWorker's} {@code doInBackground} and {@code get} methods
+ * {@code BukkitWorker's} {@code doInBackground} and {@code get} methods
  * @param <V> <V> the type used for carrying out intermediate results by this
- * {@code CEBukkitWorker's} {@code publish} and {@code process} methods
+ * {@code BukkitWorker's} {@code publish} and {@code process} methods
  * @param <P> Plugin class
  * @author Ferrybig
  */
-public abstract class CEBukkitWorker<T, V, P extends Plugin> implements RunnableFuture<T> {
+public abstract class BukkitWorker<T, V, P extends Plugin> implements RunnableFuture<T> {
 
     private final AccumulativeRunnable<Runnable> doSubmit;
     /**
@@ -57,22 +57,22 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
     private AccumulativeRunnable<V> doProcess;
 
     /**
-     * Creates a new CEBukkitWorker object
+     * Creates a new BukkitWorker object
      *
-     * @param plugin The plugin that is the host of this {@code CEBukkitWorker}
+     * @param plugin The plugin that is the host of this {@code BukkitWorker}
      */
-    public CEBukkitWorker(P plugin) {
+    public BukkitWorker(P plugin) {
         this.future = new FutureTask<T>(new Callable<T>() {
             @Override
             public T call() throws Exception {
-                CEBukkitWorker.this.setState(StateValue.STARTED);
-                return CEBukkitWorker.this.doInBackground();
+                BukkitWorker.this.setState(StateValue.STARTED);
+                return BukkitWorker.this.doInBackground();
             }
         }) {
             @Override
             protected void done() {
-                CEBukkitWorker.this.doneTask();
-                CEBukkitWorker.this.setState(StateValue.DONE);
+                BukkitWorker.this.doneTask();
+                BukkitWorker.this.setState(StateValue.DONE);
             }
         };
         this.doSubmit = new DoSubmitAccumulativeRunnable(plugin);
@@ -136,12 +136,12 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
     }
 
     /**
-     * Schedules this {@code CEBukkitWorker} for execution on a <i>worker</i>
+     * Schedules this {@code BukkitWorker} for execution on a <i>worker</i>
      * thread.
      *
      * <p>
-     * Note {@code CEBukkitWorker} is only designed to be executed once.
-     * Executing a {@code CEBukkitWorker} more than once will not result in
+     * Note {@code BukkitWorker} is only designed to be executed once.
+     * Executing a {@code BukkitWorker} more than once will not result in
      * invoking the {@code doInBackground} method twice.
      *
      */
@@ -192,12 +192,12 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
                 this.doProcess = new AccumulativeRunnable<V>() {
                     @Override
                     public void run(List<V> args) {
-                        CEBukkitWorker.this.process(args);
+                        BukkitWorker.this.process(args);
                     }
 
                     @Override
                     protected void submit() {
-                        CEBukkitWorker.this.doSubmit.add(this);
+                        BukkitWorker.this.doSubmit.add(this);
                     }
                 };
             }
@@ -206,7 +206,7 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
     }
 
     /**
-     * Returns the {@code CEBukkitWorker} current state.
+     * Returns the {@code BukkitWorker} current state.
      *
      * @return the current state
      */
@@ -249,7 +249,7 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
     }
 
     /**
-     * Sets this {@code CEBukkitWorker} state bound property.
+     * Sets this {@code BukkitWorker} state bound property.
      *
      * @param state the state to set
      */
@@ -265,14 +265,14 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
         this.doSubmit.add(new Runnable() {
             @Override
             public void run() {
-                CEBukkitWorker.this.done();
+                BukkitWorker.this.done();
             }
         });
 
     }
 
     /**
-     * get the plugin that created this {@code CEBukkitWorker}
+     * get the plugin that created this {@code BukkitWorker}
      *
      * @return the plugin
      */
@@ -285,7 +285,7 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
      * <p>
      * Note: calling {@code get} on the <i>Bukkit Main Server Thread</i> blocks
      * <i>all</i> other tasks from being processed until this
-     * {@code CEBukkitWorker} is complete. (This is not recommend to do!)
+     * {@code BukkitWorker} is complete. (This is not recommend to do!)
      */
     @Override
     public final T get() throws InterruptedException, ExecutionException {
@@ -373,16 +373,16 @@ public abstract class CEBukkitWorker<T, V, P extends Plugin> implements Runnable
     public enum StateValue {
 
         /**
-         * Initial {@code CEBukkitWorker} state.
+         * Initial {@code BukkitWorker} state.
          */
         PENDING,
         /**
-         * {@code CEBukkitWorker} is {@code STARTED} before invoking
+         * {@code BukkitWorker} is {@code STARTED} before invoking
          * {@code doInBackground}.
          */
         STARTED,
         /**
-         * {@code CEBukkitWorker} is {@code DONE} after {@code doInBackground}
+         * {@code BukkitWorker} is {@code DONE} after {@code doInBackground}
          * method is finished.
          */
         DONE

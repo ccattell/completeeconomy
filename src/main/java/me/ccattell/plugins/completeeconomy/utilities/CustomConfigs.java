@@ -16,7 +16,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
  *
  * @author Charlie
  */
-public class CECustomConfigs {
+public class CustomConfigs {
 
     public ConsoleCommandSender console;
     private CompleteEconomy plugin;
@@ -39,7 +39,7 @@ public class CECustomConfigs {
     private File titleListFile = null;
     private File treasureListFile = null;
 
-    public CECustomConfigs(CompleteEconomy plugin) {
+    public CustomConfigs(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 

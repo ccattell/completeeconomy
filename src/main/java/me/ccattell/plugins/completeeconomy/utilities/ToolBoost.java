@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author charlie
  */
-public class CEToolBoost {
+public class ToolBoost {
 
     List<Integer> spades = Arrays.asList(new Integer[]{256, 269, 273, 277, 284});
     List<Integer> pickaxes = Arrays.asList(new Integer[]{257, 270, 274, 278, 285});
@@ -21,7 +21,7 @@ public class CEToolBoost {
     // what about enchanted tools like silk touch that let you get blocks like ORES ?
     HashMap<Integer, List<Integer>> lookup = new HashMap<Integer, List<Integer>>();
 
-    public CEToolBoost() {
+    public ToolBoost() {
 //AIR(0, 0)
         lookup.put(1, pickaxes); //STONE
         lookup.put(2, spades); //GRASS

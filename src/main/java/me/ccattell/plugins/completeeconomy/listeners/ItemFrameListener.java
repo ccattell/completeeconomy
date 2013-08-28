@@ -24,13 +24,13 @@ import org.bukkit.material.MaterialData;
  *
  * @author Charlie
  */
-public class CEItemFrameListener implements Listener {
+public class ItemFrameListener implements Listener {
 
     CompleteEconomy plugin;
     public String prefix;
     public String moduleName;
 
-    public CEItemFrameListener(CompleteEconomy plugin) {
+    public ItemFrameListener(CompleteEconomy plugin) {
         this.plugin = plugin;
         prefix = this.plugin.configs.getShopConfig().getString("Shops.Prefix");
         moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";

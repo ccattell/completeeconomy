@@ -2,9 +2,9 @@ package me.ccattell.plugins.completeeconomy.listeners;
 
 import java.util.HashMap;
 import me.ccattell.plugins.completeeconomy.CompleteEconomy;
-import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
+import me.ccattell.plugins.completeeconomy.database.MainResultSet;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.VersionCheck;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,12 +14,12 @@ import org.bukkit.event.player.PlayerJoinEvent;
  *
  * @author Charlie
  */
-public class CEJoinListener implements Listener {
+public class JoinListener implements Listener {
 
-    protected CEVersionCheck versionCheck;
+    protected VersionCheck versionCheck;
     private CompleteEconomy plugin;
 
-    public CEJoinListener(CompleteEconomy plugin) {
+    public JoinListener(CompleteEconomy plugin) {
         this.plugin = plugin;
     }
 
@@ -28,7 +28,7 @@ public class CEJoinListener implements Listener {
         String name = event.getPlayer().getName();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if (!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()) {
-            this.versionCheck = new CEVersionCheck(plugin, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            this.versionCheck = new VersionCheck(plugin, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
             if (this.versionCheck.updateNeeded()) {
                 String update = this.versionCheck.getUpdate();
                 if (update.equalsIgnoreCase("yes")) {
@@ -45,10 +45,10 @@ public class CEJoinListener implements Listener {
     public void loadPlayer(String name) {
         HashMap<String, Object> where = new HashMap<String, Object>();
         where.put("player_name", name);
-        CEMainResultSet rsm = new CEMainResultSet(where);
+        MainResultSet rsm = new MainResultSet(where);
         float c;
         HashMap<String, Object> set = new HashMap<String, Object>();
-        CEQueryFactory qf = new CEQueryFactory();
+        QueryFactory qf = new QueryFactory();
         if (rsm.resultSet()) {
             // found a record so load data
             // c = rsm.getCash();

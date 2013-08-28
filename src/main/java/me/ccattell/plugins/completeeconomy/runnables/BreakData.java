@@ -6,7 +6,7 @@ import java.util.List;
  *
  * @author charlie
  */
-public class CEBreakData {
+public class BreakData {
 
     private String player;
     private String block;
@@ -15,7 +15,7 @@ public class CEBreakData {
     private int tool;
     private int drops;
 
-    public CEBreakData() {
+    public BreakData() {
     }
 
     public String getPlayer() {

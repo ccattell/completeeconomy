@@ -8,7 +8,7 @@ import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
  *
  * @author Charlie
  */
-public class CEMajorMinor {
+public class MajorMinor {
 
     String[] major = plugin.getConfig().getString("System.Currency.Major").split(":");
     String majorSingle = major[0];
