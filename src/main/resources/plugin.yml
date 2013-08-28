@@ -172,13 +172,11 @@ commands:
       permission: ce.shop.own
       permission-message: You don't have permission to save that shop
     open:
-      aliases: [s]
       description: This will set a shop status to open.
       usage: /<command> [shop name]
       permission: ce.shop.own
       permission-message: You don't have permission to open that shop
     close:
-      aliases: [s]
       description: This will set a shop status to closed.
       usage: /<command> [shop name]
       permission: ce.shop.own

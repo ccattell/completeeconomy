@@ -2,9 +2,9 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
-import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import me.ccattell.plugins.completeeconomy.database.MainResultSet;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.MajorMinor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CEPayCommand implements CommandExecutor {
+public class PayCommand implements CommandExecutor {
 
     public String prefix = plugin.getConfig().getString("System.Currency.Prefix");
     public String moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
@@ -57,7 +57,7 @@ public class CEPayCommand implements CommandExecutor {
                 // name shouldn't be empty cause we're checking argument length
                 HashMap<String, Object> where_from = new HashMap<String, Object>();
                 where_from.put("player_name", from_name);
-                CEMainResultSet fq = new CEMainResultSet(where_from);
+                MainResultSet fq = new MainResultSet(where_from);
                 if (fq.resultSet()) {
                     // found a record so load data
                     float c;
@@ -69,11 +69,11 @@ public class CEPayCommand implements CommandExecutor {
                     } else {
                         HashMap<String, Object> where_to = new HashMap<String, Object>();
                         where_to.put("player_name", to_name);
-                        CEMainResultSet tq = new CEMainResultSet(where_to);
+                        MainResultSet tq = new MainResultSet(where_to);
                         if (tq.resultSet()) {
                             //                        old_to = tq.getCash();
-                            s = new CEMajorMinor().getFormat(pay_amount);
-                            CEQueryFactory qf = new CEQueryFactory();
+                            s = new MajorMinor().getFormat(pay_amount);
+                            QueryFactory qf = new QueryFactory();
                             qf.alterBalance("cash", from_name, -pay_amount);
                             qf.alterBalance("cash", to_name, pay_amount);
                             player.sendMessage(moduleName + "You paid " + to_name + " " + s);

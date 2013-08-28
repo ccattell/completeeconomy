@@ -2,9 +2,9 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
-import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
-import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import me.ccattell.plugins.completeeconomy.database.MainResultSet;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
+import me.ccattell.plugins.completeeconomy.utilities.MajorMinor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CEBankCommand implements CommandExecutor {
+public class BankCommand implements CommandExecutor {
 
     public String prefix = plugin.configs.getBankConfig().getString("Banking.Prefix");
     public boolean BankEnabled = plugin.configs.getBankConfig().getBoolean("Banking.Enabled");
@@ -45,10 +45,10 @@ public class CEBankCommand implements CommandExecutor {
                 if (args.length == 0) {
                     HashMap<String, Object> where_from = new HashMap<String, Object>();
                     where_from.put("player_name", name);
-                    CEMainResultSet fq = new CEMainResultSet(where_from);
+                    MainResultSet fq = new MainResultSet(where_from);
                     if (fq.resultSet()) {
                         balance = fq.getBank();
-                        String s = new CEMajorMinor().getFormat(balance);
+                        String s = new MajorMinor().getFormat(balance);
                         sender.sendMessage(moduleName + "Your current bank balance is " + s);
                         return true;
                     }
@@ -62,12 +62,12 @@ public class CEBankCommand implements CommandExecutor {
                     if (transaction_amount > 0) {
                         HashMap<String, Object> where = new HashMap<String, Object>();
                         where.put("player_name", name);
-                        CEMainResultSet fq = new CEMainResultSet(where);
+                        MainResultSet fq = new MainResultSet(where);
                         if (fq.resultSet()) {
                             if (transaction_type.equalsIgnoreCase("withdrawal") || transaction_type.equalsIgnoreCase("w")) {
                                 balance = fq.getBank();
                                 if (balance >= transaction_amount) {
-                                    CEQueryFactory qf = new CEQueryFactory();
+                                    QueryFactory qf = new QueryFactory();
                                     qf.alterBalance("bank", name, -transaction_amount);
                                     qf.alterBalance("cash", name, transaction_amount);
                                     sender.sendMessage(moduleName + "Transaction complete");
@@ -80,7 +80,7 @@ public class CEBankCommand implements CommandExecutor {
                             if (transaction_type.equalsIgnoreCase("deposit") || transaction_type.equalsIgnoreCase("d")) {
                                 balance = fq.getCash();
                                 if (balance >= transaction_amount) {
-                                    CEQueryFactory qf = new CEQueryFactory();
+                                    QueryFactory qf = new QueryFactory();
                                     qf.alterBalance("bank", name, transaction_amount);
                                     qf.alterBalance("cash", name, -transaction_amount);
                                     sender.sendMessage(moduleName + "Transaction complete");

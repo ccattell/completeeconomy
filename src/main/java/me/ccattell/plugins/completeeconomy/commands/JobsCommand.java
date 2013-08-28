@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,9 +16,9 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CEJobsCommand implements CommandExecutor {
+public class JobsCommand implements CommandExecutor {
 
-    CEQueryFactory qf = new CEQueryFactory();
+    QueryFactory qf = new QueryFactory();
     public String prefix = plugin.configs.getJobConfig().getString("Jobs.Prefix");
     public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
     public boolean JobsEnabled = plugin.configs.getJobConfig().getBoolean("Jobs.Enabled");

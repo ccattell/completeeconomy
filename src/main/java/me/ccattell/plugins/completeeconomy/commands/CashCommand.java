@@ -2,8 +2,8 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
-import me.ccattell.plugins.completeeconomy.database.CEMainResultSet;
-import me.ccattell.plugins.completeeconomy.utilities.CEMajorMinor;
+import me.ccattell.plugins.completeeconomy.database.MainResultSet;
+import me.ccattell.plugins.completeeconomy.utilities.MajorMinor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CECashCommand implements CommandExecutor {
+public class CashCommand implements CommandExecutor {
 
     public String prefix = plugin.getConfig().getString("System.Currency.Prefix");
     public String moduleName = ChatColor.DARK_GREEN + prefix + ChatColor.RESET + " ";
@@ -47,12 +47,12 @@ public class CECashCommand implements CommandExecutor {
                 if (!name.isEmpty()) { // name could potentially still be empty, so check
                     HashMap<String, Object> where = new HashMap<String, Object>();
                     where.put("player_name", name);
-                    CEMainResultSet rsm = new CEMainResultSet(where);
+                    MainResultSet rsm = new MainResultSet(where);
                     float c;
                     if (rsm.resultSet()) {
                         // found a record so load data
                         c = rsm.getCash();
-                        String s = new CEMajorMinor().getFormat(c);
+                        String s = new MajorMinor().getFormat(c);
                         String which = (name_supplied) ? name + "'s" : "Your";
                         sender.sendMessage(moduleName + which + " cash balance: " + s);
                     } else {

@@ -2,7 +2,7 @@ package me.ccattell.plugins.completeeconomy.commands;
 
 import java.util.HashMap;
 import static me.ccattell.plugins.completeeconomy.CompleteEconomy.plugin;
-import me.ccattell.plugins.completeeconomy.database.CEQueryFactory;
+import me.ccattell.plugins.completeeconomy.database.QueryFactory;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,12 +13,12 @@ import org.bukkit.entity.Player;
  *
  * @author Charlie
  */
-public class CEShopCommand implements CommandExecutor {
+public class ShopCommand implements CommandExecutor {
     
     public boolean ShopsEnabled = plugin.configs.getShopConfig().getBoolean("Shops.Enabled");
     public String prefix = plugin.configs.getShopConfig().getString("Shops.Prefix");
     public String moduleName = ChatColor.BLUE + prefix + ChatColor.RESET + " ";
-    CEQueryFactory qf = new CEQueryFactory();
+    QueryFactory qf = new QueryFactory();
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

@@ -4,24 +4,25 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import me.ccattell.plugins.completeeconomy.commands.CEBankCommand;
-import me.ccattell.plugins.completeeconomy.commands.CECashCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEJobsCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEPayCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEShopCommand;
-import me.ccattell.plugins.completeeconomy.commands.CEXPBankCommand;
-import me.ccattell.plugins.completeeconomy.database.CEDatabase;
-import me.ccattell.plugins.completeeconomy.database.CEInitMySQL;
-import me.ccattell.plugins.completeeconomy.database.CEInitSQLite;
-import me.ccattell.plugins.completeeconomy.listeners.CEBreakListener;
-import me.ccattell.plugins.completeeconomy.listeners.CEDeathListener;
-import me.ccattell.plugins.completeeconomy.listeners.CEJoinListener;
-import me.ccattell.plugins.completeeconomy.listeners.CEItemFrameListener;
-import me.ccattell.plugins.completeeconomy.runnables.CEBreakRunnable;
-import me.ccattell.plugins.completeeconomy.runnables.CEBreakData;
-import me.ccattell.plugins.completeeconomy.utilities.CECustomConfigs;
-import me.ccattell.plugins.completeeconomy.utilities.CEGiveInterest;
-import me.ccattell.plugins.completeeconomy.utilities.CEVersionCheck;
+import me.ccattell.plugins.completeeconomy.commands.BankCommand;
+import me.ccattell.plugins.completeeconomy.commands.SillyCommand;
+import me.ccattell.plugins.completeeconomy.commands.CashCommand;
+import me.ccattell.plugins.completeeconomy.commands.JobsCommand;
+import me.ccattell.plugins.completeeconomy.commands.PayCommand;
+import me.ccattell.plugins.completeeconomy.commands.ShopCommand;
+import me.ccattell.plugins.completeeconomy.commands.XPBankCommand;
+import me.ccattell.plugins.completeeconomy.database.Database;
+import me.ccattell.plugins.completeeconomy.database.InitMySQL;
+import me.ccattell.plugins.completeeconomy.database.InitSQLite;
+import me.ccattell.plugins.completeeconomy.listeners.BreakListener;
+import me.ccattell.plugins.completeeconomy.listeners.DeathListener;
+import me.ccattell.plugins.completeeconomy.listeners.JoinListener;
+import me.ccattell.plugins.completeeconomy.listeners.ItemFrameListener;
+import me.ccattell.plugins.completeeconomy.runnables.BreakRunnable;
+import me.ccattell.plugins.completeeconomy.runnables.BreakData;
+import me.ccattell.plugins.completeeconomy.utilities.CustomConfigs;
+import me.ccattell.plugins.completeeconomy.utilities.GiveInterest;
+import me.ccattell.plugins.completeeconomy.utilities.VersionCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
@@ -32,16 +33,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class CompleteEconomy extends JavaPlugin {
 
     public static CompleteEconomy plugin;
-    CEDatabase service = CEDatabase.getInstance();
+    Database service = Database.getInstance();
     public PluginDescriptionFile pdfFile;
     public HashMap<String, String> trackPlayers = new HashMap<String, String>();
     public ConsoleCommandSender console;
     public String dbtype;
     public PluginManager pm = Bukkit.getServer().getPluginManager();
-    public CECustomConfigs configs;
-    protected CEVersionCheck versionCheck;
+    public CustomConfigs configs;
+    protected VersionCheck versionCheck;
     public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
-    public List<CEBreakData> breakQueue = new ArrayList<CEBreakData>();
+    public List<BreakData> breakQueue = new ArrayList<BreakData>();
 
     @Override
     public void onDisable() {
@@ -58,7 +59,7 @@ public class CompleteEconomy extends JavaPlugin {
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if (!UpdateChannel.equalsIgnoreCase("none")) {
             console.sendMessage(plugin.pluginName + "Update Channel: " + UpdateChannel);
-            this.versionCheck = new CEVersionCheck(this, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
+            this.versionCheck = new VersionCheck(this, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
             if (this.versionCheck.updateNeeded()) {
                 String update = this.versionCheck.getUpdate();
                 if (update.equalsIgnoreCase("none")) {
@@ -78,36 +79,38 @@ public class CompleteEconomy extends JavaPlugin {
                 console.sendMessage(pluginName + "Loading SQLite Database");
                 String path = getDataFolder() + File.separator + "CompleteEconomy.db";
                 service.setConnection(path);
-                new CEInitSQLite().initSQLite();
+                new InitSQLite().initSQLite();
             } else {
                 // mysql
                 console.sendMessage(pluginName + "Loading MySQL Database");
                 service.setConnection();
-                new CEInitMySQL().initMYSQL();
+                new InitMySQL().initMYSQL();
             }
         } catch (Exception e) {
             console.sendMessage(pluginName + ChatColor.GOLD + "Connection and Tables Error: " + e + ChatColor.RESET);
         }
-        configs = new CECustomConfigs(this);
+        configs = new CustomConfigs(this);
         configs.copyDefaultConfigs();
         console.sendMessage(pluginName + "Loading config files");
         configs.loadCustomConfigs();
-        pm.registerEvents(new CEJoinListener(this), this);
-        pm.registerEvents(new CEDeathListener(this), this);
-        pm.registerEvents(new CEBreakListener(this), this);
-        pm.registerEvents(new CEItemFrameListener(this), this);
-        getCommand("cash").setExecutor(new CECashCommand());
-        getCommand("pay").setExecutor(new CEPayCommand());
-        getCommand("bank").setExecutor(new CEBankCommand());
-        getCommand("xpbank").setExecutor(new CEXPBankCommand());
-        getCommand("jobs").setExecutor(new CEJobsCommand());
-        getCommand("shop").setExecutor(new CEShopCommand());
-        new CEGiveInterest().interest();
+        pm.registerEvents(new JoinListener(this), this);
+        pm.registerEvents(new DeathListener(this), this);
+        pm.registerEvents(new BreakListener(this), this);
+        pm.registerEvents(new ItemFrameListener(this), this);
+        getCommand("ping").setExecutor(new SillyCommand());
+        getCommand("marco").setExecutor(new SillyCommand());
+        getCommand("cash").setExecutor(new CashCommand());
+        getCommand("pay").setExecutor(new PayCommand());
+        getCommand("bank").setExecutor(new BankCommand());
+        getCommand("xpbank").setExecutor(new XPBankCommand());
+        getCommand("jobs").setExecutor(new JobsCommand());
+        getCommand("shop").setExecutor(new ShopCommand());
+        new GiveInterest().interest();
         // start a repeating task to process the mining queue
-        getServer().getScheduler().scheduleSyncRepeatingTask(this, new CEBreakRunnable(this), 300L, 1200L);
+        getServer().getScheduler().scheduleSyncRepeatingTask(this, new BreakRunnable(this), 300L, 1200L);
     }
 
-    public List<CEBreakData> getBreakQueue() {
+    public List<BreakData> getBreakQueue() {
         return breakQueue;
     }
 }
