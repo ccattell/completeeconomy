@@ -38,7 +38,7 @@ public class BreakListener implements Listener {
          *
          * c) the end, keep the listener simple - no major calculations are done here
          *
-         * ****** Everything below here is done on the queued items, NOT in the listener ************
+         * ****** Everything below here is done on the queued items (in the BreakRunnable class), NOT in the listener ************
          *
          * 1) we check the block list for the skills, pay, and exp associated with breaking the block
          *
@@ -55,10 +55,7 @@ public class BreakListener implements Listener {
          * 7) give job xp, skill xp, and pay to player
          */
         if (!plugin.configs.blockList.contains(block + ".break")) {
-            // listeners don't return values...
             return;
-            // need to check somehwere if the player is using the right tool for this block, so they can get a small boost to their exp.
-            // so the correct tool either needs to added to blocks.yml or we need a separate lookup table
         }
         // does the player have a break skill as part of their job description?
         if (!hasBreakSkill(event.getPlayer().getName(), plugin.configs.blockList.getStringList(block + ".break.skill"))) {
@@ -67,12 +64,15 @@ public class BreakListener implements Listener {
         // yes & yes, so add it to the queue
         // will need to determine number of drops based on player skill level
         String name = event.getPlayer().getName();
+        // BreakData is just a storage class it doesn't do anythin except hold onto the data associated with this break
         BreakData rd = new BreakData();
+        // add some data for later processing
         rd.setPlayer(name);
         rd.setBlock(block);
         rd.setDrops(getDropsForSkill(name));
         rd.setSkills(plugin.configs.blockList.getStringList(block + ".break.skill"));
         rd.setTool(event.getPlayer().getItemInHand().getTypeId());
+        // get the break queue and add the BreakData to it
         plugin.getBreakQueue().add(rd);
     }
 

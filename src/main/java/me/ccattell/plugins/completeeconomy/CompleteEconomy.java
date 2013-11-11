@@ -42,6 +42,7 @@ public class CompleteEconomy extends JavaPlugin {
     public CustomConfigs configs;
     protected VersionCheck versionCheck;
     public String pluginName = ChatColor.DARK_PURPLE + "[Complete Economy]" + ChatColor.RESET + " ";
+    // This is the break queue - data is added to it for processing in another thread
     public List<BreakData> breakQueue = new ArrayList<BreakData>();
 
     @Override
@@ -106,7 +107,9 @@ public class CompleteEconomy extends JavaPlugin {
         getCommand("jobs").setExecutor(new JobsCommand());
         getCommand("shop").setExecutor(new ShopCommand());
         new GiveInterest().interest();
-        // start a repeating task to process the mining queue
+        // start a repeating task to process the mining/break queue
+        // it starts it first round of processing 15 seconds after the plugin is enabled
+        // then it processes the current break queue every 60 seconds thereafter
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new BreakRunnable(this), 300L, 1200L);
     }
 

@@ -3,6 +3,9 @@ package me.ccattell.plugins.completeeconomy.runnables;
 import java.util.List;
 
 /**
+ * This is a simple data storage class. Each time a block is broken we need to
+ * store some information about it in this handy little container. This is
+ * because Java is sucky at holding arrays of data of different data types.
  *
  * @author charlie
  */
@@ -15,9 +18,11 @@ public class BreakData {
     private int tool;
     private int drops;
 
+    // class constructor
     public BreakData() {
     }
 
+    // getters and setters
     public String getPlayer() {
         return player;
     }
