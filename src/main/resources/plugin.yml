@@ -1,195 +1,195 @@
 author: ccattell
 description: Everything your server needs for a fully functioning economy
-main: me.ccattell.plugins.completeeconomy.CompleteEconomy
-name: Complete Economy
+main: me.ccattell.plugins.cnu.CompleteNovusUtilities
+name: Complete Novus Utilities
 startup: postworld
 version: 0.2-beta
 permissions:
-  ce.admin:
-    description: Allow players to use the CE admin features.
+  cnu.admin:
+    description: Allow players to use the CNU admin features.
     default: op
-  ce.use:
-    description: Allow players to use the CE features.
+  cnu.use:
+    description: Allow players to use the CNU features.
     children:
-      ce.cash: true
-      ce.pay: true
-      ce.bank: true
-      ce.xpbank: true
-      ce.jobs: true
+      cnu.cash: true
+      cnu.pay: true
+      cnu.bank: true
+      cnu.xpbank: true
+      cnu.jobs: true
     default: op
-  ce.cash:
+  cnu.cash:
     description: Allow players to use the /cash command.
     default: op
-  ce.pay:
+  cnu.pay:
     description: Allow players to use the /pay command.
     default: op
-  ce.bank:
+  cnu.bank:
     description: Allow players to use the /bank command.
     default: op
-  ce.xpbank:
+  cnu.xpbank:
     description: Allow players to use the /xpbank command.
     default: op
-  ce.jobs:
+  cnu.jobs:
     description: Allow players to use the /jobs command.
     default: op
-  ce.shop:
+  cnu.shop:
     description: Allow players to use the /shop command.
     default: op
-  ce.shop.own:
+  cnu.shop.own:
     description: Allow players to own and manage a shop.
     default: op
-  ce.kit:
+  cnu.kit:
     description: Allow players to use the /kit command.
     default: op
 commands:
   cash:
     description: This will display your current cash holdings.
     usage: /<command>
-    permission: ce.cash
+    permission: cnu.cash
     permission-message: You don't have permission to use this command
   pay:
     description: This will give [amount] to another player.
     usage: /<command> [amount] [player name]
-    permission: ce.pay
+    permission: cnu.pay
     permission-message: You don't have permission to pay other players
   bank:
     aliases: [b]
     description: This will show your current bank balance.
     usage: /<command>
-    permission: ce.bank
+    permission: cnu.bank
     permission-message: You don't have permission to use the bank
     deposit:
       aliases: [d]
       description: This will deposit [amount] into your bank account.
       usage: /<command> [amount]
-      permission: ce.bank
+      permission: cnu.bank
       permission-message: You don't have permission to use the bank
     withdrawal:
       aliases: [w]
       description: This will withdrawal [amount] from your bank account.
       usage: /<command> [amount]
-      permission: ce.bank
+      permission: cnu.bank
       permission-message: You don't have permission to use the bank
   xpbank:
     aliases: [xpb]
     description: This will access the xp bank module.
     usage: /<command>
-    permission: ce.xpbank
+    permission: cnu.xpbank
     permission-message: You don't have permission to use the xp bank
     deposit:
       aliases: [d]
       description: This will deposit [amount] into your xp bank.
       usage: /<command> [amount]
-      permission: ce.xpbank
+      permission: cnu.xpbank
       permission-message: You don't have permission to use the xp bank
     withdrawal:
       aliases: [w]
       description: This will withdrawal [amount] from your xp bank.
       usage: /<command> [amount]
-      permission: ce.xpbank
+      permission: cnu.xpbank
       permission-message: You don't have permission to use the xp bank
   jobs:
     aliases: [job]
     description: This will access the jobs module.
     usage: /<command>
-    permission: ce.jobs
+    permission: cnu.jobs
     permission-message: You don't have permission to use jobs
     list:
       aliases: [l]
       description: This will display a list of available jobs.
       usage: /<command>
-      permission: ce.jobs
+      permission: cnu.jobs
       permission-message: You don't have permission to use jobs
     info:
       aliases: [i]
       description: This will display a detail of the selected job.
       usage: /<command> [job]
-      permission: ce.jobs
+      permission: cnu.jobs
       permission-message: You don't have permission to use jobs
     join:
       aliases: [j]
       description: This will add the selected job to your profile.
       usage: /<command> [job]
-      permission: ce.jobs
+      permission: cnu.jobs
       permission-message: You don't have permission to use jobs
     stats:
       aliases: [s]
       description: This will display the current levels of all jobs in your profile.
       usage: /<command>
-      permission: ce.jobs
+      permission: cnu.jobs
       permission-message: You don't have permission to use jobs
     quit:
       aliases: [q, leave]
       description: This will remove the selected job from your profile.
       usage: /<command> [job]
-      permission: ce.jobs
+      permission: cnu.jobs
       permission-message: You don't have permission to use jobs
   shop:
     description: This will access the shops module.
     usage: /<command>
-    permission: ce.shop
+    permission: cnu.shop
     permission-message: You don't have permission to use shops
     create:
       aliases: [c, add]
       description: This will create a new shop.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to create a shop
     delete:
       aliases: [d, remove]
       description: This will delete an existing shop.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to delete a shop
     edit:
       aliases: [e, change, update]
       description: This will edit an existing shop.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to edit a shop
     setowner:
       aliases: [o, owner, transfer, changeowner]
       description: This will change the owner of a shop.
       usage: /<command> [shop name] [new owner]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to transfer a shop
     setmode:
       aliases: [m, mode, changemode]
       description: This will change the buy/sell mode of an item in a shop.
       usage: /<command> [mode]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to change modes
     setprice:
       aliases: [p, price, changeprice]
       description: This will change the price of an item in a shop.
       usage: /<command> [mode] [price]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to change prices
     save:
       aliases: [s]
       description: This will set a shop to active mode.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to save that shop
     open:
       description: This will set a shop status to open.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to open that shop
     close:
       description: This will set a shop status to closed.
       usage: /<command> [shop name]
-      permission: ce.shop.own
+      permission: cnu.shop.own
       permission-message: You don't have permission to close that shop
   kit:
     description: This will access the kits module.
     usage: /<command>
-    permission: ce.kit
+    permission: cnu.kit
     permission-message: You don't have permission to use kits
     
-  ceadmin:
-    description: The CompleteEconomy command
+  cnuadmin:
+    description: The CompleteNovusUtilities command
     usage: /<command>
-    permission: ceadmin.command
+    permission: cnuadmin.command
     permission-message: You don't have permission to use admin commands
   

@@ -8,7 +8,7 @@ System:
 
     Type: 'sqlite'
     # [MySQL Default] mysql://localhost:3306/database_name
-    URL: 'mysql://localhost:3306/CompleteEconomy'
+    URL: 'mysql://localhost:3306/CompleteNovusUtilities'
 
     # Login details for MySQL database
     Username: ''
