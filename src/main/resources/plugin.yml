@@ -20,6 +20,9 @@ permissions:
   cnu.cash:
     description: Allow players to use the /cash command.
     default: op
+  cnu.silly:
+    description: Allow players to use the /cash command.
+    default: op
   cnu.pay:
     description: Allow players to use the /pay command.
     default: op
@@ -52,6 +55,16 @@ commands:
     usage: /<command> [amount] [player name]
     permission: cnu.pay
     permission-message: You don't have permission to pay other players
+  ping:
+    description: This is a silly command.
+    usage: /<command>
+    permission: cnu.silly
+    permission-message: You don't have permission to perform silly commands
+  marco:
+    description: This is a silly command.
+    usage: /<command>
+    permission: cnu.silly
+    permission-message: You don't have permission to perform silly commands
   bank:
     aliases: [b]
     description: This will show your current bank balance.
