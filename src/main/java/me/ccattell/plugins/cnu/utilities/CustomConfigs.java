@@ -121,7 +121,7 @@ public class CustomConfigs {
     }
 
     /**
-     * Copies a custom config file to the Complete Novus Utilities plugin directory if
+     * Copies a custom config file to the CompleteNovusUtilities plugin directory if
      * it is not present.
      *
      * @param filepath the path to the file to write to

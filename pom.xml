@@ -3,7 +3,7 @@
     <groupId>me.ccattell.plugins.cnu</groupId>
     <artifactId>CompleteNovusUtilities</artifactId>
     <version>0.2-beta</version>
-    <name>Complete Novus Utilities</name>
+    <name>CompleteNovusUtilities</name>
     <repositories>
         <repository>
             <id>bukkit-repo</id>

@@ -1,7 +1,7 @@
 author: ccattell
 description: Everything your server needs for a fully functioning economy
 main: me.ccattell.plugins.cnu.CompleteNovusUtilities
-name: Complete Novus Utilities
+name: CompleteNovusUtilities
 startup: postworld
 version: 0.2-beta
 permissions:
