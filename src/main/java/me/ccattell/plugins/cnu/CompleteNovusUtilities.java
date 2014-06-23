@@ -98,6 +98,7 @@ public class CompleteNovusUtilities extends JavaPlugin {
         pm.registerEvents(new DeathListener(this), this);
         pm.registerEvents(new BreakListener(this), this);
         pm.registerEvents(new ItemFrameListener(this), this);
+        getCommand("poke").setExecutor(new SillyCommand());
         getCommand("ping").setExecutor(new SillyCommand());
         getCommand("marco").setExecutor(new SillyCommand());
         getCommand("cash").setExecutor(new CashCommand());
