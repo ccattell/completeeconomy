@@ -20,6 +20,12 @@ permissions:
   cnu.cash:
     description: Allow players to use the /cash command.
     default: op
+  cnu.gamemode:
+    description: Allow players to use the /gamemode command.
+    default: op
+  cnu.gamemode.others:
+    description: Allow players to use the /gamemode command.
+    default: op
   cnu.silly:
     description: Allow players to use the /cash command.
     default: op
@@ -45,6 +51,47 @@ permissions:
     description: Allow players to use the /kit command.
     default: op
 commands:
+  gamemode:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  gm:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  creative:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  1:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  survival:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  0:
+    aliases: [gm, 0, 2, survival, adventure]
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  adventure:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
+  2:
+    description: This will change the target player's gamemode.
+    usage: /<command> <mode> <player>
+    permission: cnu.gamemode
+    permission-message: You don't have permission to use this command
   cash:
     description: This will display your current cash holdings.
     usage: /<command>
