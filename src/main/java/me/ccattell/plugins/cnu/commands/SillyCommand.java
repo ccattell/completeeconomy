@@ -21,12 +21,17 @@ public class SillyCommand implements CommandExecutor{
             sender.sendMessage("Polo!");
         }
         if(cmd.getName().equalsIgnoreCase("poke")){
-            if(Arrays.toString(Bukkit.getServer().getOnlinePlayers()).contains(args[0])){
-                Bukkit.getPlayer(args[0]).sendMessage("You have been poked by: " + sender.getName());
-                sender.sendMessage("You have successfully poked " + args[0] + ".");
+            if(args.length < 1) {
+                sender.sendMessage(ChatColor.DARK_RED + "[ERROR] " + ChatColor.WHITE + "Insufficient arguments, /poke <player>");
             }
-            else{
-                sender.sendMessage(ChatColor.DARK_RED + "[ERROR] " + ChatColor.WHITE + "Player: " + args[0] + " is not currently online.");
+            else {
+                if(Arrays.toString(Bukkit.getServer().getOnlinePlayers()).contains(args[0])){
+                    Bukkit.getPlayer(args[0]).sendMessage("You have been poked by: " + sender.getName());
+                    sender.sendMessage("You have successfully poked " + Bukkit.getPlayer(args[0]).getName() + ".");
+                }
+                else{
+                    sender.sendMessage(ChatColor.DARK_RED + "[ERROR] " + ChatColor.WHITE + "Player: " + Bukkit.getPlayer(args[0]).getName() + " is not currently online.");
+                }
             }
         }
         return true;
