@@ -23,6 +23,7 @@ public class CustomConfigs {
     public FileConfiguration bankConfig = null;
     public FileConfiguration jobConfig = null;
     public FileConfiguration shopConfig = null;
+    public FileConfiguration aliases = null;
     public FileConfiguration jobList = null;
     public FileConfiguration kitList = null;
     public FileConfiguration shopList = null;
@@ -32,6 +33,7 @@ public class CustomConfigs {
     private File bankConfigFile = null;
     private File jobConfigFile = null;
     private File shopConfigFile = null;
+    private File aliasesFile = null;
     private File jobListFile = null;
     private File kitListFile = null;
     private File shopListFile = null;
@@ -55,6 +57,7 @@ public class CustomConfigs {
         copy(plugin.getDataFolder() + File.separator + "bankConfig.yml", plugin.getResource("bankConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "jobConfig.yml", plugin.getResource("jobConfig.yml"));
         copy(plugin.getDataFolder() + File.separator + "shopConfig.yml", plugin.getResource("shopConfig.yml"));
+        copy(plugin.getDataFolder() + File.separator + "aliases.yml", plugin.getResource("aliases.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "jobs.yml", plugin.getResource("jobs.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "kits.yml", plugin.getResource("kits.yml"));
         copy(plugin.getDataFolder() + File.separator + "lists" + File.separator + "shops.yml", plugin.getResource("shops.yml"));
@@ -70,6 +73,8 @@ public class CustomConfigs {
         this.jobConfig = YamlConfiguration.loadConfiguration(jobConfigFile);
         this.shopConfigFile = new File(plugin.getDataFolder(), "shopConfig.yml");
         this.shopConfig = YamlConfiguration.loadConfiguration(shopConfigFile);
+        this.aliasesFile = new File(plugin.getDataFolder(), "aliases.yml");
+        this.aliases = YamlConfiguration.loadConfiguration(aliasesFile);
         this.jobListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "jobs.yml");
         this.jobList = YamlConfiguration.loadConfiguration(jobListFile);
         this.kitListFile = new File(plugin.getDataFolder(), "lists" + File.separator + "kits.yml");
@@ -118,6 +123,21 @@ public class CustomConfigs {
 
     public FileConfiguration getTreasureList() {
         return treasureList;
+    }
+    
+    public FileConfiguration getAliases(){
+      return aliases;
+    }
+    public void reloadAliases(){
+      if(aliasesFile == null){
+        copy(plugin.getDataFolder() + File.separator + "aliases.yml", plugin.getResource("aliases.yml"));
+      }
+      aliases = YamlConfiguration.loadConfiguration(aliasesFile);
+      InputStream defConfigStream = plugin.getResource("aliases.yml");
+      if (defConfigStream != null) {
+        YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+          aliases.setDefaults(defConfig);
+      }
     }
 
     /**

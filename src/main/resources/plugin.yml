@@ -251,6 +251,27 @@ commands:
     usage: /<command>
     permission: cnu.kit
     permission-message: You don't have permission to use kits
+  alias:
+    description: This will access the alias module.
+    usage: /<command>
+    permission: cnu.alias
+    permission-message: You don't have permission to use aliases
+    help:
+      description: This will display a list of available commands.
+      usage: /<command>
+      permission: cnu.alias
+      permission-message: You don't have permission to use aliases.
+    list:
+      aliases: [l]
+      description: This will display a list of available aliases.
+      usage: /<command>
+      permission: cnu.alias
+      permission-message: You don't have permission to list aliases
+    reload:
+      description: This will reload aliase's configuration file.
+      usage: /<command>
+      permission: cnu.alias.reload
+      permission-message: You don't have permission to reload aliases
     
   cnuadmin:
     description: The CompleteNovusUtilities command

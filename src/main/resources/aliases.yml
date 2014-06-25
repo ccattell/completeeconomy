@@ -1,0 +1,114 @@
+# Aliasing Module
+#
+# Basic Information:
+#  Args - The mininum argument requirements for the alias.
+#  Console - Whether it should be console executed or player executed. [Must be Boolean]
+#  Command - The Command you want to exectute on alias call. ['/' at the beginning of the command is optional]
+#          - You can have multiple commands with one alias, by adding more to the list. [See Example Alias 'Staff']
+#  Usage   - Message sent to the player if the player didnt input enough arguments. [See Example "m", This is not required]
+#  Permission - The permission node you would want the player to have in order to execute the alias. [This is not required, only put it if you want to restrict alias to players]
+#  ReturnMessage - A return message given to the sender upon successful execution of the alias. [This is not required, only put it if you want a return message]
+#
+#  %message - use this if the alias requires a written message to send.
+#           - this tag must also always be at the end of the aliased command.
+#  %sender  - the player that executed the alias.
+#  %oppositeGamemode - the opposite gamemode of the executor of this alias.
+#  %target  - a player the executor of the alias defines through arguments. [See Example Alias 'm']
+#
+
+
+Aliasing:
+  Enabled: true
+  Prefix: '&5[&6ALIASES&5]'
+  
+  Aliases:
+    gm:
+      Args: 0
+      Console: false
+      Command: 
+        - /gamemode %oppositeGamemode %sender
+      Usage: '/gm'
+      Permission: gmAlias
+      ReturnMessage: '&aYour Gamemode has been successfully changed.'
+    day:
+      Args: 0
+      Console: false
+      Command: 
+        - /time set 0
+      Usage: '/day'
+      Permission: dayAlias
+      ReturnMessage: '&6The Time has been set to day.'
+    night:
+      Args: 0
+      Console: false
+      Command: 
+        - /time set 38000
+      Usage: '/night'
+      Permission: nightAlias
+      ReturnMessage: '&1The Time has been set to night.'
+    staff:
+      Args: 0
+      Console: true
+      Command:
+        - '/tell %sender &6Current Staff Members&f:'
+        - /tell %sender Mr Squirrel
+        - /tell %sender Mrs Squirrel
+        - /tell %sender Squirrel Jr.
+      Usage: '/staff'
+      Permission: staffListAlias
+    Error:
+      Args: 0
+      Console: false
+      Command: 
+        - '/tell %sender Error: This message is an error.'
+      Usage: '/error'
+    tpto:
+      Args: 1
+      Console: false
+      Command: 
+        - /tp %sender %target
+      Usage: '/tpto {player}'
+      Permission: msgAlias
+    tpbring:
+      Args: 1
+      Console: false
+      Command:
+        - /tp %target %sender
+      Usage: '/tpbring {player}'
+    makemehouse:
+      Args: 0
+      Console: false
+      Command:
+        - /setblock ~4 ~0 ~1 minecraft:stone
+        - /setblock ~4 ~0 ~-1 minecraft:stone
+        - /setblock ~4 ~1 ~1 minecraft:stone
+        - /setblock ~4 ~1 ~-1 minecraft:stone
+        - /setblock ~4 ~2 ~0 minecraft:stone
+        - /setblock ~4 ~2 ~1 minecraft:stone
+        - /setblock ~4 ~2 ~-1 minecraft:stone
+        - /setblock ~5 ~0 ~1 minecraft:stone
+        - /setblock ~5 ~0 ~-1 minecraft:stone
+        - /setblock ~5 ~1 ~1 minecraft:stone
+        - /setblock ~5 ~1 ~-1 minecraft:stone
+        - /setblock ~5 ~2 ~0 minecraft:stone
+        - /setblock ~5 ~2 ~1 minecraft:stone
+        - /setblock ~5 ~2 ~-1 minecraft:stone
+        - /setblock ~6 ~0 ~0 minecraft:stone
+        - /setblock ~6 ~0 ~1 minecraft:stone
+        - /setblock ~6 ~0 ~-1 minecraft:stone
+        - /setblock ~6 ~1 ~0 minecraft:stone
+        - /setblock ~6 ~1 ~1 minecraft:stone
+        - /setblock ~6 ~1 ~-1 minecraft:stone
+        - /setblock ~6 ~2 ~0 minecraft:stone
+        - /setblock ~6 ~2 ~1 minecraft:stone
+        - /setblock ~6 ~2 ~-1 minecraft:stone
+      Usage: '/makemehouse'
+      Permission: makemehouseAlias
+      ReturnMessage: '&aYour House has been build :D'
+    pm:
+      Args: 2
+      Console: false
+      Command:
+        - /tell %target %message
+      Usage: '/pm {player} {message}'
+      Permission: pmAlias
