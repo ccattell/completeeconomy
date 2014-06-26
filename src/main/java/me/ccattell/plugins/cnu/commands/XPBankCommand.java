@@ -33,7 +33,7 @@ public class XPBankCommand implements CommandExecutor {
                     sender.sendMessage(moduleName + "The bank command cannot be used from the console!");
                     return true;
                 }
-                if (!player.hasPermission("ce.xpbank")) {
+                if (!player.hasPermission("cnu.xpbank")) {
                     sender.sendMessage(moduleName + "You don't have permission to use the xp bank!");
                     return true;
                 }

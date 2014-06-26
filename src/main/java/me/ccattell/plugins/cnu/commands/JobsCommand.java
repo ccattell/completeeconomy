@@ -43,7 +43,7 @@ public class JobsCommand implements CommandExecutor {
                     sender.sendMessage(moduleName + "The jobs command cannot be used from the console!");
                     return true;
                 }
-                if (!sender.hasPermission("ce.jobs")) {
+                if (!sender.hasPermission("cnu.jobs")) {
                     sender.sendMessage(moduleName + "You don't have permission to use jobs!");
                     return true;
                 } else {

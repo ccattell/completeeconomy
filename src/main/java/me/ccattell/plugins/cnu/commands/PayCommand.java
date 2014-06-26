@@ -31,7 +31,7 @@ public class PayCommand implements CommandExecutor {
                 sender.sendMessage(moduleName + "The pay command cannot be used from the console!");
                 return true;
             }
-            if (!player.hasPermission("ce.pay")) {
+            if (!player.hasPermission("cnu.pay")) {
                 player.sendMessage(moduleName + "You don't have permission to use that command!");
                 return true;
             } else {

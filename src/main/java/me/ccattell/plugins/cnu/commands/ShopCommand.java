@@ -35,7 +35,7 @@ public class ShopCommand implements CommandExecutor {
                     sender.sendMessage(moduleName + "The shop command cannot be used from the console!");
                     return true;
                 }
-                if (!sender.hasPermission("ce.shop")) {
+                if (!sender.hasPermission("cnu.shop")) {
                     sender.sendMessage(moduleName + "You don't have permission to use shops!");
                     return true;
                 } else {

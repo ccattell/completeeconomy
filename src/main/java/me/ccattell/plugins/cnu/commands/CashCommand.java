@@ -23,7 +23,7 @@ public class CashCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("cash")) {
-            if (!sender.hasPermission("ce.cash")) {
+            if (!sender.hasPermission("cnu.cash")) {
                 sender.sendMessage(moduleName + "You don't have permission to use that command!");
                 return true;
             } else {
@@ -34,7 +34,7 @@ public class CashCommand implements CommandExecutor {
                 }
                 boolean name_supplied = false; // use a boolean rather than comparing strings
                 if (args.length > 0) {
-                    if (!sender.hasPermission("ce.admin")) { // console always has permission
+                    if (!sender.hasPermission("cnu.admin")) { // console always has permission
                         sender.sendMessage(moduleName + "You don't have permission to get another player's balance!");
                         return true;
                     }

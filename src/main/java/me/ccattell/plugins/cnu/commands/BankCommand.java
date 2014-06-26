@@ -33,7 +33,7 @@ public class BankCommand implements CommandExecutor {
                     sender.sendMessage(moduleName + "The bank command cannot be used from the console!");
                     return true;
                 }
-                if (!sender.hasPermission("ce.bank")) {
+                if (!sender.hasPermission("cnu.bank")) {
                     sender.sendMessage(moduleName + "You don't have permission to use the bank!");
                     return true;
                 }
