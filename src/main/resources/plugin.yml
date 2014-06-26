@@ -53,12 +53,12 @@ permissions:
 commands:
   gamemode:
     description: This will change the target player's gamemode.
-    usage: /<command> <mode> <player>
+    usage: /<command> <player>
     permission: cnu.gamemode
     permission-message: You don't have permission to use this command
   gm:
     description: This will change the target player's gamemode.
-    usage: /<command> <mode> <player>
+    usage: /<command> <player>
     permission: cnu.gamemode
     permission-message: You don't have permission to use this command
   creative:

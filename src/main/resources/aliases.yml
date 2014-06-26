@@ -22,11 +22,11 @@ Aliasing:
   Prefix: '&5[&6ALIASES&5]'
   
   Aliases:
-    gm:
+    g:
       Args: 0
       Console: false
       Command: 
-        - /gamemode %oppositeGamemode %sender
+        - /gamemode %sender
       Usage: '/gm'
       Permission: gmAlias
       ReturnMessage: '&aYour Gamemode has been successfully changed.'
