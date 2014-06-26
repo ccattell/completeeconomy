@@ -1,5 +1,5 @@
 # Complete Novus Utilities
-Complete Novus Utilities is a "one stop shop" Bukkit plugin which has as objective of satisfying all your server needs without the need for additional plugins.
+Complete Novus Utilities is a "all in one utility" Bukkit plugin which has as objective of satisfying all your server needs without the need for additional plugins.
 
 ## Features
 
