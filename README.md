@@ -31,10 +31,10 @@ Complete Novus Utilities is a "all in one utility" Bukkit plugin which has as ob
 * Private Messaging Chat Channel
 * Mail System
 * NickName System
-** Show on player login/logout message
-** Show on Chat Title
-** Show on Tab list
-** Show on NameTag
+* - Show on player login/logout message
+* - Show on Chat Title
+* - Show on Tab list
+* - Show on NameTag
 
 **Basic Essentials**
 * Teleporting (tp and tpa)
