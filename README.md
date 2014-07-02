@@ -25,10 +25,16 @@ Complete Novus Utilities is a "all in one utility" Bukkit plugin which has as ob
 * destroying shops
 * Shift click need to cancel rotation of the item frame
 
-**Utilities**
+**Chat**
 * Chat Channels
 * Announcer System
-* Private Messaging
+* Private Messaging Chat Channel
+* Mail System
+* NickName System
+** Show on player login/logout message
+** Show on Chat Title
+** Show on Tab list
+** Show on NameTag
 
 **Basic Essentials**
 * Teleporting (tp and tpa)
