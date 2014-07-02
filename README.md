@@ -11,21 +11,24 @@ Complete Novus Utilities is a "all in one utility" Bukkit plugin which has as ob
 
 
 
-Todo list
+#Todo list
+* Vault Support
 
-Vault Support
-Jobs
-	Kill/Break/Place Queues completed
-Shops
-	ItemFrame and Sign Protection
-	Bug fix stopping signs from being created without a block behind
-	Buying and selling needs to be finished
-	quantities for buying selling to be added to price line
-	destroying shops
-	Shift click need to cancel rotation of the item frame
-Basic Essentials
-	Teleporting (tp and tpa)
-	Finish gamemode commands
-	Time commands, weather commands
-	
-UUID conversion
+**Jobs**
+* Kill/Break/Place Queues completed
+
+**Shops**
+* ItemFrame and Sign Protection
+* Bug fix stopping signs from being created without a block behind
+* Buying and selling needs to be finished
+* quantities for buying selling to be added to price line
+* destroying shops
+* Shift click need to cancel rotation of the item frame
+
+**Basic Essentials**
+* Teleporting (tp and tpa)
+* Finish gamemode commands
+* Time commands, weather commands
+
+**Other**
+* UUID conversion
