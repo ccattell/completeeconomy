@@ -57,7 +57,7 @@ public class JoinListener implements Listener {
             set.put("last_login", System.currentTimeMillis());
             HashMap<String, Object> wherep = new HashMap<String, Object>();
             wherep.put("player_name", name);
-            qf.doUpdate("CEMain", set, wherep);
+            qf.doUpdate("CNUMain", set, wherep);
         } else {
             // insert a record for new player
             c = plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
@@ -66,7 +66,7 @@ public class JoinListener implements Listener {
             set.put("bank", 0);
             set.put("xp", 0);
             set.put("last_login", System.currentTimeMillis());
-            qf.doInsert("CEMain", set);
+            qf.doInsert("CNUMain", set);
             // do something with it
         }
     }

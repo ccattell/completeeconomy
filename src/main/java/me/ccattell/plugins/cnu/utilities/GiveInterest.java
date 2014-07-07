@@ -20,7 +20,7 @@ public class GiveInterest {
     QueryFactory qf;
 
     // add class constructor
-    public void CEGiveInterest(CompleteNovusUtilities plugin) {
+    public void CNUGiveInterest(CompleteNovusUtilities plugin) {
         this.plugin = plugin;
         this.enabled = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Enabled");
         this.online = plugin.configs.getBankConfig().getBoolean("Banking.Interest.Online");

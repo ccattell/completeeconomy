@@ -41,7 +41,7 @@ public class MainResultSet {
             }
             wheres = " WHERE " + sbw.toString().substring(0, sbw.length() - 5);
         }
-        String query = "SELECT * FROM CEMain" + wheres;
+        String query = "SELECT * FROM CNUMain" + wheres;
         try {
             statement = connection.prepareStatement(query);
             if (where != null) {
@@ -73,7 +73,7 @@ public class MainResultSet {
                 return false;
             }
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CEMain table! " + e.getMessage() + ChatColor.RESET);
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CNUMain table! " + e.getMessage() + ChatColor.RESET);
             return false;
         } finally {
             try {
@@ -84,7 +84,7 @@ public class MainResultSet {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CEMain table! " + e.getMessage() + ChatColor.RESET);
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CNUMain table! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return true;

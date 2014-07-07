@@ -99,13 +99,13 @@ public class JobsCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
                             seta.put("status", "active");
-                            qf.doUpdate("CEJobs", seta, setw);
+                            qf.doUpdate("CNUJobs", seta, setw);
                         } else if (jobCheck.equalsIgnoreCase("none")) {
                             player.sendMessage(moduleName + "Joining that job!");
                             seta.put("player_name", player.getName());
                             seta.put("job", found_job);
                             seta.put("status", "active");
-                            qf.doInsert("CEJobs", seta);
+                            qf.doInsert("CNUJobs", seta);
                         }
                         return true;
                     } else if ((args[0].equalsIgnoreCase("stats") || args[0].equalsIgnoreCase("s")) && args.length == 1) {
@@ -132,13 +132,13 @@ public class JobsCommand implements CommandExecutor {
                             player.sendMessage(moduleName + "Deleting " + found_job);
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
-                            qf.doDelete("CEJobs", setw);
+                            qf.doDelete("CNUJobs", setw);
                         } else {
                             player.sendMessage(moduleName + "Quitting " + found_job);
                             setw.put("player_name", player.getName());
                             setw.put("job", found_job);
                             seta.put("status", "inactive");
-                            qf.doUpdate("CEJobs", seta, setw);
+                            qf.doUpdate("CNUJobs", seta, setw);
                         }
                         return true;
                     } else {

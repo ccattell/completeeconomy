@@ -18,7 +18,7 @@ public class MajorMinor {
     String minorPlural = major[1];
     String format = plugin.getConfig().getString("System.Currency.Formatting");
 
-    public void CEMajorMinor() {
+    public void CNUMajorMinor() {
     }
 
     public String getFormat(float pay_amount) {

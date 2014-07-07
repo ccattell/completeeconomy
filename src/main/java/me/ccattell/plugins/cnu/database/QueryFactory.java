@@ -191,7 +191,7 @@ public class QueryFactory {
 
     public void alterBalance(String field, String player, float amount) {
         Statement statement = null;
-        String query = "UPDATE CEMain SET " + field + " = " + field + " + " + amount + " WHERE player_name = '" + player + "'";
+        String query = "UPDATE CNUMain SET " + field + " = " + field + " + " + amount + " WHERE player_name = '" + player + "'";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(query);
@@ -203,14 +203,14 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CNUMain! " + ChatColor.RESET + e.getMessage());
             }
         }
     }
 
     public void alterExperience(double amount, String player, String job) {
         Statement statement = null;
-        String query = "UPDATE CEJobs SET experience = (experience + " + amount + ") WHERE player_name = '" + player + "' AND job = '" + job + "'";
+        String query = "UPDATE CNUJobs SET experience = (experience + " + amount + ") WHERE player_name = '" + player + "' AND job = '" + job + "'";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(query);
@@ -222,14 +222,14 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter experience level error, closing CEJobs! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter experience level error, closing CNUJobs! " + ChatColor.RESET + e.getMessage());
             }
         }
     }
 
     public void killBalance(String field, String player) {
         Statement statement = null;
-        String query = "UPDATE CEMain SET " + field + " = '0' WHERE player_name = '" + player + "'";
+        String query = "UPDATE CNUMain SET " + field + " = '0' WHERE player_name = '" + player + "'";
         try {
             statement = connection.createStatement();
             statement.executeUpdate(query);
@@ -241,15 +241,15 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CEMain! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Alter " + field + " balance error, closing CNUMain! " + ChatColor.RESET + e.getMessage());
             }
         }
     }
 
     public String checkPlayerJob(String job, String player) {
         Statement statement = null;
-        String query = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'active'";
-        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'inactive'";
+        String query = "select COUNT(*) AS rowcount from CNUJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'active'";
+        String query2 = "select COUNT(*) AS rowcount from CNUJobs WHERE player_name = '" + player + "' and job = '" + job + "' and status = 'inactive'";
         try {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -273,7 +273,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info, closing CEJobs! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + job + " info, closing CNUJobs! " + ChatColor.RESET + e.getMessage());
             }
         }
         return "none";
@@ -281,8 +281,8 @@ public class QueryFactory {
 
     public String checkShop(String shop, String player) {
         Statement statement = null;
-        String query = "select COUNT(*) AS rowcount from CEShops WHERE shop_name = '" + shop + "'";
-        String query2 = "select COUNT(*) AS rowcount from CEShops WHERE shop_name = '" + shop + "' and player_name = '" + player + "'";
+        String query = "select COUNT(*) AS rowcount from CNUShops WHERE shop_name = '" + shop + "'";
+        String query2 = "select COUNT(*) AS rowcount from CNUShops WHERE shop_name = '" + shop + "' and player_name = '" + player + "'";
         try {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -306,7 +306,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CESHopss! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CNUSHopss! " + ChatColor.RESET + e.getMessage());
             }
         }
         return "none";
@@ -314,7 +314,7 @@ public class QueryFactory {
 
     public String checkShopStatus(String shop) {
         Statement statement = null;
-        String query = "select * from CEShops WHERE shop_name = '" + shop + "'";
+        String query = "select * from CNUShops WHERE shop_name = '" + shop + "'";
         try {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -328,7 +328,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CEShops! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + shop + " info, closing CNUShops! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return "none";
@@ -336,7 +336,7 @@ public class QueryFactory {
 
     public int checkPLayerShops(String player) {
         Statement statement = null;
-        String query = "select COUNT(*) as rowcount from CEShops WHERE player_name = '" + player + "' and status = 'edit'";
+        String query = "select COUNT(*) as rowcount from CNUShops WHERE player_name = '" + player + "' and status = 'edit'";
         try {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -350,7 +350,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get info, closing CEShops! " + e.getMessage() + ChatColor.RESET);
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get info, closing CNUShops! " + e.getMessage() + ChatColor.RESET);
             }
         }
         return 0;
@@ -360,8 +360,8 @@ public class QueryFactory {
         long level_exp;
         HashMap<String, String> data = new HashMap<String, String>();
         Statement statement = null;
-        String query = "select * from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
-//        String query2 = "select COUNT(*) AS rowcount from CEJobs WHERE player_name = '" + player + "' and status = 'active'";
+        String query = "select * from CNUJobs WHERE player_name = '" + player + "' and status = 'active'";
+//        String query2 = "select COUNT(*) AS rowcount from CNUJobs WHERE player_name = '" + player + "' and status = 'active'";
         try {
             statement = connection.createStatement();
 
@@ -383,7 +383,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CEJobs! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Couldn't get " + player + "'s jobs, closing CNUJobs! " + ChatColor.RESET + e.getMessage());
             }
         }
         return data;
@@ -392,7 +392,7 @@ public class QueryFactory {
     public HashMap<Player, Float> getPlayers() {
         HashMap<Player, Float> data = new HashMap<Player, Float>();
         Statement statement = null;
-        String query = "SELECT player_name, bank FROM CEMain";
+        String query = "SELECT player_name, bank FROM CNUMain";
         try {
             statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -407,7 +407,7 @@ public class QueryFactory {
                     statement.close();
                 }
             } catch (Exception e) {
-                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error closing CEMain! " + ChatColor.RESET + e.getMessage());
+                plugin.console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Get Players error closing CNUMain! " + ChatColor.RESET + e.getMessage());
             }
         }
         return data;

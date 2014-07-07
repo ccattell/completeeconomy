@@ -40,7 +40,7 @@ public class SkillsResultSet {
             }
             wheres = " WHERE " + sbw.toString().substring(0, sbw.length() - 5);
         }
-        String query = "SELECT * FROM CESkills" + wheres;
+        String query = "SELECT * FROM CNUSkills" + wheres;
         try {
             statement = connection.prepareStatement(query);
             if (where != null) {
@@ -71,7 +71,7 @@ public class SkillsResultSet {
                 return false;
             }
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CESkills table! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CNUSkills table! " + e.getMessage());
             return false;
         } finally {
             try {
@@ -82,7 +82,7 @@ public class SkillsResultSet {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CESkills table! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CNUSkills table! " + e.getMessage());
             }
         }
         return true;

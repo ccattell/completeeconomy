@@ -56,8 +56,8 @@ public class CashCommand implements CommandExecutor {
                         String which = (name_supplied) ? name + "'s" : "Your";
                         sender.sendMessage(moduleName + which + " cash balance: " + s);
                     } else {
-                        // player does not exist in the CEMain table
-                        sender.sendMessage(moduleName + name + " does not exist in the CE database! Check your spelling.");
+                        // player does not exist in the CNUMain table
+                        sender.sendMessage(moduleName + name + " does not exist in the CNU database! Check your spelling.");
                     }
                     return true;
                 } else {

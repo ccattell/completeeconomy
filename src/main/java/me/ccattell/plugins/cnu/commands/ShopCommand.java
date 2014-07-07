@@ -64,7 +64,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             setw.put("status", "edit");
-                            qf.doInsert("CEShops", setw);
+                            qf.doInsert("CNUShops", setw);
                             player.sendMessage(moduleName + "Created shop '" + tmp + "'");
                             return true;
                         }else{
@@ -93,7 +93,7 @@ public class ShopCommand implements CommandExecutor {
                             //Detroy itemframes and signson the wall
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
-                            qf.doDelete("CEShops", setw);
+                            qf.doDelete("CNUShops", setw);
                             player.sendMessage(moduleName + "Deleted '" + tmp + "'");
                             return true;
                         }
@@ -128,7 +128,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("status", "edit");
-                            qf.doUpdate("CEShops", seta, setw);
+                            qf.doUpdate("CNUShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + "' is now in edit mode");
                             //broadcast closed message to all players?????
                             return true;
@@ -160,7 +160,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("player_name", recipient);
-                            qf.doUpdate("CEShops", seta, setw);
+                            qf.doUpdate("CNUShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + "' has been transferred to " + recipient);
                             if (plugin.getServer().getPlayer(recipient).isOnline()) {
                                 Player targetPlayer = player.getServer().getPlayer(args[count-1]);
@@ -213,7 +213,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("status", "closed");
-                            qf.doUpdate("CEShops", seta, setw);
+                            qf.doUpdate("CNUShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + " has been saved, dont forget to open it");
                             return true;
                         }
@@ -243,7 +243,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("status", "open");
-                            qf.doUpdate("CEShops", seta, setw);
+                            qf.doUpdate("CNUShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + " is now open for business");
                             //broadcast closed message to all players?????
                             return true;
@@ -274,7 +274,7 @@ public class ShopCommand implements CommandExecutor {
                             setw.put("player_name", player.getName());
                             setw.put("shop_name", tmp);
                             seta.put("status", "closed");
-                            qf.doUpdate("CEShops", seta, setw);
+                            qf.doUpdate("CNUShops", seta, setw);
                             player.sendMessage(moduleName + "'" + tmp + " is now closed.");
                             //broadcast closed message to all players?????
                             return true;

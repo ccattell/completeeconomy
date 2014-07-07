@@ -79,7 +79,7 @@ public class PayCommand implements CommandExecutor {
                             player.sendMessage(moduleName + "You paid " + to_name + " " + s);
                             return true;
                         } else {
-                            player.sendMessage(moduleName + " does not exist in the CE database! Check your spelling.");
+                            player.sendMessage(moduleName + " does not exist in the CNU database! Check your spelling.");
                             return true;
                         }
                     }

@@ -42,7 +42,7 @@ public class JobsResultSet {
             }
             wheres = " WHERE " + sbw.toString().substring(0, sbw.length() - 5);
         }
-        String query = "SELECT * FROM CEJobs" + wheres;
+        String query = "SELECT * FROM CNUJobs" + wheres;
         try {
             statement = connection.prepareStatement(query);
             if (where != null) {
@@ -74,7 +74,7 @@ public class JobsResultSet {
                 return false;
             }
         } catch (SQLException e) {
-            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CEJobs table! " + e.getMessage());
+            console.sendMessage(plugin.pluginName + ChatColor.GOLD + "ResultSet error for CNUJobs table! " + e.getMessage());
             return false;
         } finally {
             try {
@@ -85,7 +85,7 @@ public class JobsResultSet {
                     statement.close();
                 }
             } catch (Exception e) {
-                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CEJobs table! " + e.getMessage());
+                console.sendMessage(plugin.pluginName + ChatColor.GOLD + "Error closing CNUJobs table! " + e.getMessage());
             }
         }
         return true;
