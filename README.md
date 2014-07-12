@@ -38,6 +38,7 @@ Complete Novus Utilities is a "all in one utility" Bukkit plugin which has as ob
 
 **Basic Essentials**
 * Teleporting (tp and tpa)
+* Random Range Teleportation
 * Finish gamemode commands
 * Time commands, weather commands
 
