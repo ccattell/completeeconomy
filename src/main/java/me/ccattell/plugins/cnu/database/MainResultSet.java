@@ -21,6 +21,7 @@ public class MainResultSet {
     private Connection connection = service.getConnection();
     private HashMap<String, Object> where;
     private String player_name;
+    private String chat_channel;
     private float cash;
     private float bank;
     private float xp;
@@ -65,6 +66,7 @@ public class MainResultSet {
             rs = statement.executeQuery();
             if (rs.isBeforeFirst()) {
                 this.player_name = rs.getString("player_name");
+                this.chat_channel = rs.getString("chat_chanel");
                 this.cash = rs.getFloat("cash");
                 this.bank = rs.getFloat("bank");
                 this.xp = rs.getFloat("xp");
@@ -92,6 +94,10 @@ public class MainResultSet {
 
     public String getPlayer_name() {
         return player_name;
+    }
+    
+    public String getChannel(){
+      return chat_channel;
     }
 
     public float getCash() {

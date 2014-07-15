@@ -39,6 +39,7 @@ public class JoinListener implements Listener {
         }
         loadPlayer(name);
 //        event.getPlayer().sendMessage("Welcome, "+ PlayerTitle +" " + event.getPlayer().getDisplayName() + "!");
+        
         event.getPlayer().sendMessage("Welcome, Grandmaster " + name + "!");
     }
 
@@ -55,6 +56,7 @@ public class JoinListener implements Listener {
             // do something with it
             // update last_login
             set.put("last_login", System.currentTimeMillis());
+            set.put("chat_channel", "global");
             HashMap<String, Object> wherep = new HashMap<String, Object>();
             wherep.put("player_name", name);
             qf.doUpdate("CNUMain", set, wherep);
@@ -62,6 +64,7 @@ public class JoinListener implements Listener {
             // insert a record for new player
             c = plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
             set.put("player_name", name);
+            set.put("chat_channel", "global");
             set.put("cash", c);
             set.put("bank", 0);
             set.put("xp", 0);

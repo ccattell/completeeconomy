@@ -1,4 +1,3 @@
-
 package me.ccattell.plugins.cnu.listeners;
 
 import me.ccattell.plugins.cnu.CompleteNovusUtilities;
