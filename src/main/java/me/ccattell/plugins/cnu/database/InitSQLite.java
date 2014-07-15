@@ -22,7 +22,7 @@ public class InitSQLite {
     public void initSQLite() {
         try {
             statement = connection.createStatement();
-            String queryCNU = "CREATE TABLE IF NOT EXISTS CNUMain (player_name TEXT PRIMARY KEY COLLATE NOCASE, cash REAL DEFAULT 0.0, bank REAL DEFAULT 0.0, xp REAL DEFAULT 0.0, last_login INTEGER DEFAULT 0, chat_channel text NOT NULL COLLATE NOCASE)";
+            String queryCNU = "CREATE TABLE IF NOT EXISTS CNUMain (player_name TEXT PRIMARY KEY COLLATE NOCASE, player_UUID TEXT PRIMARY KEY COLLATE NOCASE, cash REAL DEFAULT 0.0, bank REAL DEFAULT 0.0, xp REAL DEFAULT 0.0, last_login INTEGER DEFAULT 0, chat_channel text NOT NULL COLLATE NOCASE)";
             statement.executeUpdate(queryCNU);
             String queryJobs = "CREATE TABLE IF NOT EXISTS CNUJobs (player_name TEXT COLLATE NOCASE, job text NOT NULL COLLATE NOCASE, experience REAL DEFAULT 0, level REAL DEFAULT 1, status TEXT NOT NULL COLLATE NOCASE)";
             statement.executeUpdate(queryJobs);

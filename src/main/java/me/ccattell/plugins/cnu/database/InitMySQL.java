@@ -22,7 +22,7 @@ public class InitMySQL {
     public void initMYSQL() {
         try {
             statement = connection.createStatement();
-            String queryCNU = "CREATE TABLE IF NOT EXISTS CNUMain (player_name text NOT NULL, cash float NOT NULL, bank float NOT NULL, xp float NOT NULL, last_login int(11) NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci, chat_channel text NOT NULL";
+            String queryCNU = "CREATE TABLE IF NOT EXISTS CNUMain (player_name text NOT NULL, player_UUID text NOT NULL, cash float NOT NULL, bank float NOT NULL, xp float NOT NULL, last_login int(11) NOT NULL, chat_channel text NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
             statement.executeUpdate(queryCNU);
             String queryJobs = "CREATE TABLE IF NOT EXISTS CNUJobs (player_name text NOT NULL, job text NOT NULL, experience int(11) NOT NULL, level int(11) NOT NULL, status text NOT NULL) CHARACTER SET utf8 COLLATE utf8_general_ci";
             statement.executeUpdate(queryJobs);

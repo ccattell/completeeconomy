@@ -26,6 +26,7 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         String name = event.getPlayer().getName();
+        String UUID = event.getPlayer().getUniqueId().toString();
         String UpdateChannel = plugin.getConfig().getString("System.UpdateChannel");
         if (!UpdateChannel.equalsIgnoreCase("none") && event.getPlayer().isOp()) {
             this.versionCheck = new VersionCheck(plugin, "http://dev.bukkit.org/server-mods/complete-economy/files.rss");
@@ -37,15 +38,15 @@ public class JoinListener implements Listener {
                 }
             }
         }
-        loadPlayer(name);
+        loadPlayer(UUID, name);
 //        event.getPlayer().sendMessage("Welcome, "+ PlayerTitle +" " + event.getPlayer().getDisplayName() + "!");
         
         event.getPlayer().sendMessage("Welcome, Grandmaster " + name + "!");
     }
 
-    public void loadPlayer(String name) {
+    public void loadPlayer(String UUID, String name) {
         HashMap<String, Object> where = new HashMap<String, Object>();
-        where.put("player_name", name);
+        where.put("player_UUID", UUID);
         MainResultSet rsm = new MainResultSet(where);
         float c;
         HashMap<String, Object> set = new HashMap<String, Object>();
@@ -58,11 +59,12 @@ public class JoinListener implements Listener {
             set.put("last_login", System.currentTimeMillis());
             set.put("chat_channel", "global");
             HashMap<String, Object> wherep = new HashMap<String, Object>();
-            wherep.put("player_name", name);
+            wherep.put("player_UUID", UUID);
             qf.doUpdate("CNUMain", set, wherep);
         } else {
             // insert a record for new player
             c = plugin.getConfig().getInt("System.Default.Holdings") * 1.0F; // can't getFloat() so make one from int
+            set.put("player_UUID", UUID);
             set.put("player_name", name);
             set.put("chat_channel", "global");
             set.put("cash", c);
