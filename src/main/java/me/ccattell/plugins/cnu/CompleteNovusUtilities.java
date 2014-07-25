@@ -116,6 +116,7 @@ public class CompleteNovusUtilities extends JavaPlugin {
         getCommand("poke").setExecutor(new SillyCommand());
         getCommand("ping").setExecutor(new SillyCommand());
         getCommand("marco").setExecutor(new SillyCommand());
+        getCommand("live").setExecutor(new SillyCommand());
         getCommand("cash").setExecutor(new CashCommand());
         getCommand("pay").setExecutor(new PayCommand());
         getCommand("bank").setExecutor(new BankCommand());

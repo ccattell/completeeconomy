@@ -117,6 +117,11 @@ commands:
     usage: /<command> <player>
     permission: cnu.silly
     permission-message: You don't have permission to perform silly commands
+  live:
+    description: Opposite of suicide command, its a bit anti-climatic.
+    usage: /<command> [player]
+    permission: cnu.silly
+    permission-message: You don't have permission to perform silly commands
   bank:
     aliases: [b]
     description: This will show your current bank balance.
