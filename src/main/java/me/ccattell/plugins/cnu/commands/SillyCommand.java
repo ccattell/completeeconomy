@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 
 /**
  *
@@ -33,6 +34,24 @@ public class SillyCommand implements CommandExecutor{
                     sender.sendMessage(ChatColor.DARK_RED + "[ERROR] " + ChatColor.WHITE + "Player: " + Bukkit.getPlayer(args[0]).getName() + " is not currently online.");
                 }
             }
+        }
+        if(cmd.getName().equalsIgnoreCase("live")){
+          if(args.length < 1){
+            if(sender instanceof ConsoleCommandSender){
+              sender.sendMessage("You are a console you silly, you dont live.");
+            }
+            else{
+              sender.sendMessage("You are already alive you silly potato.");
+            }
+          }
+          else{
+            if(Arrays.toString(Bukkit.getServer().getOnlinePlayers()).contains(args[0])){
+              sender.sendMessage("Player '"+args[0]+"' is already alive you silly potato.");
+            }
+            else{
+              sender.sendMessage("You have inputed a fake player, and shall be called silly potato for doing so."); 
+            }
+          }
         }
         return true;
     }
